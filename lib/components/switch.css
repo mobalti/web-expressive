@@ -151,7 +151,8 @@
     }
 
     &::after {
-      background: linear-gradient(var(--_target-color), var(--_target-color)) padding-box,
+      background:
+        linear-gradient(var(--_target-color), var(--_target-color)) padding-box,
         linear-gradient(var(--_state), var(--_state)) border-box;
       block-size: var(--_handle-shape-size);
       border-radius: 6.25rem;
@@ -168,11 +169,16 @@
       translate: var(--_translate-x) 0px;
 
       -webkit-font-feature-settings: "liga";
-      font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
       line-height: 1;
       white-space: nowrap;
 
-      transition: translate var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
+      transition:
+        translate var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
         border-width var(--sys-motion-spring-default-effects-duration) var(--sys-motion-spring-default-effects);
     }
   }

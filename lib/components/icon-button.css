@@ -4,11 +4,12 @@
     --_motion: border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
 
     /* Avoid "corner-full" to prevent animation jitter from large radius transitions. */
-    --_radius-full: calc(min((var(--_block-size) - var(--_padding-block) * 2) / 2,
-          /* inner-block-size / 2 */
-          (var(--_inline-size) - var(--_padding-inline) * 2) / 2
-          /* inner-inline-size / 2 */
-        ));
+    --_radius-full: calc(
+      min(
+        (var(--_block-size) - var(--_padding-block) * 2) / 2,
+        /* inner-block-size / 2 */ (var(--_inline-size) - var(--_padding-inline) * 2) / 2 /* inner-inline-size / 2 */
+      )
+    );
     /* Radius is exactly half of the shorter side. */
     --_btn-radius: var(--_radius-full);
     --_btn-radius-expand: var(--sys-shape-corner-small);
@@ -47,7 +48,11 @@
       display: inline-block;
       font-family: var(--font-icon);
       font-size: var(--_icon-font-size);
-      font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
       grid-area: 1/1;
       line-height: 1;
       white-space: nowrap;
@@ -70,7 +75,8 @@
 
       /* motionOK */
       @media (prefers-reduced-motion: no-preference) {
-        transition: var(--_motion),
+        transition:
+          var(--_motion),
           outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
       }
     }
@@ -344,8 +350,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-medium);
       }
-
-
     }
 
     &.md {
@@ -372,7 +376,6 @@
         }
       }
 
-
       &:not(.round) {
         @container style(--type: square) {
           --_btn-radius: var(--sys-shape-corner-large);
@@ -396,8 +399,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-large);
       }
-
-
     }
 
     &.lg {
@@ -407,7 +408,6 @@
       --_padding-block: 0rem;
       --_padding-inline: 0rem;
       --_btn-radius-expand: var(--sys-shape-corner-large);
-
 
       &:not(.default) {
         @container style(--width: narrow) {
@@ -424,8 +424,6 @@
           --_padding-inline: 0rem;
         }
       }
-
-
 
       &:not(.round) {
         @container style(--type: square) {
@@ -450,8 +448,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-extra-large);
       }
-
-
     }
 
     &.xl {
@@ -461,7 +457,6 @@
       --_padding-block: 0rem;
       --_padding-inline: 0rem;
       --_btn-radius-expand: var(--sys-shape-corner-large);
-
 
       &:not(.default) {
         @container style(--width: narrow) {
@@ -502,7 +497,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-extra-large);
       }
-
     }
   }
 
@@ -553,8 +547,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-medium);
       }
-
-
     }
 
     @container style(--size: md) {
@@ -604,8 +596,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-large);
       }
-
-
     }
 
     @container style(--size: lg) {
@@ -655,8 +645,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-extra-large);
       }
-
-
     }
 
     @container style(--size: xl) {
@@ -666,7 +654,6 @@
       --_padding-block: 0rem;
       --_padding-inline: 0rem;
       --_btn-radius-expand: var(--sys-shape-corner-large);
-
 
       &:not(.default) {
         @container style(--width: narrow) {

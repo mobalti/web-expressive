@@ -36,10 +36,13 @@
     user-select: none;
 
     .icon {
-
       font-family: var(--font-icon);
       font-size: var(--_icon-font-size);
-      font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
       line-height: 1;
       white-space: nowrap;
     }
@@ -59,7 +62,9 @@
 
       /* motionOK */
       @media (prefers-reduced-motion: no-preference) {
-        transition: var(--_motion), outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+        transition:
+          var(--_motion),
+          outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
       }
     }
 
@@ -88,8 +93,7 @@
       --_on-bg: var(--sys-color-on-primary);
       --_state: oklch(from var(--sys-color-on-primary) l c h / 10%);
       --_outline-width: 3px;
-      --_outline-in: outward-grow 0.15s cubic-bezier(0.2, 0, 0, 1) 0s,
-        outward-shrink 0.45s cubic-bezier(0.2, 0, 0, 1) 0.15s forwards;
+      --_outline-in: outward-grow 0.15s cubic-bezier(0.2, 0, 0, 1) 0s, outward-shrink 0.45s cubic-bezier(0.2, 0, 0, 1) 0.15s forwards;
     }
 
     &:active {
@@ -295,7 +299,6 @@
 
     /* style query for custom property it's supported on all chromium base browsers and safari but in Firefox still behind the flag you can use 
    it as progressive enhancement to handle the resizing the button without the need of javascript check demo: link */
-
   }
 
   .btn {
@@ -319,9 +322,7 @@
     &.square {
       --_btn-radius: var(--sys-shape-corner-medium);
     }
-
   }
-
 
   .btn:not(.sm) {
     &.xs {
@@ -343,8 +344,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-medium);
       }
-
-
     }
 
     &.md {
@@ -387,8 +386,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-extra-large);
       }
-
-
     }
 
     &.xl {
@@ -410,9 +407,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-extra-large);
       }
-
-
-
     }
   }
 
@@ -437,7 +431,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-medium);
       }
-
     }
 
     @container style(--size: md) {
@@ -459,8 +452,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-large);
       }
-
-
     }
 
     @container style(--size: lg) {
@@ -482,8 +473,6 @@
       &.square {
         --_btn-radius: var(--sys-shape-corner-extra-large);
       }
-
-
     }
 
     @container style(--size: xl) {

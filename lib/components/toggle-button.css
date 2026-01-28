@@ -1,15 +1,13 @@
 @layer design-system.components {
-
   .toggle-btn {
-
     --_fill: 0;
-    --_motion: border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
+    --_motion:
+      border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
       background var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects);
 
     /* Avoid "corner-full" to prevent animation jitter from large radius transitions. */
     --_radius-full: calc((var(--_block-size) - var(--_inner-padding) * 2) / 2);
     --_btn-radius: var(--_radius-full);
-
 
     --_shadow: none;
     /* state tokens */
@@ -21,11 +19,9 @@
     --_state: none;
     --_outline-width: 0px;
 
-
     display: inline-grid;
     inline-size: fit-content;
     place-items: center;
-
 
     &:has(.input:hover) {
       --_bg: var(--sys-color-surface-container);
@@ -102,12 +98,10 @@
         --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
         --_state: none;
       }
-
     }
 
     /* tonal */
     &.tonal {
-
       --_bg: var(--sys-color-secondary-container);
       --_border: none;
       --_corner: var(--_btn-radius);
@@ -148,8 +142,6 @@
         --_state: none;
       }
 
-
-
       /* Selected */
       &:has(.input:checked) {
         --_bg: var(--sys-color-secondary);
@@ -160,14 +152,12 @@
         --_on-bg: var(--sys-color-on-secondary);
         --_state: none;
 
-
         &:has(.input:hover) {
           --_bg: var(--sys-color-secondary);
           --_border: none;
           --_corner: var(--_btn-radius);
           --_on-bg: var(--sys-color-on-secondary);
           --_state: oklch(from var(--sys-color-on-secondary) l c h / 8%);
-
         }
 
         &:has(.input:focus-visible) {
@@ -194,13 +184,11 @@
           --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
           --_state: none;
         }
-
       }
     }
 
     /* Outline */
     &.outline {
-
       --_bg: transparent;
       --_border: 1px solid var(--sys-color-outline-variant);
       --_corner: var(--_btn-radius);
@@ -241,8 +229,6 @@
         --_state: none;
       }
 
-
-
       /* Selected */
       &:has(.input:checked) {
         --_bg: var(--sys-color-inverse-surface);
@@ -253,14 +239,12 @@
         --_on-bg: var(--sys-color-inverse-on-surface);
         --_state: none;
 
-
         &:has(.input:hover) {
           --_bg: var(--sys-color-inverse-surface);
           --_border: none;
           --_corner: var(--_btn-radius);
           --_on-bg: var(--sys-color-inverse-on-surface);
           --_state: oklch(from var(--sys-color-inverse-on-surface) l c h / 8%);
-
         }
 
         &:has(.input:focus-visible) {
@@ -287,13 +271,11 @@
           --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
           --_state: none;
         }
-
       }
     }
 
     /* elevated */
     &.elevated {
-
       --_bg: var(--sys-color-surface-container-low);
       --_border: none;
       --_corner: var(--_btn-radius);
@@ -335,8 +317,6 @@
         --_state: none;
       }
 
-
-
       /* Selected */
       &:has(.input:checked) {
         --_bg: var(--sys-color-primary);
@@ -348,14 +328,12 @@
         --_shadow: var(--sys-elevation-level1);
         --_state: none;
 
-
         &:has(.input:hover) {
           --_bg: var(--sys-color-primary);
           --_border: none;
           --_corner: var(--_btn-radius);
           --_on-bg: var(--sys-color-on-primary);
           --_state: oklch(from var(--sys-color-on-secondary) l c h / 8%);
-
         }
 
         &:has(.input:focus-visible) {
@@ -382,7 +360,6 @@
           --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
           --_state: none;
         }
-
       }
     }
 
@@ -396,8 +373,6 @@
       grid-area: 1/1;
       inline-size: 100%;
       outline: none;
-
-
     }
 
     .label {
@@ -421,13 +396,16 @@
       text-decoration: none;
       user-select: none;
 
-
       .icon {
         -webkit-font-feature-settings: "liga";
         display: inline-block;
         font-family: var(--font-icon);
         font-size: var(--_icon-font-size);
-        font-variation-settings: "FILL" var(--_fill, 0), "wght" 400, "GRAD" 0, "opsz" 24;
+        font-variation-settings:
+          "FILL" var(--_fill, 0),
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
         grid-area: 1/1;
         line-height: 1;
         white-space: nowrap;
@@ -448,7 +426,9 @@
 
         /* motionOK */
         @media (prefers-reduced-motion: no-preference) {
-          transition: var(--_motion), outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+          transition:
+            var(--_motion),
+            outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
         }
       }
 
@@ -500,8 +480,6 @@
   }
 
   .toggle-btn:not(.sm) {
-
-
     &.xs {
       --_block-size: 3rem;
       --_btn-radius-expand: var(--sys-shape-corner-small);
@@ -605,7 +583,6 @@
           --_btn-radius: var(--_radius-full);
         }
       }
-
     }
 
     &.xl {
@@ -617,7 +594,6 @@
       --_inner-padding: 0px;
       --_padding-block: 3rem;
       --_padding-inline: 4rem;
-
 
       &:not(.round) {
         @container style(--type: square) {
@@ -646,7 +622,6 @@
   }
 
   .toggle-btn:not(.sm) {
-
     @container style(--size: xs) {
       --_block-size: 3rem;
       --_btn-radius-expand: var(--sys-shape-corner-small);
@@ -750,7 +725,6 @@
           --_btn-radius: var(--_radius-full);
         }
       }
-
     }
 
     @container style(--size: xl) {
@@ -762,7 +736,6 @@
       --_inner-padding: 0px;
       --_padding-block: 3rem;
       --_padding-inline: 4rem;
-
 
       &:not(.round) {
         @container style(--type: square) {
