@@ -1,0 +1,50 @@
+ @import "_global-tokens.css" layer(design-system.tokens);
+ @import "_we-internal-icons.css" layer(design-system.tokens);
+
+ @layer design-system {
+   @layer tokens, reset, base, components;
+
+   @layer reset {
+
+     *,
+     ::before,
+     ::after {
+       box-sizing: border-box;
+     }
+
+     :where(:not(dialog)) {
+       margin: 0;
+     }
+
+     :where(html) {
+       -webkit-text-size-adjust: none;
+
+       @media (prefers-reduced-motion: no-preference) {
+         scroll-behavior: smooth;
+       }
+     }
+
+     :where(body) {
+       min-block-size: 100svb;
+       -webkit-font-smoothing: antialiased;
+     }
+   }
+
+   @layer base {
+     html {
+       color-scheme: light dark;
+       scrollbar-color: var(--sys-color-outline) transparent;
+
+       ::selection {
+         color: var(--sys-color-on-secondary-container);
+         background-color: var(--sys-color-secondary-container);
+       }
+     }
+
+     body {
+       background: var(--sys-color-surface);
+       color: var(--sys-color-on-surface);
+       font: var(--sys-typescale-body-large);
+     }
+   }
+ }

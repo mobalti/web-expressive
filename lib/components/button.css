@@ -1,0 +1,510 @@
+@layer design-system.components {
+  .btn {
+    /* Avoid "corner-full" to prevent animation jitter from large radius transitions. */
+    --_btn-radius: calc((var(--_block-size) - var(--_inner-padding) * 2) / 2);
+
+    --_motion: border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+    --_shadow: none;
+
+    /* state tokens */
+    --_bg: var(--sys-color-primary);
+    --_border: none;
+    --_corner: var(--_btn-radius);
+    --_cursor: pointer;
+    --_on-bg: var(--sys-color-on-primary);
+    --_state: transparent;
+
+    --_outline-width: 0px;
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    background: transparent;
+    block-size: var(--_block-size);
+    border: none;
+    color: var(--_on-bg);
+    cursor: var(--_cursor);
+    display: inline-flex;
+    font: var(--_font);
+    gap: var(--_gap);
+    inline-size: fit-content;
+    isolation: isolate;
+    outline: none;
+    padding-inline: var(--_padding-inline);
+    place-items: center;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+
+    .icon {
+
+      font-family: var(--font-icon);
+      font-size: var(--_icon-font-size);
+      font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    &::before {
+      background: var(--_bg);
+      border-radius: var(--_corner);
+      border: var(--_border);
+      box-shadow: var(--_shadow);
+      content: "";
+      inset: var(--_inner-padding) 0px;
+      outline: var(--_outline-width) solid var(--sys-color-secondary);
+      outline-offset: 2px;
+      position: absolute;
+      transition: var(--_motion);
+      z-index: -1;
+
+      /* motionOK */
+      @media (prefers-reduced-motion: no-preference) {
+        transition: var(--_motion), outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+      }
+    }
+
+    &::after {
+      background: var(--_state);
+      border-radius: var(--_corner);
+      content: "";
+      inset: var(--_inner-padding) 0px;
+      position: absolute;
+      transition: var(--_motion);
+      z-index: -1;
+    }
+
+    &:hover {
+      --_bg: var(--sys-color-primary);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_on-bg: var(--sys-color-on-primary);
+      --_state: oklch(from var(--sys-color-on-primary) l c h / 8%);
+    }
+
+    &:focus-visible {
+      --_bg: var(--sys-color-primary);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_on-bg: var(--sys-color-on-primary);
+      --_state: oklch(from var(--sys-color-on-primary) l c h / 10%);
+      --_outline-width: 3px;
+      --_outline-in: outward-grow 0.15s cubic-bezier(0.2, 0, 0, 1) 0s,
+        outward-shrink 0.45s cubic-bezier(0.2, 0, 0, 1) 0.15s forwards;
+    }
+
+    &:active {
+      --_bg: var(--sys-color-primary);
+      --_border: none;
+      --_corner: var(--_btn-radius-expand);
+      --_on-bg: var(--sys-color-on-primary);
+      --_state: oklch(from var(--sys-color-on-primary) l c h / 10%);
+    }
+
+    &:disabled {
+      --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_cursor: not-allowed;
+      --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+      --_state: oklch(from var(--sys-color-on-primary) l c h / 8%);
+    }
+
+    &.outline {
+      --_bg: none;
+      --_border: 1px solid var(--sys-color-outline-variant);
+      --_corner: var(--_btn-radius);
+      --_on-bg: var(--sys-color-on-surface-variant);
+      --_shadow: none;
+      --_state: none;
+
+      &:hover {
+        --_bg: none;
+        --_border: 1px solid var(--sys-color-outline-variant);
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-surface-variant);
+        --_shadow: none;
+        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 8%);
+      }
+
+      &:focus-visible {
+        --_bg: none;
+        --_border: 1px solid var(--sys-color-outline-variant);
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-surface-variant);
+        --_shadow: none;
+        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
+      }
+
+      &:active {
+        --_bg: none;
+        --_border: 1px solid var(--sys-color-outline-variant);
+        --_corner: var(--_btn-radius-expand);
+        --_on-bg: var(--sys-color-on-surface-variant);
+        --_shadow: none;
+        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
+      }
+
+      &:disabled {
+        --_bg: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
+        --_border: 1px solid var(--sys-color-outline-variant);
+        --_corner: var(--_btn-radius);
+        --_cursor: not-allowed;
+        --_on-bg: oklch(from var(--sys-color-on-surface-variant) l c h / 38%);
+        --_shadow: none;
+        --_state: none;
+      }
+    }
+
+    &.tonal {
+      --_bg: var(--sys-color-secondary-container);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_on-bg: var(--sys-color-on-secondary-container);
+      --_shadow: none;
+      --_state: none;
+
+      &:hover {
+        --_bg: var(--sys-color-secondary-container);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-secondary-container);
+        --_shadow: none;
+        --_state: oklch(from var(--sys-color-on-secondary-container) l c h / 8%);
+      }
+
+      &:focus-visible {
+        --_bg: var(--sys-color-secondary-container);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-secondary-container);
+        --_shadow: none;
+        --_state: oklch(from var(--sys-color-on-secondary-container) l c h / 10%);
+      }
+
+      &:active {
+        --_bg: var(--sys-color-secondary-container);
+        --_border: none;
+        --_corner: var(--_btn-radius-expand);
+        --_shadow: none;
+        --_state: none;
+        --_state: oklch(from var(--sys-color-on-secondary-container) l c h / 10%);
+      }
+
+      &:disabled {
+        --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_cursor: not-allowed;
+        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+        --_shadow: none;
+        --_state: none;
+      }
+    }
+
+    &.elevated {
+      --_bg: var(--sys-color-surface-container-low);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_on-bg: var(--sys-color-primary);
+      --_shadow: var(--sys-elevation-level1);
+      --_state: none;
+
+      &:hover {
+        --_bg: var(--sys-color-surface-container-low);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-primary);
+        --_shadow: var(--sys-elevation-level1);
+        --_state: oklch(from var(--sys-color-primary) l c h / 8%);
+      }
+
+      &:focus-visible {
+        --_bg: var(--sys-color-surface-container-low);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-primary);
+        --_shadow: var(--sys-elevation-level1);
+        --_state: oklch(from var(--sys-color-primary) l c h / 10%);
+      }
+
+      &:active {
+        --_bg: var(--sys-color-surface-container-low);
+        --_border: none;
+        --_corner: var(--_btn-radius-expand);
+        --_on-bg: var(--sys-color-primary);
+        --_shadow: var(--sys-elevation-level1);
+        --_state: oklch(from var(--sys-color-primary) l c h / 10%);
+      }
+
+      &:disabled {
+        --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_cursor: not-allowed;
+        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+        --_shadow: none;
+        --_state: none;
+      }
+    }
+
+    &.text {
+      --_bg: none;
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_on-bg: var(--sys-color-primary);
+      --_shadow: none;
+      --_state: none;
+
+      &:hover {
+        --_bg: none;
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-primary);
+        --_shadow: none;
+        --_state: oklch(from var(--sys-color-primary) l c h / 8%);
+      }
+
+      &:focus-visible {
+        --_bg: none;
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-primary);
+        --_shadow: none;
+        --_state: oklch(from var(--sys-color-primary) l c h / 10%);
+      }
+
+      &:active {
+        --_bg: none;
+        --_border: none;
+        --_corner: var(--_btn-radius-expand);
+        --_on-bg: var(--sys-color-primary);
+        --_shadow: none;
+        --_state: oklch(from var(--sys-color-primary) l c h / 10%);
+      }
+
+      &:disabled {
+        --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_cursor: not-allowed;
+        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+        --_shadow: none;
+        --_state: none;
+      }
+    }
+
+    /* style query for custom property it's supported on all chromium base browsers and safari but in Firefox still behind the flag you can use 
+   it as progressive enhancement to handle the resizing the button without the need of javascript check demo: link */
+
+  }
+
+  .btn {
+    /* variation tokens */
+    /* default (sm) */
+    --_block-size: 3rem;
+    --_btn-radius-expand: var(--sys-shape-corner-small);
+    --_font: var(--sys-typescale-label-large);
+    --_gap: 0.5rem;
+    --_icon-font-size: 1.25rem;
+    --_inner-padding: 0.25rem;
+    --_padding-block: 0.625rem;
+    --_padding-inline: 1rem;
+
+    &:not(.round) {
+      @container style(--type: square) {
+        --_btn-radius: var(--sys-shape-corner-medium);
+      }
+    }
+
+    &.square {
+      --_btn-radius: var(--sys-shape-corner-medium);
+    }
+
+  }
+
+
+  .btn:not(.sm) {
+    &.xs {
+      --_block-size: 3rem;
+      --_btn-radius-expand: var(--sys-shape-corner-small);
+      --_font: var(--sys-typescale-label-large);
+      --_gap: 0.25rem;
+      --_icon-font-size: 1.25rem;
+      --_inner-padding: 0.5rem;
+      --_padding-block: 0.375rem;
+      --_padding-inline: 0.75rem;
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-medium);
+        }
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-medium);
+      }
+
+
+    }
+
+    &.md {
+      --_block-size: 3.5rem;
+      --_btn-radius-expand: var(--sys-shape-corner-medium);
+      --_font: var(--sys-typescale-title-medium);
+      --_gap: 0.5rem;
+      --_icon-font-size: 1.5rem;
+      --_inner-padding: 0px;
+      --_padding-block: 1rem;
+      --_padding-inline: 1.5rem;
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-large);
+        }
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-large);
+      }
+    }
+
+    &.lg {
+      --_block-size: 6rem;
+      --_btn-radius-expand: var(--sys-shape-corner-large);
+      --_font: var(--sys-typescale-headline-small);
+      --_gap: 0.75rem;
+      --_icon-font-size: 2rem;
+      --_inner-padding: 0px;
+      --_padding-block: 2rem;
+      --_padding-inline: 3rem;
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-extra-large);
+        }
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+      }
+
+
+    }
+
+    &.xl {
+      --_block-size: 8.5rem;
+      --_btn-radius-expand: var(--sys-shape-corner-large);
+      --_font: var(--sys-typescale-headline-large);
+      --_gap: 1rem;
+      --_icon-font-size: 2.5rem;
+      --_inner-padding: 0px;
+      --_padding-block: 3rem;
+      --_padding-inline: 4rem;
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-extra-large);
+        }
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+      }
+
+
+
+    }
+  }
+
+  /* style query */
+  .btn:not(.sm) {
+    @container style(--size: xs) {
+      --_block-size: 3rem;
+      --_btn-radius-expand: var(--sys-shape-corner-small);
+      --_font: var(--sys-typescale-label-large);
+      --_gap: 0.25rem;
+      --_icon-font-size: 1.25rem;
+      --_inner-padding: 0.5rem;
+      --_padding-block: 0.375rem;
+      --_padding-inline: 0.75rem;
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-medium);
+        }
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-medium);
+      }
+
+    }
+
+    @container style(--size: md) {
+      --_block-size: 3.5rem;
+      --_btn-radius-expand: var(--sys-shape-corner-medium);
+      --_font: var(--sys-typescale-title-medium);
+      --_gap: 0.5rem;
+      --_icon-font-size: 1.5rem;
+      --_inner-padding: 0px;
+      --_padding-block: 1rem;
+      --_padding-inline: 1.5rem;
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-large);
+        }
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-large);
+      }
+
+
+    }
+
+    @container style(--size: lg) {
+      --_block-size: 6rem;
+      --_btn-radius-expand: var(--sys-shape-corner-large);
+      --_font: var(--sys-typescale-headline-small);
+      --_gap: 0.75rem;
+      --_icon-font-size: 2rem;
+      --_inner-padding: 0px;
+      --_padding-block: 2rem;
+      --_padding-inline: 3rem;
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-extra-large);
+        }
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+      }
+
+
+    }
+
+    @container style(--size: xl) {
+      --_block-size: 8.5rem;
+      --_btn-radius-expand: var(--sys-shape-corner-large);
+      --_font: var(--sys-typescale-headline-large);
+      --_gap: 1rem;
+      --_icon-font-size: 2.5rem;
+      --_inner-padding: 0px;
+      --_padding-block: 3rem;
+      --_padding-inline: 4rem;
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-extra-large);
+        }
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+      }
+    }
+  }
+}

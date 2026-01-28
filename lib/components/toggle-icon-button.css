@@ -1,0 +1,1067 @@
+@layer design-system.components {
+  .toggle-icon-btn {
+    --_fill: 0;
+    --_motion: border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
+      background var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects);
+
+    /* Avoid "corner-full" to prevent animation jitter from large radius transitions. */
+    --_radius-full: calc(min((var(--_block-size) - var(--_padding-block) * 2) / 2,
+          /* inner-block-size / 2 */
+          (var(--_inline-size) - var(--_padding-inline) * 2) / 2
+          /* inner-inline-size / 2 */
+        ));
+    --_btn-radius: var(--_radius-full);
+    --_btn-radius-expand: var(--sys-shape-corner-small);
+
+    --_shadow: none;
+
+    /* state tokens */
+    --_bg: var(--sys-color-surface-container);
+    --_border: none;
+    --_corner: var(--_btn-radius);
+    --_cursor: pointer;
+    --_on-bg: var(--sys-color-on-surface-variant);
+    --_state: none;
+
+    --_outline-width: 0px;
+
+    display: inline-grid;
+    place-items: center;
+    inline-size: fit-content;
+
+
+    &:has(.input:hover) {
+      --_bg: var(--sys-color-surface-container);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_on-bg: var(--sys-color-on-surface-variant);
+      --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 8%);
+    }
+
+    &:has(.input:focus-visible) {
+      --_bg: var(--sys-color-surface-container);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_on-bg: var(--sys-color-on-surface-variant);
+      --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
+      --_outline-width: 3px;
+    }
+
+    &:has(.input:active) {
+      --_bg: var(--sys-color-surface-container);
+      --_border: none;
+      --_corner: var(--_btn-radius-expand);
+      --_on-bg: var(--sys-color-on-surface-variant);
+      --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
+    }
+
+    &:has(.input:disabled) {
+
+      --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_cursor: not-allowed;
+      --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+      --_state: none;
+    }
+
+    /* Selected */
+    &:has(.input:checked) {
+      --_bg: var(--sys-color-primary);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_fill: 1;
+      --_on-bg: var(--sys-color-on-primary);
+      --_state: none;
+
+      &:has(.input:hover) {
+        --_bg: var(--sys-color-primary);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-primary);
+        --_state: oklch(from var(--sys-color-on-primary) l c h / 8%);
+
+      }
+
+      &:has(.input:focus-visible) {
+        --_bg: var(--sys-color-primary);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-primary);
+
+        --_state: oklch(from var(--sys-color-on-primary) l c h / 10%);
+      }
+
+      &:has(.input:active) {
+        --_bg: var(--sys-color-primary);
+        --_border: none;
+        --_corner: var(--_btn-radius-expand);
+        --_on-bg: var(--sys-color-on-primary);
+        --_state: oklch(from var(--sys-color-on-primary) l c h / 10%);
+      }
+
+      &:has(.input:disabled) {
+        --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_cursor: not-allowed;
+        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+        --_state: none;
+      }
+
+    }
+
+
+    /* Tonal */
+    &.tonal {
+
+      --_bg: var(--sys-color-secondary-container);
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_cursor: pointer;
+      --_on-bg: var(--sys-color-on-secondary-container);
+      --_state: none;
+
+      &:has(.input:hover) {
+        --_bg: var(--sys-color-secondary-container);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-secondary-container);
+        --_state: oklch(from var(--sys-color-on-secondary-container) l c h / 8%);
+      }
+
+      &:has(.input:focus-visible) {
+        --_bg: var(--sys-color-secondary-container);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-secondary-container);
+
+        --_state: oklch(from var(--sys-color-on-secondary-container) l c h / 10%);
+      }
+
+      &:has(.input:active) {
+        --_bg: var(--sys-color-secondary-container);
+        --_border: none;
+        --_corner: var(--_btn-radius-expand);
+        --_on-bg: var(--sys-color-on-secondary-container);
+        --_state: oklch(from var(--sys-color-on-secondary-container) l c h / 10%);
+      }
+
+      &:has(.input:disabled) {
+        --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_cursor: not-allowed;
+        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+        --_state: none;
+      }
+
+
+
+      /* Selected */
+      &:has(.input:checked) {
+        --_bg: var(--sys-color-secondary);
+        --_border: none;
+        --_btn-radius: var(--sys-shape-corner-medium);
+        --_corner: var(--_btn-radius);
+        --_fill: 1;
+        --_on-bg: var(--sys-color-on-secondary);
+        --_state: none;
+
+
+        &:has(.input:hover) {
+          --_bg: var(--sys-color-secondary);
+          --_border: none;
+          --_corner: var(--_btn-radius);
+          --_on-bg: var(--sys-color-on-secondary);
+          --_state: oklch(from var(--sys-color-on-secondary) l c h / 8%);
+
+        }
+
+        &:has(.input:focus-visible) {
+          --_bg: var(--sys-color-secondary);
+          --_border: none;
+          --_corner: var(--_btn-radius);
+          --_on-bg: var(--sys-color-on-secondary);
+
+          --_state: oklch(from var(--sys-color-on-secondary) l c h / 10%);
+        }
+
+        &:has(.input:active) {
+          --_bg: var(--sys-color-secondary);
+          --_border: none;
+          --_corner: var(--_btn-radius-expand);
+          --_on-bg: var(--sys-color-on-secondary);
+          --_state: oklch(from var(--sys-color-on-secondary) l c h / 10%);
+        }
+
+        &:has(.input:disabled) {
+          --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+          --_border: none;
+          --_corner: var(--_btn-radius);
+          --_cursor: not-allowed;
+          --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+          --_state: none;
+        }
+
+      }
+    }
+
+    /* Outline */
+    &.outline {
+
+      --_bg: transparent;
+      --_border: 1px solid var(--sys-color-outline-variant);
+      --_corner: var(--_btn-radius);
+      --_cursor: pointer;
+      --_on-bg: var(--sys-color-on-surface-variant);
+      --_state: none;
+
+      &:has(.input:hover) {
+        --_bg: transparent;
+        --_border: 1px solid var(--sys-color-outline-variant);
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-surface-variant);
+        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 8%);
+      }
+
+      &:has(.input:focus-visible) {
+        --_bg: transparent;
+        --_border: 1px solid var(--sys-color-outline-variant);
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-surface-variant);
+
+        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
+      }
+
+      &:has(.input:active) {
+        --_bg: transparent;
+        --_border: 1px solid var(--sys-color-outline-variant);
+        --_corner: var(--_btn-radius-expand);
+        --_on-bg: var(--sys-color-on-surface-variant);
+        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
+      }
+
+      &:has(.input:disabled) {
+        --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+        --_border: 1px solid var(--sys-color-outline-variant);
+        --_corner: var(--_btn-radius);
+        --_cursor: not-allowed;
+        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+        --_state: none;
+      }
+
+
+
+      /* Selected */
+      &:has(.input:checked) {
+        --_bg: var(--sys-color-inverse-surface);
+        --_border: none;
+        --_btn-radius: var(--sys-shape-corner-medium);
+        --_corner: var(--_btn-radius);
+        --_fill: 1;
+        --_on-bg: var(--sys-color-inverse-on-surface);
+        --_state: none;
+
+
+        &:has(.input:hover) {
+          --_bg: var(--sys-color-inverse-surface);
+          --_border: none;
+          --_corner: var(--_btn-radius);
+          --_on-bg: var(--sys-color-inverse-on-surface);
+          --_state: oklch(from var(--sys-color-inverse-on-surface) l c h / 8%);
+
+        }
+
+        &:has(.input:focus-visible) {
+          --_bg: var(--sys-color-inverse-surface);
+          --_border: none;
+          --_corner: var(--_btn-radius);
+          --_on-bg: var(--sys-color-inverse-on-surface);
+
+          --_state: oklch(from var(--sys-color-inverse-on-surface) l c h / 10%);
+        }
+
+        &:has(.input:active) {
+          --_bg: var(--sys-color-inverse-surface);
+          --_border: none;
+          --_corner: var(--_btn-radius-expand);
+          --_on-bg: var(--sys-color-inverse-on-surface);
+          --_state: oklch(from var(--sys-color-inverse-on-surface) l c h / 10%);
+        }
+
+        &:has(.input:disabled) {
+          --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+          --_border: none;
+          --_corner: var(--_btn-radius);
+          --_cursor: not-allowed;
+          --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+          --_state: none;
+        }
+
+      }
+    }
+
+    /* standard */
+    &.standard {
+
+      --_bg: none;
+      --_border: none;
+      --_corner: var(--_btn-radius);
+      --_cursor: pointer;
+      --_on-bg: var(--sys-color-on-surface-variant);
+      --_state: none;
+
+      &:has(.input:hover) {
+        --_bg: none;
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-surface-variant);
+        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 8%);
+      }
+
+      &:has(.input:focus-visible) {
+        --_bg: none;
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_on-bg: var(--sys-color-on-surface-variant);
+
+        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
+      }
+
+      &:has(.input:active) {
+        --_bg: none;
+        --_border: none;
+        --_corner: var(--_btn-radius-expand);
+        --_on-bg: var(--sys-color-on-surface-variant);
+        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
+      }
+
+      &:has(.input:disabled) {
+        --_bg: none;
+        --_border: none;
+        --_corner: var(--_btn-radius);
+        --_cursor: not-allowed;
+        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+        --_state: none;
+      }
+
+
+
+      /* Selected */
+      &:has(.input:checked) {
+        --_bg: none;
+        --_border: none;
+        --_btn-radius: var(--sys-shape-corner-medium);
+        --_corner: var(--_btn-radius);
+        --_fill: 1;
+        --_on-bg: var(--sys-color-primary);
+
+        --_state: none;
+
+
+        &:has(.input:hover) {
+          --_bg: none;
+          --_border: none;
+          --_corner: var(--_btn-radius);
+          --_on-bg: var(--sys-color-primary);
+          --_state: oklch(from var(--sys-color-primary) l c h / 8%);
+
+        }
+
+        &:has(.input:focus-visible) {
+          --_bg: none;
+          --_border: none;
+          --_corner: var(--_btn-radius);
+          --_on-bg: var(--sys-color-primary);
+
+          --_state: oklch(from var(--sys-color-primary) l c h / 10%);
+        }
+
+        &:has(.input:active) {
+          --_bg: none;
+          --_border: none;
+          --_corner: var(--_btn-radius-expand);
+          --_on-bg: var(--sys-color-primary);
+          --_state: oklch(from var(--sys-color-primary) l c h / 10%);
+        }
+
+        &:has(.input:disabled) {
+          --_bg: none;
+          --_border: none;
+          --_corner: var(--_btn-radius);
+          --_cursor: not-allowed;
+          --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
+          --_state: none;
+        }
+
+      }
+    }
+
+
+    .input {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: none;
+      block-size: 100%;
+      border: none;
+      grid-area: 1/1;
+      inline-size: 100%;
+      outline: none;
+
+
+    }
+
+    .label {
+      grid-area: 1/1;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      background-color: transparent;
+      background: transparent;
+      block-size: var(--_block-size);
+      border: none;
+      color: var(--_on-bg);
+      cursor: var(--_cursor);
+      display: inline-grid;
+      font: var(--_font);
+      inline-size: var(--_inline-size);
+      isolation: isolate;
+      outline: none;
+      padding-block: var(--_padding-block);
+      padding-inline: var(--_padding-inline);
+      place-items: center;
+      position: relative;
+      text-decoration: none;
+      user-select: none;
+
+
+
+      .icon {
+        -webkit-font-feature-settings: "liga";
+        display: inline-block;
+        font-family: var(--font-icon);
+        font-size: var(--_icon-font-size);
+        font-variation-settings: "FILL" var(--_fill, 0), "wght" 400, "GRAD" 0, "opsz" 24;
+        grid-area: 1/1;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      &::before {
+        background: var(--_bg);
+        block-size: 100%;
+        border-radius: var(--_corner);
+        border: var(--_border);
+        box-shadow: var(--_shadow);
+        content: "";
+        display: block;
+        grid-area: 1/1;
+        inline-size: 100%;
+        outline: var(--_outline-width) solid var(--sys-color-secondary);
+        outline-offset: 2px;
+        transition: var(--_motion);
+        z-index: -1;
+
+        /* motionOK */
+        @media (prefers-reduced-motion: no-preference) {
+          transition: var(--_motion), outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+        }
+      }
+
+      &::after {
+        background: var(--_state);
+        block-size: 100%;
+        border-radius: var(--_corner);
+        content: "";
+        display: block;
+        grid-area: 1/1;
+        inline-size: 100%;
+        transition: var(--_motion);
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Variants */
+  .toggle-icon-btn {
+    --_block-size: 3rem;
+    --_icon-font-size: 1.25rem;
+    --_inline-size: 3rem;
+    --_padding-block: 0.25rem;
+    --_padding-inline: 0.25rem;
+
+    &:not(.default) {
+      @container style(--width: narrow) {
+        --_block-size: 3rem;
+        --_inline-size: 3rem;
+        --_padding-block: 0.25rem;
+        --_padding-inline: 0.5rem;
+      }
+
+      @container style(--width: wide) {
+        --_block-size: 3rem;
+        --_inline-size: 3.25rem;
+        --_padding-block: 0.25rem;
+        --_padding-inline: 0rem;
+      }
+    }
+
+    &:not(.round) {
+      @container style(--type: square) {
+        --_btn-radius: var(--sys-shape-corner-medium);
+      }
+    }
+
+    &:has(.input:checked) {
+      --_btn-radius: var(--sys-shape-corner-medium);
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--_radius-full);
+        }
+      }
+
+      &.square {
+        --_btn-radius: var(--_radius-full);
+      }
+    }
+
+    &.narrow {
+      --_block-size: 3rem;
+      --_inline-size: 3rem;
+      --_padding-block: 0.25rem;
+      --_padding-inline: 0.5rem;
+    }
+
+    &.wide {
+      --_block-size: 3rem;
+      --_inline-size: 3.25rem;
+      --_padding-block: 0.25rem;
+      --_padding-inline: 0rem;
+    }
+
+    &.square {
+      --_btn-radius: var(--sys-shape-corner-medium);
+    }
+  }
+
+  .toggle-icon-btn:not(.sm) {
+    &.xs {
+      --_block-size: 3rem;
+      --_inline-size: 3rem;
+      --_padding-block: 0.5rem;
+      --_padding-inline: 0.5rem;
+      --_icon-font-size: 1.25rem;
+
+      &:not(.default) {
+        @container style(--width: narrow) {
+          --_block-size: 3rem;
+          --_inline-size: 3rem;
+          --_padding-block: 0.5rem;
+          --_padding-inline: 0.625rem;
+        }
+
+        @container style(--width: wide) {
+          --_block-size: 3rem;
+          --_inline-size: 3rem;
+          --_padding-block: 0.5rem;
+          --_padding-inline: 0.25rem;
+        }
+      }
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-medium);
+        }
+      }
+
+      &:has(.input:checked) {
+        --_btn-radius: var(--sys-shape-corner-medium);
+
+        &:not(.round) {
+          @container style(--type: square) {
+            --_btn-radius: var(--_radius-full);
+          }
+        }
+
+        &.square {
+          --_btn-radius: var(--_radius-full);
+        }
+      }
+
+      &.narrow {
+        --_block-size: 3rem;
+        --_inline-size: 3rem;
+        --_padding-block: 0.5rem;
+        --_padding-inline: 0.625rem;
+      }
+
+      &.wide {
+        --_block-size: 3rem;
+        --_inline-size: 3rem;
+        --_padding-block: 0.5rem;
+        --_padding-inline: 0.25rem;
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-medium);
+      }
+
+
+    }
+
+    &.md {
+      --_block-size: 3.5rem;
+      --_icon-font-size: 1.5rem;
+      --_inline-size: 3.5rem;
+      --_padding-block: 0rem;
+      --_padding-inline: 0rem;
+      --_btn-radius-expand: var(--sys-shape-corner-medium);
+
+      &:not(.default) {
+        @container style(--width: narrow) {
+          --_block-size: 3.5rem;
+          --_inline-size: 3.5rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0.25rem;
+        }
+
+        @container style(--width: wide) {
+          --_block-size: 3.5rem;
+          --_inline-size: 4.5rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+      }
+
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-large);
+        }
+      }
+
+      &:has(.input:checked) {
+        --_btn-radius: var(--sys-shape-corner-large);
+
+        &:not(.round) {
+          @container style(--type: square) {
+            --_btn-radius: var(--_radius-full);
+          }
+        }
+
+        &.square {
+          --_btn-radius: var(--_radius-full);
+        }
+      }
+
+      &.narrow {
+        --_block-size: 3.5rem;
+        --_inline-size: 3.5rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0.25rem;
+      }
+
+      &.wide {
+        --_block-size: 3.5rem;
+        --_inline-size: 4.5rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-large);
+      }
+
+
+    }
+
+    &.lg {
+      --_block-size: 6rem;
+      --_icon-font-size: 2rem;
+      --_inline-size: 6rem;
+      --_padding-block: 0rem;
+      --_padding-inline: 0rem;
+      --_btn-radius-expand: var(--sys-shape-corner-large);
+
+
+      &:not(.default) {
+        @container style(--width: narrow) {
+          --_block-size: 6rem;
+          --_inline-size: 4rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+
+        @container style(--width: wide) {
+          --_block-size: 6rem;
+          --_inline-size: 8rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+      }
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-extra-large);
+        }
+      }
+
+      &:has(.input:checked) {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+
+        &:not(.round) {
+          @container style(--type: square) {
+            --_btn-radius: var(--_radius-full);
+          }
+        }
+
+        &.square {
+          --_btn-radius: var(--_radius-full);
+        }
+      }
+
+      &.narrow {
+        --_block-size: 6rem;
+        --_inline-size: 4rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.wide {
+        --_block-size: 6rem;
+        --_inline-size: 8rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+      }
+
+    }
+
+    &.xl {
+      --_block-size: 8.5rem;
+      --_icon-font-size: 2.5rem;
+      --_inline-size: 8.5rem;
+      --_padding-block: 0rem;
+      --_padding-inline: 0rem;
+      --_btn-radius-expand: var(--sys-shape-corner-large);
+
+
+      &:not(.default) {
+        @container style(--width: narrow) {
+          --_block-size: 8.5rem;
+          --_inline-size: 6.5rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+
+        @container style(--width: wide) {
+          --_block-size: 8.5rem;
+          --_inline-size: 11.5rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+      }
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-extra-large);
+        }
+      }
+
+      &:has(.input:checked) {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+
+        &:not(.round) {
+          @container style(--type: square) {
+            --_btn-radius: var(--_radius-full);
+          }
+        }
+
+        &.square {
+          --_btn-radius: var(--_radius-full);
+        }
+      }
+
+      &.narrow {
+        --_block-size: 8.5rem;
+        --_inline-size: 6.5rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.wide {
+        --_block-size: 8.5rem;
+        --_inline-size: 11.5rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+      }
+
+    }
+  }
+
+  .toggle-icon-btn:not(.sm) {
+    @container style(--size: xs) {
+      --_block-size: 3rem;
+      --_inline-size: 3rem;
+      --_padding-block: 0.5rem;
+      --_padding-inline: 0.5rem;
+      --_icon-font-size: 1.25rem;
+
+      &:not(.default) {
+        @container style(--width: narrow) {
+          --_block-size: 3rem;
+          --_inline-size: 3rem;
+          --_padding-block: 0.5rem;
+          --_padding-inline: 0.625rem;
+        }
+
+        @container style(--width: wide) {
+          --_block-size: 3rem;
+          --_inline-size: 3rem;
+          --_padding-block: 0.5rem;
+          --_padding-inline: 0.25rem;
+        }
+      }
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-medium);
+        }
+      }
+
+      &:has(.input:checked) {
+        --_btn-radius: var(--sys-shape-corner-medium);
+
+        &:not(.round) {
+          @container style(--type: square) {
+            --_btn-radius: var(--_radius-full);
+          }
+        }
+
+        &.square {
+          --_btn-radius: var(--_radius-full);
+        }
+      }
+
+      &.narrow {
+        --_block-size: 3rem;
+        --_inline-size: 3rem;
+        --_padding-block: 0.5rem;
+        --_padding-inline: 0.625rem;
+      }
+
+      &.wide {
+        --_block-size: 3rem;
+        --_inline-size: 3rem;
+        --_padding-block: 0.5rem;
+        --_padding-inline: 0.25rem;
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-medium);
+      }
+
+    }
+
+    @container style(--size: md) {
+      --_block-size: 3.5rem;
+      --_icon-font-size: 1.5rem;
+      --_inline-size: 3.5rem;
+      --_padding-block: 0rem;
+      --_padding-inline: 0rem;
+      --_btn-radius-expand: var(--sys-shape-corner-medium);
+
+      &:not(.default) {
+        @container style(--width: narrow) {
+          --_block-size: 3.5rem;
+          --_inline-size: 3.5rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0.25rem;
+        }
+
+        @container style(--width: wide) {
+          --_block-size: 3.5rem;
+          --_inline-size: 4.5rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+      }
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-large);
+        }
+      }
+
+      &:has(.input:checked) {
+        --_btn-radius: var(--sys-shape-corner-large);
+
+        &:not(.round) {
+          @container style(--type: square) {
+            --_btn-radius: var(--_radius-full);
+          }
+        }
+
+        &.square {
+          --_btn-radius: var(--_radius-full);
+        }
+      }
+
+      &.narrow {
+        --_block-size: 3.5rem;
+        --_inline-size: 3.5rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0.25rem;
+      }
+
+      &.wide {
+        --_block-size: 3.5rem;
+        --_inline-size: 4.5rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-large);
+      }
+
+
+    }
+
+    @container style(--size: lg) {
+      --_block-size: 6rem;
+      --_icon-font-size: 2rem;
+      --_inline-size: 6rem;
+      --_padding-block: 0rem;
+      --_padding-inline: 0rem;
+      --_btn-radius-expand: var(--sys-shape-corner-large);
+
+      &:not(.default) {
+        @container style(--width: narrow) {
+          --_block-size: 6rem;
+          --_inline-size: 4rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+
+        @container style(--width: wide) {
+          --_block-size: 6rem;
+          --_inline-size: 8rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+      }
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-extra-large);
+        }
+      }
+
+      &:has(.input:checked) {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+
+        &:not(.round) {
+          @container style(--type: square) {
+            --_btn-radius: var(--_radius-full);
+          }
+        }
+
+        &.square {
+          --_btn-radius: var(--_radius-full);
+        }
+      }
+
+      &.narrow {
+        --_block-size: 6rem;
+        --_inline-size: 4rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.wide {
+        --_block-size: 6rem;
+        --_inline-size: 8rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+      }
+    }
+
+    @container style(--size: xl) {
+      --_block-size: 8.5rem;
+      --_icon-font-size: 2.5rem;
+      --_inline-size: 8.5rem;
+      --_padding-block: 0rem;
+      --_padding-inline: 0rem;
+      --_btn-radius-expand: var(--sys-shape-corner-large);
+
+
+      &:not(.default) {
+        @container style(--width: narrow) {
+          --_block-size: 8.5rem;
+          --_inline-size: 6.5rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+
+        @container style(--width: wide) {
+          --_block-size: 8.5rem;
+          --_inline-size: 11.5rem;
+          --_padding-block: 0rem;
+          --_padding-inline: 0rem;
+        }
+      }
+
+      &:not(.round) {
+        @container style(--type: square) {
+          --_btn-radius: var(--sys-shape-corner-extra-large);
+        }
+      }
+
+      &:has(.input:checked) {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+
+        &:not(.round) {
+          @container style(--type: square) {
+            --_btn-radius: var(--_radius-full);
+          }
+        }
+
+        &.square {
+          --_btn-radius: var(--_radius-full);
+        }
+      }
+
+      &.narrow {
+        --_block-size: 8.5rem;
+        --_inline-size: 6.5rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.wide {
+        --_block-size: 8.5rem;
+        --_inline-size: 11.5rem;
+        --_padding-block: 0rem;
+        --_padding-inline: 0rem;
+      }
+
+      &.square {
+        --_btn-radius: var(--sys-shape-corner-extra-large);
+      }
+    }
+  }
+}

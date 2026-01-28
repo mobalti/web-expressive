@@ -1,0 +1,176 @@
+@property --font-system-ui {
+  syntax: '<string>';
+  inherits: false;
+  initial-value: "Google Sans Flex";
+}
+
+@property --font-monospace-code {
+  syntax: '<string>';
+  inherits: false;
+  initial-value: "Google Sans Code";
+}
+
+
+@property --font-icon {
+  syntax: '<string>';
+  inherits: false;
+  initial-value: "Material Symbols Outlined";
+}
+
+@property --size {
+  syntax: 'xs | sm | md | lg | xl';
+  inherits: false;
+  initial-value: sm;
+}
+
+
+@property --width {
+  syntax: 'narrow | default | wide';
+  inherits: false;
+  initial-value: default;
+}
+
+
+@property --type {
+  syntax: 'round | square';
+  inherits: false;
+  initial-value: round;
+}
+
+
+
+:where(html) {
+  --sys-shape-corner-none: 0px;
+  --sys-shape-corner-extra-small: 0.25rem;
+  --sys-shape-corner-small: 0.5rem;
+  --sys-shape-corner-medium: 0.75rem;
+  --sys-shape-corner-large: 1rem;
+  --sys-shape-corner-large-increased: 1.25rem;
+  --sys-shape-corner-extra-large: 28px;
+  --sys-shape-corner-extra-large-increased: 2rem;
+  --sys-shape-corner-extra-extra-large: 3rem;
+  --sys-shape-corner-full: 9999px;
+
+  /* ----------------------------------------------------- */
+  /* EXPRESSIVE MOTION - SPATIAL ANIMATIONS (movement)      */
+  /* ----------------------------------------------------- */
+
+  /* Small UI movement (quick feedback) 
+     Example: switch thumb sliding, button press motion */
+  --sys-motion-spring-fast-spatial: cubic-bezier(0.42, 1.67, 0.21, 0.9);
+  --sys-motion-spring-fast-spatial-duration: 350ms;
+
+  /* Medium-size movements (default, use most often)
+     Example: bottom sheet sliding up, navigation rail expanding */
+  --sys-motion-spring-default-spatial: cubic-bezier(0.38, 1.21, 0.22, 1);
+  --sys-motion-spring-default-spatial-duration: 500ms;
+
+  /* Large or fullscreen movements (smooth & slower) 
+     Example: fullscreen dialog, screen transition, hero card expand */
+  --sys-motion-spring-slow-spatial: cubic-bezier(0.39, 1.29, 0.35, 0.98);
+  --sys-motion-spring-slow-spatial-duration: 650ms;
+
+  /* ----------------------------------------------------- */
+  /* EXPRESSIVE MOTION - EFFECTS ANIMATIONS (visual props)  */
+  /* ----------------------------------------------------- */
+
+  /* Tiny feedback visual effect (very quick) 
+     Example: switch handle color change, small icon tint */
+  --sys-motion-spring-fast-effects: cubic-bezier(0.31, 0.94, 0.34, 1);
+  --sys-motion-spring-fast-effects-duration: 150ms;
+
+  /* Medium visual effects (default, use most often) 
+     Example: opacity fade inside navigation rail, subtle highlight */
+  --sys-motion-spring-default-effects: cubic-bezier(0.34, 0.8, 0.34, 1);
+  --sys-motion-spring-default-effects-duration: 200ms;
+
+  /* Large/fullscreen effects (slower, smooth) 
+     Example: full content refresh fade, modal background fade-in */
+  --sys-motion-spring-slow-effects: cubic-bezier(0.34, 0.88, 0.34, 1);
+  --sys-motion-spring-slow-effects-duration: 300ms;
+}
+
+:where(html, [data-theme="light"], .light) {
+  /* M3/Elevation Light/1 */
+  --sys-elevation-level1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px rgba(0, 0, 0, 0.3);
+  /* M3/Elevation Light/2 */
+  --sys-elevation-level2: 0px 1px 2px rgba(0, 0, 0, 0.3),
+    0px 2px 0.375rem 2px rgba(0, 0, 0, 0.15);
+
+  /* M3/Elevation Light/3 */
+  --sys-elevation-level3: 0px 0.25rem 0.5rem 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* M3/Elevation Light/4 */
+  --sys-elevation-level4: 0px 0.375rem 0.625rem 0.25rem rgba(0, 0, 0, 0.15),
+    0px 2px 3px rgba(0, 0, 0, 0.3);
+
+  /* M3/Elevation Light/5 */
+  --sys-elevation-level5: 0px 0.5rem 0.75rem 0.375rem rgba(0, 0, 0, 0.15),
+    0px 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+
+:where([data-theme="dark"], .dark) {
+  /* M3/Elevation Dark/1 */
+  --sys-elevation-level1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px rgba(0, 0, 0, 0.3);
+
+  /* M3/Elevation Dark/2 */
+  --sys-elevation-level2: 0px 2px 0.375rem 2px rgba(0, 0, 0, 0.15),
+    0px 1px 2px rgba(0, 0, 0, 0.3);
+
+  /* M3/Elevation Dark/3 */
+  --sys-elevation-level3: 0px 0.25rem 0.5rem 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* M3/Elevation Dark/4 */
+  --sys-elevation-level4: 0px 0.375rem 0.625rem 0.25rem rgba(0, 0, 0, 0.15),
+    0px 2px 3px rgba(0, 0, 0, 0.3);
+
+  /* M3/Elevation Dark/5 */
+  --sys-elevation-level5: 0px 0.5rem 0.75rem 0.375rem rgba(0, 0, 0, 0.15),
+    0px 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+
+:where(html) {
+  --sys-motion-spring-pop-focus: linear(0 0%,
+      2.5 25%,
+      2.5 50%,
+      1 100%);
+}
+
+:where(html) {
+  --sys-typescale-body-large: 400 1rem/1.5rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-body-medium: 400 0.875rem/1.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-body-small: 400 0.75rem/1rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-display-large: 400 3.562rem/4rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-display-medium: 400 2.812rem/3.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-display-small: 400 2.25rem/2.75rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-headline-large: 400 2rem/2.5rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-headline-medium: 400 1.75rem/2.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-headline-small: 400 1.5rem/2rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-label-large: 500 0.875rem/1.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-label-medium: 500 0.75rem/1rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-label-small: 500 0.688rem/1rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-title-large: 400 1.375rem/1.75rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-title-medium: 500 1rem/1.5rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-title-small: 500 0.875rem/1.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Emphasized */
+  --sys-typescale-emphasized-body-large: 500 1rem/1.5rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-body-medium: 500 0.875rem/1.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-body-small: 500 0.75rem/1rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-display-large: 500 3.562rem/4rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-display-medium: 500 2.812rem/3.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-display-small: 500 2.25rem/2.75rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-headline-large: 500 2rem/2.5rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-headline-medium: 500 1.75rem/2.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-headline-small: 500 1.5rem/2rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-label-large: 600 0.875rem/1.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-label-medium: 600 0.75rem/1rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-label-small: 600 0.688rem/1rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-title-large: 500 1.375rem/1.75rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-title-medium: 600 1rem/1.5rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  --sys-typescale-emphasized-title-small: 600 0.875rem/1.25rem var(--font-system-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+}
