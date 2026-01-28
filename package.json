@@ -7,7 +7,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mobalti/web-expressive"
+    "url": "https://github.com/mobalti/web-expressive.git"
   },
   "keywords": [
     "css",
