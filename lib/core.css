@@ -1,3 +1,10 @@
+/*!
+ * Web Expressive
+ * Copyright (c) 2026 Arby (@mobalti)
+ * Licensed under the MIT License
+ * https://github.com/mobalti/web-expressive
+ */
+
 @import "_global-tokens.css" layer(design-system.tokens);
 @import "_we-internal-icons.css" layer(design-system.tokens);
 

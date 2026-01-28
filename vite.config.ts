@@ -3,6 +3,9 @@ import { resolve, basename } from 'path'
 import { glob } from 'glob'
 
 export default defineConfig({
+  esbuild: {
+    legalComments: 'inline',
+  },
   build: {
     // 1. Ensure CSS is split into individual files
     cssCodeSplit: true,
