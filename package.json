@@ -31,17 +31,14 @@
     "./palettes/*": "./dist/palettes/*"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "format": "prettier --write \"lib/**/*.{css,ts,js}\"",
-    "format:check": "prettier --check \"lib/**/*.{css,ts,js}\""
+    "build": "vite build",
+    "prepublishOnly": "npm run build",
+    "format": "prettier --write \"lib/**/*.{css,js}\"",
+    "format:check": "prettier --check \"lib/**/*.{css,js}\""
   },
   "devDependencies": {
-    "@types/node": "^22.19.7",
     "glob": "^11.0.0",
     "prettier": "3.8.1",
-    "typescript": "~5.9.3",
     "vite": "^7.2.7"
   }
 }
