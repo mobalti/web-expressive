@@ -36,7 +36,7 @@
     user-select: none;
 
     .icon {
-      font-family: var(--font-icon);
+      font-family: var(--ref-typeface-symbol);
       font-size: var(--_icon-font-size);
       font-variation-settings:
         "FILL" 1,

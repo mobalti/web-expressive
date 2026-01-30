@@ -28,13 +28,13 @@
   initial-value: "Google Sans Flex";
 }
 
-@property --font-monospace-code {
+@property --ref-typeface-monospace {
   syntax: "<string>";
   inherits: false;
   initial-value: "Google Sans Code";
 }
 
-@property --font-icon {
+@property --ref-typeface-symbol {
   syntax: "<string>";
   inherits: false;
   initial-value: "Material Symbols Outlined";

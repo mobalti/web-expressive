@@ -399,7 +399,7 @@
       .icon {
         -webkit-font-feature-settings: "liga";
         display: inline-block;
-        font-family: var(--font-icon);
+        font-family: var(--ref-typeface-symbol);
         font-size: var(--_icon-font-size);
         font-variation-settings:
           "FILL" var(--_fill, 0),

@@ -6,12 +6,11 @@
       background var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects);
 
     /* Avoid "corner-full" to prevent animation jitter from large radius transitions. */
-    --_radius-full: calc(
-      min(
-        (var(--_block-size) - var(--_padding-block) * 2) / 2,
-        /* inner-block-size / 2 */ (var(--_inline-size) - var(--_padding-inline) * 2) / 2 /* inner-inline-size / 2 */
-      )
-    );
+    --_radius-full: calc(min((var(--_block-size) - var(--_padding-block) * 2) / 2,
+          /* inner-block-size / 2 */
+          (var(--_inline-size) - var(--_padding-inline) * 2) / 2
+          /* inner-inline-size / 2 */
+        ));
     --_btn-radius: var(--_radius-full);
     --_btn-radius-expand: var(--sys-shape-corner-small);
 
@@ -414,7 +413,7 @@
       .icon {
         -webkit-font-feature-settings: "liga";
         display: inline-block;
-        font-family: var(--font-icon);
+        font-family: var(--ref-typeface-symbol);
         font-size: var(--_icon-font-size);
         font-variation-settings:
           "FILL" var(--_fill, 0),
