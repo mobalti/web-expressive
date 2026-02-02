@@ -52,7 +52,7 @@
   initial-value: default;
 }
 
-@property --type {
+@property --shape {
   syntax: "round | square";
   inherits: false;
   initial-value: round;

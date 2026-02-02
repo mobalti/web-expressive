@@ -314,7 +314,7 @@
     --_padding-inline: 1rem;
 
     &:not(.round) {
-      @container style(--type: square) {
+      @container style(--shape: square) {
         --_btn-radius: var(--sys-shape-corner-medium);
       }
     }
@@ -336,7 +336,7 @@
       --_padding-inline: 0.75rem;
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-medium);
         }
       }
@@ -357,7 +357,7 @@
       --_padding-inline: 1.5rem;
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-large);
         }
       }
@@ -378,7 +378,7 @@
       --_padding-inline: 3rem;
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-extra-large);
         }
       }
@@ -399,7 +399,7 @@
       --_padding-inline: 4rem;
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-extra-large);
         }
       }
@@ -423,7 +423,7 @@
       --_padding-inline: 0.75rem;
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-medium);
         }
       }
@@ -444,7 +444,7 @@
       --_padding-inline: 1.5rem;
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-large);
         }
       }
@@ -465,7 +465,7 @@
       --_padding-inline: 3rem;
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-extra-large);
         }
       }
@@ -486,7 +486,7 @@
       --_padding-inline: 4rem;
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-extra-large);
         }
       }

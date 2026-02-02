@@ -488,7 +488,7 @@
     }
 
     &:not(.round) {
-      @container style(--type: square) {
+      @container style(--shape: square) {
         --_btn-radius: var(--sys-shape-corner-medium);
       }
     }
@@ -497,7 +497,7 @@
       --_btn-radius: var(--sys-shape-corner-medium);
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--_radius-full);
         }
       }
@@ -551,7 +551,7 @@
       }
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-medium);
         }
       }
@@ -560,7 +560,7 @@
         --_btn-radius: var(--sys-shape-corner-medium);
 
         &:not(.round) {
-          @container style(--type: square) {
+          @container style(--shape: square) {
             --_btn-radius: var(--_radius-full);
           }
         }
@@ -614,7 +614,7 @@
       }
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-large);
         }
       }
@@ -623,7 +623,7 @@
         --_btn-radius: var(--sys-shape-corner-large);
 
         &:not(.round) {
-          @container style(--type: square) {
+          @container style(--shape: square) {
             --_btn-radius: var(--_radius-full);
           }
         }
@@ -677,7 +677,7 @@
       }
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-extra-large);
         }
       }
@@ -686,7 +686,7 @@
         --_btn-radius: var(--sys-shape-corner-extra-large);
 
         &:not(.round) {
-          @container style(--type: square) {
+          @container style(--shape: square) {
             --_btn-radius: var(--_radius-full);
           }
         }
@@ -740,7 +740,7 @@
       }
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-extra-large);
         }
       }
@@ -749,7 +749,7 @@
         --_btn-radius: var(--sys-shape-corner-extra-large);
 
         &:not(.round) {
-          @container style(--type: square) {
+          @container style(--shape: square) {
             --_btn-radius: var(--_radius-full);
           }
         }
@@ -804,7 +804,7 @@
       }
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-medium);
         }
       }
@@ -813,7 +813,7 @@
         --_btn-radius: var(--sys-shape-corner-medium);
 
         &:not(.round) {
-          @container style(--type: square) {
+          @container style(--shape: square) {
             --_btn-radius: var(--_radius-full);
           }
         }
@@ -867,7 +867,7 @@
       }
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-large);
         }
       }
@@ -876,7 +876,7 @@
         --_btn-radius: var(--sys-shape-corner-large);
 
         &:not(.round) {
-          @container style(--type: square) {
+          @container style(--shape: square) {
             --_btn-radius: var(--_radius-full);
           }
         }
@@ -930,7 +930,7 @@
       }
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-extra-large);
         }
       }
@@ -939,7 +939,7 @@
         --_btn-radius: var(--sys-shape-corner-extra-large);
 
         &:not(.round) {
-          @container style(--type: square) {
+          @container style(--shape: square) {
             --_btn-radius: var(--_radius-full);
           }
         }
@@ -993,7 +993,7 @@
       }
 
       &:not(.round) {
-        @container style(--type: square) {
+        @container style(--shape: square) {
           --_btn-radius: var(--sys-shape-corner-extra-large);
         }
       }
@@ -1002,7 +1002,7 @@
         --_btn-radius: var(--sys-shape-corner-extra-large);
 
         &:not(.round) {
-          @container style(--type: square) {
+          @container style(--shape: square) {
             --_btn-radius: var(--_radius-full);
           }
         }
