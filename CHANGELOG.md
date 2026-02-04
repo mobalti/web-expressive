@@ -2,7 +2,7 @@
 
 ## 0.1.1
 
-- "Prevented label wrapping in `Button` and `Toggle button` components"
+- Prevented label wrapping in `Button` and `Toggle button` components
 
 ## 0.1.0
 
