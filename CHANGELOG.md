@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- "Prevented label wrapping in `Button` and `Toggle button` components"
+
 ## 0.1.0
 
 - Renamed shape tokens for consistency (`--type` → `--shape`)
