@@ -28,7 +28,7 @@
   "exports": {
     "./core.css": "./dist/core.css",
     "./components/*": "./dist/components/*",
-    "./palettes/*": "./dist/palettes/*"
+    "./schemes/*": "./dist/schemes/*"
   },
   "scripts": {
     "build": "vite build",
