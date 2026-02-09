@@ -6,7 +6,6 @@
  */
 
 @import "_global-tokens.css" layer(design-system.tokens);
-@import "_we-internal-icons.css" layer(design-system.tokens);
 
 @layer design-system {
   @layer tokens, reset, base, components;
