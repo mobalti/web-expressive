@@ -262,7 +262,7 @@
     --_padding-block: 0.25rem;
     --_padding-inline: 0.25rem;
 
-    &:not(.default) {
+    &:not(.normal) {
       @container style(--width: narrow) {
         --_block-size: 3rem;
         --_inline-size: 3rem;
@@ -311,7 +311,7 @@
       --_padding-inline: 0.5rem;
       --_icon-font-size: 1.25rem;
 
-      &:not(.default) {
+      &:not(.normal) {
         @container style(--width: narrow) {
           --_block-size: 3rem;
           --_inline-size: 3rem;
@@ -360,7 +360,7 @@
       --_padding-inline: 0rem;
       --_btn-radius-expand: var(--sys-shape-corner-medium);
 
-      &:not(.default) {
+      &:not(.normal) {
         @container style(--width: narrow) {
           --_block-size: 3.5rem;
           --_inline-size: 3.5rem;
@@ -409,7 +409,7 @@
       --_padding-inline: 0rem;
       --_btn-radius-expand: var(--sys-shape-corner-large);
 
-      &:not(.default) {
+      &:not(.normal) {
         @container style(--width: narrow) {
           --_block-size: 6rem;
           --_inline-size: 4rem;
@@ -458,7 +458,7 @@
       --_padding-inline: 0rem;
       --_btn-radius-expand: var(--sys-shape-corner-large);
 
-      &:not(.default) {
+      &:not(.normal) {
         @container style(--width: narrow) {
           --_block-size: 8.5rem;
           --_inline-size: 6.5rem;
@@ -508,7 +508,7 @@
       --_padding-inline: 0.5rem;
       --_icon-font-size: 1.25rem;
 
-      &:not(.default) {
+      &:not(.normal) {
         @container style(--width: narrow) {
           --_block-size: 3rem;
           --_inline-size: 3rem;
@@ -557,7 +557,7 @@
       --_padding-inline: 0rem;
       --_btn-radius-expand: var(--sys-shape-corner-medium);
 
-      &:not(.default) {
+      &:not(.normal) {
         @container style(--width: narrow) {
           --_block-size: 3.5rem;
           --_inline-size: 3.5rem;
@@ -606,7 +606,7 @@
       --_padding-inline: 0rem;
       --_btn-radius-expand: var(--sys-shape-corner-large);
 
-      &:not(.default) {
+      &:not(.normal) {
         @container style(--width: narrow) {
           --_block-size: 6rem;
           --_inline-size: 4rem;
@@ -655,7 +655,7 @@
       --_padding-inline: 0rem;
       --_btn-radius-expand: var(--sys-shape-corner-large);
 
-      &:not(.default) {
+      &:not(.normal) {
         @container style(--width: narrow) {
           --_block-size: 8.5rem;
           --_inline-size: 6.5rem;

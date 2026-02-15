@@ -47,9 +47,9 @@
 }
 
 @property --width {
-  syntax: "narrow | default | wide";
+  syntax: "narrow | normal | wide";
   inherits: false;
-  initial-value: default;
+  initial-value: normal;
 }
 
 @property --shape {
