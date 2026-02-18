@@ -298,8 +298,9 @@
       }
     }
 
-    /* style query for custom property it's supported on all chromium base browsers and safari but in Firefox still behind the flag you can use 
-   it as progressive enhancement to handle the resizing the button without the need of javascript check demo: link */
+    /* Style queries for custom properties are supported on all Chromium-based browsers and Safari. 
+       In Firefox, they are currently behind a flag. Use this as a progressive enhancement 
+       to handle button resizing. */
   }
 
   .btn {
