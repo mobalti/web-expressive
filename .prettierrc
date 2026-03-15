@@ -4,5 +4,6 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "printWidth": 150,
-  "htmlWhitespaceSensitivity": "css"
+  "htmlWhitespaceSensitivity": "css",
+  "plugins": ["prettier-plugin-css-order"]
 }
