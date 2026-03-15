@@ -307,26 +307,26 @@
     --_power: 5px;
 
     .btn {
-      padding-inline: calc(var(--_padding-inline) + var(--_delta) / 2);
       transition: padding-inline var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+      padding-inline: calc(var(--_padding-inline) + var(--_delta) / 2);
     }
 
     .icon-btn {
-      inline-size: calc(var(--_inline-size) + var(--_delta));
       transition: inline-size var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+      inline-size: calc(var(--_inline-size) + var(--_delta));
     }
 
     .toggle-btn {
       .label {
-        padding-inline: calc(var(--_padding-inline) + var(--_delta) / 2);
         transition: padding-inline var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+        padding-inline: calc(var(--_padding-inline) + var(--_delta) / 2);
       }
     }
 
     .toggle-icon-btn {
       .label {
-        inline-size: calc(var(--_inline-size) + var(--_delta));
         transition: inline-size var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+        inline-size: calc(var(--_inline-size) + var(--_delta));
       }
     }
 

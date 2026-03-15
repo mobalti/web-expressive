@@ -37,17 +37,17 @@
 
   @layer base {
     html {
-      color-scheme: light dark;
       scrollbar-color: var(--sys-color-outline) transparent;
+      color-scheme: light dark;
 
       ::selection {
-        color: var(--sys-color-on-secondary-container);
         background: var(--sys-color-secondary-container);
+        color: var(--sys-color-on-secondary-container);
       }
 
       ::search-text {
-        color: var(--sys-color-on-primary-container);
         background: var(--sys-color-primary-container);
+        color: var(--sys-color-on-primary-container);
       }
     }
 

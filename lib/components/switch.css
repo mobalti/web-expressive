@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "WE-Internal-Icons";
   font-style: normal;
   font-weight: 400;
   src: url("data:font/woff2;base64,d09GMgABAAAAAAScAA4AAAAACKwAAAREAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHIGYD9TVEFUcAB8EQgKhSiEKAsYAAE2AiQDGAQgBYR6ByAMBxsgB8gEHvh30z83CVRCYSqZOXUbVYUZrWPt3Jztif9Vnqj95fr9VkX7p1HFGyFCTc/QxSWLeswkSAxRLNHaSWoXUj+FaGf31YFXEEAwwwlDypicV4bZ45zjw4wCb/kr1MzyNDcSGFAtoRAgQ2AEAEYmsxLdMLJ5A0YMTewShRALIhggmu5Fkf1iBwZ0PUOwkIVEht/sUuMmW2GhDT/aN+8pmn4ClJE4liND9sv+hMa4CSBwSdDDqY1Ampydl1fnfVtJaoYQiJbW2YuEhDS/sWmOkJGxMpw+BBL1S0hiB0hPhiVKQqUPixEQwfMgPVkozGIW5KlALiRT2psQ60UX9lIjGrXU04SHFmZ/kffN29+8p+sLZTByX6V/pZ/UT+jH9CP6IX3/oHv9ovtFbm+eXi8Quo6FCFV+L7JjPH9I9KstVNjRsy1gjlk+ReY/bjSNNpkCFaPZbFUDLMYah73ZUFUVYhcOU21FaXljcWVJZUVpeWVxWXlRhXNTx4cTKzs5dXO7tDz4WAcXvKlNixXt6uZOyWC1rV41dMWMBQdVgypZZFUJls1SZDBbbcXSUFnfq1hwbuoQYmVfB2BFW8XmTiFWCnZoWuxUB20UKzs6OkbeG5s2dAXX+psr2tvbI9vbWdH2pt/q/2zxzdqb9dvfevtm7Rs7627W2q87Z7D0t6++2nDpks+3Af2N+Z999tln9j+J/8xlx8Yuqspea3dkr1lUeWxsWfzK7rPCyipDMuzv2mIdQ2eYRqUsGVaTmdCYsb1j3bqhDSanlh2faDdklFcvCFvfHe/l/rkvPvLkeP58KxvvZftI68gpl6fEW+PxXrafzD6xue3ve97Hbtt4/QAtD2f43szlc/OFv87c63rvrzMXzv917k7XO3+dO5e/5vHS7V23P162Zt2jpTu67ni8hK/Nd/4vn220G5MvxF86cyUyfERj2DptabfazoXdPWNyc5OLbk374M/zvgqjw5i6J+rS6e0TYvrlj3YPmtUj883Br1c1TvnEDsCTPfrd7z+mHHtzuiXhn0DpiynwzY68Ad6Zeov+t35Wfld+ARgfNX3o7GsbkP363/rf8rsdJvVqIft5k0MCQiIFL5NvIZOYycqqOMHQqWeSeAinvhmfEkSlZogFkUoQJiarJMwiRiVTxtcZhbRuKgP92KA0kkSOQ/yZXGlEJQgmRiXRBy0pY/puMfjB4kBQ/3evhBFBK3MooIVZeHHioZJ6mmkkiTkUViSaqS2UaJSeWkQ9NmbhpI56JgNB10M+TuYkZtHcrLuUhXipoYXIZlPIXLsHhj7qqWMCJbFG5iLvZBYVneyzud9uwYdGGBOJxUrUkLs0brfGmdImhvkq47FRSCE24pc6I7Hi5dWn00IrCxuzQybbPW0ljEg0bLTQQiMenNPII490JqKhkcqRzVm6uGZvFWZPDfMGhol/6wl99qOsfSD0tTeUrQAAAA==")
     format("woff2");
+  font-family: "WE-Internal-Icons";
 }
 
 @layer design-system.components {
@@ -25,23 +25,23 @@
     --_handle-shape-size: 2.5rem;
 
     --isLTR: 1;
-
-    &:dir(rtl) {
-      --isLTR: -1;
-    }
-
-    appearance: none;
-    inline-size: 3.25rem;
-    block-size: 3rem;
-    border-radius: 6.25rem;
-    cursor: pointer;
     display: inline-grid;
     place-items: center;
+
+    appearance: none;
+    cursor: pointer;
     outline: none;
+    border-radius: 6.25rem;
+    inline-size: 3.25rem;
+    block-size: 3rem;
 
     user-select: none;
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
+
+    &:dir(rtl) {
+      --isLTR: -1;
+    }
 
     &.icon {
       --_icon-content: "\e5cd" / "close";
@@ -145,14 +145,14 @@
 
     &::before {
       grid-area: 1/1;
-      content: "";
+      outline: var(--_outline-width) solid var(--sys-color-secondary);
+      outline-offset: 2px;
+      border: var(--_border);
       border-radius: 6.25rem;
       background: var(--_bg);
       inline-size: 3.25rem;
       block-size: 2rem;
-      border: var(--_border);
-      outline: var(--_outline-width) solid var(--sys-color-secondary);
-      outline-offset: 2px;
+      content: "";
 
       /* motionOK */
       @media (prefers-reduced-motion: no-preference) {
@@ -161,35 +161,35 @@
     }
 
     &::after {
-      background:
-        linear-gradient(var(--_target-color), var(--_target-color)) padding-box,
-        linear-gradient(var(--_state), var(--_state)) border-box;
-      block-size: var(--_handle-shape-size);
-      border-radius: 6.25rem;
-      border: var(--_padding) solid transparent;
-      color: var(--_icon-color);
-      content: var(--_icon-content);
       display: inline-grid;
-      font-family: var(--we-icon-font-family);
-      font-size: 1rem;
 
       grid-area: 1/1;
-      inline-size: var(--_handle-shape-size);
       place-items: center;
       translate: calc(var(--_translate-x) * var(--isLTR)) 0px;
 
-      -webkit-font-feature-settings: "liga";
+      transition:
+        translate var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
+        border-width var(--sys-motion-spring-default-effects-duration) var(--sys-motion-spring-default-effects);
+      border: var(--_padding) solid transparent;
+      border-radius: 6.25rem;
+      background:
+        linear-gradient(var(--_target-color), var(--_target-color)) padding-box,
+        linear-gradient(var(--_state), var(--_state)) border-box;
+      inline-size: var(--_handle-shape-size);
+      block-size: var(--_handle-shape-size);
+      content: var(--_icon-content);
+      color: var(--_icon-color);
+      font-size: 1rem;
+      line-height: 1;
+      font-family: var(--we-icon-font-family);
       font-variation-settings:
         "FILL" 1,
         "wght" 400,
         "GRAD" 0,
         "opsz" 24;
-      line-height: 1;
-      white-space: nowrap;
 
-      transition:
-        translate var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
-        border-width var(--sys-motion-spring-default-effects-duration) var(--sys-motion-spring-default-effects);
+      -webkit-font-feature-settings: "liga";
+      white-space: nowrap;
     }
   }
 }

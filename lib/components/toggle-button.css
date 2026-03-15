@@ -20,8 +20,8 @@
     --_outline-width: 0px;
 
     display: inline-grid;
-    inline-size: fit-content;
     place-items: center;
+    inline-size: fit-content;
 
     &:has(.input:hover) {
       --_bg: var(--sys-color-surface-container);
@@ -364,68 +364,68 @@
     }
 
     .input {
+      grid-area: 1/1;
       -moz-appearance: none;
       -webkit-appearance: none;
       appearance: none;
-      background: none;
-      block-size: 100%;
-      border: none;
-      grid-area: 1/1;
-      inline-size: 100%;
       outline: none;
+      border: none;
+      background: none;
+      inline-size: 100%;
+      block-size: 100%;
     }
 
     .label {
       -webkit-tap-highlight-color: transparent;
       -webkit-touch-callout: none;
-      align-items: center;
-      background: transparent;
-      block-size: var(--_block-size);
-      border: none;
-      color: var(--_on-bg);
-      cursor: var(--_cursor);
       display: inline-flex;
-      font: var(--_font);
-      gap: var(--_gap);
-      grid-area: 1/1;
-      inline-size: fit-content;
-      isolation: isolate;
-      justify-content: center;
-      outline: none;
-      padding-inline: var(--_padding-inline);
       position: relative;
-      text-decoration: none;
+      grid-area: 1/1;
+      justify-content: center;
+      align-items: center;
+      gap: var(--_gap);
+      cursor: var(--_cursor);
+      outline: none;
+      border: none;
+      background: transparent;
+      isolation: isolate;
+      padding-inline: var(--_padding-inline);
+      inline-size: fit-content;
+      block-size: var(--_block-size);
+      color: var(--_on-bg);
+      font: var(--_font);
       user-select: none;
+      text-decoration: none;
       white-space: nowrap;
 
       .icon {
-        -webkit-font-feature-settings: "liga";
-        font-feature-settings: "liga";
         display: inline-block;
-        font-family: var(--ref-typeface-symbols);
+        grid-area: 1/1;
         font-size: var(--_icon-font-size);
+        line-height: 1;
+        font-family: var(--ref-typeface-symbols);
         font-variation-settings:
           "FILL" var(--_fill, 0),
           "wght" 400,
           "GRAD" 0,
           "opsz" 24;
-        grid-area: 1/1;
-        line-height: 1;
+        -webkit-font-feature-settings: "liga";
+        font-feature-settings: "liga";
         white-space: nowrap;
       }
 
       &::before {
-        background: var(--_bg);
-        border-radius: var(--_corner);
-        border: var(--_border);
-        box-shadow: var(--_shadow);
-        content: "";
-        inset: var(--_inner-padding) 0px;
-        outline-offset: 2px;
-        outline: var(--_outline-width) solid var(--sys-color-secondary);
         position: absolute;
-        transition: var(--_motion);
         z-index: -1;
+        transition: var(--_motion);
+        inset: var(--_inner-padding) 0px;
+        outline: var(--_outline-width) solid var(--sys-color-secondary);
+        outline-offset: 2px;
+        box-shadow: var(--_shadow);
+        border: var(--_border);
+        border-radius: var(--_corner);
+        background: var(--_bg);
+        content: "";
 
         /* motionOK */
         @media (prefers-reduced-motion: no-preference) {
@@ -436,13 +436,13 @@
       }
 
       &::after {
-        background: var(--_state);
-        border-radius: var(--_corner);
-        content: "";
-        inset: var(--_inner-padding) 0px;
         position: absolute;
-        transition: var(--_motion);
         z-index: -1;
+        transition: var(--_motion);
+        inset: var(--_inner-padding) 0px;
+        border-radius: var(--_corner);
+        background: var(--_state);
+        content: "";
       }
     }
   }
