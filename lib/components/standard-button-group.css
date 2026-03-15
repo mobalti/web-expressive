@@ -1,0 +1,413 @@
+@layer design-system.groups {
+  .standard-btn-group {
+    --size: sm;
+    --_gap: 0.25rem;
+
+    display: flex;
+    gap: var(--_gap);
+
+    &:not(.normal) {
+      @container style(--width: narrow) {
+        --width: narrow;
+      }
+
+      @container style(--width: wide) {
+        --width: wide;
+      }
+    }
+
+    &:not(.round) {
+      @container style(--shape: square) {
+        --shape: square;
+      }
+    }
+
+    &.narrow {
+      --width: narrow;
+    }
+
+    &.wide {
+      --width: wide;
+    }
+
+    &.square {
+      --shape: square;
+    }
+
+    &:not(.sm) {
+      &.xs {
+        --size: xs;
+        --_gap: 0.125rem;
+
+        &:not(.normal) {
+          @container style(--width: narrow) {
+            --width: narrow;
+          }
+
+          @container style(--width: wide) {
+            --width: wide;
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.narrow {
+          --width: narrow;
+        }
+
+        &.wide {
+          --width: wide;
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      &.md {
+        --size: md;
+        --_gap: 0.5rem;
+
+        &:not(.normal) {
+          @container style(--width: narrow) {
+            --width: narrow;
+          }
+
+          @container style(--width: wide) {
+            --width: wide;
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.narrow {
+          --width: narrow;
+        }
+
+        &.wide {
+          --width: wide;
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      &.lg {
+        --size: lg;
+        --_gap: 0.5rem;
+
+        &:not(.normal) {
+          @container style(--width: narrow) {
+            --width: narrow;
+          }
+
+          @container style(--width: wide) {
+            --width: wide;
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.narrow {
+          --width: narrow;
+        }
+
+        &.wide {
+          --width: wide;
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      &.xl {
+        --size: xl;
+        --_gap: 0.5rem;
+
+        &:not(.normal) {
+          @container style(--width: narrow) {
+            --width: narrow;
+          }
+
+          @container style(--width: wide) {
+            --width: wide;
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.narrow {
+          --width: narrow;
+        }
+
+        &.wide {
+          --width: wide;
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      @container style(--size: xs) {
+        --size: xs;
+        --_gap: 0.125rem;
+
+        &:not(.normal) {
+          @container style(--width: narrow) {
+            --width: narrow;
+          }
+
+          @container style(--width: wide) {
+            --width: wide;
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.narrow {
+          --width: narrow;
+        }
+
+        &.wide {
+          --width: wide;
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      @container style(--size: md) {
+        --size: md;
+        --_gap: 0.5rem;
+
+        &:not(.normal) {
+          @container style(--width: narrow) {
+            --width: narrow;
+          }
+
+          @container style(--width: wide) {
+            --width: wide;
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.narrow {
+          --width: narrow;
+        }
+
+        &.wide {
+          --width: wide;
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      @container style(--size: lg) {
+        --size: lg;
+        --_gap: 0.5rem;
+
+        &:not(.normal) {
+          @container style(--width: narrow) {
+            --width: narrow;
+          }
+
+          @container style(--width: wide) {
+            --width: wide;
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.narrow {
+          --width: narrow;
+        }
+
+        &.wide {
+          --width: wide;
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      @container style(--size: xl) {
+        --size: xl;
+        --_gap: 0.5rem;
+
+        &:not(.normal) {
+          @container style(--width: narrow) {
+            --width: narrow;
+          }
+
+          @container style(--width: wide) {
+            --width: wide;
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.narrow {
+          --width: narrow;
+        }
+
+        &.wide {
+          --width: wide;
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+    }
+  }
+
+  /* interaction between children */
+  .standard-btn-group {
+    --_delta: 0px;
+    --_power: 5px;
+
+    .btn {
+      padding-inline: calc(var(--_padding-inline) + var(--_delta) / 2);
+      transition: padding-inline var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+    }
+
+    .icon-btn {
+      inline-size: calc(var(--_inline-size) + var(--_delta));
+      transition: inline-size var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+    }
+
+    .toggle-btn {
+      .label {
+        padding-inline: calc(var(--_padding-inline) + var(--_delta) / 2);
+        transition: padding-inline var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+      }
+    }
+
+    .toggle-icon-btn {
+      .label {
+        inline-size: calc(var(--_inline-size) + var(--_delta));
+        transition: inline-size var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+      }
+    }
+
+    > :is(.btn, .icon-btn):not(:only-child) {
+      &:active {
+        --_delta: var(--_power);
+      }
+
+      &:active + & {
+        --_delta: calc((var(--_power) / 2) * -1);
+      }
+
+      &:has(+ &:active) {
+        --_delta: calc((var(--_power) / 2) * -1);
+      }
+
+      &:first-child:active + & {
+        --_delta: calc(var(--_power) * -1);
+      }
+
+      &:has(+ &:last-child:active) {
+        --_delta: calc(var(--_power) * -1);
+      }
+
+      /* mixing */
+
+      :is(.toggle-btn, .toggle-icon-btn):has(.input:active) + & {
+        --_delta: calc((var(--_power) / 2) * -1);
+      }
+
+      &:has(+ :is(.toggle-btn, .toggle-icon-btn) > .input:active) {
+        --_delta: calc((var(--_power) / 2) * -1);
+      }
+
+      :is(.toggle-btn, .toggle-icon-btn):first-child:has(.input:active) + & {
+        --_delta: calc(var(--_power) * -1);
+      }
+
+      &:has(+ :is(.toggle-btn, .toggle-icon-btn):last-child > .input:active) {
+        --_delta: calc(var(--_power) * -1);
+      }
+    }
+
+    > :is(.toggle-btn, .toggle-icon-btn):not(:only-child) {
+      &:has(.input:active) {
+        --_delta: var(--_power);
+      }
+
+      &:has(.input:active) + & {
+        --_delta: calc((var(--_power) / 2) * -1);
+      }
+
+      &:has(+ & > .input:active) {
+        --_delta: calc((var(--_power) / 2) * -1);
+      }
+
+      &:first-child:has(.input:active) + & {
+        --_delta: calc(var(--_power) * -1);
+      }
+
+      &:has(+ &:last-child > .input:active) {
+        --_delta: calc(var(--_power) * -1);
+      }
+
+      /* mixing */
+
+      :is(.btn, .icon-btn):active + & {
+        --_delta: calc((var(--_power) / 2) * -1);
+      }
+
+      &:has(+ :is(.btn, .icon-btn):active) {
+        --_delta: calc((var(--_power) / 2) * -1);
+      }
+
+      &:has(+ :is(.btn, .icon-btn):last-child:active) {
+        --_delta: calc(var(--_power) * -1);
+      }
+
+      :is(.btn, .icon-btn):first-child:active + & {
+        --_delta: calc(var(--_power) * -1);
+      }
+    }
+  }
+}

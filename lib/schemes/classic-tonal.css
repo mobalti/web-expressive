@@ -1,8 +1,8 @@
-/* Seed: #3a5e98 */
+/* Source: #3a5e98 */
 
 @layer design-system.tokens {
   html,
-  [data-theme="blue-tonal"] {
+  [data-theme="classic-tonal"] {
     --sys-color-primary: light-dark(#415f91, #aac7ff);
     --sys-color-surface-tint: light-dark(#415f91, #aac7ff);
     --sys-color-on-primary: light-dark(#ffffff, #0b305f);

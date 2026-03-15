@@ -1,8 +1,8 @@
-/* Seed: #3a5e98 */
+/* Source: #3a5e98 */
 
 @layer design-system.tokens {
   html,
-  [data-theme="blue-expressive"] {
+  [data-theme="classic-expressive"] {
     --sys-color-primary: light-dark(#396932, #9fd491);
     --sys-color-surface-tint: light-dark(#396932, #9fd491);
     --sys-color-on-primary: light-dark(#ffffff, #073907);

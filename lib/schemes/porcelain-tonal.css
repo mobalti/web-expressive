@@ -1,8 +1,8 @@
-/* Seed: #6f5d00 */
+/* Source: #6f5d00 */
 
 @layer design-system.tokens {
   html,
-  [data-theme="citron-tonal"] {
+  [data-theme="porcelain-tonal"] {
     --sys-color-primary: light-dark(#6e5d0e, #dcc66e);
     --sys-color-surface-tint: light-dark(#6e5d0e, #dcc66e);
     --sys-color-on-primary: light-dark(#ffffff, #3a3000);

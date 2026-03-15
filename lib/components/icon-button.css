@@ -3,13 +3,17 @@
     --_shadow: none;
     --_motion: border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
 
-    /* Avoid "corner-full" to prevent animation jitter from large radius transitions. */
+    /* Radius-full is calculated at the component level based on 
+       the block and inline size instead of using the "corner-full" 
+       to ensure smooth border-radius transitions. */
+
     --_radius-full: calc(
       min(
-        (var(--_block-size) - var(--_padding-block) * 2) / 2,
-        /* inner-block-size / 2 */ (var(--_inline-size) - var(--_padding-inline) * 2) / 2 /* inner-inline-size / 2 */
+        /* inner-block-size / 2 */ (var(--_block-size) - var(--_padding-block) * 2) / 2,
+        /* inner-inline-size / 2 */ (var(--_inline-size) - var(--_padding-inline) * 2) / 2
       )
     );
+
     /* Radius is exactly half of the shorter side. */
     --_btn-radius: var(--_radius-full);
     --_btn-radius-expand: var(--sys-shape-corner-small);
@@ -25,7 +29,6 @@
 
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    background-color: transparent;
     background: transparent;
     block-size: var(--_block-size);
     border: none;
@@ -45,8 +48,9 @@
 
     .icon {
       -webkit-font-feature-settings: "liga";
+      font-feature-settings: "liga";
       display: inline-block;
-      font-family: var(--ref-typeface-symbol);
+      font-family: var(--ref-typeface-symbols);
       font-size: var(--_icon-font-size);
       font-variation-settings:
         "FILL" 1,

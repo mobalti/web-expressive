@@ -5,7 +5,7 @@
       border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
       background var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects);
 
-    /* Avoid "corner-full" to prevent animation jitter from large radius transitions. */
+    /* Radius-full is calculated at the component level based on the block size instead of using the "corner-full" to ensure smooth border-radius transitions. */
     --_radius-full: calc((var(--_block-size) - var(--_inner-padding) * 2) / 2);
     --_btn-radius: var(--_radius-full);
 
@@ -378,6 +378,7 @@
     .label {
       -webkit-tap-highlight-color: transparent;
       -webkit-touch-callout: none;
+      align-items: center;
       background: transparent;
       block-size: var(--_block-size);
       border: none;
@@ -389,9 +390,9 @@
       grid-area: 1/1;
       inline-size: fit-content;
       isolation: isolate;
+      justify-content: center;
       outline: none;
       padding-inline: var(--_padding-inline);
-      place-items: center;
       position: relative;
       text-decoration: none;
       user-select: none;
@@ -399,8 +400,9 @@
 
       .icon {
         -webkit-font-feature-settings: "liga";
+        font-feature-settings: "liga";
         display: inline-block;
-        font-family: var(--ref-typeface-symbol);
+        font-family: var(--ref-typeface-symbols);
         font-size: var(--_icon-font-size);
         font-variation-settings:
           "FILL" var(--_fill, 0),

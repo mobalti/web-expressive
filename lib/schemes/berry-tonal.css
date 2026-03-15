@@ -1,8 +1,8 @@
-/* Seed: #924759 */
+/* Source: #924759 */
 
 @layer design-system.tokens {
   html,
-  [data-theme="rose-tonal"] {
+  [data-theme="berry-tonal"] {
     --sys-color-primary: light-dark(#8d4959, #ffb1c0);
     --sys-color-surface-tint: light-dark(#8d4959, #ffb1c0);
     --sys-color-on-primary: light-dark(#ffffff, #551d2c);

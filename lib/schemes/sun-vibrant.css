@@ -1,8 +1,8 @@
-/* Seed: #8e4e1c */
+/* Source: #8e4e1c */
 
 @layer design-system.tokens {
   html,
-  [data-theme="orange-vibrant"] {
+  [data-theme="sun-vibrant"] {
     --sys-color-primary: light-dark(#964900, #ffb786);
     --sys-color-surface-tint: light-dark(#964900, #ffb786);
     --sys-color-on-primary: light-dark(#ffffff, #502400);

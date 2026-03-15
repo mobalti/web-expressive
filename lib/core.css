@@ -8,7 +8,7 @@
 @import "_global-tokens.css" layer(design-system.tokens);
 
 @layer design-system {
-  @layer tokens, reset, base, components;
+  @layer tokens, reset, base, components, groups;
 
   @layer reset {
     *,
@@ -42,7 +42,12 @@
 
       ::selection {
         color: var(--sys-color-on-secondary-container);
-        background-color: var(--sys-color-secondary-container);
+        background: var(--sys-color-secondary-container);
+      }
+
+      ::search-text {
+        color: var(--sys-color-on-primary-container);
+        background: var(--sys-color-primary-container);
       }
     }
 

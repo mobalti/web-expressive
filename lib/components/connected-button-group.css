@@ -1,0 +1,223 @@
+@layer design-system.groups {
+  .connected-btn-group {
+    --size: sm;
+
+    &:not(.round) {
+      @container style(--shape: square) {
+        --shape: square;
+      }
+    }
+
+    &.square {
+      --shape: square;
+    }
+
+    &:not(.sm) {
+      &.xs {
+        --size: xs;
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      &.md {
+        --size: md;
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      &.lg {
+        --size: lg;
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      &.xl {
+        --size: xl;
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      @container style(--size: xs) {
+        --size: xs;
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      @container style(--size: md) {
+        --size: md;
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      @container style(--size: lg) {
+        --size: lg;
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+
+      @container style(--size: xl) {
+        --size: xl;
+
+        &:not(.round) {
+          @container style(--shape: square) {
+            --shape: square;
+          }
+        }
+
+        &.square {
+          --shape: square;
+        }
+      }
+    }
+  }
+
+  .connected-btn-group {
+    display: grid;
+    grid-auto-flow: column;
+    inline-size: 100%;
+    gap: 0.125rem;
+    min-inline-size: fit-content;
+
+    .toggle-btn {
+      inline-size: 100%;
+      --_edge-corner: var(--_radius-full);
+
+      --_corner: var(--_inner-corner);
+      --_inner-corner: var(--sys-shape-corner-small);
+
+      &:not(.round) {
+        @container style(--shape: square) {
+          --_edge-corner: var(--sys-shape-corner-small);
+        }
+      }
+
+      &.square {
+        --_edge-corner: var(--sys-shape-corner-small);
+      }
+
+      &:not(.sm) {
+        &.xs {
+          --_inner-corner: var(--sys-shape-corner-extra-small);
+
+          &.square {
+            --_edge-corner: var(--sys-shape-corner-extra-small);
+          }
+        }
+
+        &.md {
+          --_inner-corner: var(--sys-shape-corner-small);
+
+          &:not(.round) {
+            @container style(--shape: square) {
+              --_edge-corner: var(--sys-shape-corner-small);
+            }
+          }
+
+          &.square {
+            --_edge-corner: var(--sys-shape-corner-small);
+          }
+        }
+
+        &.lg {
+          --_inner-corner: var(--sys-shape-corner-large);
+
+          &:not(.round) {
+            @container style(--shape: square) {
+              --_edge-corner: var(--sys-shape-corner-large);
+            }
+          }
+
+          &.square {
+            --_edge-corner: var(--sys-shape-corner-large);
+          }
+        }
+
+        &.xl {
+          --_inner-corner: var(--sys-shape-corner-large-increased);
+
+          &:not(.round) {
+            @container style(--shape: square) {
+              --_edge-corner: var(--sys-shape-corner-large-increased);
+            }
+          }
+
+          &.square {
+            --_edge-corner: var(--sys-shape-corner-large-increased);
+          }
+        }
+      }
+
+      &:has(.input:checked) {
+        --_corner: var(--_radius-full);
+      }
+
+      &:is(:last-child) {
+        --_corner: var(--_inner-corner) var(--_edge-corner) var(--_edge-corner) var(--_inner-corner);
+      }
+
+      &:is(:first-child) {
+        --_corner: var(--_edge-corner) var(--_inner-corner) var(--_inner-corner) var(--_edge-corner);
+      }
+
+      .label {
+        inline-size: 100%;
+      }
+    }
+  }
+}

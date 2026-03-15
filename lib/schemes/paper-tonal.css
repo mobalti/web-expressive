@@ -1,8 +1,8 @@
-/* Seed: #6a5294 */
+/* Source: #6a5294 */
 
 @layer design-system.tokens {
   html,
-  [data-theme="violet-tonal"] {
+  [data-theme="paper-tonal"] {
     --sys-color-primary: light-dark(#69548d, #d4bbfc);
     --sys-color-surface-tint: light-dark(#69548d, #d4bbfc);
     --sys-color-on-primary: light-dark(#ffffff, #39255b);

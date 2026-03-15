@@ -1,8 +1,8 @@
-/* Seed: #8e4e1c */
+/* Source: #8e4e1c */
 
 @layer design-system.tokens {
   html,
-  [data-theme="orange-expressive"] {
+  [data-theme="sun-expressive"] {
     --sys-color-primary: light-dark(#5f5598, #c9bfff);
     --sys-color-surface-tint: light-dark(#5f5598, #c9bfff);
     --sys-color-on-primary: light-dark(#ffffff, #302666);
