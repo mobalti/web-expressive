@@ -44,11 +44,6 @@
         background: var(--sys-color-secondary-container);
         color: var(--sys-color-on-secondary-container);
       }
-
-      ::search-text {
-        background: var(--sys-color-primary-container);
-        color: var(--sys-color-on-primary-container);
-      }
     }
 
     body {
