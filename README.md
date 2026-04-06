@@ -57,6 +57,8 @@ Import the styles you need into your global stylesheet:
 @import "web-expressive/components/button.css";
 ```
 
+Refer to [Imports](docs/reference/imports.md) for the full list of npm and CDN paths.
+
 ## Overview
 
 Web Expressive is modular. Core foundations, schemes, and components ship as separate layers, so you can import the full toolkit or only the parts you need.
@@ -80,5 +82,6 @@ If you are starting from scratch, the usual path is:
 **Reference**
 
 - [Tokens](docs/reference/tokens.md)
+- [Imports](docs/reference/imports.md)
 - [Available schemes](https://unpkg.com/browse/web-expressive/dist/schemes/)
 - [Components API](docs/reference/components.md)
