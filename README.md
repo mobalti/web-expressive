@@ -52,9 +52,9 @@ npm install web-expressive
 Import the styles you need into your global stylesheet:
 
 ```css
-@import "web-expressive/dist/core.css";
-@import "web-expressive/dist/schemes/blue-tonal.css";
-@import "web-expressive/dist/components/button.css";
+@import "web-expressive/core.css";
+@import "web-expressive/schemes/classic-tonal.css";
+@import "web-expressive/components/button.css";
 ```
 
 ## Overview
