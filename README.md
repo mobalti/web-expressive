@@ -64,11 +64,11 @@ Web Expressive is modular. Core foundations, schemes, and components ship as sep
 If you are starting from scratch, the usual path is:
 
 1. Load `core.css`.
-   Minimal reset and global system tokens for spacing, shape corners, typography, and elevation. Color tokens and abstract shape tokens are not included here. Abstract shape tokens can be imported individually. Refer to [Tokens](./tokens.md) for the full reference.
+   Minimal reset and global system tokens for spacing, shape corners, typography, and elevation. Color tokens and abstract shape tokens are not included here. Abstract shape tokens can be imported individually. Refer to [Tokens](docs/reference/tokens.md) for the full reference.
 2. Load one or more schemes.
    Material 3 color roles: primary, secondary, tertiary, surface, error, and `on-*` variants. Each scheme includes light and dark mode. Multiple schemes can coexist. Browse the available files in [`dist/schemes/`](https://unpkg.com/browse/web-expressive/dist/schemes/) or preview them in the [Schemes showcase](https://web-expressive-schemes.netlify.app/).
 3. Add components as needed.
-   Import only the components you need from `dist/components/`, or build your own with the system tokens. Use [Components API](./components.md) for component markup and modifiers.
+   Import only the components you need from `dist/components/`, or build your own with the system tokens. Use [Components API](docs/reference/components.md) for component markup and modifiers.
 
 ## Resources
 
