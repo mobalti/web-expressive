@@ -1,5 +1,15 @@
 # Changelog
 
+## Notes
+
+Entries before v0.5.1 were not consistently tracked. This changelog is complete from v0.5.1 onward.
+
+## 0.5.1
+
+- Add VS Code snippets extension.
+- Restructure repo layout (docs, examples, extensions).
+- Refresh documentation and references.
+
 ## 0.1.1
 
 - Prevented label wrapping in `Button` and `Toggle button` components
