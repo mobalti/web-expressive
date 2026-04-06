@@ -1,0 +1,44 @@
+{
+  "name": "web-expressive-snippets",
+  "displayName": "Web Expressive Snippets",
+  "description": "HTML and CSS snippets for the Web Expressive toolkit",
+  "version": "0.1.0",
+  "icon": "icon-128.png",
+  "publisher": "web-expressive",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "author": "Web Expressive Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mobalti/web-expressive"
+  },
+  "homepage": "https://github.com/mobalti/web-expressive/tree/main/extensions/vscode",
+  "bugs": {
+    "url": "https://github.com/mobalti/web-expressive/issues"
+  },
+  "keywords": [
+    "css",
+    "html",
+    "snippet",
+    "material",
+    "design",
+    "expressive"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/css.json"
+      }
+    ]
+  }
+}

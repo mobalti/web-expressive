@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive | Connected button group</title>
+    <meta name="description"
+        content="Connected button group component from Web Expressive, built with standard HTML and CSS for framework-agnostic use." />
+    <link rel="stylesheet" href="//unpkg.com/web-expressive@0.5.0/dist/core.css" />
+    <link rel="stylesheet" href="//unpkg.com/web-expressive@0.5.0/dist/schemes/classic-tonal.css" />
+    <link rel="stylesheet" href="//unpkg.com/web-expressive@0.5.0/dist/components/toggle-button.css" />
+    <link rel="stylesheet" href="//unpkg.com/web-expressive@0.5.0/dist/components/connected-button-group.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=alarm,bluetooth,do_not_disturb_on,flashlight_on,wifi&display=block" />
+    <style>
+        /* Showcase layout only, not part of Web Expressive and not required for use. */
+        .section {
+            display: grid;
+            place-items: center;
+            padding: 2rem;
+            min-block-size: 100svb;
+        }
+
+        .fieldset {
+            border: none;
+            padding: 0;
+
+            /* window-expanded-up */
+            @media (width >=840px) {
+                --size: lg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Web Expressive
+        GitHub: https://github.com/mobalti/web-expressive
+    -->
+    <section class="section">
+        <fieldset class="fieldset" aria-label="Select drink size">
+            <div class="connected-btn-group">
+                <div class="toggle-btn">
+                    <input type="radio" checked name="size" class="input" id="8-oz" />
+                    <label class="label" for="8-oz">8 oz</label>
+                </div>
+                <div class="toggle-btn">
+                    <input type="radio" name="size" class="input" id="12-oz" />
+                    <label class="label" for="12-oz">12 oz</label>
+                </div>
+                <div class="toggle-btn">
+                    <input type="radio" name="size" class="input" id="16-oz" />
+                    <label class="label" for="16-oz">16 oz</label>
+                </div>
+                <div class="toggle-btn">
+                    <input type="radio" name="size" class="input" id="20-oz" />
+                    <label class="label" for="20-oz">20 oz</label>
+                </div>
+            </div>
+        </fieldset>
+    </section>
+</body>
+
+</html>

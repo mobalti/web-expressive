@@ -1,0 +1,1078 @@
+{
+  "Display large": {
+    "prefix": "--sys-typescale-display-large",
+    "body": ["var(--sys-typescale-display-large)"],
+    "description": "Common use cases: Hero sections. Huge impact text for landing page titles."
+  },
+  "Emphasized display large": {
+    "prefix": "--sys-typescale-emphasized-display-large",
+    "body": ["var(--sys-typescale-emphasized-display-large)"],
+    "description": "Common use cases: Hero sections. Huge impact text for landing page titles. (Emphasized)"
+  },
+  "Display medium": {
+    "prefix": "--sys-typescale-display-medium",
+    "body": ["var(--sys-typescale-display-medium)"],
+    "description": "Common use cases: Section splashes. Large, expressive headers for high-impact content."
+  },
+  "Emphasized display medium": {
+    "prefix": "--sys-typescale-emphasized-display-medium",
+    "body": ["var(--sys-typescale-emphasized-display-medium)"],
+    "description": "Common use cases: Section splashes. Large, expressive headers for high-impact content. (Emphasized)"
+  },
+  "Display small": {
+    "prefix": "--sys-typescale-display-small",
+    "body": ["var(--sys-typescale-display-small)"],
+    "description": "Common use cases: Feature intros. Strong headline for secondary hero elements."
+  },
+  "Emphasized display small": {
+    "prefix": "--sys-typescale-emphasized-display-small",
+    "body": ["var(--sys-typescale-emphasized-display-small)"],
+    "description": "Common use cases: Feature intros. Strong headline for secondary hero elements. (Emphasized)"
+  },
+  "Headline large": {
+    "prefix": "--sys-typescale-headline-large",
+    "body": ["var(--sys-typescale-headline-large)"],
+    "description": "Common use cases: H1 elements. Primary page headings and major article titles."
+  },
+  "Emphasized headline large": {
+    "prefix": "--sys-typescale-emphasized-headline-large",
+    "body": ["var(--sys-typescale-emphasized-headline-large)"],
+    "description": "Common use cases: H1 elements. Primary page headings and major article titles. (Emphasized)"
+  },
+  "Headline medium": {
+    "prefix": "--sys-typescale-headline-medium",
+    "body": ["var(--sys-typescale-headline-medium)"],
+    "description": "Common use cases: H2 elements. Secondary section headings."
+  },
+  "Emphasized headline medium": {
+    "prefix": "--sys-typescale-emphasized-headline-medium",
+    "body": ["var(--sys-typescale-emphasized-headline-medium)"],
+    "description": "Common use cases: H2 elements. Secondary section headings. (Emphasized)"
+  },
+  "Headline small": {
+    "prefix": "--sys-typescale-headline-small",
+    "body": ["var(--sys-typescale-headline-small)"],
+    "description": "Common use cases: H3 elements. Sub-section headings and modal titles."
+  },
+  "Emphasized headline small": {
+    "prefix": "--sys-typescale-emphasized-headline-small",
+    "body": ["var(--sys-typescale-emphasized-headline-small)"],
+    "description": "Common use cases: H3 elements. Sub-section headings and modal titles. (Emphasized)"
+  },
+  "Title large": {
+    "prefix": "--sys-typescale-title-large",
+    "body": ["var(--sys-typescale-title-large)"],
+    "description": "Common use cases: App bar / navigation titles. High-visibility component headers."
+  },
+  "Emphasized title large": {
+    "prefix": "--sys-typescale-emphasized-title-large",
+    "body": ["var(--sys-typescale-emphasized-title-large)"],
+    "description": "Common use cases: App bar / navigation titles. High-visibility component headers. (Emphasized)"
+  },
+  "Title medium": {
+    "prefix": "--sys-typescale-title-medium",
+    "body": ["var(--sys-typescale-title-medium)"],
+    "description": "Common use cases: Card titles. Standard headers for cards and list item groups."
+  },
+  "Emphasized title medium": {
+    "prefix": "--sys-typescale-emphasized-title-medium",
+    "body": ["var(--sys-typescale-emphasized-title-medium)"],
+    "description": "Common use cases: Card titles. Standard headers for cards and list item groups. (Emphasized)"
+  },
+  "Title small": {
+    "prefix": "--sys-typescale-title-small",
+    "body": ["var(--sys-typescale-title-small)"],
+    "description": "Common use cases: Small components. Nested list headers or secondary card titles."
+  },
+  "Emphasized title small": {
+    "prefix": "--sys-typescale-emphasized-title-small",
+    "body": ["var(--sys-typescale-emphasized-title-small)"],
+    "description": "Common use cases: Small components. Nested list headers or secondary card titles. (Emphasized)"
+  },
+  "Body large": {
+    "prefix": "--sys-typescale-body-large",
+    "body": ["var(--sys-typescale-body-large)"],
+    "description": "Common use cases: Primary reading. Main paragraph text for blogs and long-form content."
+  },
+  "Emphasized body large": {
+    "prefix": "--sys-typescale-emphasized-body-large",
+    "body": ["var(--sys-typescale-emphasized-body-large)"],
+    "description": "Common use cases: Primary reading. Main paragraph text for blogs and long-form content. (Emphasized)"
+  },
+  "Body medium": {
+    "prefix": "--sys-typescale-body-medium",
+    "body": ["var(--sys-typescale-body-medium)"],
+    "description": "Common use cases: Standard content. Default text for descriptions and metadata."
+  },
+  "Emphasized body medium": {
+    "prefix": "--sys-typescale-emphasized-body-medium",
+    "body": ["var(--sys-typescale-emphasized-body-medium)"],
+    "description": "Common use cases: Standard content. Default text for descriptions and metadata. (Emphasized)"
+  },
+  "Body small": {
+    "prefix": "--sys-typescale-body-small",
+    "body": ["var(--sys-typescale-body-small)"],
+    "description": "Common use cases: Fine print. Footers, legal disclaimers, and secondary metadata."
+  },
+  "Emphasized body small": {
+    "prefix": "--sys-typescale-emphasized-body-small",
+    "body": ["var(--sys-typescale-emphasized-body-small)"],
+    "description": "Common use cases: Fine print. Footers, legal disclaimers, and secondary metadata. (Emphasized)"
+  },
+  "Label large": {
+    "prefix": "--sys-typescale-label-large",
+    "body": ["var(--sys-typescale-label-large)"],
+    "description": "Common use cases: Interactive elements. Text inside buttons, tabs, and navigation rails."
+  },
+  "Emphasized label large": {
+    "prefix": "--sys-typescale-emphasized-label-large",
+    "body": ["var(--sys-typescale-emphasized-label-large)"],
+    "description": "Common use cases: Interactive elements. Text inside buttons, tabs, and navigation rails. (Emphasized)"
+  },
+  "Label medium": {
+    "prefix": "--sys-typescale-label-medium",
+    "body": ["var(--sys-typescale-label-medium)"],
+    "description": "Common use cases: Form controls. Labels for inputs (`<label>`), chips, and badges."
+  },
+  "Emphasized label medium": {
+    "prefix": "--sys-typescale-emphasized-label-medium",
+    "body": ["var(--sys-typescale-emphasized-label-medium)"],
+    "description": "Common use cases: Form controls. Labels for inputs (`<label>`), chips, and badges. (Emphasized)"
+  },
+  "Label small": {
+    "prefix": "--sys-typescale-label-small",
+    "body": ["var(--sys-typescale-label-small)"],
+    "description": "Common use cases: Captions / overlines. Tiny hints, tooltips, and image captions."
+  },
+  "Emphasized label small": {
+    "prefix": "--sys-typescale-emphasized-label-small",
+    "body": ["var(--sys-typescale-emphasized-label-small)"],
+    "description": "Common use cases: Captions / overlines. Tiny hints, tooltips, and image captions. (Emphasized)"
+  },
+  "Primary": {
+    "prefix": "--sys-color-primary",
+    "body": ["var(--sys-color-primary)"],
+    "description": "Common use cases: High-emphasis. Primary buttons, active states, and prominent brand icons."
+  },
+  "On primary": {
+    "prefix": "--sys-color-on-primary",
+    "body": ["var(--sys-color-on-primary)"],
+    "description": "Common use cases: Content on primary. Text and icons displayed against the primary color."
+  },
+  "Primary container": {
+    "prefix": "--sys-color-primary-container",
+    "body": ["var(--sys-color-primary-container)"],
+    "description": "Common use cases: Medium-emphasis. Large prominent containers like FABs or active search bars."
+  },
+  "On primary container": {
+    "prefix": "--sys-color-on-primary-container",
+    "body": ["var(--sys-color-on-primary-container)"],
+    "description": "Common use cases: Content on primary container. High-contrast text for primary containers."
+  },
+  "Secondary": {
+    "prefix": "--sys-color-secondary",
+    "body": ["var(--sys-color-secondary)"],
+    "description": "Common use cases: Secondary actions. Filter chips, toggle switches, and less-intense buttons."
+  },
+  "On secondary": {
+    "prefix": "--sys-color-on-secondary",
+    "body": ["var(--sys-color-on-secondary)"],
+    "description": "Common use cases: Content on secondary. Text/icons for secondary elements."
+  },
+  "Secondary container": {
+    "prefix": "--sys-color-secondary-container",
+    "body": ["var(--sys-color-secondary-container)"],
+    "description": "Common use cases: Subtle highlights. Backgrounds for selected items in lists or navigation."
+  },
+  "On secondary container": {
+    "prefix": "--sys-color-on-secondary-container",
+    "body": ["var(--sys-color-on-secondary-container)"],
+    "description": "Common use cases: Content on secondary container. Text for subtle accent areas."
+  },
+  "Tertiary": {
+    "prefix": "--sys-color-tertiary",
+    "body": ["var(--sys-color-tertiary)"],
+    "description": "Common use cases: Input highlights. Used for \"call to action\" or tertiary brand accents."
+  },
+  "On tertiary": {
+    "prefix": "--sys-color-on-tertiary",
+    "body": ["var(--sys-color-on-tertiary)"],
+    "description": "Common use cases: Content on tertiary. Text/icons for tertiary elements."
+  },
+  "Tertiary container": {
+    "prefix": "--sys-color-tertiary-container",
+    "body": ["var(--sys-color-tertiary-container)"],
+    "description": "Common use cases: Specific highlights. Unique badges or notification dots."
+  },
+  "On tertiary container": {
+    "prefix": "--sys-color-on-tertiary-container",
+    "body": ["var(--sys-color-on-tertiary-container)"],
+    "description": "Common use cases: Content on tertiary container. Deep text for tertiary accents."
+  },
+  "Error": {
+    "prefix": "--sys-color-error",
+    "body": ["var(--sys-color-error)"],
+    "description": "Common use cases: Critical alerts. Destructive buttons (Delete), error icons, and invalid text."
+  },
+  "On error": {
+    "prefix": "--sys-color-on-error",
+    "body": ["var(--sys-color-on-error)"],
+    "description": "Common use cases: Content on error. Text/icons on high-emphasis error backgrounds."
+  },
+  "Error container": {
+    "prefix": "--sys-color-error-container",
+    "body": ["var(--sys-color-error-container)"],
+    "description": "Common use cases: Error banners. Large warning backgrounds at the top of forms."
+  },
+  "On error container": {
+    "prefix": "--sys-color-on-error-container",
+    "body": ["var(--sys-color-on-error-container)"],
+    "description": "Common use cases: Content on error container. Error message text within banners."
+  },
+  "Background": {
+    "prefix": "--sys-color-background",
+    "body": ["var(--sys-color-background)"],
+    "description": "Common use cases: App background. The foundational color under all other content."
+  },
+  "On background": {
+    "prefix": "--sys-color-on-background",
+    "body": ["var(--sys-color-on-background)"],
+    "description": "Common use cases: Body text. Main text color for long-form reading on the background."
+  },
+  "Surface": {
+    "prefix": "--sys-color-surface",
+    "body": ["var(--sys-color-surface)"],
+    "description": "Common use cases: Generic surfaces. Default background for cards, sheets, and dialogs."
+  },
+  "On surface": {
+    "prefix": "--sys-color-on-surface",
+    "body": ["var(--sys-color-on-surface)"],
+    "description": "Common use cases: Surface text. Main content color for text sitting on surface elements."
+  },
+  "Surface variant": {
+    "prefix": "--sys-color-surface-variant",
+    "body": ["var(--sys-color-surface-variant)"],
+    "description": "Common use cases: Decorative surfaces. Backgrounds for inputs or unselected component states."
+  },
+  "On surface variant": {
+    "prefix": "--sys-color-on-surface-variant",
+    "body": ["var(--sys-color-on-surface-variant)"],
+    "description": "Common use cases: Low-emphasis text. Metadata, captions, and secondary icon colors."
+  },
+  "Surface bright": {
+    "prefix": "--sys-color-surface-bright",
+    "body": ["var(--sys-color-surface-bright)"],
+    "description": "Common use cases: High-visibility. A surface that is always bright, regardless of light/dark mode."
+  },
+  "Surface dim": {
+    "prefix": "--sys-color-surface-dim",
+    "body": ["var(--sys-color-surface-dim)"],
+    "description": "Common use cases: Low-visibility. A dimmed surface for backgrounding content."
+  },
+  "Surface container lowest": {
+    "prefix": "--sys-color-surface-container-lowest",
+    "body": ["var(--sys-color-surface-container-lowest)"],
+    "description": "Common use cases: Clean backdrop. Used for the most \"distant\" layer in the UI."
+  },
+  "Surface container low": {
+    "prefix": "--sys-color-surface-container-low",
+    "body": ["var(--sys-color-surface-container-low)"],
+    "description": "Common use cases: Minimal separation. Subtle card backgrounds on a flat page."
+  },
+  "Surface container": {
+    "prefix": "--sys-color-surface-container",
+    "body": ["var(--sys-color-surface-container)"],
+    "description": "Common use cases: Standard container. The default role for most cards and UI blocks."
+  },
+  "Surface container high": {
+    "prefix": "--sys-color-surface-container-high",
+    "body": ["var(--sys-color-surface-container-high)"],
+    "description": "Common use cases: Raised areas. Side drawers, floating search bars, or headers."
+  },
+  "Surface container highest": {
+    "prefix": "--sys-color-surface-container-highest",
+    "body": ["var(--sys-color-surface-container-highest)"],
+    "description": "Common use cases: Top-level layers. Modals, dialogs, and tooltips."
+  },
+  "Primary fixed": {
+    "prefix": "--sys-color-primary-fixed",
+    "body": ["var(--sys-color-primary-fixed)"],
+    "description": "Common use cases: Static branding. Brand colors that stay consistent in light/dark themes."
+  },
+  "On primary fixed": {
+    "prefix": "--sys-color-on-primary-fixed",
+    "body": ["var(--sys-color-on-primary-fixed)"],
+    "description": "Common use cases: Text on fixed. Main text for fixed-theme brand elements."
+  },
+  "Primary fixed dim": {
+    "prefix": "--sys-color-primary-fixed-dim",
+    "body": ["var(--sys-color-primary-fixed-dim)"],
+    "description": "Common use cases: Dark-mode fixed. A muted version of primary-fixed for dark themes."
+  },
+  "On primary fixed variant": {
+    "prefix": "--sys-color-on-primary-fixed-variant",
+    "body": ["var(--sys-color-on-primary-fixed-variant)"],
+    "description": "Common use cases: Emphasis on fixed. Secondary text/icons on fixed backgrounds."
+  },
+  "Secondary fixed": {
+    "prefix": "--sys-color-secondary-fixed",
+    "body": ["var(--sys-color-secondary-fixed)"],
+    "description": "Common use cases: Static accents. Secondary brand colors that don't flip themes."
+  },
+  "On secondary fixed": {
+    "prefix": "--sys-color-on-secondary-fixed",
+    "body": ["var(--sys-color-on-secondary-fixed)"],
+    "description": "Common use cases: Text on secondary fixed. Standard text for fixed secondary areas."
+  },
+  "Secondary fixed dim": {
+    "prefix": "--sys-color-secondary-fixed-dim",
+    "body": ["var(--sys-color-secondary-fixed-dim)"],
+    "description": "Common use cases: Dark-mode fixed. Muted secondary for dark theme consistency."
+  },
+  "On secondary fixed variant": {
+    "prefix": "--sys-color-on-secondary-fixed-variant",
+    "body": ["var(--sys-color-on-secondary-fixed-variant)"],
+    "description": "Common use cases: Emphasis on fixed. Detail text on fixed secondary containers."
+  },
+  "Tertiary fixed": {
+    "prefix": "--sys-color-tertiary-fixed",
+    "body": ["var(--sys-color-tertiary-fixed)"],
+    "description": "Common use cases: Static tertiary. Tertiary brand colors that remain constant."
+  },
+  "On tertiary fixed": {
+    "prefix": "--sys-color-on-tertiary-fixed",
+    "body": ["var(--sys-color-on-tertiary-fixed)"],
+    "description": "Common use cases: Text on tertiary fixed. Main text for fixed tertiary elements."
+  },
+  "Tertiary fixed dim": {
+    "prefix": "--sys-color-tertiary-fixed-dim",
+    "body": ["var(--sys-color-tertiary-fixed-dim)"],
+    "description": "Common use cases: Dark-mode fixed. Muted tertiary for dark theme consistency."
+  },
+  "On tertiary fixed variant": {
+    "prefix": "--sys-color-on-tertiary-fixed-variant",
+    "body": ["var(--sys-color-on-tertiary-fixed-variant)"],
+    "description": "Common use cases: Emphasis on fixed. Detail text on fixed tertiary containers."
+  },
+  "Outline": {
+    "prefix": "--sys-color-outline",
+    "body": ["var(--sys-color-outline)"],
+    "description": "Common use cases: Borders. Standard visible boundaries for text fields and chips."
+  },
+  "Outline variant": {
+    "prefix": "--sys-color-outline-variant",
+    "body": ["var(--sys-color-outline-variant)"],
+    "description": "Common use cases: Dividers. Very subtle lines for horizontal rules or list separators."
+  },
+  "Shadow": {
+    "prefix": "--sys-color-shadow",
+    "body": ["var(--sys-color-shadow)"],
+    "description": "Common use cases: Depth. The color used for box-shadows (usually black/neutral)."
+  },
+  "Scrim": {
+    "prefix": "--sys-color-scrim",
+    "body": ["var(--sys-color-scrim)"],
+    "description": "Common use cases: Overlays. The semi-transparent dark layer behind a modal."
+  },
+  "Surface tint": {
+    "prefix": "--sys-color-surface-tint",
+    "body": ["var(--sys-color-surface-tint)"],
+    "description": "Common use cases: Color toning. Used to apply brand-colored tints to surfaces at high elevations."
+  },
+  "Inverse surface": {
+    "prefix": "--sys-color-inverse-surface",
+    "body": ["var(--sys-color-inverse-surface)"],
+    "description": "Common use cases: High contrast. Snackbars or floating \"undo\" banners."
+  },
+  "Inverse on surface": {
+    "prefix": "--sys-color-inverse-on-surface",
+    "body": ["var(--sys-color-inverse-on-surface)"],
+    "description": "Common use cases: Inverse text. High-contrast text for snackbars."
+  },
+  "Inverse primary": {
+    "prefix": "--sys-color-inverse-primary",
+    "body": ["var(--sys-color-inverse-primary)"],
+    "description": "Common use cases: Inverse accent. Primary-colored buttons inside an inverse surface (e.g., on a snackbar)."
+  },
+  "Level1": {
+    "prefix": "--sys-elevation-level1",
+    "body": ["var(--sys-elevation-level1)"],
+    "description": "Common use cases: Minimal lift. Standard cards, unselected filter chips, and low-profile components. Provides just enough shadow to separate from the background."
+  },
+  "Level2": {
+    "prefix": "--sys-elevation-level2",
+    "body": ["var(--sys-elevation-level2)"],
+    "description": "Common use cases: Raised. Small floating action buttons (FABs) and components that have been interacted with (hover/focus states of level 1 items)."
+  },
+  "Level3": {
+    "prefix": "--sys-elevation-level3",
+    "body": ["var(--sys-elevation-level3)"],
+    "description": "Common use cases: Prominent. Standard FABs, date pickers, and time pickers. This is the \"middle ground\" for floating components."
+  },
+  "Level4": {
+    "prefix": "--sys-elevation-level4",
+    "body": ["var(--sys-elevation-level4)"],
+    "description": "Common use cases: High lift. Search bars in a scrolled state, navigation drawers, and side sheets. Used for large surfaces that slide over the main content."
+  },
+  "Level5": {
+    "prefix": "--sys-elevation-level5",
+    "body": ["var(--sys-elevation-level5)"],
+    "description": "Common use cases: Maximum lift. Dialogs, modals, tooltips, and context menus. Reserved for elements that require the user's immediate focus and sit at the very top of the stack."
+  },
+  "Spring fast spatial": {
+    "prefix": "--sys-motion-spring-fast-spatial",
+    "body": ["var(--sys-motion-spring-fast-spatial)"],
+    "description": "Common use cases: Micro-movements. Small-distance translations like toggle switches, button icon bounces, or chip removals."
+  },
+  "Spring fast spatial duration": {
+    "prefix": "--sys-motion-spring-fast-spatial-duration",
+    "body": ["var(--sys-motion-spring-fast-spatial-duration)"],
+    "description": "Common use cases: Micro-movements. Small-distance translations like toggle switches, button icon bounces, or chip removals. (Duration)"
+  },
+  "Spring default spatial": {
+    "prefix": "--sys-motion-spring-default-spatial",
+    "body": ["var(--sys-motion-spring-default-spatial)"],
+    "description": "Common use cases: Standard movement. The go-to pairing for nav drawers, side sheets, and elements moving across a medium portion of the screen."
+  },
+  "Spring default spatial duration": {
+    "prefix": "--sys-motion-spring-default-spatial-duration",
+    "body": ["var(--sys-motion-spring-default-spatial-duration)"],
+    "description": "Common use cases: Standard movement. The go-to pairing for nav drawers, side sheets, and elements moving across a medium portion of the screen. (Duration)"
+  },
+  "Spring slow spatial": {
+    "prefix": "--sys-motion-spring-slow-spatial",
+    "body": ["var(--sys-motion-spring-slow-spatial)"],
+    "description": "Common use cases: Hero transitions. Large layout shifts, such as a card expanding to fill the entire viewport or full-screen entry animations."
+  },
+  "Spring slow spatial duration": {
+    "prefix": "--sys-motion-spring-slow-spatial-duration",
+    "body": ["var(--sys-motion-spring-slow-spatial-duration)"],
+    "description": "Common use cases: Hero transitions. Large layout shifts, such as a card expanding to fill the entire viewport or full-screen entry animations. (Duration)"
+  },
+  "Spring fast effects": {
+    "prefix": "--sys-motion-spring-fast-effects",
+    "body": ["var(--sys-motion-spring-fast-effects)"],
+    "description": "Common use cases: Snappy feedback. Quick opacity or color changes for hover/pressed states and rapid icon swaps."
+  },
+  "Spring fast effects duration": {
+    "prefix": "--sys-motion-spring-fast-effects-duration",
+    "body": ["var(--sys-motion-spring-fast-effects-duration)"],
+    "description": "Common use cases: Snappy feedback. Quick opacity or color changes for hover/pressed states and rapid icon swaps. (Duration)"
+  },
+  "Spring default effects": {
+    "prefix": "--sys-motion-spring-default-effects",
+    "body": ["var(--sys-motion-spring-default-effects)"],
+    "description": "Common use cases: Standard fades. Default for tooltips appearing or content cross-fading within a container (e.g., tab switching)."
+  },
+  "Spring default effects duration": {
+    "prefix": "--sys-motion-spring-default-effects-duration",
+    "body": ["var(--sys-motion-spring-default-effects-duration)"],
+    "description": "Common use cases: Standard fades. Default for tooltips appearing or content cross-fading within a container (e.g., tab switching). (Duration)"
+  },
+  "Spring slow effects": {
+    "prefix": "--sys-motion-spring-slow-effects",
+    "body": ["var(--sys-motion-spring-slow-effects)"],
+    "description": "Common use cases: Ambient changes. Gradual background color shifts or complex layered \"blur-in\" effects where a sudden change would be jarring."
+  },
+  "Spring slow effects duration": {
+    "prefix": "--sys-motion-spring-slow-effects-duration",
+    "body": ["var(--sys-motion-spring-slow-effects-duration)"],
+    "description": "Common use cases: Ambient changes. Gradual background color shifts or complex layered \"blur-in\" effects where a sudden change would be jarring. (Duration)"
+  },
+  "None": {
+    "prefix": "--sys-shape-corner-none",
+    "body": ["var(--sys-shape-corner-none)"],
+    "description": "Common use cases: Full-bleed. Edge-to-edge images, banners, or backgrounds that touch the screen boundary."
+  },
+  "Extra small": {
+    "prefix": "--sys-shape-corner-extra-small",
+    "body": ["var(--sys-shape-corner-extra-small)"],
+    "description": "Common use cases: Tiny elements. Tooltips, small badges, and micro-interactions."
+  },
+  "Small": {
+    "prefix": "--sys-shape-corner-small",
+    "body": ["var(--sys-shape-corner-small)"],
+    "description": "Common use cases: Inputs & controls. Text fields, checkboxes, and small menu items."
+  },
+  "Medium": {
+    "prefix": "--sys-shape-corner-medium",
+    "body": ["var(--sys-shape-corner-medium)"],
+    "description": "Common use cases: Standard components. Default cards, small dialogs, and secondary buttons."
+  },
+  "Large": {
+    "prefix": "--sys-shape-corner-large",
+    "body": ["var(--sys-shape-corner-large)"],
+    "description": "Common use cases: Prominent surfaces. Medium-sized cards and standard floating action buttons (FABs)."
+  },
+  "Large increased": {
+    "prefix": "--sys-shape-corner-large-increased",
+    "body": ["var(--sys-shape-corner-large-increased)"],
+    "description": "Common use cases: High-emphasis cards. Used in expressive layouts to give hero cards a more \"contained\" and distinct look."
+  },
+  "Extra large": {
+    "prefix": "--sys-shape-corner-extra-large",
+    "body": ["var(--sys-shape-corner-extra-large)"],
+    "description": "Common use cases: Large containers. Bottom sheets, navigation drawers, and large modal dialogs."
+  },
+  "Extra large increased": {
+    "prefix": "--sys-shape-corner-extra-large-increased",
+    "body": ["var(--sys-shape-corner-extra-large-increased)"],
+    "description": "Common use cases: Expressive sheets. Top-level hero elements or large background containers in high-impact layouts."
+  },
+  "Extra extra large": {
+    "prefix": "--sys-shape-corner-extra-extra-large",
+    "body": ["var(--sys-shape-corner-extra-extra-large)"],
+    "description": "Common use cases: Max containers. Used for the largest surfaces, like ultra-wide search bars or full-screen expansion containers."
+  },
+  "Full": {
+    "prefix": "--sys-shape-corner-full",
+    "body": ["var(--sys-shape-corner-full)"],
+    "description": "Common use cases: Pills & circles. Standard buttons, chips, and circular icons (avatars)."
+  },
+  "Typeface plain": {
+    "prefix": "--ref-typeface-plain",
+    "body": ["var(--ref-typeface-plain)"],
+    "description": "Common use cases: Typeface for plain variants (Title small/medium, Body, Label)"
+  },
+  "Typeface base": {
+    "prefix": "--ref-typeface-base",
+    "body": ["var(--ref-typeface-base)"],
+    "description": "Common use cases: Base typeface for the entire system"
+  },
+  "Typeface emphasized plain": {
+    "prefix": "--ref-typeface-emphasized-plain",
+    "body": ["var(--ref-typeface-emphasized-plain)"],
+    "description": "Common use cases: Typeface for emphasized plain variants"
+  },
+  "Typeface emphasized brand": {
+    "prefix": "--ref-typeface-emphasized-brand",
+    "body": ["var(--ref-typeface-emphasized-brand)"],
+    "description": "Common use cases: Typeface for emphasized brand variants"
+  },
+  "Typeface brand": {
+    "prefix": "--ref-typeface-brand",
+    "body": ["var(--ref-typeface-brand)"],
+    "description": "Common use cases: Typeface for brand variants (Display, Headline, Title large)"
+  },
+  "Typeface generic": {
+    "prefix": "--ref-typeface-generic",
+    "body": ["var(--ref-typeface-generic)"],
+    "description": "Common use cases: Generic fallback typeface (e.g. sans-serif, serif)"
+  },
+  "Window compact": {
+    "prefix": "window-compact",
+    "body": ["/* window-compact */", "@media (width < 600px) {", "  $0", "}"],
+    "description": "Common devices for compact window: Phone in portrait"
+  },
+  "Window medium": {
+    "prefix": "window-medium",
+    "body": ["/* window-medium */", "@media (600px <= width < 840px) {", "  $0", "}"],
+    "description": "Common devices for medium window: Tablet in portrait, Foldable in portrait (unfolded)"
+  },
+  "Window medium and wider": {
+    "prefix": "window-medium-wider",
+    "body": ["/* window-medium-wider */", "@media (width >= 600px) {", "  $0", "}"],
+    "description": "Common devices for medium window and larger: Tablet in portrait, Foldable in portrait (unfolded), Desktop"
+  },
+  "Window medium and narrower": {
+    "prefix": "window-medium-narrower",
+    "body": ["/* window-medium-narrower */", "@media (width < 840px) {", "  $0", "}"],
+    "description": "Common devices for medium window and smaller: Phone in portrait, Tablet in portrait, Foldable in portrait (unfolded)"
+  },
+  "Window expanded": {
+    "prefix": "window-expanded",
+    "body": ["/* window-expanded */", "@media (840px <= width < 1200px) {", "  $0", "}"],
+    "description": "Common devices for expanded window: Phone in landscape, Tablet in landscape, Foldable in landscape (unfolded), Desktop"
+  },
+  "Window expanded and wider": {
+    "prefix": "window-expanded-wider",
+    "body": ["/* window-expanded-wider */", "@media (width >= 840px) {", "  $0", "}"],
+    "description": "Common devices for expanded window and larger: Phone in landscape, Tablet in landscape, Desktop"
+  },
+  "Window expanded and narrower": {
+    "prefix": "window-expanded-narrower",
+    "body": ["/* window-expanded-narrower */", "@media (width < 1200px) {", "  $0", "}"],
+    "description": "Common devices for expanded window and smaller: Phone, Tablet, Foldable, Desktop"
+  },
+  "Window large": {
+    "prefix": "window-large",
+    "body": ["/* window-large */", "@media (1200px <= width < 1600px) {", "  $0", "}"],
+    "description": "Common devices for large window: Desktop"
+  },
+  "Window large and wider": {
+    "prefix": "window-large-wider",
+    "body": ["/* window-large-wider */", "@media (width >= 1200px) {", "  $0", "}"],
+    "description": "Common devices for large window and larger: Desktop, Ultra-wide monitors"
+  },
+  "Window large and narrower": {
+    "prefix": "window-large-narrower",
+    "body": ["/* window-large-narrower */", "@media (width < 1600px) {", "  $0", "}"],
+    "description": "Common devices for large window and smaller: All mobile devices, Tablets, Standard Desktop"
+  },
+  "Window extra large": {
+    "prefix": "window-extra-large",
+    "body": ["/* window-extra-large */", "@media (width >= 1600px) {", "  $0", "}"],
+    "description": "Common devices for extra-large window: Desktop, Ultra-wide monitors"
+  },
+  "Media Query: Motion No Preference": {
+    "prefix": "media-motion-no-preference",
+    "body": ["@media (prefers-reduced-motion: no-preference) {", "  $0", "}"],
+    "description": "User has made no preference known regarding reducing motion"
+  },
+  "Media Query: Motion Reduce": {
+    "prefix": "media-motion-reduce",
+    "body": ["@media (prefers-reduced-motion: reduce) {", "  $0", "}"],
+    "description": "User has requested the system minimize the amount of non-essential motion"
+  },
+  "Media Query: Transparency No Preference": {
+    "prefix": "media-transparency-no-preference",
+    "body": ["@media (prefers-reduced-transparency: no-preference) {", "  $0", "}"],
+    "description": "User has made no preference regarding reduced transparency"
+  },
+  "Media Query: Transparency Reduce": {
+    "prefix": "media-transparency-reduce",
+    "body": ["@media (prefers-reduced-transparency: reduce) {", "  $0", "}"],
+    "description": "User has requested the system minimize the amount of transparent or translucent layer effects"
+  },
+  "Media Query: Data No Preference": {
+    "prefix": "media-data-no-preference",
+    "body": ["@media (prefers-reduced-data: no-preference) {", "  $0", "}"],
+    "description": "User has made no preference regarding reduced data"
+  },
+  "Media Query: Data Reduce": {
+    "prefix": "media-data-reduce",
+    "body": ["@media (prefers-reduced-data: reduce) {", "  $0", "}"],
+    "description": "User has expressed the preference for lightweight alternate content"
+  },
+  "Media Query: Scheme Dark": {
+    "prefix": "media-scheme-dark",
+    "body": ["@media (prefers-color-scheme: dark) {", "  $0", "}"],
+    "description": "User has requested a dark color theme"
+  },
+  "Media Query: Scheme Light": {
+    "prefix": "media-scheme-light",
+    "body": ["@media (prefers-color-scheme: light) {", "  $0", "}"],
+    "description": "User has requested a light color theme"
+  },
+  "Media Query: Contrast More": {
+    "prefix": "media-contrast-more",
+    "body": ["@media (prefers-contrast: more) {", "  $0", "}"],
+    "description": "User has requested a higher contrast theme"
+  },
+  "Media Query: Contrast Less": {
+    "prefix": "media-contrast-less",
+    "body": ["@media (prefers-contrast: less) {", "  $0", "}"],
+    "description": "User has requested a lower contrast theme"
+  },
+  "Media Query: Inverted Colors": {
+    "prefix": "media-inverted-colors",
+    "body": ["@media (inverted-colors: inverted) {", "  $0", "}"],
+    "description": "Colors are inverted by the OS"
+  },
+  "Media Query: Forced Colors Active": {
+    "prefix": "media-forced-colors",
+    "body": ["@media (forced-colors: active) {", "  $0", "}"],
+    "description": "User has enabled a forced colors mode (like Windows High Contrast)"
+  },
+  "Media Query: Landscape": {
+    "prefix": "media-landscape",
+    "body": ["@media (orientation: landscape) {", "  $0", "}"],
+    "description": "Viewport is in a landscape orientation"
+  },
+  "Media Query: HDR Display": {
+    "prefix": "media-hdr",
+    "body": ["@media ((dynamic-range: high) or (color-gamut: p3)) {", "  $0", "}"],
+    "description": "Device supports high dynamic range (HDR) or P3 wide color gamut"
+  },
+  "Media Query: Touch Interface": {
+    "prefix": "media-touch",
+    "body": ["@media (hover: none) and (pointer: coarse) {", "  $0", "}"],
+    "description": "Primary input is a touch screen (Phones, Tablets)"
+  },
+  "Media Query: Stylus on Non-Hover": {
+    "prefix": "media-stylus",
+    "body": ["@media (hover: none) and (pointer: fine) {", "  $0", "}"],
+    "description": "Primary input is a stylus on a screen without hover"
+  },
+  "Media Query: Hover with Coarse Pointer": {
+    "prefix": "media-hover-coarse",
+    "body": ["@media (hover: hover) and (pointer: coarse) {", "  $0", "}"],
+    "description": "Primary input has hover but is coarse (e.g. Nintendo Wii controller)"
+  },
+  "Media Query: Mouse / Desktop": {
+    "prefix": "media-mouse",
+    "body": ["@media (hover: hover) and (pointer: fine) {", "  $0", "}"],
+    "description": "Primary input is a mouse or trackpad"
+  },
+  "Supports: animation-timeline": {
+    "prefix": "supports-animation-timeline",
+    "body": ["@supports (animation-timeline: scroll()) {", "\t$0", "}"],
+    "description": "@supports block for animation-timeline support."
+  },
+  "Supports Not: animation-timeline": {
+    "prefix": "supports-not-animation-timeline",
+    "body": ["@supports not (animation-timeline: scroll()) {", "\t$0", "}"],
+    "description": "@supports block for missing animation-timeline support."
+  },
+  "CSS Custom Property Registration": {
+    "prefix": "register-property",
+    "body": [
+      "@property --property-${1:name} {",
+      "  syntax: \"${2|<angle>,<color>,<custom-ident>,<image>,<integer>,<length>,<length-percentage>,<number>,<percentage>,<resolution>,<string>,<time>,<transform-function>,<transform-list>,<url>,*|}\";",
+      "  inherits: ${3|false,true|};",
+      "  initial-value: ${4:0};",
+      "}$0"
+    ],
+    "description": "Register a CSS custom property."
+  },
+  "Shape Clip: Very Sunny": {
+    "prefix": "--sys-shape-clip-very-sunny",
+    "body": ["var(--sys-shape-clip-very-sunny)"],
+    "description": "Common use cases: Shape clipping boundary for Very Sunny framing"
+  },
+  "Shape Clip: 4 Leaf Clover": {
+    "prefix": "--sys-shape-clip-4-leaf-clover",
+    "body": ["var(--sys-shape-clip-4-leaf-clover)"],
+    "description": "Common use cases: Shape clipping boundary for 4 Leaf Clover framing"
+  },
+  "Shape Clip: 4 Sided Cookie": {
+    "prefix": "--sys-shape-clip-4-sided-cookie",
+    "body": ["var(--sys-shape-clip-4-sided-cookie)"],
+    "description": "Common use cases: Shape clipping boundary for 4 Sided Cookie framing"
+  },
+  "Shape Clip: 6 Sided Cookie": {
+    "prefix": "--sys-shape-clip-6-sided-cookie",
+    "body": ["var(--sys-shape-clip-6-sided-cookie)"],
+    "description": "Common use cases: Shape clipping boundary for 6 Sided Cookie framing"
+  },
+  "Shape Clip: 7 Sided Cookie": {
+    "prefix": "--sys-shape-clip-7-sided-cookie",
+    "body": ["var(--sys-shape-clip-7-sided-cookie)"],
+    "description": "Common use cases: Shape clipping boundary for 7 Sided Cookie framing"
+  },
+  "Shape Clip: 8 Leaf Clover": {
+    "prefix": "--sys-shape-clip-8-leaf-clover",
+    "body": ["var(--sys-shape-clip-8-leaf-clover)"],
+    "description": "Common use cases: Shape clipping boundary for 8 Leaf Clover framing"
+  },
+  "Shape Clip: 12 Sided Cookie": {
+    "prefix": "--sys-shape-clip-12-sided-cookie",
+    "body": ["var(--sys-shape-clip-12-sided-cookie)"],
+    "description": "Common use cases: Shape clipping boundary for 12 Sided Cookie framing"
+  },
+  "Shape Clip: 9 Sided Cookie": {
+    "prefix": "--sys-shape-clip-9-sided-cookie",
+    "body": ["var(--sys-shape-clip-9-sided-cookie)"],
+    "description": "Common use cases: Shape clipping boundary for 9 Sided Cookie framing"
+  },
+  "Shape Clip: Arrow": {
+    "prefix": "--sys-shape-clip-arrow",
+    "body": ["var(--sys-shape-clip-arrow)"],
+    "description": "Common use cases: Shape clipping boundary for Arrow framing"
+  },
+  "Shape Clip: Arch": {
+    "prefix": "--sys-shape-clip-arch",
+    "body": ["var(--sys-shape-clip-arch)"],
+    "description": "Common use cases: Shape clipping boundary for Arch framing"
+  },
+  "Shape Clip: Boom": {
+    "prefix": "--sys-shape-clip-boom",
+    "body": ["var(--sys-shape-clip-boom)"],
+    "description": "Common use cases: Shape clipping boundary for Boom framing"
+  },
+  "Shape Clip: Bun": {
+    "prefix": "--sys-shape-clip-bun",
+    "body": ["var(--sys-shape-clip-bun)"],
+    "description": "Common use cases: Shape clipping boundary for Bun framing"
+  },
+  "Shape Clip: Burst": {
+    "prefix": "--sys-shape-clip-burst",
+    "body": ["var(--sys-shape-clip-burst)"],
+    "description": "Common use cases: Shape clipping boundary for Burst framing"
+  },
+  "Shape Clip: Circle": {
+    "prefix": "--sys-shape-clip-circle",
+    "body": ["var(--sys-shape-clip-circle)"],
+    "description": "Common use cases: Shape clipping boundary for Circle framing"
+  },
+  "Shape Clip: Diamond": {
+    "prefix": "--sys-shape-clip-diamond",
+    "body": ["var(--sys-shape-clip-diamond)"],
+    "description": "Common use cases: Shape clipping boundary for Diamond framing"
+  },
+  "Shape Clip: Fan": {
+    "prefix": "--sys-shape-clip-fan",
+    "body": ["var(--sys-shape-clip-fan)"],
+    "description": "Common use cases: Shape clipping boundary for Fan framing"
+  },
+  "Shape Clip: Flower": {
+    "prefix": "--sys-shape-clip-flower",
+    "body": ["var(--sys-shape-clip-flower)"],
+    "description": "Common use cases: Shape clipping boundary for Flower framing"
+  },
+  "Shape Clip: Gem": {
+    "prefix": "--sys-shape-clip-gem",
+    "body": ["var(--sys-shape-clip-gem)"],
+    "description": "Common use cases: Shape clipping boundary for Gem framing"
+  },
+  "Shape Clip: Ghost Ish": {
+    "prefix": "--sys-shape-clip-ghost-ish",
+    "body": ["var(--sys-shape-clip-ghost-ish)"],
+    "description": "Common use cases: Shape clipping boundary for Ghost Ish framing"
+  },
+  "Shape Clip: Heart": {
+    "prefix": "--sys-shape-clip-heart",
+    "body": ["var(--sys-shape-clip-heart)"],
+    "description": "Common use cases: Shape clipping boundary for Heart framing"
+  },
+  "Shape Clip: Clamshell": {
+    "prefix": "--sys-shape-clip-clamshell",
+    "body": ["var(--sys-shape-clip-clamshell)"],
+    "description": "Common use cases: Shape clipping boundary for Clamshell framing"
+  },
+  "Shape Clip: Oval": {
+    "prefix": "--sys-shape-clip-oval",
+    "body": ["var(--sys-shape-clip-oval)"],
+    "description": "Common use cases: Shape clipping boundary for Oval framing"
+  },
+  "Shape Clip: Pentagon": {
+    "prefix": "--sys-shape-clip-pentagon",
+    "body": ["var(--sys-shape-clip-pentagon)"],
+    "description": "Common use cases: Shape clipping boundary for Pentagon framing"
+  },
+  "Shape Clip: Pill": {
+    "prefix": "--sys-shape-clip-pill",
+    "body": ["var(--sys-shape-clip-pill)"],
+    "description": "Common use cases: Shape clipping boundary for Pill framing"
+  },
+  "Shape Clip: Pixel Circle": {
+    "prefix": "--sys-shape-clip-pixel-circle",
+    "body": ["var(--sys-shape-clip-pixel-circle)"],
+    "description": "Common use cases: Shape clipping boundary for Pixel Circle framing"
+  },
+  "Shape Clip: Pixel Triangle": {
+    "prefix": "--sys-shape-clip-pixel-triangle",
+    "body": ["var(--sys-shape-clip-pixel-triangle)"],
+    "description": "Common use cases: Shape clipping boundary for Pixel Triangle framing"
+  },
+  "Shape Clip: Puffy Diamond": {
+    "prefix": "--sys-shape-clip-puffy-diamond",
+    "body": ["var(--sys-shape-clip-puffy-diamond)"],
+    "description": "Common use cases: Shape clipping boundary for Puffy Diamond framing"
+  },
+  "Shape Clip: Puffy": {
+    "prefix": "--sys-shape-clip-puffy",
+    "body": ["var(--sys-shape-clip-puffy)"],
+    "description": "Common use cases: Shape clipping boundary for Puffy framing"
+  },
+  "Shape Clip: Semicircle": {
+    "prefix": "--sys-shape-clip-semicircle",
+    "body": ["var(--sys-shape-clip-semicircle)"],
+    "description": "Common use cases: Shape clipping boundary for Semicircle framing"
+  },
+  "Shape Clip: Slanted": {
+    "prefix": "--sys-shape-clip-slanted",
+    "body": ["var(--sys-shape-clip-slanted)"],
+    "description": "Common use cases: Shape clipping boundary for Slanted framing"
+  },
+  "Shape Clip: Soft Boom": {
+    "prefix": "--sys-shape-clip-soft-boom",
+    "body": ["var(--sys-shape-clip-soft-boom)"],
+    "description": "Common use cases: Shape clipping boundary for Soft Boom framing"
+  },
+  "Shape Clip: Soft Burst": {
+    "prefix": "--sys-shape-clip-soft-burst",
+    "body": ["var(--sys-shape-clip-soft-burst)"],
+    "description": "Common use cases: Shape clipping boundary for Soft Burst framing"
+  },
+  "Shape Clip: Square": {
+    "prefix": "--sys-shape-clip-square",
+    "body": ["var(--sys-shape-clip-square)"],
+    "description": "Common use cases: Shape clipping boundary for Square framing"
+  },
+  "Shape Clip: Sunny": {
+    "prefix": "--sys-shape-clip-sunny",
+    "body": ["var(--sys-shape-clip-sunny)"],
+    "description": "Common use cases: Shape clipping boundary for Sunny framing"
+  },
+  "Shape Clip: Triangle": {
+    "prefix": "--sys-shape-clip-triangle",
+    "body": ["var(--sys-shape-clip-triangle)"],
+    "description": "Common use cases: Shape clipping boundary for Triangle framing"
+  },
+  "Shape Mask: 4 Leaf Clover": {
+    "prefix": "--sys-shape-mask-4-leaf-clover",
+    "body": ["var(--sys-shape-mask-4-leaf-clover)"],
+    "description": "Common use cases: SVG data URI mask for 4 Leaf Clover aesthetic"
+  },
+  "Shape Mask: 4 Sided Cookie": {
+    "prefix": "--sys-shape-mask-4-sided-cookie",
+    "body": ["var(--sys-shape-mask-4-sided-cookie)"],
+    "description": "Common use cases: SVG data URI mask for 4 Sided Cookie aesthetic"
+  },
+  "Shape Mask: 6 Sided Cookie": {
+    "prefix": "--sys-shape-mask-6-sided-cookie",
+    "body": ["var(--sys-shape-mask-6-sided-cookie)"],
+    "description": "Common use cases: SVG data URI mask for 6 Sided Cookie aesthetic"
+  },
+  "Shape Mask: 7 Sided Cookie": {
+    "prefix": "--sys-shape-mask-7-sided-cookie",
+    "body": ["var(--sys-shape-mask-7-sided-cookie)"],
+    "description": "Common use cases: SVG data URI mask for 7 Sided Cookie aesthetic"
+  },
+  "Shape Mask: 8 Leaf Clover": {
+    "prefix": "--sys-shape-mask-8-leaf-clover",
+    "body": ["var(--sys-shape-mask-8-leaf-clover)"],
+    "description": "Common use cases: SVG data URI mask for 8 Leaf Clover aesthetic"
+  },
+  "Shape Mask: 9 Sided Cookie": {
+    "prefix": "--sys-shape-mask-9-sided-cookie",
+    "body": ["var(--sys-shape-mask-9-sided-cookie)"],
+    "description": "Common use cases: SVG data URI mask for 9 Sided Cookie aesthetic"
+  },
+  "Shape Mask: 12 Sided Cookie": {
+    "prefix": "--sys-shape-mask-12-sided-cookie",
+    "body": ["var(--sys-shape-mask-12-sided-cookie)"],
+    "description": "Common use cases: SVG data URI mask for 12 Sided Cookie aesthetic"
+  },
+  "Shape Mask: Arch": {
+    "prefix": "--sys-shape-mask-arch",
+    "body": ["var(--sys-shape-mask-arch)"],
+    "description": "Common use cases: SVG data URI mask for Arch aesthetic"
+  },
+  "Shape Mask: Arrow": {
+    "prefix": "--sys-shape-mask-arrow",
+    "body": ["var(--sys-shape-mask-arrow)"],
+    "description": "Common use cases: SVG data URI mask for Arrow aesthetic"
+  },
+  "Shape Mask: Boom": {
+    "prefix": "--sys-shape-mask-boom",
+    "body": ["var(--sys-shape-mask-boom)"],
+    "description": "Common use cases: SVG data URI mask for Boom aesthetic"
+  },
+  "Shape Mask: Bun": {
+    "prefix": "--sys-shape-mask-bun",
+    "body": ["var(--sys-shape-mask-bun)"],
+    "description": "Common use cases: SVG data URI mask for Bun aesthetic"
+  },
+  "Shape Mask: Burst": {
+    "prefix": "--sys-shape-mask-burst",
+    "body": ["var(--sys-shape-mask-burst)"],
+    "description": "Common use cases: SVG data URI mask for Burst aesthetic"
+  },
+  "Shape Mask: Circle": {
+    "prefix": "--sys-shape-mask-circle",
+    "body": ["var(--sys-shape-mask-circle)"],
+    "description": "Common use cases: SVG data URI mask for Circle aesthetic"
+  },
+  "Shape Mask: Diamond": {
+    "prefix": "--sys-shape-mask-diamond",
+    "body": ["var(--sys-shape-mask-diamond)"],
+    "description": "Common use cases: SVG data URI mask for Diamond aesthetic"
+  },
+  "Shape Mask: Fan": {
+    "prefix": "--sys-shape-mask-fan",
+    "body": ["var(--sys-shape-mask-fan)"],
+    "description": "Common use cases: SVG data URI mask for Fan aesthetic"
+  },
+  "Shape Mask: Flower": {
+    "prefix": "--sys-shape-mask-flower",
+    "body": ["var(--sys-shape-mask-flower)"],
+    "description": "Common use cases: SVG data URI mask for Flower aesthetic"
+  },
+  "Shape Mask: Gem": {
+    "prefix": "--sys-shape-mask-gem",
+    "body": ["var(--sys-shape-mask-gem)"],
+    "description": "Common use cases: SVG data URI mask for Gem aesthetic"
+  },
+  "Shape Mask: Ghost Ish": {
+    "prefix": "--sys-shape-mask-ghost-ish",
+    "body": ["var(--sys-shape-mask-ghost-ish)"],
+    "description": "Common use cases: SVG data URI mask for Ghost Ish aesthetic"
+  },
+  "Shape Mask: Heart": {
+    "prefix": "--sys-shape-mask-heart",
+    "body": ["var(--sys-shape-mask-heart)"],
+    "description": "Common use cases: SVG data URI mask for Heart aesthetic"
+  },
+  "Shape Mask: Clamshell": {
+    "prefix": "--sys-shape-mask-clamshell",
+    "body": ["var(--sys-shape-mask-clamshell)"],
+    "description": "Common use cases: SVG data URI mask for Clamshell aesthetic"
+  },
+  "Shape Mask: Oval": {
+    "prefix": "--sys-shape-mask-oval",
+    "body": ["var(--sys-shape-mask-oval)"],
+    "description": "Common use cases: SVG data URI mask for Oval aesthetic"
+  },
+  "Shape Mask: Pentagon": {
+    "prefix": "--sys-shape-mask-pentagon",
+    "body": ["var(--sys-shape-mask-pentagon)"],
+    "description": "Common use cases: SVG data URI mask for Pentagon aesthetic"
+  },
+  "Shape Mask: Pill": {
+    "prefix": "--sys-shape-mask-pill",
+    "body": ["var(--sys-shape-mask-pill)"],
+    "description": "Common use cases: SVG data URI mask for Pill aesthetic"
+  },
+  "Shape Mask: Pixel Circle": {
+    "prefix": "--sys-shape-mask-pixel-circle",
+    "body": ["var(--sys-shape-mask-pixel-circle)"],
+    "description": "Common use cases: SVG data URI mask for Pixel Circle aesthetic"
+  },
+  "Shape Mask: Pixel Triangle": {
+    "prefix": "--sys-shape-mask-pixel-triangle",
+    "body": ["var(--sys-shape-mask-pixel-triangle)"],
+    "description": "Common use cases: SVG data URI mask for Pixel Triangle aesthetic"
+  },
+  "Shape Mask: Puffy Diamond": {
+    "prefix": "--sys-shape-mask-puffy-diamond",
+    "body": ["var(--sys-shape-mask-puffy-diamond)"],
+    "description": "Common use cases: SVG data URI mask for Puffy Diamond aesthetic"
+  },
+  "Shape Mask: Puffy": {
+    "prefix": "--sys-shape-mask-puffy",
+    "body": ["var(--sys-shape-mask-puffy)"],
+    "description": "Common use cases: SVG data URI mask for Puffy aesthetic"
+  },
+  "Shape Mask: Semicircle": {
+    "prefix": "--sys-shape-mask-semicircle",
+    "body": ["var(--sys-shape-mask-semicircle)"],
+    "description": "Common use cases: SVG data URI mask for Semicircle aesthetic"
+  },
+  "Shape Mask: Slanted": {
+    "prefix": "--sys-shape-mask-slanted",
+    "body": ["var(--sys-shape-mask-slanted)"],
+    "description": "Common use cases: SVG data URI mask for Slanted aesthetic"
+  },
+  "Shape Mask: Soft Boom": {
+    "prefix": "--sys-shape-mask-soft-boom",
+    "body": ["var(--sys-shape-mask-soft-boom)"],
+    "description": "Common use cases: SVG data URI mask for Soft Boom aesthetic"
+  },
+  "Shape Mask: Soft Burst": {
+    "prefix": "--sys-shape-mask-soft-burst",
+    "body": ["var(--sys-shape-mask-soft-burst)"],
+    "description": "Common use cases: SVG data URI mask for Soft Burst aesthetic"
+  },
+  "Shape Mask: Square": {
+    "prefix": "--sys-shape-mask-square",
+    "body": ["var(--sys-shape-mask-square)"],
+    "description": "Common use cases: SVG data URI mask for Square aesthetic"
+  },
+  "Shape Mask: Sunny": {
+    "prefix": "--sys-shape-mask-sunny",
+    "body": ["var(--sys-shape-mask-sunny)"],
+    "description": "Common use cases: SVG data URI mask for Sunny aesthetic"
+  },
+  "Shape Mask: Triangle": {
+    "prefix": "--sys-shape-mask-triangle",
+    "body": ["var(--sys-shape-mask-triangle)"],
+    "description": "Common use cases: SVG data URI mask for Triangle aesthetic"
+  },
+  "Shape Mask: Very Sunny": {
+    "prefix": "--sys-shape-mask-very-sunny",
+    "body": ["var(--sys-shape-mask-very-sunny)"],
+    "description": "Common use cases: SVG data URI mask for Very Sunny aesthetic"
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "Component: Button": {
+    "name": "Component: Button",
+    "prefix": "btn",
+    "body": ["<button class=\"btn ${1|filled,tonal,outline,elevated,text|}\">$2</button>$0"],
+    "description": "Standard triggers for actions. Use .filled by default for primary actions."
+  },
+  "Component: Toggle Button": {
+    "name": "Component: Toggle Button",
+    "prefix": "toggle-btn",
+    "body": [
+      "<div class=\"toggle-btn ${1|filled,tonal,outline,elevated|}\">",
+      "  <input class=\"input\" type=\"${2|checkbox,radio|}\" id=\"${3:id_name}\" />",
+      "  <label class=\"label\" for=\"$3\">$4</label>",
+      "</div>$0"
+    ],
+    "description": "Used for selection states. These wrap standard input types to maintain accessibility."
+  },
+  "Component: Icon Button": {
+    "name": "Component: Icon Button",
+    "prefix": "icon-btn",
+    "body": [
+      "<button class=\"icon-btn ${1|filled,tonal,outline,standard|}\" aria-label=\"${2:Favorite}\">",
+      "  <span class=\"icon\" aria-hidden=\"true\">${3:icon_name}</span>",
+      "</button>$0"
+    ],
+    "description": "Compact actions represented by an icon. Always include an aria-label."
+  },
+  "Component: Toggle Icon Button": {
+    "name": "Component: Toggle Icon Button",
+    "prefix": "toggle-icon-btn",
+    "body": [
+      "<div class=\"toggle-icon-btn ${1|filled,tonal,outline,standard|}\">",
+      "  <input class=\"input\" type=\"${2|checkbox,radio|}\" aria-label=\"${3:Label}\" id=\"${4:id_name}\" />",
+      "  <label class=\"label\" for=\"$4\">",
+      "    <span class=\"icon\" aria-hidden=\"true\">${5:icon_name}</span>",
+      "  </label>",
+      "</div>$0"
+    ],
+    "description": "Visual toggles for states such as bookmarks or 'favorite' status."
+  },
+  "Component: Standard Button Group": {
+    "name": "Component: Standard Button Group",
+    "prefix": "standard-btn-group",
+    "body": ["<div class=\"standard-btn-group $1\" role=\"group\" aria-label=\"${2:Group Name}\">", "  $0", "</div>"],
+    "description": "Groups related buttons together with a consistent gap."
+  },
+  "Component: Connected Button Group": {
+    "name": "Component: Connected Button Group",
+    "prefix": "connected-btn-group",
+    "body": ["<div class=\"connected-btn-group $1\" role=\"group\" aria-label=\"${2:Group Name}\">", "  $0", "</div>"],
+    "description": "A group of connected buttons that stretch to fill the container size."
+  },
+  "Component: Switch": {
+    "name": "Component: Switch",
+    "prefix": "switch",
+    "body": ["<input class=\"switch $1\" type=\"checkbox\" role=\"switch\" aria-label=\"${2:Toggle setting}\" />$0"],
+    "description": "Switches toggle the state of a single setting on or off."
+  },
+  "CDN Core": {
+    "prefix": "cdn-core",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/core.css\" />"],
+    "description": "Load the core foundation (reset + essential tokens)"
+  },
+  "CDN Component Button": {
+    "prefix": "cdn-component-button",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/components/button.css\" />"],
+    "description": "Load the Button component styles"
+  },
+  "CDN Component Switch": {
+    "prefix": "cdn-component-switch",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/components/switch.css\" />"],
+    "description": "Load the Switch component styles"
+  },
+  "CDN Scheme Aqua Expressive": {
+    "prefix": "cdn-scheme-aqua-expressive",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/aqua-expressive.css\" />"],
+    "description": "Load the aqua-expressive scheme"
+  },
+  "CDN Scheme Aqua Neutral": {
+    "prefix": "cdn-scheme-aqua-neutral",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/aqua-neutral.css\" />"],
+    "description": "Load the aqua-neutral scheme"
+  },
+  "CDN Scheme Aqua Tonal": {
+    "prefix": "cdn-scheme-aqua-tonal",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/aqua-tonal.css\" />"],
+    "description": "Load the aqua-tonal scheme"
+  },
+  "CDN Scheme Aqua Vibrant": {
+    "prefix": "cdn-scheme-aqua-vibrant",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/aqua-vibrant.css\" />"],
+    "description": "Load the aqua-vibrant scheme"
+  },
+  "CDN Scheme Baseline": {
+    "prefix": "cdn-scheme-baseline",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/baseline.css\" />"],
+    "description": "Load the baseline scheme"
+  },
+  "CDN Scheme Berry Expressive": {
+    "prefix": "cdn-scheme-berry-expressive",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/berry-expressive.css\" />"],
+    "description": "Load the berry-expressive scheme"
+  },
+  "CDN Scheme Berry Neutral": {
+    "prefix": "cdn-scheme-berry-neutral",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/berry-neutral.css\" />"],
+    "description": "Load the berry-neutral scheme"
+  },
+  "CDN Scheme Berry Tonal": {
+    "prefix": "cdn-scheme-berry-tonal",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/berry-tonal.css\" />"],
+    "description": "Load the berry-tonal scheme"
+  },
+  "CDN Scheme Berry Vibrant": {
+    "prefix": "cdn-scheme-berry-vibrant",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/berry-vibrant.css\" />"],
+    "description": "Load the berry-vibrant scheme"
+  },
+  "CDN Scheme Classic Expressive": {
+    "prefix": "cdn-scheme-classic-expressive",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/classic-expressive.css\" />"],
+    "description": "Load the classic-expressive scheme"
+  },
+  "CDN Scheme Classic Neutral": {
+    "prefix": "cdn-scheme-classic-neutral",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/classic-neutral.css\" />"],
+    "description": "Load the classic-neutral scheme"
+  },
+  "CDN Scheme Classic Tonal": {
+    "prefix": "cdn-scheme-classic-tonal",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/classic-tonal.css\" />"],
+    "description": "Load the classic-tonal scheme"
+  },
+  "CDN Scheme Classic Vibrant": {
+    "prefix": "cdn-scheme-classic-vibrant",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/classic-vibrant.css\" />"],
+    "description": "Load the classic-vibrant scheme"
+  },
+  "CDN Scheme Forest Expressive": {
+    "prefix": "cdn-scheme-forest-expressive",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/forest-expressive.css\" />"],
+    "description": "Load the forest-expressive scheme"
+  },
+  "CDN Scheme Forest Neutral": {
+    "prefix": "cdn-scheme-forest-neutral",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/forest-neutral.css\" />"],
+    "description": "Load the forest-neutral scheme"
+  },
+  "CDN Scheme Forest Tonal": {
+    "prefix": "cdn-scheme-forest-tonal",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/forest-tonal.css\" />"],
+    "description": "Load the forest-tonal scheme"
+  },
+  "CDN Scheme Forest Vibrant": {
+    "prefix": "cdn-scheme-forest-vibrant",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/forest-vibrant.css\" />"],
+    "description": "Load the forest-vibrant scheme"
+  },
+  "CDN Scheme Fuchsia Expressive": {
+    "prefix": "cdn-scheme-fuchsia-expressive",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-expressive.css\" />"],
+    "description": "Load the fuchsia-expressive scheme"
+  },
+  "CDN Scheme Fuchsia Neutral": {
+    "prefix": "cdn-scheme-fuchsia-neutral",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-neutral.css\" />"],
+    "description": "Load the fuchsia-neutral scheme"
+  },
+  "CDN Scheme Fuchsia Tonal": {
+    "prefix": "cdn-scheme-fuchsia-tonal",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-tonal.css\" />"],
+    "description": "Load the fuchsia-tonal scheme"
+  },
+  "CDN Scheme Fuchsia Vibrant": {
+    "prefix": "cdn-scheme-fuchsia-vibrant",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-vibrant.css\" />"],
+    "description": "Load the fuchsia-vibrant scheme"
+  },
+  "CDN Scheme Monochrome": {
+    "prefix": "cdn-scheme-monochrome",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/monochrome.css\" />"],
+    "description": "Load the monochrome scheme"
+  },
+  "CDN Scheme Paper Expressive": {
+    "prefix": "cdn-scheme-paper-expressive",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/paper-expressive.css\" />"],
+    "description": "Load the paper-expressive scheme"
+  },
+  "CDN Scheme Paper Neutral": {
+    "prefix": "cdn-scheme-paper-neutral",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/paper-neutral.css\" />"],
+    "description": "Load the paper-neutral scheme"
+  },
+  "CDN Scheme Paper Tonal": {
+    "prefix": "cdn-scheme-paper-tonal",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/paper-tonal.css\" />"],
+    "description": "Load the paper-tonal scheme"
+  },
+  "CDN Scheme Paper Vibrant": {
+    "prefix": "cdn-scheme-paper-vibrant",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/paper-vibrant.css\" />"],
+    "description": "Load the paper-vibrant scheme"
+  },
+  "CDN Scheme Porcelain Expressive": {
+    "prefix": "cdn-scheme-porcelain-expressive",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/porcelain-expressive.css\" />"],
+    "description": "Load the porcelain-expressive scheme"
+  },
+  "CDN Scheme Porcelain Neutral": {
+    "prefix": "cdn-scheme-porcelain-neutral",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/porcelain-neutral.css\" />"],
+    "description": "Load the porcelain-neutral scheme"
+  },
+  "CDN Scheme Porcelain Tonal": {
+    "prefix": "cdn-scheme-porcelain-tonal",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/porcelain-tonal.css\" />"],
+    "description": "Load the porcelain-tonal scheme"
+  },
+  "CDN Scheme Porcelain Vibrant": {
+    "prefix": "cdn-scheme-porcelain-vibrant",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/porcelain-vibrant.css\" />"],
+    "description": "Load the porcelain-vibrant scheme"
+  },
+  "CDN Scheme Sun Expressive": {
+    "prefix": "cdn-scheme-sun-expressive",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/sun-expressive.css\" />"],
+    "description": "Load the sun-expressive scheme"
+  },
+  "CDN Scheme Sun Neutral": {
+    "prefix": "cdn-scheme-sun-neutral",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/sun-neutral.css\" />"],
+    "description": "Load the sun-neutral scheme"
+  },
+  "CDN Scheme Sun Tonal": {
+    "prefix": "cdn-scheme-sun-tonal",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/sun-tonal.css\" />"],
+    "description": "Load the sun-tonal scheme"
+  },
+  "CDN Scheme Sun Vibrant": {
+    "prefix": "cdn-scheme-sun-vibrant",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/sun-vibrant.css\" />"],
+    "description": "Load the sun-vibrant scheme"
+  },
+  "Web Expressive Starter": {
+    "prefix": "web-expressive-starter",
+    "body": [
+      "<!doctype html>",
+      "<html lang=\"en\">",
+      "  <head>",
+      "    <meta charset=\"UTF-8\" />",
+      "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+      "    <title>${1:Web Expressive App}</title>",
+      "",
+      "    <!-- 1. Typography -->",
+      "    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap\" />",
+      "",
+      "    <!-- 2. Core (reset + essential tokens) -->",
+      "    <link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/core.css\" />",
+      "",
+      "    <!-- 3. Scheme -->",
+      "    <link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/schemes/${2|baseline,monochrome,aqua-tonal,berry-tonal,classic-tonal,forest-tonal,fuchsia-tonal,paper-tonal,porcelain-tonal,sun-tonal|}.css\" />",
+      "",
+      "    <!-- 4. Components -->",
+      "    <link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/components/button.css\" />",
+      "",
+      "  </head>",
+      "",
+      "  <body>",
+      "    $0",
+      "  </body>",
+      "</html>"
+    ],
+    "description": "HTML Starter template for Web Expressive"
+  },
+  "CDN Component Connected Button Group": {
+    "prefix": "cdn-component-connected-button-group",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/components/connected-button-group.css\" />"],
+    "description": "Load the Connected Button Group component styles"
+  },
+  "CDN Component Icon Button": {
+    "prefix": "cdn-component-icon-button",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/components/icon-button.css\" />"],
+    "description": "Load the Icon Button component styles"
+  },
+  "CDN Component Standard Button Group": {
+    "prefix": "cdn-component-standard-button-group",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/components/standard-button-group.css\" />"],
+    "description": "Load the Standard Button Group component styles"
+  },
+  "CDN Component Toggle Button": {
+    "prefix": "cdn-component-toggle-button",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/components/toggle-button.css\" />"],
+    "description": "Load the Toggle Button component styles"
+  },
+  "CDN Component Toggle Icon Button": {
+    "prefix": "cdn-component-toggle-icon-button",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/components/toggle-icon-button.css\" />"],
+    "description": "Load the Toggle Icon Button component styles"
+  },
+  "CDN Shape Clip Tokens": {
+    "prefix": "cdn-shape-clip",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/shapes/clip-tokens.css\" />"],
+    "description": "Load the Clip tokens for expressive shapes"
+  },
+  "CDN Shape Mask Tokens": {
+    "prefix": "cdn-shape-mask",
+    "body": ["<link rel=\"stylesheet\" href=\"https://unpkg.com/web-expressive@0.5.0/dist/shapes/mask-tokens.css\" />"],
+    "description": "Load the Mask tokens for expressive shapes"
+  }
+}

@@ -1,0 +1,2022 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive | Toggle button</title>
+    <meta name="description"
+        content="Toggle button component from Web Expressive, built with standard HTML and CSS for framework-agnostic use." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stars&display=block" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/core.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/forest-tonal.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/toggle-button.css" />
+
+    <style>
+        /* Showcase layout only, not part of Web Expressive and not required for use. */
+
+        @layer support {
+            body {
+                display: grid;
+                place-items: center;
+            }
+
+            .section {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding-inline: 1rem;
+                padding-block: 4rem;
+                overflow-inline: auto;
+
+                @media (width < 840px) {
+                    inline-size: 100%;
+                }
+            }
+
+            .article {
+                display: flex;
+                align-items: center;
+                gap: 0.25rem;
+                inline-size: max-content;
+            }
+
+            .section-headline {
+                color: var(--sys-color-on-surface);
+                font: var(--sys-typescale-emphasized-headline-large);
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Web Expressive
+        GitHub: https://github.com/mobalti/web-expressive
+    -->
+
+    <!-- Toggle button -->
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - round - (choose many)</h2>
+        </header>
+
+        <article class="article">
+            <div class="toggle-btn xs">
+                <input class="input" type="checkbox" name="item-icon-1" value="" id="item-icon-1" />
+                <label class="label" for="item-icon-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn sm">
+                <input class="input" type="checkbox" name="item-icon-2" value="" id="item-icon-2" />
+                <label class="label" for="item-icon-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn md">
+                <input class="input" type="checkbox" name="item-icon-3" value="" id="item-icon-3" />
+                <label class="label" for="item-icon-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn lg">
+                <input class="input" type="checkbox" checked name="item-icon-4" value="" id="item-icon-4" />
+                <label class="label" for="item-icon-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn xl">
+                <input class="input" type="checkbox" name="item-icon-5" value="" id="item-icon-5" />
+                <label class="label" for="item-icon-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn xs">
+                <input class="input" type="checkbox" disabled name="item-icon-disabled-1" value=""
+                    id="item-icon-disabled-1" />
+                <label class="label" for="item-icon-disabled-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn sm">
+                <input class="input" type="checkbox" disabled name="item-icon-disabled-2" value=""
+                    id="item-icon-disabled-2" />
+                <label class="label" for="item-icon-disabled-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn md">
+                <input class="input" type="checkbox" disabled name="item-icon-disabled-3" value=""
+                    id="item-icon-disabled-3" />
+                <label class="label" for="item-icon-disabled-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn lg">
+                <input class="input" type="checkbox" disabled checked name="item-icon-disabled-4" value=""
+                    id="item-icon-disabled-4" />
+                <label class="label" for="item-icon-disabled-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn xl">
+                <input class="input" type="checkbox" disabled name="item-icon-disabled-5" value=""
+                    id="item-icon-disabled-5" />
+                <label class="label" for="item-icon-disabled-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn xs">
+                <input class="input" type="checkbox" name="item-1" value="" id="item-1" />
+                <label class="label" for="item-1">Label</label>
+            </div>
+            <div class="toggle-btn sm">
+                <input class="input" type="checkbox" name="item-2" value="" id="item-2" />
+                <label class="label" for="item-2">Label</label>
+            </div>
+            <div class="toggle-btn md">
+                <input class="input" type="checkbox" name="item-3" value="" id="item-3" />
+                <label class="label" for="item-3">Label</label>
+            </div>
+            <div class="toggle-btn lg">
+                <input class="input" type="checkbox" checked name="item-4" value="" id="item-4" />
+                <label class="label" for="item-4">Label</label>
+            </div>
+            <div class="toggle-btn xl">
+                <input class="input" type="checkbox" name="item-5" value="" id="item-5" />
+                <label class="label" for="item-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn xs">
+                <input class="input" type="checkbox" disabled name="item-disabled-1" value="" id="item-disabled-1" />
+                <label class="label" for="item-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn sm">
+                <input class="input" type="checkbox" disabled name="item-disabled-2" value="" id="item-disabled-2" />
+                <label class="label" for="item-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn md">
+                <input class="input" type="checkbox" disabled name="item-disabled-3" value="" id="item-disabled-3" />
+                <label class="label" for="item-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn lg">
+                <input class="input" type="checkbox" disabled checked name="item-disabled-4" value=""
+                    id="item-disabled-4" />
+                <label class="label" for="item-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn xl">
+                <input class="input" type="checkbox" disabled name="item-disabled-5" value="" id="item-disabled-5" />
+                <label class="label" for="item-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - round - (choose one)</h2>
+        </header>
+        <article class="article">
+            <div class="toggle-btn xs">
+                <input class="input" type="radio" name="item-icon-radio" value="" id="item-icon-radio-1" />
+                <label class="label" for="item-icon-radio-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn sm">
+                <input class="input" type="radio" name="item-icon-radio" value="" id="item-icon-radio-2" />
+                <label class="label" for="item-icon-radio-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn md">
+                <input class="input" type="radio" name="item-icon-radio" value="" id="item-icon-radio-3" />
+                <label class="label" for="item-icon-radio-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn lg">
+                <input class="input" type="radio" checked name="item-icon-radio" value="" id="item-icon-radio-4" />
+                <label class="label" for="item-icon-radio-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn xl">
+                <input class="input" type="radio" name="item-icon-radio" value="" id="item-icon-radio-5" />
+                <label class="label" for="item-icon-radio-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn xs">
+                <input class="input" type="radio" disabled name="item-icon-radio-disabled" value=""
+                    id="item-icon-radio-disabled-1" />
+                <label class="label" for="item-icon-radio-disabled-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn sm">
+                <input class="input" type="radio" disabled name="item-icon-radio-disabled" value=""
+                    id="item-icon-radio-disabled-2" />
+                <label class="label" for="item-icon-radio-disabled-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn md">
+                <input class="input" type="radio" disabled name="item-icon-radio-disabled" value=""
+                    id="item-icon-radio-disabled-3" />
+                <label class="label" for="item-icon-radio-disabled-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn lg">
+                <input class="input" type="radio" disabled checked name="item-icon-radio-disabled" value=""
+                    id="item-icon-radio-disabled-4" />
+                <label class="label" for="item-icon-radio-disabled-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn xl">
+                <input class="input" type="radio" disabled name="item-icon-radio-disabled" value=""
+                    id="item-icon-radio-disabled-5" />
+                <label class="label" for="item-icon-radio-disabled-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn xs">
+                <input class="input" type="radio" name="item-radio" value="" id="item-radio-1" />
+                <label class="label" for="item-radio-1">Label</label>
+            </div>
+            <div class="toggle-btn sm">
+                <input class="input" type="radio" name="item-radio" value="" id="item-radio-2" />
+                <label class="label" for="item-radio-2">Label</label>
+            </div>
+            <div class="toggle-btn md">
+                <input class="input" type="radio" name="item-radio" value="" id="item-radio-3" />
+                <label class="label" for="item-radio-3">Label</label>
+            </div>
+            <div class="toggle-btn lg">
+                <input class="input" type="radio" checked name="item-radio" value="" id="item-radio-4" />
+                <label class="label" for="item-radio-4">Label</label>
+            </div>
+            <div class="toggle-btn xl">
+                <input class="input" type="radio" name="item-radio" value="" id="item-radio-5" />
+                <label class="label" for="item-radio-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn xs">
+                <input class="input" type="radio" disabled name="item-radio-disabled" value=""
+                    id="item-radio-disabled-1" />
+                <label class="label" for="item-radio-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn sm">
+                <input class="input" type="radio" disabled name="item-radio-disabled" value=""
+                    id="item-radio-disabled-2" />
+                <label class="label" for="item-radio-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn md">
+                <input class="input" type="radio" disabled name="item-radio-disabled" value=""
+                    id="item-radio-disabled-3" />
+                <label class="label" for="item-radio-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn lg">
+                <input class="input" type="radio" disabled checked name="item-radio-disabled" value=""
+                    id="item-radio-disabled-4" />
+                <label class="label" for="item-radio-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn xl">
+                <input class="input" type="radio" disabled name="item-radio-disabled" value=""
+                    id="item-radio-disabled-5" />
+                <label class="label" for="item-radio-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - square - (choose many)</h2>
+        </header>
+
+        <article class="article">
+            <div class="toggle-btn square xs">
+                <input class="input" type="checkbox" name="item-icon-square-1" value="" id="item-icon-square-1" />
+                <label class="label" for="item-icon-square-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square sm">
+                <input class="input" type="checkbox" name="item-icon-square-2" value="" id="item-icon-square-2" />
+                <label class="label" for="item-icon-square-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square md">
+                <input class="input" type="checkbox" name="item-icon-square-3" value="" id="item-icon-square-3" />
+                <label class="label" for="item-icon-square-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square lg">
+                <input class="input" type="checkbox" checked name="item-icon-square-4" value=""
+                    id="item-icon-square-4" />
+                <label class="label" for="item-icon-square-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square xl">
+                <input class="input" type="checkbox" name="item-icon-square-5" value="" id="item-icon-square-5" />
+                <label class="label" for="item-icon-square-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn square xs">
+                <input class="input" type="checkbox" disabled name="item-icon-square-disabled-1" value=""
+                    id="item-icon-square-disabled-1" />
+                <label class="label" for="item-icon-square-disabled-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square sm">
+                <input class="input" type="checkbox" disabled name="item-icon-square-disabled-2" value=""
+                    id="item-icon-square-disabled-2" />
+                <label class="label" for="item-icon-square-disabled-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square md">
+                <input class="input" type="checkbox" disabled name="item-icon-square-disabled-3" value=""
+                    id="item-icon-square-disabled-3" />
+                <label class="label" for="item-icon-square-disabled-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square lg">
+                <input class="input" type="checkbox" disabled checked name="item-icon-square-disabled-4" value=""
+                    id="item-icon-square-disabled-4" />
+                <label class="label" for="item-icon-square-disabled-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square xl">
+                <input class="input" type="checkbox" disabled name="item-icon-square-disabled-5" value=""
+                    id="item-icon-square-disabled-5" />
+                <label class="label" for="item-icon-square-disabled-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn square xs">
+                <input class="input" type="checkbox" name="item-square-1" value="" id="item-square-1" />
+                <label class="label" for="item-square-1">Label</label>
+            </div>
+            <div class="toggle-btn square sm">
+                <input class="input" type="checkbox" name="item-square-2" value="" id="item-square-2" />
+                <label class="label" for="item-square-2">Label</label>
+            </div>
+            <div class="toggle-btn square md">
+                <input class="input" type="checkbox" name="item-square-3" value="" id="item-square-3" />
+                <label class="label" for="item-square-3">Label</label>
+            </div>
+            <div class="toggle-btn square lg">
+                <input class="input" type="checkbox" checked name="item-square-4" value="" id="item-square-4" />
+                <label class="label" for="item-square-4">Label</label>
+            </div>
+            <div class="toggle-btn square xl">
+                <input class="input" type="checkbox" name="item-square-5" value="" id="item-square-5" />
+                <label class="label" for="item-square-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn square xs">
+                <input class="input" type="checkbox" disabled name="item-square-disabled-1" value=""
+                    id="item-square-disabled-1" />
+                <label class="label" for="item-square-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn square sm">
+                <input class="input" type="checkbox" disabled name="item-square-disabled-2" value=""
+                    id="item-square-disabled-2" />
+                <label class="label" for="item-square-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn square md">
+                <input class="input" type="checkbox" disabled name="item-square-disabled-3" value=""
+                    id="item-square-disabled-3" />
+                <label class="label" for="item-square-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn square lg">
+                <input class="input" type="checkbox" disabled checked name="item-square-disabled-4" value=""
+                    id="item-square-disabled-4" />
+                <label class="label" for="item-square-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn square xl">
+                <input class="input" type="checkbox" disabled name="item-square-disabled-5" value=""
+                    id="item-square-disabled-5" />
+                <label class="label" for="item-square-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - square - (choose one)</h2>
+        </header>
+        <article class="article">
+            <div class="toggle-btn square xs">
+                <input class="input" type="radio" name="item-icon-square-radio" value=""
+                    id="item-icon-square-radio-1" />
+                <label class="label" for="item-icon-square-radio-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square sm">
+                <input class="input" type="radio" name="item-icon-square-radio" value=""
+                    id="item-icon-square-radio-2" />
+                <label class="label" for="item-icon-square-radio-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square md">
+                <input class="input" type="radio" name="item-icon-square-radio" value=""
+                    id="item-icon-square-radio-3" />
+                <label class="label" for="item-icon-square-radio-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square lg">
+                <input class="input" type="radio" checked name="item-icon-square-radio" value=""
+                    id="item-icon-square-radio-4" />
+                <label class="label" for="item-icon-square-radio-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn square xl">
+                <input class="input" type="radio" name="item-icon-square-radio" value=""
+                    id="item-icon-square-radio-5" />
+                <label class="label" for="item-icon-square-radio-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn square xs">
+                <input class="input" type="radio" disabled name="item-icon-square-radio-disabled" value=""
+                    id="item-icon-square-radio-disabled-1" />
+                <label class="label" for="item-icon-square-radio-disabled-1"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn square sm">
+                <input class="input" type="radio" disabled name="item-icon-square-radio-disabled" value=""
+                    id="item-icon-square-radio-disabled-2" />
+                <label class="label" for="item-icon-square-radio-disabled-2"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn square md">
+                <input class="input" type="radio" disabled name="item-icon-square-radio-disabled" value=""
+                    id="item-icon-square-radio-disabled-3" />
+                <label class="label" for="item-icon-square-radio-disabled-3"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn square lg">
+                <input class="input" type="radio" disabled checked name="item-icon-square-radio-disabled" value=""
+                    id="item-icon-square-radio-disabled-4" />
+                <label class="label" for="item-icon-square-radio-disabled-4"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn square xl">
+                <input class="input" type="radio" disabled name="item-icon-square-radio-disabled" value=""
+                    id="item-icon-square-radio-disabled-5" />
+                <label class="label" for="item-icon-square-radio-disabled-5"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn square xs">
+                <input class="input" type="radio" name="item-square-radio" value="" id="item-square-radio-1" />
+                <label class="label" for="item-square-radio-1">Label</label>
+            </div>
+            <div class="toggle-btn square sm">
+                <input class="input" type="radio" name="item-square-radio" value="" id="item-square-radio-2" />
+                <label class="label" for="item-square-radio-2">Label</label>
+            </div>
+            <div class="toggle-btn square md">
+                <input class="input" type="radio" name="item-square-radio" value="" id="item-square-radio-3" />
+                <label class="label" for="item-square-radio-3">Label</label>
+            </div>
+            <div class="toggle-btn square lg">
+                <input class="input" type="radio" checked name="item-square-radio" value="" id="item-square-radio-4" />
+                <label class="label" for="item-square-radio-4">Label</label>
+            </div>
+            <div class="toggle-btn square xl">
+                <input class="input" type="radio" name="item-square-radio" value="" id="item-square-radio-5" />
+                <label class="label" for="item-square-radio-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn square xs">
+                <input class="input" type="radio" disabled name="item-square-radio-disabled" value=""
+                    id="item-square-radio-disabled-1" />
+                <label class="label" for="item-square-radio-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn square sm">
+                <input class="input" type="radio" disabled name="item-square-radio-disabled" value=""
+                    id="item-square-radio-disabled-2" />
+                <label class="label" for="item-square-radio-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn square md">
+                <input class="input" type="radio" disabled name="item-square-radio-disabled" value=""
+                    id="item-square-radio-disabled-3" />
+                <label class="label" for="item-square-radio-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn square lg">
+                <input class="input" type="radio" disabled checked name="item-square-radio-disabled" value=""
+                    id="item-square-radio-disabled-4" />
+                <label class="label" for="item-square-radio-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn square xl">
+                <input class="input" type="radio" disabled name="item-square-radio-disabled" value=""
+                    id="item-square-radio-disabled-5" />
+                <label class="label" for="item-square-radio-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <!-- Toggle button tonal -->
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - tonal - round - (choose many)</h2>
+        </header>
+
+        <article class="article">
+            <div class="toggle-btn tonal xs">
+                <input class="input" type="checkbox" name="item-icon-tonal-1" value="" id="item-icon-tonal-1" />
+                <label class="label" for="item-icon-tonal-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal sm">
+                <input class="input" type="checkbox" name="item-icon-tonal-2" value="" id="item-icon-tonal-2" />
+                <label class="label" for="item-icon-tonal-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal md">
+                <input class="input" type="checkbox" name="item-icon-tonal-3" value="" id="item-icon-tonal-3" />
+                <label class="label" for="item-icon-tonal-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal lg">
+                <input class="input" type="checkbox" checked name="item-icon-tonal-4" value="" id="item-icon-tonal-4" />
+                <label class="label" for="item-icon-tonal-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal xl">
+                <input class="input" type="checkbox" name="item-icon-tonal-5" value="" id="item-icon-tonal-5" />
+                <label class="label" for="item-icon-tonal-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal xs">
+                <input class="input" type="checkbox" disabled name="item-icon-tonal-disabled-1" value=""
+                    id="item-icon-tonal-disabled-1" />
+                <label class="label" for="item-icon-tonal-disabled-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal sm">
+                <input class="input" type="checkbox" disabled name="item-icon-tonal-disabled-2" value=""
+                    id="item-icon-tonal-disabled-2" />
+                <label class="label" for="item-icon-tonal-disabled-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal md">
+                <input class="input" type="checkbox" disabled name="item-icon-tonal-disabled-3" value=""
+                    id="item-icon-tonal-disabled-3" />
+                <label class="label" for="item-icon-tonal-disabled-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal lg">
+                <input class="input" type="checkbox" disabled checked name="item-icon-tonal-disabled-4" value=""
+                    id="item-icon-tonal-disabled-4" />
+                <label class="label" for="item-icon-tonal-disabled-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal xl">
+                <input class="input" type="checkbox" disabled name="item-icon-tonal-disabled-5" value=""
+                    id="item-icon-tonal-disabled-5" />
+                <label class="label" for="item-icon-tonal-disabled-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal xs">
+                <input class="input" type="checkbox" name="item-tonal-1" value="" id="item-tonal-1" />
+                <label class="label" for="item-tonal-1">Label</label>
+            </div>
+            <div class="toggle-btn tonal sm">
+                <input class="input" type="checkbox" name="item-tonal-2" value="" id="item-tonal-2" />
+                <label class="label" for="item-tonal-2">Label</label>
+            </div>
+            <div class="toggle-btn tonal md">
+                <input class="input" type="checkbox" name="item-tonal-3" value="" id="item-tonal-3" />
+                <label class="label" for="item-tonal-3">Label</label>
+            </div>
+            <div class="toggle-btn tonal lg">
+                <input class="input" type="checkbox" checked name="item-tonal-4" value="" id="item-tonal-4" />
+                <label class="label" for="item-tonal-4">Label</label>
+            </div>
+            <div class="toggle-btn tonal xl">
+                <input class="input" type="checkbox" name="item-tonal-5" value="" id="item-tonal-5" />
+                <label class="label" for="item-tonal-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal xs">
+                <input class="input" type="checkbox" disabled name="item-tonal-disabled-1" value=""
+                    id="item-tonal-disabled-1" />
+                <label class="label" for="item-tonal-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn tonal sm">
+                <input class="input" type="checkbox" disabled name="item-tonal-disabled-2" value=""
+                    id="item-tonal-disabled-2" />
+                <label class="label" for="item-tonal-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn tonal md">
+                <input class="input" type="checkbox" disabled name="item-tonal-disabled-3" value=""
+                    id="item-tonal-disabled-3" />
+                <label class="label" for="item-tonal-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn tonal lg">
+                <input class="input" type="checkbox" disabled checked name="item-tonal-disabled-4" value=""
+                    id="item-tonal-disabled-4" />
+                <label class="label" for="item-tonal-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn tonal xl">
+                <input class="input" type="checkbox" disabled name="item-tonal-disabled-5" value=""
+                    id="item-tonal-disabled-5" />
+                <label class="label" for="item-tonal-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - tonal - round - (choose one)</h2>
+        </header>
+        <article class="article">
+            <div class="toggle-btn tonal xs">
+                <input class="input" type="radio" name="item-icon-tonal-radio" value="" id="item-icon-tonal-radio-1" />
+                <label class="label" for="item-icon-tonal-radio-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal sm">
+                <input class="input" type="radio" name="item-icon-tonal-radio" value="" id="item-icon-tonal-radio-2" />
+                <label class="label" for="item-icon-tonal-radio-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal md">
+                <input class="input" type="radio" name="item-icon-tonal-radio" value="" id="item-icon-tonal-radio-3" />
+                <label class="label" for="item-icon-tonal-radio-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal lg">
+                <input class="input" type="radio" checked name="item-icon-tonal-radio" value=""
+                    id="item-icon-tonal-radio-4" />
+                <label class="label" for="item-icon-tonal-radio-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal xl">
+                <input class="input" type="radio" name="item-icon-tonal-radio" value="" id="item-icon-tonal-radio-5" />
+                <label class="label" for="item-icon-tonal-radio-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal xs">
+                <input class="input" type="radio" disabled name="item-icon-tonal-radio-disabled" value=""
+                    id="item-icon-tonal-radio-disabled-1" />
+                <label class="label" for="item-icon-tonal-radio-disabled-1"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal sm">
+                <input class="input" type="radio" disabled name="item-icon-tonal-radio-disabled" value=""
+                    id="item-icon-tonal-radio-disabled-2" />
+                <label class="label" for="item-icon-tonal-radio-disabled-2"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal md">
+                <input class="input" type="radio" disabled name="item-icon-tonal-radio-disabled" value=""
+                    id="item-icon-tonal-radio-disabled-3" />
+                <label class="label" for="item-icon-tonal-radio-disabled-3"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal lg">
+                <input class="input" type="radio" disabled checked name="item-icon-tonal-radio-disabled" value=""
+                    id="item-icon-tonal-radio-disabled-4" />
+                <label class="label" for="item-icon-tonal-radio-disabled-4"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal xl">
+                <input class="input" type="radio" disabled name="item-icon-tonal-radio-disabled" value=""
+                    id="item-icon-tonal-radio-disabled-5" />
+                <label class="label" for="item-icon-tonal-radio-disabled-5"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal xs">
+                <input class="input" type="radio" name="item-tonal-radio" value="" id="item-tonal-radio-1" />
+                <label class="label" for="item-tonal-radio-1">Label</label>
+            </div>
+            <div class="toggle-btn tonal sm">
+                <input class="input" type="radio" name="item-tonal-radio" value="" id="item-tonal-radio-2" />
+                <label class="label" for="item-tonal-radio-2">Label</label>
+            </div>
+            <div class="toggle-btn tonal md">
+                <input class="input" type="radio" name="item-tonal-radio" value="" id="item-tonal-radio-3" />
+                <label class="label" for="item-tonal-radio-3">Label</label>
+            </div>
+            <div class="toggle-btn tonal lg">
+                <input class="input" type="radio" checked name="item-tonal-radio" value="" id="item-tonal-radio-4" />
+                <label class="label" for="item-tonal-radio-4">Label</label>
+            </div>
+            <div class="toggle-btn tonal xl">
+                <input class="input" type="radio" name="item-tonal-radio" value="" id="item-tonal-radio-5" />
+                <label class="label" for="item-tonal-radio-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal xs">
+                <input class="input" type="radio" disabled name="item-tonal-radio-disabled" value=""
+                    id="item-tonal-radio-disabled-1" />
+                <label class="label" for="item-tonal-radio-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn tonal sm">
+                <input class="input" type="radio" disabled name="item-tonal-radio-disabled" value=""
+                    id="item-tonal-radio-disabled-2" />
+                <label class="label" for="item-tonal-radio-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn tonal md">
+                <input class="input" type="radio" disabled name="item-tonal-radio-disabled" value=""
+                    id="item-tonal-radio-disabled-3" />
+                <label class="label" for="item-tonal-radio-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn tonal lg">
+                <input class="input" type="radio" disabled checked name="item-tonal-radio-disabled" value=""
+                    id="item-tonal-radio-disabled-4" />
+                <label class="label" for="item-tonal-radio-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn tonal xl">
+                <input class="input" type="radio" disabled name="item-tonal-radio-disabled" value=""
+                    id="item-tonal-radio-disabled-5" />
+                <label class="label" for="item-tonal-radio-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - tonal - square - (choose many)</h2>
+        </header>
+
+        <article class="article">
+            <div class="toggle-btn tonal square xs">
+                <input class="input" type="checkbox" name="item-icon-tonal-square-1" value=""
+                    id="item-icon-tonal-square-1" />
+                <label class="label" for="item-icon-tonal-square-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square sm">
+                <input class="input" type="checkbox" name="item-icon-tonal-square-2" value=""
+                    id="item-icon-tonal-square-2" />
+                <label class="label" for="item-icon-tonal-square-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square md">
+                <input class="input" type="checkbox" name="item-icon-tonal-square-3" value=""
+                    id="item-icon-tonal-square-3" />
+                <label class="label" for="item-icon-tonal-square-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square lg">
+                <input class="input" type="checkbox" checked name="item-icon-tonal-square-4" value=""
+                    id="item-icon-tonal-square-4" />
+                <label class="label" for="item-icon-tonal-square-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square xl">
+                <input class="input" type="checkbox" name="item-icon-tonal-square-5" value=""
+                    id="item-icon-tonal-square-5" />
+                <label class="label" for="item-icon-tonal-square-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal square xs">
+                <input class="input" type="checkbox" disabled name="item-icon-tonal-square-disabled-1" value=""
+                    id="item-icon-tonal-square-disabled-1" />
+                <label class="label" for="item-icon-tonal-square-disabled-1"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square sm">
+                <input class="input" type="checkbox" disabled name="item-icon-tonal-square-disabled-2" value=""
+                    id="item-icon-tonal-square-disabled-2" />
+                <label class="label" for="item-icon-tonal-square-disabled-2"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square md">
+                <input class="input" type="checkbox" disabled name="item-icon-tonal-square-disabled-3" value=""
+                    id="item-icon-tonal-square-disabled-3" />
+                <label class="label" for="item-icon-tonal-square-disabled-3"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square lg">
+                <input class="input" type="checkbox" disabled checked name="item-icon-tonal-square-disabled-4" value=""
+                    id="item-icon-tonal-square-disabled-4" />
+                <label class="label" for="item-icon-tonal-square-disabled-4"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square xl">
+                <input class="input" type="checkbox" disabled name="item-icon-tonal-square-disabled-5" value=""
+                    id="item-icon-tonal-square-disabled-5" />
+                <label class="label" for="item-icon-tonal-square-disabled-5"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal square xs">
+                <input class="input" type="checkbox" name="item-tonal-square-1" value="" id="item-tonal-square-1" />
+                <label class="label" for="item-tonal-square-1">Label</label>
+            </div>
+            <div class="toggle-btn tonal square sm">
+                <input class="input" type="checkbox" name="item-tonal-square-2" value="" id="item-tonal-square-2" />
+                <label class="label" for="item-tonal-square-2">Label</label>
+            </div>
+            <div class="toggle-btn tonal square md">
+                <input class="input" type="checkbox" name="item-tonal-square-3" value="" id="item-tonal-square-3" />
+                <label class="label" for="item-tonal-square-3">Label</label>
+            </div>
+            <div class="toggle-btn tonal square lg">
+                <input class="input" type="checkbox" checked name="item-tonal-square-4" value=""
+                    id="item-tonal-square-4" />
+                <label class="label" for="item-tonal-square-4">Label</label>
+            </div>
+            <div class="toggle-btn tonal square xl">
+                <input class="input" type="checkbox" name="item-tonal-square-5" value="" id="item-tonal-square-5" />
+                <label class="label" for="item-tonal-square-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal square xs">
+                <input class="input" type="checkbox" disabled name="item-tonal-square-disabled-1" value=""
+                    id="item-tonal-square-disabled-1" />
+                <label class="label" for="item-tonal-square-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn tonal square sm">
+                <input class="input" type="checkbox" disabled name="item-tonal-square-disabled-2" value=""
+                    id="item-tonal-square-disabled-2" />
+                <label class="label" for="item-tonal-square-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn tonal square md">
+                <input class="input" type="checkbox" disabled name="item-tonal-square-disabled-3" value=""
+                    id="item-tonal-square-disabled-3" />
+                <label class="label" for="item-tonal-square-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn tonal square lg">
+                <input class="input" type="checkbox" disabled checked name="item-tonal-square-disabled-4" value=""
+                    id="item-tonal-square-disabled-4" />
+                <label class="label" for="item-tonal-square-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn tonal square xl">
+                <input class="input" type="checkbox" disabled name="item-tonal-square-disabled-5" value=""
+                    id="item-tonal-square-disabled-5" />
+                <label class="label" for="item-tonal-square-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - tonal - square - (choose one)</h2>
+        </header>
+        <article class="article">
+            <div class="toggle-btn tonal square xs">
+                <input class="input" type="radio" name="item-icon-tonal-square-radio" value=""
+                    id="item-icon-tonal-square-radio-1" />
+                <label class="label" for="item-icon-tonal-square-radio-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square sm">
+                <input class="input" type="radio" name="item-icon-tonal-square-radio" value=""
+                    id="item-icon-tonal-square-radio-2" />
+                <label class="label" for="item-icon-tonal-square-radio-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square md">
+                <input class="input" type="radio" name="item-icon-tonal-square-radio" value=""
+                    id="item-icon-tonal-square-radio-3" />
+                <label class="label" for="item-icon-tonal-square-radio-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square lg">
+                <input class="input" type="radio" checked name="item-icon-tonal-square-radio" value=""
+                    id="item-icon-tonal-square-radio-4" />
+                <label class="label" for="item-icon-tonal-square-radio-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square xl">
+                <input class="input" type="radio" name="item-icon-tonal-square-radio" value=""
+                    id="item-icon-tonal-square-radio-5" />
+                <label class="label" for="item-icon-tonal-square-radio-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal square xs">
+                <input class="input" type="radio" disabled name="item-icon-tonal-square-radio-disabled" value=""
+                    id="item-icon-tonal-square-radio-disabled-1" />
+                <label class="label" for="item-icon-tonal-square-radio-disabled-1"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square sm">
+                <input class="input" type="radio" disabled name="item-icon-tonal-square-radio-disabled" value=""
+                    id="item-icon-tonal-square-radio-disabled-2" />
+                <label class="label" for="item-icon-tonal-square-radio-disabled-2"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square md">
+                <input class="input" type="radio" disabled name="item-icon-tonal-square-radio-disabled" value=""
+                    id="item-icon-tonal-square-radio-disabled-3" />
+                <label class="label" for="item-icon-tonal-square-radio-disabled-3"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square lg">
+                <input class="input" type="radio" disabled checked name="item-icon-tonal-square-radio-disabled" value=""
+                    id="item-icon-tonal-square-radio-disabled-4" />
+                <label class="label" for="item-icon-tonal-square-radio-disabled-4"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn tonal square xl">
+                <input class="input" type="radio" disabled name="item-icon-tonal-square-radio-disabled" value=""
+                    id="item-icon-tonal-square-radio-disabled-5" />
+                <label class="label" for="item-icon-tonal-square-radio-disabled-5"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal square xs">
+                <input class="input" type="radio" name="item-tonal-square-radio" value=""
+                    id="item-tonal-square-radio-1" />
+                <label class="label" for="item-tonal-square-radio-1">Label</label>
+            </div>
+            <div class="toggle-btn tonal square sm">
+                <input class="input" type="radio" name="item-tonal-square-radio" value=""
+                    id="item-tonal-square-radio-2" />
+                <label class="label" for="item-tonal-square-radio-2">Label</label>
+            </div>
+            <div class="toggle-btn tonal square md">
+                <input class="input" type="radio" name="item-tonal-square-radio" value=""
+                    id="item-tonal-square-radio-3" />
+                <label class="label" for="item-tonal-square-radio-3">Label</label>
+            </div>
+            <div class="toggle-btn tonal square lg">
+                <input class="input" type="radio" checked name="item-tonal-square-radio" value=""
+                    id="item-tonal-square-radio-4" />
+                <label class="label" for="item-tonal-square-radio-4">Label</label>
+            </div>
+            <div class="toggle-btn tonal square xl">
+                <input class="input" type="radio" name="item-tonal-square-radio" value=""
+                    id="item-tonal-square-radio-5" />
+                <label class="label" for="item-tonal-square-radio-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn tonal square xs">
+                <input class="input" type="radio" disabled name="item-tonal-square-radio-disabled" value=""
+                    id="item-tonal-square-radio-disabled-1" />
+                <label class="label" for="item-tonal-square-radio-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn tonal square sm">
+                <input class="input" type="radio" disabled name="item-tonal-square-radio-disabled" value=""
+                    id="item-tonal-square-radio-disabled-2" />
+                <label class="label" for="item-tonal-square-radio-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn tonal square md">
+                <input class="input" type="radio" disabled name="item-tonal-square-radio-disabled" value=""
+                    id="item-tonal-square-radio-disabled-3" />
+                <label class="label" for="item-tonal-square-radio-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn tonal square lg">
+                <input class="input" type="radio" disabled checked name="item-tonal-square-radio-disabled" value=""
+                    id="item-tonal-square-radio-disabled-4" />
+                <label class="label" for="item-tonal-square-radio-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn tonal square xl">
+                <input class="input" type="radio" disabled name="item-tonal-square-radio-disabled" value=""
+                    id="item-tonal-square-radio-disabled-5" />
+                <label class="label" for="item-tonal-square-radio-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <!-- Toggle button outline -->
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - outline - round - (choose many)</h2>
+        </header>
+
+        <article class="article">
+            <div class="toggle-btn outline xs">
+                <input class="input" type="checkbox" name="item-icon-outline-1" value="" id="item-icon-outline-1" />
+                <label class="label" for="item-icon-outline-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline sm">
+                <input class="input" type="checkbox" name="item-icon-outline-2" value="" id="item-icon-outline-2" />
+                <label class="label" for="item-icon-outline-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline md">
+                <input class="input" type="checkbox" name="item-icon-outline-3" value="" id="item-icon-outline-3" />
+                <label class="label" for="item-icon-outline-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline lg">
+                <input class="input" type="checkbox" checked name="item-icon-outline-4" value=""
+                    id="item-icon-outline-4" />
+                <label class="label" for="item-icon-outline-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline xl">
+                <input class="input" type="checkbox" name="item-icon-outline-5" value="" id="item-icon-outline-5" />
+                <label class="label" for="item-icon-outline-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline xs">
+                <input class="input" type="checkbox" disabled name="item-icon-outline-disabled-1" value=""
+                    id="item-icon-outline-disabled-1" />
+                <label class="label" for="item-icon-outline-disabled-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline sm">
+                <input class="input" type="checkbox" disabled name="item-icon-outline-disabled-2" value=""
+                    id="item-icon-outline-disabled-2" />
+                <label class="label" for="item-icon-outline-disabled-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline md">
+                <input class="input" type="checkbox" disabled name="item-icon-outline-disabled-3" value=""
+                    id="item-icon-outline-disabled-3" />
+                <label class="label" for="item-icon-outline-disabled-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline lg">
+                <input class="input" type="checkbox" disabled checked name="item-icon-outline-disabled-4" value=""
+                    id="item-icon-outline-disabled-4" />
+                <label class="label" for="item-icon-outline-disabled-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline xl">
+                <input class="input" type="checkbox" disabled name="item-icon-outline-disabled-5" value=""
+                    id="item-icon-outline-disabled-5" />
+                <label class="label" for="item-icon-outline-disabled-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline xs">
+                <input class="input" type="checkbox" name="item-outline-1" value="" id="item-outline-1" />
+                <label class="label" for="item-outline-1">Label</label>
+            </div>
+            <div class="toggle-btn outline sm">
+                <input class="input" type="checkbox" name="item-outline-2" value="" id="item-outline-2" />
+                <label class="label" for="item-outline-2">Label</label>
+            </div>
+            <div class="toggle-btn outline md">
+                <input class="input" type="checkbox" name="item-outline-3" value="" id="item-outline-3" />
+                <label class="label" for="item-outline-3">Label</label>
+            </div>
+            <div class="toggle-btn outline lg">
+                <input class="input" type="checkbox" checked name="item-outline-4" value="" id="item-outline-4" />
+                <label class="label" for="item-outline-4">Label</label>
+            </div>
+            <div class="toggle-btn outline xl">
+                <input class="input" type="checkbox" name="item-outline-5" value="" id="item-outline-5" />
+                <label class="label" for="item-outline-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline xs">
+                <input class="input" type="checkbox" disabled name="item-outline-disabled-1" value=""
+                    id="item-outline-disabled-1" />
+                <label class="label" for="item-outline-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn outline sm">
+                <input class="input" type="checkbox" disabled name="item-outline-disabled-2" value=""
+                    id="item-outline-disabled-2" />
+                <label class="label" for="item-outline-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn outline md">
+                <input class="input" type="checkbox" disabled name="item-outline-disabled-3" value=""
+                    id="item-outline-disabled-3" />
+                <label class="label" for="item-outline-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn outline lg">
+                <input class="input" type="checkbox" disabled checked name="item-outline-disabled-4" value=""
+                    id="item-outline-disabled-4" />
+                <label class="label" for="item-outline-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn outline xl">
+                <input class="input" type="checkbox" disabled name="item-outline-disabled-5" value=""
+                    id="item-outline-disabled-5" />
+                <label class="label" for="item-outline-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - outline - round - (choose one)</h2>
+        </header>
+        <article class="article">
+            <div class="toggle-btn outline xs">
+                <input class="input" type="radio" name="item-icon-outline-radio" value=""
+                    id="item-icon-outline-radio-1" />
+                <label class="label" for="item-icon-outline-radio-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline sm">
+                <input class="input" type="radio" name="item-icon-outline-radio" value=""
+                    id="item-icon-outline-radio-2" />
+                <label class="label" for="item-icon-outline-radio-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline md">
+                <input class="input" type="radio" name="item-icon-outline-radio" value=""
+                    id="item-icon-outline-radio-3" />
+                <label class="label" for="item-icon-outline-radio-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline lg">
+                <input class="input" type="radio" checked name="item-icon-outline-radio" value=""
+                    id="item-icon-outline-radio-4" />
+                <label class="label" for="item-icon-outline-radio-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline xl">
+                <input class="input" type="radio" name="item-icon-outline-radio" value=""
+                    id="item-icon-outline-radio-5" />
+                <label class="label" for="item-icon-outline-radio-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline xs">
+                <input class="input" type="radio" disabled name="item-icon-outline-radio-disabled" value=""
+                    id="item-icon-outline-radio-disabled-1" />
+                <label class="label" for="item-icon-outline-radio-disabled-1"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline sm">
+                <input class="input" type="radio" disabled name="item-icon-outline-radio-disabled" value=""
+                    id="item-icon-outline-radio-disabled-2" />
+                <label class="label" for="item-icon-outline-radio-disabled-2"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline md">
+                <input class="input" type="radio" disabled name="item-icon-outline-radio-disabled" value=""
+                    id="item-icon-outline-radio-disabled-3" />
+                <label class="label" for="item-icon-outline-radio-disabled-3"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline lg">
+                <input class="input" type="radio" disabled checked name="item-icon-outline-radio-disabled" value=""
+                    id="item-icon-outline-radio-disabled-4" />
+                <label class="label" for="item-icon-outline-radio-disabled-4"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline xl">
+                <input class="input" type="radio" disabled name="item-icon-outline-radio-disabled" value=""
+                    id="item-icon-outline-radio-disabled-5" />
+                <label class="label" for="item-icon-outline-radio-disabled-5"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline xs">
+                <input class="input" type="radio" name="item-outline-radio" value="" id="item-outline-radio-1" />
+                <label class="label" for="item-outline-radio-1">Label</label>
+            </div>
+            <div class="toggle-btn outline sm">
+                <input class="input" type="radio" name="item-outline-radio" value="" id="item-outline-radio-2" />
+                <label class="label" for="item-outline-radio-2">Label</label>
+            </div>
+            <div class="toggle-btn outline md">
+                <input class="input" type="radio" name="item-outline-radio" value="" id="item-outline-radio-3" />
+                <label class="label" for="item-outline-radio-3">Label</label>
+            </div>
+            <div class="toggle-btn outline lg">
+                <input class="input" type="radio" checked name="item-outline-radio" value=""
+                    id="item-outline-radio-4" />
+                <label class="label" for="item-outline-radio-4">Label</label>
+            </div>
+            <div class="toggle-btn outline xl">
+                <input class="input" type="radio" name="item-outline-radio" value="" id="item-outline-radio-5" />
+                <label class="label" for="item-outline-radio-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline xs">
+                <input class="input" type="radio" disabled name="item-outline-radio-disabled" value=""
+                    id="item-outline-radio-disabled-1" />
+                <label class="label" for="item-outline-radio-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn outline sm">
+                <input class="input" type="radio" disabled name="item-outline-radio-disabled" value=""
+                    id="item-outline-radio-disabled-2" />
+                <label class="label" for="item-outline-radio-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn outline md">
+                <input class="input" type="radio" disabled name="item-outline-radio-disabled" value=""
+                    id="item-outline-radio-disabled-3" />
+                <label class="label" for="item-outline-radio-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn outline lg">
+                <input class="input" type="radio" disabled checked name="item-outline-radio-disabled" value=""
+                    id="item-outline-radio-disabled-4" />
+                <label class="label" for="item-outline-radio-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn outline xl">
+                <input class="input" type="radio" disabled name="item-outline-radio-disabled" value=""
+                    id="item-outline-radio-disabled-5" />
+                <label class="label" for="item-outline-radio-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - outline - square - (choose many)</h2>
+        </header>
+
+        <article class="article">
+            <div class="toggle-btn outline square xs">
+                <input class="input" type="checkbox" name="item-icon-outline-square-1" value=""
+                    id="item-icon-outline-square-1" />
+                <label class="label" for="item-icon-outline-square-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square sm">
+                <input class="input" type="checkbox" name="item-icon-outline-square-2" value=""
+                    id="item-icon-outline-square-2" />
+                <label class="label" for="item-icon-outline-square-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square md">
+                <input class="input" type="checkbox" name="item-icon-outline-square-3" value=""
+                    id="item-icon-outline-square-3" />
+                <label class="label" for="item-icon-outline-square-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square lg">
+                <input class="input" type="checkbox" checked name="item-icon-outline-square-4" value=""
+                    id="item-icon-outline-square-4" />
+                <label class="label" for="item-icon-outline-square-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square xl">
+                <input class="input" type="checkbox" name="item-icon-outline-square-5" value=""
+                    id="item-icon-outline-square-5" />
+                <label class="label" for="item-icon-outline-square-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline square xs">
+                <input class="input" type="checkbox" disabled name="item-icon-outline-square-disabled-1" value=""
+                    id="item-icon-outline-square-disabled-1" />
+                <label class="label" for="item-icon-outline-square-disabled-1"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square sm">
+                <input class="input" type="checkbox" disabled name="item-icon-outline-square-disabled-2" value=""
+                    id="item-icon-outline-square-disabled-2" />
+                <label class="label" for="item-icon-outline-square-disabled-2"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square md">
+                <input class="input" type="checkbox" disabled name="item-icon-outline-square-disabled-3" value=""
+                    id="item-icon-outline-square-disabled-3" />
+                <label class="label" for="item-icon-outline-square-disabled-3"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square lg">
+                <input class="input" type="checkbox" disabled checked name="item-icon-outline-square-disabled-4"
+                    value="" id="item-icon-outline-square-disabled-4" />
+                <label class="label" for="item-icon-outline-square-disabled-4"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square xl">
+                <input class="input" type="checkbox" disabled name="item-icon-outline-square-disabled-5" value=""
+                    id="item-icon-outline-square-disabled-5" />
+                <label class="label" for="item-icon-outline-square-disabled-5"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline square xs">
+                <input class="input" type="checkbox" name="item-outline-square-1" value="" id="item-outline-square-1" />
+                <label class="label" for="item-outline-square-1">Label</label>
+            </div>
+            <div class="toggle-btn outline square sm">
+                <input class="input" type="checkbox" name="item-outline-square-2" value="" id="item-outline-square-2" />
+                <label class="label" for="item-outline-square-2">Label</label>
+            </div>
+            <div class="toggle-btn outline square md">
+                <input class="input" type="checkbox" name="item-outline-square-3" value="" id="item-outline-square-3" />
+                <label class="label" for="item-outline-square-3">Label</label>
+            </div>
+            <div class="toggle-btn outline square lg">
+                <input class="input" type="checkbox" checked name="item-outline-square-4" value=""
+                    id="item-outline-square-4" />
+                <label class="label" for="item-outline-square-4">Label</label>
+            </div>
+            <div class="toggle-btn outline square xl">
+                <input class="input" type="checkbox" name="item-outline-square-5" value="" id="item-outline-square-5" />
+                <label class="label" for="item-outline-square-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline square xs">
+                <input class="input" type="checkbox" disabled name="item-outline-square-disabled-1" value=""
+                    id="item-outline-square-disabled-1" />
+                <label class="label" for="item-outline-square-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn outline square sm">
+                <input class="input" type="checkbox" disabled name="item-outline-square-disabled-2" value=""
+                    id="item-outline-square-disabled-2" />
+                <label class="label" for="item-outline-square-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn outline square md">
+                <input class="input" type="checkbox" disabled name="item-outline-square-disabled-3" value=""
+                    id="item-outline-square-disabled-3" />
+                <label class="label" for="item-outline-square-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn outline square lg">
+                <input class="input" type="checkbox" disabled checked name="item-outline-square-disabled-4" value=""
+                    id="item-outline-square-disabled-4" />
+                <label class="label" for="item-outline-square-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn outline square xl">
+                <input class="input" type="checkbox" disabled name="item-outline-square-disabled-5" value=""
+                    id="item-outline-square-disabled-5" />
+                <label class="label" for="item-outline-square-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - outline - square - (choose one)</h2>
+        </header>
+        <article class="article">
+            <div class="toggle-btn outline square xs">
+                <input class="input" type="radio" name="item-icon-outline-square-radio" value=""
+                    id="item-icon-outline-square-radio-1" />
+                <label class="label" for="item-icon-outline-square-radio-1"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square sm">
+                <input class="input" type="radio" name="item-icon-outline-square-radio" value=""
+                    id="item-icon-outline-square-radio-2" />
+                <label class="label" for="item-icon-outline-square-radio-2"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square md">
+                <input class="input" type="radio" name="item-icon-outline-square-radio" value=""
+                    id="item-icon-outline-square-radio-3" />
+                <label class="label" for="item-icon-outline-square-radio-3"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square lg">
+                <input class="input" type="radio" checked name="item-icon-outline-square-radio" value=""
+                    id="item-icon-outline-square-radio-4" />
+                <label class="label" for="item-icon-outline-square-radio-4"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square xl">
+                <input class="input" type="radio" name="item-icon-outline-square-radio" value=""
+                    id="item-icon-outline-square-radio-5" />
+                <label class="label" for="item-icon-outline-square-radio-5"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline square xs">
+                <input class="input" type="radio" disabled name="item-icon-outline-square-radio-disabled" value=""
+                    id="item-icon-outline-square-radio-disabled-1" />
+                <label class="label" for="item-icon-outline-square-radio-disabled-1"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square sm">
+                <input class="input" type="radio" disabled name="item-icon-outline-square-radio-disabled" value=""
+                    id="item-icon-outline-square-radio-disabled-2" />
+                <label class="label" for="item-icon-outline-square-radio-disabled-2"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square md">
+                <input class="input" type="radio" disabled name="item-icon-outline-square-radio-disabled" value=""
+                    id="item-icon-outline-square-radio-disabled-3" />
+                <label class="label" for="item-icon-outline-square-radio-disabled-3"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square lg">
+                <input class="input" type="radio" disabled checked name="item-icon-outline-square-radio-disabled"
+                    value="" id="item-icon-outline-square-radio-disabled-4" />
+                <label class="label" for="item-icon-outline-square-radio-disabled-4"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn outline square xl">
+                <input class="input" type="radio" disabled name="item-icon-outline-square-radio-disabled" value=""
+                    id="item-icon-outline-square-radio-disabled-5" />
+                <label class="label" for="item-icon-outline-square-radio-disabled-5"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline square xs">
+                <input class="input" type="radio" name="item-outline-square-radio" value=""
+                    id="item-outline-square-radio-1" />
+                <label class="label" for="item-outline-square-radio-1">Label</label>
+            </div>
+            <div class="toggle-btn outline square sm">
+                <input class="input" type="radio" name="item-outline-square-radio" value=""
+                    id="item-outline-square-radio-2" />
+                <label class="label" for="item-outline-square-radio-2">Label</label>
+            </div>
+            <div class="toggle-btn outline square md">
+                <input class="input" type="radio" name="item-outline-square-radio" value=""
+                    id="item-outline-square-radio-3" />
+                <label class="label" for="item-outline-square-radio-3">Label</label>
+            </div>
+            <div class="toggle-btn outline square lg">
+                <input class="input" type="radio" checked name="item-outline-square-radio" value=""
+                    id="item-outline-square-radio-4" />
+                <label class="label" for="item-outline-square-radio-4">Label</label>
+            </div>
+            <div class="toggle-btn outline square xl">
+                <input class="input" type="radio" name="item-outline-square-radio" value=""
+                    id="item-outline-square-radio-5" />
+                <label class="label" for="item-outline-square-radio-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn outline square xs">
+                <input class="input" type="radio" disabled name="item-outline-square-radio-disabled" value=""
+                    id="item-outline-square-radio-disabled-1" />
+                <label class="label" for="item-outline-square-radio-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn outline square sm">
+                <input class="input" type="radio" disabled name="item-outline-square-radio-disabled" value=""
+                    id="item-outline-square-radio-disabled-2" />
+                <label class="label" for="item-outline-square-radio-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn outline square md">
+                <input class="input" type="radio" disabled name="item-outline-square-radio-disabled" value=""
+                    id="item-outline-square-radio-disabled-3" />
+                <label class="label" for="item-outline-square-radio-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn outline square lg">
+                <input class="input" type="radio" disabled checked name="item-outline-square-radio-disabled" value=""
+                    id="item-outline-square-radio-disabled-4" />
+                <label class="label" for="item-outline-square-radio-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn outline square xl">
+                <input class="input" type="radio" disabled name="item-outline-square-radio-disabled" value=""
+                    id="item-outline-square-radio-disabled-5" />
+                <label class="label" for="item-outline-square-radio-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <!-- Toggle button elevated -->
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - elevated - round - (choose many)</h2>
+        </header>
+
+        <article class="article">
+            <div class="toggle-btn elevated xs">
+                <input class="input" type="checkbox" name="item-icon-elevated-1" value="" id="item-icon-elevated-1" />
+                <label class="label" for="item-icon-elevated-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated sm">
+                <input class="input" type="checkbox" name="item-icon-elevated-2" value="" id="item-icon-elevated-2" />
+                <label class="label" for="item-icon-elevated-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated md">
+                <input class="input" type="checkbox" name="item-icon-elevated-3" value="" id="item-icon-elevated-3" />
+                <label class="label" for="item-icon-elevated-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated lg">
+                <input class="input" type="checkbox" checked name="item-icon-elevated-4" value=""
+                    id="item-icon-elevated-4" />
+                <label class="label" for="item-icon-elevated-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated xl">
+                <input class="input" type="checkbox" name="item-icon-elevated-5" value="" id="item-icon-elevated-5" />
+                <label class="label" for="item-icon-elevated-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated xs">
+                <input class="input" type="checkbox" disabled name="item-icon-elevated-disabled-1" value=""
+                    id="item-icon-elevated-disabled-1" />
+                <label class="label" for="item-icon-elevated-disabled-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated sm">
+                <input class="input" type="checkbox" disabled name="item-icon-elevated-disabled-2" value=""
+                    id="item-icon-elevated-disabled-2" />
+                <label class="label" for="item-icon-elevated-disabled-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated md">
+                <input class="input" type="checkbox" disabled name="item-icon-elevated-disabled-3" value=""
+                    id="item-icon-elevated-disabled-3" />
+                <label class="label" for="item-icon-elevated-disabled-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated lg">
+                <input class="input" type="checkbox" disabled checked name="item-icon-elevated-disabled-4" value=""
+                    id="item-icon-elevated-disabled-4" />
+                <label class="label" for="item-icon-elevated-disabled-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated xl">
+                <input class="input" type="checkbox" disabled name="item-icon-elevated-disabled-5" value=""
+                    id="item-icon-elevated-disabled-5" />
+                <label class="label" for="item-icon-elevated-disabled-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated xs">
+                <input class="input" type="checkbox" name="item-elevated-1" value="" id="item-elevated-1" />
+                <label class="label" for="item-elevated-1">Label</label>
+            </div>
+            <div class="toggle-btn elevated sm">
+                <input class="input" type="checkbox" name="item-elevated-2" value="" id="item-elevated-2" />
+                <label class="label" for="item-elevated-2">Label</label>
+            </div>
+            <div class="toggle-btn elevated md">
+                <input class="input" type="checkbox" name="item-elevated-3" value="" id="item-elevated-3" />
+                <label class="label" for="item-elevated-3">Label</label>
+            </div>
+            <div class="toggle-btn elevated lg">
+                <input class="input" type="checkbox" checked name="item-elevated-4" value="" id="item-elevated-4" />
+                <label class="label" for="item-elevated-4">Label</label>
+            </div>
+            <div class="toggle-btn elevated xl">
+                <input class="input" type="checkbox" name="item-elevated-5" value="" id="item-elevated-5" />
+                <label class="label" for="item-elevated-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated xs">
+                <input class="input" type="checkbox" disabled name="item-elevated-disabled-1" value=""
+                    id="item-elevated-disabled-1" />
+                <label class="label" for="item-elevated-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn elevated sm">
+                <input class="input" type="checkbox" disabled name="item-elevated-disabled-2" value=""
+                    id="item-elevated-disabled-2" />
+                <label class="label" for="item-elevated-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn elevated md">
+                <input class="input" type="checkbox" disabled name="item-elevated-disabled-3" value=""
+                    id="item-elevated-disabled-3" />
+                <label class="label" for="item-elevated-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn elevated lg">
+                <input class="input" type="checkbox" disabled checked name="item-elevated-disabled-4" value=""
+                    id="item-elevated-disabled-4" />
+                <label class="label" for="item-elevated-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn elevated xl">
+                <input class="input" type="checkbox" disabled name="item-elevated-disabled-5" value=""
+                    id="item-elevated-disabled-5" />
+                <label class="label" for="item-elevated-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - elevated - round - (choose one)</h2>
+        </header>
+        <article class="article">
+            <div class="toggle-btn elevated xs">
+                <input class="input" type="radio" name="item-icon-elevated-radio" value=""
+                    id="item-icon-elevated-radio-1" />
+                <label class="label" for="item-icon-elevated-radio-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated sm">
+                <input class="input" type="radio" name="item-icon-elevated-radio" value=""
+                    id="item-icon-elevated-radio-2" />
+                <label class="label" for="item-icon-elevated-radio-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated md">
+                <input class="input" type="radio" name="item-icon-elevated-radio" value=""
+                    id="item-icon-elevated-radio-3" />
+                <label class="label" for="item-icon-elevated-radio-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated lg">
+                <input class="input" type="radio" checked name="item-icon-elevated-radio" value=""
+                    id="item-icon-elevated-radio-4" />
+                <label class="label" for="item-icon-elevated-radio-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated xl">
+                <input class="input" type="radio" name="item-icon-elevated-radio" value=""
+                    id="item-icon-elevated-radio-5" />
+                <label class="label" for="item-icon-elevated-radio-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated xs">
+                <input class="input" type="radio" disabled name="item-icon-elevated-radio-disabled" value=""
+                    id="item-icon-elevated-radio-disabled-1" />
+                <label class="label" for="item-icon-elevated-radio-disabled-1"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated sm">
+                <input class="input" type="radio" disabled name="item-icon-elevated-radio-disabled" value=""
+                    id="item-icon-elevated-radio-disabled-2" />
+                <label class="label" for="item-icon-elevated-radio-disabled-2"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated md">
+                <input class="input" type="radio" disabled name="item-icon-elevated-radio-disabled" value=""
+                    id="item-icon-elevated-radio-disabled-3" />
+                <label class="label" for="item-icon-elevated-radio-disabled-3"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated lg">
+                <input class="input" type="radio" disabled checked name="item-icon-elevated-radio-disabled" value=""
+                    id="item-icon-elevated-radio-disabled-4" />
+                <label class="label" for="item-icon-elevated-radio-disabled-4"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated xl">
+                <input class="input" type="radio" disabled name="item-icon-elevated-radio-disabled" value=""
+                    id="item-icon-elevated-radio-disabled-5" />
+                <label class="label" for="item-icon-elevated-radio-disabled-5"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated xs">
+                <input class="input" type="radio" name="item-elevated-radio" value="" id="item-elevated-radio-1" />
+                <label class="label" for="item-elevated-radio-1">Label</label>
+            </div>
+            <div class="toggle-btn elevated sm">
+                <input class="input" type="radio" name="item-elevated-radio" value="" id="item-elevated-radio-2" />
+                <label class="label" for="item-elevated-radio-2">Label</label>
+            </div>
+            <div class="toggle-btn elevated md">
+                <input class="input" type="radio" name="item-elevated-radio" value="" id="item-elevated-radio-3" />
+                <label class="label" for="item-elevated-radio-3">Label</label>
+            </div>
+            <div class="toggle-btn elevated lg">
+                <input class="input" type="radio" checked name="item-elevated-radio" value=""
+                    id="item-elevated-radio-4" />
+                <label class="label" for="item-elevated-radio-4">Label</label>
+            </div>
+            <div class="toggle-btn elevated xl">
+                <input class="input" type="radio" name="item-elevated-radio" value="" id="item-elevated-radio-5" />
+                <label class="label" for="item-elevated-radio-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated xs">
+                <input class="input" type="radio" disabled name="item-elevated-radio-disabled" value=""
+                    id="item-elevated-radio-disabled-1" />
+                <label class="label" for="item-elevated-radio-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn elevated sm">
+                <input class="input" type="radio" disabled name="item-elevated-radio-disabled" value=""
+                    id="item-elevated-radio-disabled-2" />
+                <label class="label" for="item-elevated-radio-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn elevated md">
+                <input class="input" type="radio" disabled name="item-elevated-radio-disabled" value=""
+                    id="item-elevated-radio-disabled-3" />
+                <label class="label" for="item-elevated-radio-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn elevated lg">
+                <input class="input" type="radio" disabled checked name="item-elevated-radio-disabled" value=""
+                    id="item-elevated-radio-disabled-4" />
+                <label class="label" for="item-elevated-radio-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn elevated xl">
+                <input class="input" type="radio" disabled name="item-elevated-radio-disabled" value=""
+                    id="item-elevated-radio-disabled-5" />
+                <label class="label" for="item-elevated-radio-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - elevated - square - (choose many)</h2>
+        </header>
+
+        <article class="article">
+            <div class="toggle-btn elevated square xs">
+                <input class="input" type="checkbox" name="item-icon-elevated-square-1" value=""
+                    id="item-icon-elevated-square-1" />
+                <label class="label" for="item-icon-elevated-square-1"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square sm">
+                <input class="input" type="checkbox" name="item-icon-elevated-square-2" value=""
+                    id="item-icon-elevated-square-2" />
+                <label class="label" for="item-icon-elevated-square-2"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square md">
+                <input class="input" type="checkbox" name="item-icon-elevated-square-3" value=""
+                    id="item-icon-elevated-square-3" />
+                <label class="label" for="item-icon-elevated-square-3"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square lg">
+                <input class="input" type="checkbox" checked name="item-icon-elevated-square-4" value=""
+                    id="item-icon-elevated-square-4" />
+                <label class="label" for="item-icon-elevated-square-4"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square xl">
+                <input class="input" type="checkbox" name="item-icon-elevated-square-5" value=""
+                    id="item-icon-elevated-square-5" />
+                <label class="label" for="item-icon-elevated-square-5"> <span class="icon" aria-hidden="true"> stars
+                    </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated square xs">
+                <input class="input" type="checkbox" disabled name="item-icon-elevated-square-disabled-1" value=""
+                    id="item-icon-elevated-square-disabled-1" />
+                <label class="label" for="item-icon-elevated-square-disabled-1"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square sm">
+                <input class="input" type="checkbox" disabled name="item-icon-elevated-square-disabled-2" value=""
+                    id="item-icon-elevated-square-disabled-2" />
+                <label class="label" for="item-icon-elevated-square-disabled-2"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square md">
+                <input class="input" type="checkbox" disabled name="item-icon-elevated-square-disabled-3" value=""
+                    id="item-icon-elevated-square-disabled-3" />
+                <label class="label" for="item-icon-elevated-square-disabled-3"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square lg">
+                <input class="input" type="checkbox" disabled checked name="item-icon-elevated-square-disabled-4"
+                    value="" id="item-icon-elevated-square-disabled-4" />
+                <label class="label" for="item-icon-elevated-square-disabled-4"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square xl">
+                <input class="input" type="checkbox" disabled name="item-icon-elevated-square-disabled-5" value=""
+                    id="item-icon-elevated-square-disabled-5" />
+                <label class="label" for="item-icon-elevated-square-disabled-5"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated square xs">
+                <input class="input" type="checkbox" name="item-elevated-square-1" value=""
+                    id="item-elevated-square-1" />
+                <label class="label" for="item-elevated-square-1">Label</label>
+            </div>
+            <div class="toggle-btn elevated square sm">
+                <input class="input" type="checkbox" name="item-elevated-square-2" value=""
+                    id="item-elevated-square-2" />
+                <label class="label" for="item-elevated-square-2">Label</label>
+            </div>
+            <div class="toggle-btn elevated square md">
+                <input class="input" type="checkbox" name="item-elevated-square-3" value=""
+                    id="item-elevated-square-3" />
+                <label class="label" for="item-elevated-square-3">Label</label>
+            </div>
+            <div class="toggle-btn elevated square lg">
+                <input class="input" type="checkbox" checked name="item-elevated-square-4" value=""
+                    id="item-elevated-square-4" />
+                <label class="label" for="item-elevated-square-4">Label</label>
+            </div>
+            <div class="toggle-btn elevated square xl">
+                <input class="input" type="checkbox" name="item-elevated-square-5" value=""
+                    id="item-elevated-square-5" />
+                <label class="label" for="item-elevated-square-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated square xs">
+                <input class="input" type="checkbox" disabled name="item-elevated-square-disabled-1" value=""
+                    id="item-elevated-square-disabled-1" />
+                <label class="label" for="item-elevated-square-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn elevated square sm">
+                <input class="input" type="checkbox" disabled name="item-elevated-square-disabled-2" value=""
+                    id="item-elevated-square-disabled-2" />
+                <label class="label" for="item-elevated-square-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn elevated square md">
+                <input class="input" type="checkbox" disabled name="item-elevated-square-disabled-3" value=""
+                    id="item-elevated-square-disabled-3" />
+                <label class="label" for="item-elevated-square-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn elevated square lg">
+                <input class="input" type="checkbox" disabled checked name="item-elevated-square-disabled-4" value=""
+                    id="item-elevated-square-disabled-4" />
+                <label class="label" for="item-elevated-square-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn elevated square xl">
+                <input class="input" type="checkbox" disabled name="item-elevated-square-disabled-5" value=""
+                    id="item-elevated-square-disabled-5" />
+                <label class="label" for="item-elevated-square-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="section-headline">Toggle button - elevated - square - (choose one)</h2>
+        </header>
+        <article class="article">
+            <div class="toggle-btn elevated square xs">
+                <input class="input" type="radio" name="item-icon-elevated-square-radio" value=""
+                    id="item-icon-elevated-square-radio-1" />
+                <label class="label" for="item-icon-elevated-square-radio-1"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square sm">
+                <input class="input" type="radio" name="item-icon-elevated-square-radio" value=""
+                    id="item-icon-elevated-square-radio-2" />
+                <label class="label" for="item-icon-elevated-square-radio-2"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square md">
+                <input class="input" type="radio" name="item-icon-elevated-square-radio" value=""
+                    id="item-icon-elevated-square-radio-3" />
+                <label class="label" for="item-icon-elevated-square-radio-3"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square lg">
+                <input class="input" type="radio" checked name="item-icon-elevated-square-radio" value=""
+                    id="item-icon-elevated-square-radio-4" />
+                <label class="label" for="item-icon-elevated-square-radio-4"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square xl">
+                <input class="input" type="radio" name="item-icon-elevated-square-radio" value=""
+                    id="item-icon-elevated-square-radio-5" />
+                <label class="label" for="item-icon-elevated-square-radio-5"> <span class="icon" aria-hidden="true">
+                        stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated square xs">
+                <input class="input" type="radio" disabled name="item-icon-elevated-square-radio-disabled" value=""
+                    id="item-icon-elevated-square-radio-disabled-1" />
+                <label class="label" for="item-icon-elevated-square-radio-disabled-1"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square sm">
+                <input class="input" type="radio" disabled name="item-icon-elevated-square-radio-disabled" value=""
+                    id="item-icon-elevated-square-radio-disabled-2" />
+                <label class="label" for="item-icon-elevated-square-radio-disabled-2"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square md">
+                <input class="input" type="radio" disabled name="item-icon-elevated-square-radio-disabled" value=""
+                    id="item-icon-elevated-square-radio-disabled-3" />
+                <label class="label" for="item-icon-elevated-square-radio-disabled-3"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square lg">
+                <input class="input" type="radio" disabled checked name="item-icon-elevated-square-radio-disabled"
+                    value="" id="item-icon-elevated-square-radio-disabled-4" />
+                <label class="label" for="item-icon-elevated-square-radio-disabled-4"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+            <div class="toggle-btn elevated square xl">
+                <input class="input" type="radio" disabled name="item-icon-elevated-square-radio-disabled" value=""
+                    id="item-icon-elevated-square-radio-disabled-5" />
+                <label class="label" for="item-icon-elevated-square-radio-disabled-5"> <span class="icon"
+                        aria-hidden="true"> stars </span>Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated square xs">
+                <input class="input" type="radio" name="item-elevated-square-radio" value=""
+                    id="item-elevated-square-radio-1" />
+                <label class="label" for="item-elevated-square-radio-1">Label</label>
+            </div>
+            <div class="toggle-btn elevated square sm">
+                <input class="input" type="radio" name="item-elevated-square-radio" value=""
+                    id="item-elevated-square-radio-2" />
+                <label class="label" for="item-elevated-square-radio-2">Label</label>
+            </div>
+            <div class="toggle-btn elevated square md">
+                <input class="input" type="radio" name="item-elevated-square-radio" value=""
+                    id="item-elevated-square-radio-3" />
+                <label class="label" for="item-elevated-square-radio-3">Label</label>
+            </div>
+            <div class="toggle-btn elevated square lg">
+                <input class="input" type="radio" checked name="item-elevated-square-radio" value=""
+                    id="item-elevated-square-radio-4" />
+                <label class="label" for="item-elevated-square-radio-4">Label</label>
+            </div>
+            <div class="toggle-btn elevated square xl">
+                <input class="input" type="radio" name="item-elevated-square-radio" value=""
+                    id="item-elevated-square-radio-5" />
+                <label class="label" for="item-elevated-square-radio-5">Label</label>
+            </div>
+        </article>
+
+        <article class="article">
+            <div class="toggle-btn elevated square xs">
+                <input class="input" type="radio" disabled name="item-elevated-square-radio-disabled" value=""
+                    id="item-elevated-square-radio-disabled-1" />
+                <label class="label" for="item-elevated-square-radio-disabled-1">Label</label>
+            </div>
+            <div class="toggle-btn elevated square sm">
+                <input class="input" type="radio" disabled name="item-elevated-square-radio-disabled" value=""
+                    id="item-elevated-square-radio-disabled-2" />
+                <label class="label" for="item-elevated-square-radio-disabled-2">Label</label>
+            </div>
+            <div class="toggle-btn elevated square md">
+                <input class="input" type="radio" disabled name="item-elevated-square-radio-disabled" value=""
+                    id="item-elevated-square-radio-disabled-3" />
+                <label class="label" for="item-elevated-square-radio-disabled-3">Label</label>
+            </div>
+            <div class="toggle-btn elevated square lg">
+                <input class="input" type="radio" disabled checked name="item-elevated-square-radio-disabled" value=""
+                    id="item-elevated-square-radio-disabled-4" />
+                <label class="label" for="item-elevated-square-radio-disabled-4">Label</label>
+            </div>
+            <div class="toggle-btn elevated square xl">
+                <input class="input" type="radio" disabled name="item-elevated-square-radio-disabled" value=""
+                    id="item-elevated-square-radio-disabled-5" />
+                <label class="label" for="item-elevated-square-radio-disabled-5">Label</label>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>

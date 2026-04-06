@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive | Switch</title>
+    <meta name="description"
+        content="Switch component from Web Expressive, built with standard HTML and CSS for framework-agnostic use." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/core.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/berry-vibrant.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/switch.css" />
+</head>
+
+<style>
+    /* Showcase layout only, not part of Web Expressive and not required for use. */
+    @layer support {
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .section {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+</style>
+
+<body>
+    <!--
+        Web Expressive
+        GitHub: https://github.com/mobalti/web-expressive
+    -->
+    <div>
+        <section class="section">
+            <input class="switch" type="checkbox" role="switch" />
+            <input class="switch" disabled type="checkbox" role="switch" />
+            <input class="switch" checked type="checkbox" role="switch" />
+            <input class="switch" checked disabled type="checkbox" role="switch" />
+        </section>
+        <section class="section">
+            <input class="switch icon" type="checkbox" role="switch" />
+            <input class="switch icon" disabled type="checkbox" role="switch" />
+            <input class="switch icon" checked type="checkbox" role="switch" />
+            <input class="switch icon" checked disabled type="checkbox" role="switch" />
+        </section>
+    </div>
+</body>
+
+</html>

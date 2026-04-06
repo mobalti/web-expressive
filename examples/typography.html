@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive | Typography</title>
+    <meta name="description"
+        content="Typography showcase from Web Expressive, built with standard HTML and CSS for framework-agnostic use." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Story+Script&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/core.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/monochrome.css" />
+
+    <style>
+        html {
+            /* 
+             * Typography Customization
+             * 
+             * Web Expressive allows you to update the library font by overriding 
+             * these CSS variables. You can change the base font for the entire 
+             * system or target specific variants:
+             * 
+             * - base: the default font for the entire typography system
+             * - brand: affects Display, Headline, and Title large
+             * - plain: affects Title small/medium, Body, and Label
+             * - emphasized-brand: affects emphasized Display, Headline, and Title large
+             * - emphasized-plain: affects emphasized Title small/medium, Body, and Label
+             * 
+             * ⚠️ CAUTION: Using multiple custom web fonts concurrently can negatively impact 
+             * page load performance and create a visually cluttered experience. 
+             * 
+             * For more information, visit:
+             * https://github.com/mobalti/web-expressive/blob/main/tokens.md#customization
+             */
+
+            /* Default: "Google Sans Flex" */
+            --ref-typeface-base: "IBM Plex Sans";
+            --ref-typeface-brand: "Anton";
+            --ref-typeface-plain: "Roboto Serif";
+            --ref-typeface-emphasized-brand: "UnifrakturMaguntia";
+            --ref-typeface-emphasized-plain: "Story Script";
+            --ref-typeface-generic: fantasy;
+        }
+
+        hr {
+            border-color: var(--sys-color-outline-variant);
+        }
+    </style>
+</head>
+
+<body style="padding: 2rem; display: flex; gap: 1rem; flex-direction: column">
+    <!--
+        Web Expressive
+        GitHub: https://github.com/mobalti/web-expressive
+    -->
+    <div style="font: var(--sys-typescale-display-large)">--sys-typescale-display-large</div>
+    <div style="font: var(--sys-typescale-display-medium)">--sys-typescale-display-medium</div>
+    <div style="font: var(--sys-typescale-display-small)">--sys-typescale-display-small</div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div style="font: var(--sys-typescale-headline-large)">--sys-typescale-headline-large</div>
+    <div style="font: var(--sys-typescale-headline-medium)">--sys-typescale-headline-medium</div>
+    <div style="font: var(--sys-typescale-headline-small)">--sys-typescale-headline-small</div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div style="font: var(--sys-typescale-title-large)">--sys-typescale-title-large</div>
+    <div style="font: var(--sys-typescale-title-medium)">--sys-typescale-title-medium</div>
+    <div style="font: var(--sys-typescale-title-small)">--sys-typescale-title-small</div>
+    <br />
+    <hr />
+    <br />
+    <div style="font: var(--sys-typescale-label-large)">--sys-typescale-label-large</div>
+    <div style="font: var(--sys-typescale-label-medium)">--sys-typescale-label-medium</div>
+    <div style="font: var(--sys-typescale-label-small)">--sys-typescale-label-small</div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div style="font: var(--sys-typescale-body-large)">--sys-typescale-body-large</div>
+    <div style="font: var(--sys-typescale-body-medium)">--sys-typescale-body-medium</div>
+    <div style="font: var(--sys-typescale-body-small)">--sys-typescale-body-small</div>
+    <br />
+    <hr />
+    <br />
+
+    <div style="font: var(--sys-typescale-emphasized-display-large)">--sys-typescale-emphasized-display-large</div>
+    <div style="font: var(--sys-typescale-emphasized-display-medium)">--sys-typescale-emphasized-display-medium</div>
+    <div style="font: var(--sys-typescale-emphasized-display-small)">--sys-typescale-emphasized-display-small</div>
+
+    <br />
+    <hr />
+    <br />
+    <div style="font: var(--sys-typescale-emphasized-headline-large)">--sys-typescale-emphasized-headline-large</div>
+    <div style="font: var(--sys-typescale-emphasized-headline-medium)">--sys-typescale-emphasized-headline-medium</div>
+    <div style="font: var(--sys-typescale-emphasized-headline-small)">--sys-typescale-emphasized-headline-small</div>
+
+    <br />
+    <hr />
+    <br />
+    <div style="font: var(--sys-typescale-emphasized-title-large)">--sys-typescale-emphasized-title-large</div>
+    <div style="font: var(--sys-typescale-emphasized-title-medium)">--sys-typescale-emphasized-title-medium</div>
+    <div style="font: var(--sys-typescale-emphasized-title-small)">--sys-typescale-emphasized-title-small</div>
+
+    <br />
+    <hr />
+    <br />
+    <div style="font: var(--sys-typescale-emphasized-label-large)">--sys-typescale-emphasized-label-large</div>
+    <div style="font: var(--sys-typescale-emphasized-label-medium)">--sys-typescale-emphasized-label-medium</div>
+    <div style="font: var(--sys-typescale-emphasized-label-small)">--sys-typescale-emphasized-label-small</div>
+
+    <br />
+    <hr />
+    <br />
+    <div style="font: var(--sys-typescale-emphasized-body-large)">--sys-typescale-emphasized-body-large</div>
+    <div style="font: var(--sys-typescale-emphasized-body-medium)">--sys-typescale-emphasized-body-medium</div>
+    <div style="font: var(--sys-typescale-emphasized-body-small)">--sys-typescale-emphasized-body-small</div>
+</body>
+
+</html>

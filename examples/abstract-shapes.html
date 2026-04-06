@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive | Abstract shapes</title>
+    <meta name="description"
+        content="Abstract shapes from Web Expressive, built with standard HTML and CSS for framework-agnostic use." />
+    <!-- Typography -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap" />
+
+    <!-- Core (reset + essential tokens) -->
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/core.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/classic-tonal.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/shapes/clip-tokens.css" />
+
+    <style>
+        /* Showcase layout only, not part of Web Expressive and not required for use. */
+        .section {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            max-inline-size: 100%;
+            overflow-inline: auto;
+        }
+
+        .figure {
+            display: grid;
+            grid-template-rows: 1fr min-content;
+            place-items: center;
+
+            &:not(:nth-child(5n + 1)) {
+                border-inline-start: 1px solid var(--sys-color-outline);
+            }
+        }
+
+        .preview {
+            clip-path: var(--_shape);
+            background: var(--sys-color-primary);
+            aspect-ratio: 1/1;
+            inline-size: 80%;
+        }
+
+        .figcaption {
+            border-block: 1px solid var(--sys-color-outline);
+            padding: 0.75rem;
+            inline-size: 100%;
+            text-align: center;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Web Expressive
+        GitHub: https://github.com/mobalti/web-expressive
+    -->
+    <section class="section">
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-circle)"></div>
+            <figcaption class="figcaption">Circle</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-square)"></div>
+            <figcaption class="figcaption">Square</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-slanted)"></div>
+            <figcaption class="figcaption">Slanted</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-arch)"></div>
+            <figcaption class="figcaption">Arch</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-semicircle)"></div>
+            <figcaption class="figcaption">Semicircle</figcaption>
+        </figure>
+
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-oval)"></div>
+            <figcaption class="figcaption">Oval</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-pill)"></div>
+            <figcaption class="figcaption">Pill</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-triangle)"></div>
+            <figcaption class="figcaption">Triangle</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-arrow)"></div>
+            <figcaption class="figcaption">Arrow</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-fan)"></div>
+            <figcaption class="figcaption">Fan</figcaption>
+        </figure>
+
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-diamond)"></div>
+            <figcaption class="figcaption">Diamond</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-clamshell)"></div>
+            <figcaption class="figcaption">Clamshell</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-pentagon)"></div>
+            <figcaption class="figcaption">Pentagon</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-gem)"></div>
+            <figcaption class="figcaption">Gem</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-very-sunny)"></div>
+            <figcaption class="figcaption">Very sunny</figcaption>
+        </figure>
+
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-sunny)"></div>
+            <figcaption class="figcaption">Sunny</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-4-sided-cookie)"></div>
+            <figcaption class="figcaption">4-sided cookie</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-6-sided-cookie)"></div>
+            <figcaption class="figcaption">6-sided cookie</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-7-sided-cookie)"></div>
+            <figcaption class="figcaption">7-sided cookie</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-9-sided-cookie)"></div>
+            <figcaption class="figcaption">9-sided cookie</figcaption>
+        </figure>
+
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-12-sided-cookie)"></div>
+            <figcaption class="figcaption">12-sided cookie</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-4-leaf-clover)"></div>
+            <figcaption class="figcaption">4-leaf clover</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-8-leaf-clover)"></div>
+            <figcaption class="figcaption">8-leaf clover</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-burst)"></div>
+            <figcaption class="figcaption">Burst</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-soft-burst)"></div>
+            <figcaption class="figcaption">Soft burst</figcaption>
+        </figure>
+
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-boom)"></div>
+            <figcaption class="figcaption">Boom</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-soft-boom)"></div>
+            <figcaption class="figcaption">Soft boom</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-flower)"></div>
+            <figcaption class="figcaption">Flower</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-puffy)"></div>
+            <figcaption class="figcaption">Puffy</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-puffy-diamond)"></div>
+            <figcaption class="figcaption">Puffy diamond</figcaption>
+        </figure>
+
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-ghost-ish)"></div>
+            <figcaption class="figcaption">Ghost-ish</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-pixel-circle)"></div>
+            <figcaption class="figcaption">Pixel circle</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-pixel-triangle)"></div>
+            <figcaption class="figcaption">Pixel triangle</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-bun)"></div>
+            <figcaption class="figcaption">Bun</figcaption>
+        </figure>
+        <figure class="figure">
+            <div class="preview" style="--_shape: var(--sys-shape-clip-heart)"></div>
+            <figcaption class="figcaption">Heart</figcaption>
+        </figure>
+    </section>
+</body>
+
+</html>

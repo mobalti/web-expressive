@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive | Button</title>
+    <meta name="description"
+        content="Button component from Web Expressive, built with standard HTML and CSS for framework-agnostic use." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stars&display=block" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/core.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-tonal.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/button.css" />
+
+    <style>
+        /* Showcase layout only, not part of Web Expressive and not required for use. */
+        @layer support {
+            body {
+                display: grid;
+                place-items: center;
+            }
+
+            .section {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding-inline: 2rem;
+                padding-block: 4rem;
+                overflow-inline: auto;
+
+                /* window-medium-narrower */
+                @media (width < 840px) {
+                    inline-size: 100%;
+                }
+            }
+
+            .article {
+                inline-size: max-content;
+                user-select: none;
+            }
+
+            .headline {
+                color: var(--sys-color-on-surface);
+                font: var(--sys-typescale-emphasized-headline-large);
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Web Expressive
+        GitHub: https://github.com/mobalti/web-expressive
+    -->
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - round</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn xs" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn sm" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn md" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn lg" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn xl" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn xs">Label</button>
+            <button class="btn sm">Label</button>
+            <button class="btn md">Label</button>
+            <button class="btn lg">Label</button>
+            <button class="btn xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn xs" disabled>Label</button>
+            <button class="btn sm" disabled>Label</button>
+            <button class="btn md" disabled>Label</button>
+            <button class="btn lg" disabled>Label</button>
+            <button class="btn xl" disabled>Label</button>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - square</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn square xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn square sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn square md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn square lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn square xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn square xs" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn square sm" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn square md" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn square lg" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn square xl" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn square xs">Label</button>
+            <button class="btn square sm">Label</button>
+            <button class="btn square md">Label</button>
+            <button class="btn square lg">Label</button>
+            <button class="btn square xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn square xs" disabled>Label</button>
+            <button class="btn square sm" disabled>Label</button>
+            <button class="btn square md" disabled>Label</button>
+            <button class="btn square lg" disabled>Label</button>
+            <button class="btn square xl" disabled>Label</button>
+        </article>
+    </section>
+    <!-- Btn tonal -->
+
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - tonal - round</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn tonal xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn tonal xs" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal sm" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal md" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal lg" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal xl" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn tonal xs">Label</button>
+            <button class="btn tonal sm">Label</button>
+            <button class="btn tonal md">Label</button>
+            <button class="btn tonal lg">Label</button>
+            <button class="btn tonal xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn tonal xs" disabled>Label</button>
+            <button class="btn tonal sm" disabled>Label</button>
+            <button class="btn tonal md" disabled>Label</button>
+            <button class="btn tonal lg" disabled>Label</button>
+            <button class="btn tonal xl" disabled>Label</button>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - tonal - square</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn tonal square xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal square sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal square md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal square lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal square xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn tonal square xs" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal square sm" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal square md" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal square lg" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn tonal square xl" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn tonal square xs">Label</button>
+            <button class="btn tonal square sm">Label</button>
+            <button class="btn tonal square md">Label</button>
+            <button class="btn tonal square lg">Label</button>
+            <button class="btn tonal square xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn tonal square xs" disabled>Label</button>
+            <button class="btn tonal square sm" disabled>Label</button>
+            <button class="btn tonal square md" disabled>Label</button>
+            <button class="btn tonal square lg" disabled>Label</button>
+            <button class="btn tonal square xl" disabled>Label</button>
+        </article>
+    </section>
+
+    <!-- Button - outline -->
+
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - outline - round</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn outline xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn outline xs" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline sm" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline md" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline lg" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline xl" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn outline xs">Label</button>
+            <button class="btn outline sm">Label</button>
+            <button class="btn outline md">Label</button>
+            <button class="btn outline lg">Label</button>
+            <button class="btn outline xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn outline xs" disabled>Label</button>
+            <button class="btn outline sm" disabled>Label</button>
+            <button class="btn outline md" disabled>Label</button>
+            <button class="btn outline lg" disabled>Label</button>
+            <button class="btn outline xl" disabled>Label</button>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - outline - square</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn outline square xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline square sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline square md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline square lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline square xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn outline square xs" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline square sm" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline square md" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline square lg" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn outline square xl" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn outline square xs">Label</button>
+            <button class="btn outline square sm">Label</button>
+            <button class="btn outline square md">Label</button>
+            <button class="btn outline square lg">Label</button>
+            <button class="btn outline square xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn outline square xs" disabled>Label</button>
+            <button class="btn outline square sm" disabled>Label</button>
+            <button class="btn outline square md" disabled>Label</button>
+            <button class="btn outline square lg" disabled>Label</button>
+            <button class="btn outline square xl" disabled>Label</button>
+        </article>
+    </section>
+
+    <!-- Button - elevated -->
+
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - elevated - round</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn elevated xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn elevated xs" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated sm" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated md" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated lg" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated xl" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn elevated xs">Label</button>
+            <button class="btn elevated sm">Label</button>
+            <button class="btn elevated md">Label</button>
+            <button class="btn elevated lg">Label</button>
+            <button class="btn elevated xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn elevated xs" disabled>Label</button>
+            <button class="btn elevated sm" disabled>Label</button>
+            <button class="btn elevated md" disabled>Label</button>
+            <button class="btn elevated lg" disabled>Label</button>
+            <button class="btn elevated xl" disabled>Label</button>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - elevated - square</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn elevated square xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated square sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated square md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated square lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated square xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn elevated square xs" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated square sm" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated square md" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated square lg" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+            <button class="btn elevated square xl" disabled><span class="icon"
+                    aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn elevated square xs">Label</button>
+            <button class="btn elevated square sm">Label</button>
+            <button class="btn elevated square md">Label</button>
+            <button class="btn elevated square lg">Label</button>
+            <button class="btn elevated square xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn elevated square xs" disabled>Label</button>
+            <button class="btn elevated square sm" disabled>Label</button>
+            <button class="btn elevated square md" disabled>Label</button>
+            <button class="btn elevated square lg" disabled>Label</button>
+            <button class="btn elevated square xl" disabled>Label</button>
+        </article>
+    </section>
+
+    <!-- Button - text -->
+
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - text - round</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn text xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn text xs" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text sm" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text md" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text lg" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text xl" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn text xs">Label</button>
+            <button class="btn text sm">Label</button>
+            <button class="btn text md">Label</button>
+            <button class="btn text lg">Label</button>
+            <button class="btn text xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn text xs" disabled>Label</button>
+            <button class="btn text sm" disabled>Label</button>
+            <button class="btn text md" disabled>Label</button>
+            <button class="btn text lg" disabled>Label</button>
+            <button class="btn text xl" disabled>Label</button>
+        </article>
+    </section>
+
+    <section class="section">
+        <header>
+            <h2 class="headline">Button - text - square</h2>
+        </header>
+
+        <article class="article">
+            <button class="btn text square xs"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text square sm"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text square md"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text square lg"><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text square xl"><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn text square xs" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text square sm" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text square md" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text square lg" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+            <button class="btn text square xl" disabled><span class="icon" aria-hidden="true">stars</span>Label</button>
+        </article>
+        <article class="article">
+            <button class="btn text square xs">Label</button>
+            <button class="btn text square sm">Label</button>
+            <button class="btn text square md">Label</button>
+            <button class="btn text square lg">Label</button>
+            <button class="btn text square xl">Label</button>
+        </article>
+        <article class="article">
+            <button class="btn text square xs" disabled>Label</button>
+            <button class="btn text square sm" disabled>Label</button>
+            <button class="btn text square md" disabled>Label</button>
+            <button class="btn text square lg" disabled>Label</button>
+            <button class="btn text square xl" disabled>Label</button>
+        </article>
+    </section>
+</body>
+
+</html>

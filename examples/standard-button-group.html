@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive | Standard button group</title>
+    <meta name="description"
+        content="Standard button group component from Web Expressive, built with standard HTML and CSS for framework-agnostic use." />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/core.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/paper-tonal.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/button.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/toggle-button.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/toggle-icon-button.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/standard-button-group.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=alarm,bluetooth,do_not_disturb_on,flashlight_on,wifi&display=block" />
+    <style>
+        /* Showcase layout only — not part of Web Expressive and not required for use. */
+        .section {
+            display: grid;
+            place-items: center;
+            padding: 2rem;
+            min-block-size: 100svb;
+        }
+
+        .fieldset {
+            border: none;
+            padding: 0;
+
+            /* Window expanded and wider */
+            @media (width >=840px) {
+                --size: lg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Web Expressive
+        GitHub: https://github.com/mobalti/web-expressive
+    -->
+    <section class="section">
+        <fieldset class="fieldset" aria-label="Quick Settings">
+            <div class="standard-btn-group">
+                <div class="toggle-icon-btn">
+                    <input type="checkbox" class="input" id="bluetooth" aria-label="Bluetooth" />
+                    <label class="label" for="bluetooth">
+                        <span class="icon" aria-hidden="true">bluetooth</span>
+                    </label>
+                </div>
+
+                <div class="toggle-icon-btn wide">
+                    <input type="checkbox" class="input" id="alarm" aria-label="Alarm" />
+                    <label class="label" for="alarm">
+                        <span class="icon" aria-hidden="true">alarm</span>
+                    </label>
+                </div>
+
+                <div class="toggle-btn">
+                    <input type="checkbox" class="input" id="focus" aria-label="Focus" />
+                    <label class="label" for="focus">
+                        <span class="icon" aria-hidden="true">do_not_disturb_on</span>
+                        Focus
+                    </label>
+                </div>
+
+                <div class="toggle-icon-btn narrow">
+                    <input type="checkbox" class="input" id="flashligth_on" aria-label="Flashlight" />
+                    <label class="label" for="flashligth_on">
+                        <span class="icon" aria-hidden="true">flashlight_on</span>
+                    </label>
+                </div>
+
+                <div class="toggle-icon-btn">
+                    <input type="checkbox" class="input" id="wifi" checked aria-label="Wi-Fi" />
+                    <label class="label" for="wifi">
+                        <span class="icon" aria-hidden="true">wifi</span>
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+    </section>
+</body>
+
+</html>
