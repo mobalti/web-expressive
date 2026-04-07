@@ -78,6 +78,7 @@ If you are starting from scratch, the usual path is:
 
 - [Live examples](https://codepen.io/collection/gPxbxr)
 - [Schemes showcase](https://web-expressive-schemes.netlify.app/)
+- [VS Code extension](https://marketplace.visualstudio.com/items?itemName=web-expressive.web-expressive-snippets)
 
 **Reference**
 
