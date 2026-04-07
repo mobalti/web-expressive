@@ -9,7 +9,7 @@ Core provides the reset, base typography, and system tokens. It is required for 
 **CDN (paste in `<head>`)**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/core.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/core.css" />
 ```
 
 **npm (paste in your global stylesheet)**
@@ -25,8 +25,8 @@ These tokens provide Material 3 Expressive shapes in two formats: masking (data 
 **CDN (paste in `<head>`)**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/shapes/clip-tokens.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/shapes/mask-tokens.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/shapes/clip-tokens.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/shapes/mask-tokens.css" />
 ```
 
 **npm (paste in your global stylesheet)**
@@ -44,17 +44,17 @@ These are component stylesheets. Load the matching markup for each component. Re
 
 ```html
 <!-- Buttons -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/button.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/icon-button.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/toggle-button.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/toggle-icon-button.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/button.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/icon-button.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/toggle-button.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/toggle-icon-button.css" />
 
 <!-- Button groups -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/connected-button-group.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/standard-button-group.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/connected-button-group.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/standard-button-group.css" />
 
 <!-- Switch -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/switch.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/switch.css" />
 ```
 
 **npm (paste in your global stylesheet)**
@@ -82,58 +82,58 @@ Predefined schemes based on Material 3 color roles. Each scheme supports light a
 
 ```html
 <!-- Aqua schemes -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/aqua-expressive.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/aqua-neutral.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/aqua-tonal.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/aqua-vibrant.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/aqua-expressive.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/aqua-neutral.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/aqua-tonal.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/aqua-vibrant.css" />
 
 <!-- Baseline scheme -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/baseline.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/baseline.css" />
 
 <!-- Berry schemes -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/berry-expressive.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/berry-neutral.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/berry-tonal.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/berry-vibrant.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/berry-expressive.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/berry-neutral.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/berry-tonal.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/berry-vibrant.css" />
 
 <!-- Classic schemes -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/classic-expressive.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/classic-neutral.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/classic-tonal.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/classic-vibrant.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/classic-expressive.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/classic-neutral.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/classic-tonal.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/classic-vibrant.css" />
 
 <!-- Forest schemes -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/forest-expressive.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/forest-neutral.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/forest-tonal.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/forest-vibrant.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/forest-expressive.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/forest-neutral.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/forest-tonal.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/forest-vibrant.css" />
 
 <!-- Fuchsia schemes -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/fuchsia-expressive.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/fuchsia-neutral.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/fuchsia-tonal.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/fuchsia-vibrant.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-expressive.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-neutral.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-tonal.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-vibrant.css" />
 
 <!-- Monochrome schemes -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/monochrome.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/monochrome.css" />
 
 <!-- Paper schemes -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/paper-expressive.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/paper-neutral.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/paper-tonal.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/paper-vibrant.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/paper-expressive.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/paper-neutral.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/paper-tonal.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/paper-vibrant.css" />
 
 <!-- Porcelain schemes -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/porcelain-expressive.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/porcelain-neutral.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/porcelain-tonal.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/porcelain-vibrant.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/porcelain-expressive.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/porcelain-neutral.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/porcelain-tonal.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/porcelain-vibrant.css" />
 
 <!-- Sun schemes -->
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/sun-expressive.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/sun-neutral.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/sun-tonal.css" />
-<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/sun-vibrant.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/sun-expressive.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/sun-neutral.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/sun-tonal.css" />
+<link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/sun-vibrant.css" />
 ```
 
 **npm (paste in your global stylesheet)**
