@@ -3,6 +3,18 @@ import { resolve, basename } from "path";
 import { glob } from "glob";
 
 export default defineConfig({
+  plugins: [
+    {
+      name: "prevent-css-dedupe",
+      enforce: "pre",
+      transform(code, id) {
+        if (id.endsWith(".css") && id.replace(/\\/g, "/").includes("/alpha/")) {
+          const filename = basename(id);
+          return code + '\n:root { --alpha-file: "' + filename + '"; }';
+        }
+      },
+    },
+  ],
   esbuild: {
     legalComments: "inline",
   },
@@ -17,7 +29,7 @@ export default defineConfig({
           .filter((file) => !basename(file).startsWith("_"))
           .map((file) => [
             file.replace(/^lib\//, "").replace(/\.css$/, ""),
-            resolve(__dirname, file),
+            resolve(import.meta.dirname, file),
           ])
       ),
       output: {

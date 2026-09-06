@@ -40,19 +40,19 @@
   initial-value: "Material Symbols Outlined";
 }
 
-@property --size {
-  syntax: "xs | sm | md | lg | xl";
+@property --size-items {
+  syntax: "extra-small | small | medium | large | extra-large";
   inherits: false;
-  initial-value: sm;
+  initial-value: small;
 }
 
-@property --width {
+@property --width-items {
   syntax: "narrow | normal | wide";
   inherits: false;
   initial-value: normal;
 }
 
-@property --shape {
+@property --shape-items {
   syntax: "round | square";
   inherits: false;
   initial-value: round;
@@ -110,23 +110,44 @@
 }
 
 :where(html, [data-mode="light"], .light-mode) {
-  --sys-elevation-level1: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-  --sys-elevation-level2: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
-  --sys-elevation-level3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-1: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --sys-elevation-level-2: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --sys-elevation-level-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 :where([data-mode="dark"], .dark-mode) {
-  --sys-elevation-level1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 :where(html) {
   --sys-motion-spring-pop-focus: linear(0 0%, 2.5 25%, 2.5 50%, 1 100%);
+}
+
+:where(html) {
+  --sys-measurement-space-0: 0rem; /* 0px */
+  --sys-measurement-space-25: 0.125rem; /* 2px */
+  --sys-measurement-space-50: 0.25rem; /* 4px */
+  --sys-measurement-space-75: 0.375rem; /* 6px */
+  --sys-measurement-space-100: 0.5rem; /* 8px */
+  --sys-measurement-space-125: 0.625rem; /* 10px */
+  --sys-measurement-space-150: 0.75rem; /* 12px */
+  --sys-measurement-space-175: 0.875rem; /* 14px */
+  --sys-measurement-space-200: 1rem; /* 16px */
+  --sys-measurement-space-250: 1.25rem; /* 20px */
+  --sys-measurement-space-300: 1.5rem; /* 24px */
+  --sys-measurement-space-400: 2rem; /* 32px */
+  --sys-measurement-space-450: 2.25rem; /* 36px */
+  --sys-measurement-space-500: 2.5rem; /* 40px */
+  --sys-measurement-space-600: 3rem; /* 48px */
+  --sys-measurement-space-700: 3.5rem; /* 56px */
+  --sys-measurement-space-800: 4rem; /* 64px */
+  --sys-measurement-space-900: 4.5rem; /* 72px */
 }
 
 :where(html) {

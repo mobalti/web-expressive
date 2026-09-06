@@ -57,7 +57,7 @@ const expectedSchemeTokens = [
 ];
 
 test('Schemes match structural constraints', () => {
-  const schemeFiles = globSync('lib/schemes/*.css');
+  const schemeFiles = globSync('lib/schemes/**/*.css');
   assert.ok(schemeFiles.length > 0, 'No schemes found in lib/schemes');
 
   for (const file of schemeFiles) {

@@ -1,0 +1,56 @@
+/* Source: #837eb2 */
+
+@layer design-system.tokens {
+  html,
+  [data-theme="paper-neutral"] {
+    --sys-color-primary: light-dark(#5f5d67, #c9c5d0);
+    --sys-color-surface-tint: light-dark(#5f5d67, #c9c5d0);
+    --sys-color-on-primary: light-dark(#fbf6ff, #413f48);
+    --sys-color-primary-container: light-dark(#e5e1ec, #47464f);
+    --sys-color-on-primary-container: light-dark(#52505a, #d2ceda);
+    --sys-color-secondary: light-dark(#605e62, #a09da1);
+    --sys-color-on-secondary: light-dark(#fcf7fc, #202023);
+    --sys-color-secondary-container: light-dark(#e5e1e6, #3c3b3f);
+    --sys-color-on-secondary-container: light-dark(#535155, #c2bec3);
+    --sys-color-tertiary: light-dark(#585e78, #ebedff);
+    --sys-color-on-tertiary: light-dark(#faf8ff, #525771);
+    --sys-color-tertiary-container: light-dark(#d9defe, #d9defe);
+    --sys-color-on-tertiary-container: light-dark(#494f68, #494f68);
+    --sys-color-error: light-dark(#9e3f4e, #ec7c8a);
+    --sys-color-on-error: light-dark(#fff7f7, #490013);
+    --sys-color-error-container: light-dark(#ff8b9a, #7f2737);
+    --sys-color-on-error-container: light-dark(#782232, #ff97a3);
+    --sys-color-background: light-dark(#fdf8f9, #0e0e0f);
+    --sys-color-on-background: light-dark(#333235, #e8e4e8);
+    --sys-color-surface: light-dark(#fdf8f9, #0e0e0f);
+    --sys-color-on-surface: light-dark(#333235, #e8e4e8);
+    --sys-color-surface-variant: light-dark(#e5e1e5, #262528);
+    --sys-color-on-surface-variant: light-dark(#605e61, #adaaad);
+    --sys-color-outline: light-dark(#7c7a7d, #777578);
+    --sys-color-outline-variant: light-dark(#b4b1b4, #49474a);
+    --sys-color-shadow: light-dark(#000000, #000000);
+    --sys-color-scrim: light-dark(#000000, #000000);
+    --sys-color-inverse-surface: light-dark(#0e0e0f, #fdf8f9);
+    --sys-color-inverse-on-surface: light-dark(#9f9c9d, #565456);
+    --sys-color-inverse-primary: light-dark(#ebe6f2, #605e67);
+    --sys-color-primary-fixed: light-dark(#e5e1ec, #e5e1ec);
+    --sys-color-on-primary-fixed: light-dark(#403e47, #403e47);
+    --sys-color-primary-fixed-dim: light-dark(#d7d3de, #d7d3de);
+    --sys-color-on-primary-fixed-variant: light-dark(#5c5a64, #5c5a64);
+    --sys-color-secondary-fixed: light-dark(#e5e1e6, #e5e1e6);
+    --sys-color-on-secondary-fixed: light-dark(#403f43, #403f43);
+    --sys-color-secondary-fixed-dim: light-dark(#d7d3d8, #d7d3d8);
+    --sys-color-on-secondary-fixed-variant: light-dark(#5d5b5f, #5d5b5f);
+    --sys-color-tertiary-fixed: light-dark(#d9defe, #d9defe);
+    --sys-color-on-tertiary-fixed: light-dark(#373c55, #373c55);
+    --sys-color-tertiary-fixed-dim: light-dark(#cbd0ef, #cbd0ef);
+    --sys-color-on-tertiary-fixed-variant: light-dark(#535873, #535873);
+    --sys-color-surface-dim: light-dark(#ddd9dd, #0e0e0f);
+    --sys-color-surface-bright: light-dark(#fdf8f9, #2d2c2f);
+    --sys-color-surface-container-lowest: light-dark(#ffffff, #000000);
+    --sys-color-surface-container-low: light-dark(#f7f2f4, #141314);
+    --sys-color-surface-container: light-dark(#f1edef, #1a191b);
+    --sys-color-surface-container-high: light-dark(#ebe7ea, #201f21);
+    --sys-color-surface-container-highest: light-dark(#e5e1e5, #262528);
+  }
+}

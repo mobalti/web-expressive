@@ -8,6 +8,7 @@ This reference lists the CSS custom properties exposed by Web Expressive. Use th
 - [Color reference](#color-reference)
 - [Elevation reference](#elevation-reference)
 - [Motion reference](#motion-reference)
+- [Measurement space reference](#measurement-space-reference)
 - [Shape corner reference](#shape-corner-reference)
 - [Abstract shapes reference](#abstract-shapes-reference)
 
@@ -167,11 +168,11 @@ html {
 | ⠀⠀⠀⠀⠀⠀⠀⠀**Variable**⠀⠀⠀⠀⠀⠀⠀             | **Common use cases**                                                                                                                                    |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _(Default flat)_         | **Base layer.** Used for the main background and items that should not appear raised, like standard list items or flat buttons.                                     |
-| `--sys-elevation-level1` | **Minimal lift.** Standard cards, unselected filter chips, and low-profile components. Provides just enough shadow to separate from the background.                 |
-| `--sys-elevation-level2` | **Raised.** Small floating action buttons (FABs) and components that have been interacted with (hover/focus states of level 1 items).                               |
-| `--sys-elevation-level3` | **Prominent.** Standard FABs, date pickers, and time pickers. This is the "middle ground" for floating components.                                                  |
-| `--sys-elevation-level4` | **High lift.** Search bars in a scrolled state, navigation drawers, and side sheets. Used for large surfaces that slide over the main content.                      |
-| `--sys-elevation-level5` | **Maximum lift.** Dialogs, modals, tooltips, and context menus. Reserved for elements that require the user's immediate focus and sit at the very top of the stack. |
+| `--sys-elevation-level-1` | **Minimal lift.** Standard cards, unselected filter chips, and low-profile components. Provides just enough shadow to separate from the background.                 |
+| `--sys-elevation-level-2` | **Raised.** Small floating action buttons (FABs) and components that have been interacted with (hover/focus states of level 1 items).                               |
+| `--sys-elevation-level-3` | **Prominent.** Standard FABs, date pickers, and time pickers. This is the "middle ground" for floating components.                                                  |
+| `--sys-elevation-level-4` | **High lift.** Search bars in a scrolled state, navigation drawers, and side sheets. Used for large surfaces that slide over the main content.                      |
+| `--sys-elevation-level-5` | **Maximum lift.** Dialogs, modals, tooltips, and context menus. Reserved for elements that require the user's immediate focus and sit at the very top of the stack. |
 
 ## Motion reference
 
@@ -185,6 +186,32 @@ html {
 | `--sys-motion-spring-fast-effects`    | `--sys-motion-spring-fast-effects-duration`    | **Quick effects.** Hover, pressed, and icon-swap transitions.                                                                     |
 | `--sys-motion-spring-default-effects` | `--sys-motion-spring-default-effects-duration` | **Standard effects.** Tooltip fades and content cross-fades.                                                                      |
 | `--sys-motion-spring-slow-effects`    | `--sys-motion-spring-slow-effects-duration`    | **Slow effects.** Gradual background shifts and layered visual transitions.                                                       |
+
+
+## Measurement space reference
+
+The following tokens define the standard spacing scale for padding, margins, gaps, and other layout spacing.
+
+| Variable | Value (rem / px) |
+| --- | --- |
+| `--sys-measurement-space-0` | `0rem` (0px) |
+| `--sys-measurement-space-25` | `0.125rem` (2px) |
+| `--sys-measurement-space-50` | `0.25rem` (4px) |
+| `--sys-measurement-space-75` | `0.375rem` (6px) |
+| `--sys-measurement-space-100` | `0.5rem` (8px) |
+| `--sys-measurement-space-125` | `0.625rem` (10px) |
+| `--sys-measurement-space-150` | `0.75rem` (12px) |
+| `--sys-measurement-space-175` | `0.875rem` (14px) |
+| `--sys-measurement-space-200` | `1rem` (16px) |
+| `--sys-measurement-space-250` | `1.25rem` (20px) |
+| `--sys-measurement-space-300` | `1.5rem` (24px) |
+| `--sys-measurement-space-400` | `2rem` (32px) |
+| `--sys-measurement-space-450` | `2.25rem` (36px) |
+| `--sys-measurement-space-500` | `2.5rem` (40px) |
+| `--sys-measurement-space-600` | `3rem` (48px) |
+| `--sys-measurement-space-700` | `3.5rem` (56px) |
+| `--sys-measurement-space-800` | `4rem` (64px) |
+| `--sys-measurement-space-900` | `4.5rem` (72px) |
 
 ## Shape corner reference
 
@@ -210,10 +237,10 @@ These tokens provide Material 3 Expressive shapes in two CSS formats: clipping a
 
 ```css
 /* Import clip tokens */
-@import "web-expressive/dist/shapes/clip-tokens.css";
+@import "web-expressive/shapes/clip-tokens.css";
 
 /* Import mask tokens */
-@import "web-expressive/dist/shapes/mask-tokens.css";
+@import "web-expressive/shapes/mask-tokens.css";
 ```
 
 ### 1. Clip tokens

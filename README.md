@@ -1,6 +1,6 @@
 # Web Expressive
 
-A frontend toolkit that enables developers to communicate the intent of Material 3 Expressive through web standards.
+Web Expressive is a toolkit built on web standards that helps developers and AI agents build user interfaces for the web. It brings the design intent of Material 3 Expressive to HTML and CSS through design tokens, components, and adaptable UI patterns.
 
 ## Quick start
 
@@ -22,19 +22,19 @@ Load the core foundation first, then a scheme, then any components you need.
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap" />
 
     <!-- 2. Core (reset + essential tokens) -->
-    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/core.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/core.css" />
 
     <!-- 3. A scheme -->
-    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/schemes/fuchsia-tonal.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-tonal.css" />
 
     <!-- 4. Components (as needed) -->
-    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/button.css" />
-    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.0/dist/components/switch.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/button.css" />
+    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/switch.css" />
   </head>
 
   <body>
-    <button class="btn tonal xl">Get Started</button>
-    <input class="switch" type="checkbox" role="switch" />
+    <button class="button tonal extra-large">Get Started</button>
+    <input class="switch" type="checkbox" role="switch" aria-label="Enable feature" />
   </body>
 </html>
 ```
@@ -46,14 +46,14 @@ Load the core foundation first, then a scheme, then any components you need.
 Install with:
 
 ```bash
-npm install web-expressive
+npm install web-expressive@0.5.1
 ```
 
 Import the styles you need into your global stylesheet:
 
 ```css
 @import "web-expressive/core.css";
-@import "web-expressive/schemes/classic-tonal.css";
+@import "web-expressive/schemes/alpha/classic-tonal.css";
 @import "web-expressive/components/button.css";
 ```
 
@@ -68,21 +68,20 @@ If you are starting from scratch, the usual path is:
 1. Load `core.css`.
    This file provides the required foundation: a minimal reset and global system tokens based on the Material 3 token specification, such as typography, shape corners, and elevation. It does not include scheme colors or abstract shape tokens. Refer to [Tokens](docs/reference/tokens.md) for the full reference.
 2. Load one or more schemes.
-   Schemes provide the Material 3 color roles such as primary, secondary, tertiary, surface, error, and `on-*` variants. Each scheme includes light and dark mode, and multiple schemes can coexist. Browse the available files in [`dist/schemes/`](https://unpkg.com/browse/web-expressive/dist/schemes/) or preview them in the [Schemes showcase](https://web-expressive-schemes.netlify.app/).
+   Schemes provide the Material 3 color roles such as primary, secondary, tertiary, surface, error, and `on-*` variants. Each scheme includes light and dark mode, and multiple schemes can coexist. Start with the more vivid [`schemes/alpha/` collection](https://unpkg.com/browse/web-expressive@0.5.1/dist/schemes/alpha/). See [Imports](docs/reference/imports.md#schemes) for the full scheme guidance.
 3. Add components as needed.
-   Component stylesheets are optional. Import only the components you need from `dist/components/`, or build your own with the system tokens. Use [Components API](docs/reference/components.md) for component markup and modifiers.
+   Component stylesheets are optional. Import only the components you need, or build your own with the system tokens. Use [Imports](docs/reference/imports.md#components) for CDN and npm paths and [Components API](docs/reference/components.md) for component markup and modifiers.
+
+## Using with an AI agent
+
+Give the agent this repository URL or one of the [single-file layout starters](examples/layouts/Readme.md), then describe the interface you want and your target environment. The repository provides the import paths, component markup, system tokens, scheme guidance, and adaptable patterns it needs to build the UI layer.
+
+Ask the agent to adapt the UI to your project's stack, file structure, and conventions, then connect it to your existing routing, data, and state.
 
 ## Resources
 
-**View**
-
-- [Live examples](https://codepen.io/collection/gPxbxr)
-- [Schemes showcase](https://web-expressive-schemes.netlify.app/)
-- [VS Code extension](https://marketplace.visualstudio.com/items?itemName=web-expressive.web-expressive-snippets)
-
-**Reference**
-
+- [Layout starters](examples/layouts/Readme.md)
 - [Tokens](docs/reference/tokens.md)
 - [Imports](docs/reference/imports.md)
-- [Available schemes](https://unpkg.com/browse/web-expressive/dist/schemes/)
+- [Available schemes](https://unpkg.com/browse/web-expressive@0.5.1/dist/schemes/alpha/)
 - [Components API](docs/reference/components.md)

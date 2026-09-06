@@ -1,336 +1,127 @@
 @layer design-system.groups {
-  .standard-btn-group {
-    --size: sm;
-    --_gap: 0.25rem;
+  .standard-button-group {
+    --_extended-measurement-space-225: 1.125rem; /* 18px */
+
+    --size-items: small;
+    --_gap: var(--sys-measurement-space-150);
+    --_padding-inline: var(--sys-measurement-space-75);
 
     display: flex;
     gap: var(--_gap);
+    padding-inline: var(--_padding-inline);
 
     &:not(.normal) {
-      @container style(--width: narrow) {
-        --width: narrow;
+      @container style(--width-items: narrow) {
+        --width-items: narrow;
       }
 
-      @container style(--width: wide) {
-        --width: wide;
+      @container style(--width-items: wide) {
+        --width-items: wide;
       }
     }
 
     &:not(.round) {
-      @container style(--shape: square) {
-        --shape: square;
+      @container style(--shape-items: square) {
+        --shape-items: square;
       }
     }
 
     &.narrow {
-      --width: narrow;
+      --width-items: narrow;
     }
 
     &.wide {
-      --width: wide;
+      --width-items: wide;
     }
 
     &.square {
-      --shape: square;
+      --shape-items: square;
     }
 
-    &:not(.sm) {
-      &.xs {
-        --size: xs;
-        --_gap: 0.125rem;
+    &:not(.small) {
+      @container style(--size-items: extra-small) {
+        --size-items: extra-small;
 
-        &:not(.normal) {
-          @container style(--width: narrow) {
-            --width: narrow;
-          }
-
-          @container style(--width: wide) {
-            --width: wide;
-          }
-        }
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.narrow {
-          --width: narrow;
-        }
-
-        &.wide {
-          --width: wide;
-        }
-
-        &.square {
-          --shape: square;
-        }
+        --_gap: var(--_extended-measurement-space-225);
+        --_padding-inline: calc(var(--_extended-measurement-space-225) / 2);
       }
 
-      &.md {
-        --size: md;
-        --_gap: 0.5rem;
-
-        &:not(.normal) {
-          @container style(--width: narrow) {
-            --width: narrow;
-          }
-
-          @container style(--width: wide) {
-            --width: wide;
-          }
-        }
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.narrow {
-          --width: narrow;
-        }
-
-        &.wide {
-          --width: wide;
-        }
-
-        &.square {
-          --shape: square;
-        }
+      @container style(--size-items: medium) {
+        --size-items: medium;
+        --_gap: var(--sys-measurement-space-100);
+        --_padding-inline: var(--sys-measurement-space-0);
       }
 
-      &.lg {
-        --size: lg;
-        --_gap: 0.5rem;
-
-        &:not(.normal) {
-          @container style(--width: narrow) {
-            --width: narrow;
-          }
-
-          @container style(--width: wide) {
-            --width: wide;
-          }
-        }
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.narrow {
-          --width: narrow;
-        }
-
-        &.wide {
-          --width: wide;
-        }
-
-        &.square {
-          --shape: square;
-        }
+      @container style(--size-items: large) {
+        --size-items: large;
+        --_gap: var(--sys-measurement-space-100);
+        --_padding-inline: var(--sys-measurement-space-0);
       }
 
-      &.xl {
-        --size: xl;
-        --_gap: 0.5rem;
-
-        &:not(.normal) {
-          @container style(--width: narrow) {
-            --width: narrow;
-          }
-
-          @container style(--width: wide) {
-            --width: wide;
-          }
-        }
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.narrow {
-          --width: narrow;
-        }
-
-        &.wide {
-          --width: wide;
-        }
-
-        &.square {
-          --shape: square;
-        }
+      @container style(--size-items: extra-large) {
+        --size-items: extra-large;
+        --_gap: var(--sys-measurement-space-100);
+        --_padding-inline: var(--sys-measurement-space-0);
       }
+    }
 
-      @container style(--size: xs) {
-        --size: xs;
-        --_gap: 0.125rem;
+    &.extra-small {
+      --size-items: extra-small;
+      --_gap: var(--_extended-measurement-space-225);
+      --_padding-inline: calc(var(--_extended-measurement-space-225) / 2);
+    }
 
-        &:not(.normal) {
-          @container style(--width: narrow) {
-            --width: narrow;
-          }
+    &.medium {
+      --size-items: medium;
+      --_gap: var(--sys-measurement-space-100);
+      --_padding-inline: var(--sys-measurement-space-0);
+    }
 
-          @container style(--width: wide) {
-            --width: wide;
-          }
-        }
+    &.large {
+      --size-items: large;
+      --_gap: var(--sys-measurement-space-100);
+      --_padding-inline: var(--sys-measurement-space-0);
+    }
 
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.narrow {
-          --width: narrow;
-        }
-
-        &.wide {
-          --width: wide;
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      @container style(--size: md) {
-        --size: md;
-        --_gap: 0.5rem;
-
-        &:not(.normal) {
-          @container style(--width: narrow) {
-            --width: narrow;
-          }
-
-          @container style(--width: wide) {
-            --width: wide;
-          }
-        }
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.narrow {
-          --width: narrow;
-        }
-
-        &.wide {
-          --width: wide;
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      @container style(--size: lg) {
-        --size: lg;
-        --_gap: 0.5rem;
-
-        &:not(.normal) {
-          @container style(--width: narrow) {
-            --width: narrow;
-          }
-
-          @container style(--width: wide) {
-            --width: wide;
-          }
-        }
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.narrow {
-          --width: narrow;
-        }
-
-        &.wide {
-          --width: wide;
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      @container style(--size: xl) {
-        --size: xl;
-        --_gap: 0.5rem;
-
-        &:not(.normal) {
-          @container style(--width: narrow) {
-            --width: narrow;
-          }
-
-          @container style(--width: wide) {
-            --width: wide;
-          }
-        }
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.narrow {
-          --width: narrow;
-        }
-
-        &.wide {
-          --width: wide;
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
+    &.extra-large {
+      --size-items: extra-large;
+      --_gap: var(--sys-measurement-space-100);
+      --_padding-inline: var(--sys-measurement-space-0);
     }
   }
 
-  /* interaction between children */
-  .standard-btn-group {
+  /* Pressed children redistribute space across the group. */
+  .standard-button-group {
     --_delta: 0px;
     --_power: 5px;
 
-    .btn {
+    .button {
       transition: padding-inline var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
       padding-inline: calc(var(--_padding-inline) + var(--_delta) / 2);
     }
 
-    .icon-btn {
+    .icon-button {
       transition: inline-size var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+      margin-inline: calc(var(--_padding-inline) * -1);
       inline-size: calc(var(--_inline-size) + var(--_delta));
     }
 
-    .toggle-btn {
+    .toggle-button {
       .label {
         transition: padding-inline var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
         padding-inline: calc(var(--_padding-inline) + var(--_delta) / 2);
       }
     }
 
-    .toggle-icon-btn {
+    .toggle-icon-button {
       .label {
         transition: inline-size var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+        margin-inline: calc(var(--_padding-inline) * -1);
         inline-size: calc(var(--_inline-size) + var(--_delta));
       }
     }
 
-    > :is(.btn, .icon-btn):not(:only-child) {
+    > :is(.button, .icon-button):not(:only-child) {
       &:active {
         --_delta: var(--_power);
       }
@@ -351,26 +142,26 @@
         --_delta: calc(var(--_power) * -1);
       }
 
-      /* mixing */
+      /* Mixed button and toggle-button neighbors. */
 
-      :is(.toggle-btn, .toggle-icon-btn):has(.input:active) + & {
+      :is(.toggle-button, .toggle-icon-button):has(.input:active) + & {
         --_delta: calc((var(--_power) / 2) * -1);
       }
 
-      &:has(+ :is(.toggle-btn, .toggle-icon-btn) > .input:active) {
+      &:has(+ :is(.toggle-button, .toggle-icon-button) > .input:active) {
         --_delta: calc((var(--_power) / 2) * -1);
       }
 
-      :is(.toggle-btn, .toggle-icon-btn):first-child:has(.input:active) + & {
+      :is(.toggle-button, .toggle-icon-button):first-child:has(.input:active) + & {
         --_delta: calc(var(--_power) * -1);
       }
 
-      &:has(+ :is(.toggle-btn, .toggle-icon-btn):last-child > .input:active) {
+      &:has(+ :is(.toggle-button, .toggle-icon-button):last-child > .input:active) {
         --_delta: calc(var(--_power) * -1);
       }
     }
 
-    > :is(.toggle-btn, .toggle-icon-btn):not(:only-child) {
+    > :is(.toggle-button, .toggle-icon-button):not(:only-child) {
       &:has(.input:active) {
         --_delta: var(--_power);
       }
@@ -391,21 +182,21 @@
         --_delta: calc(var(--_power) * -1);
       }
 
-      /* mixing */
+      /* Mixed button and toggle-button neighbors. */
 
-      :is(.btn, .icon-btn):active + & {
+      :is(.button, .icon-button):active + & {
         --_delta: calc((var(--_power) / 2) * -1);
       }
 
-      &:has(+ :is(.btn, .icon-btn):active) {
+      &:has(+ :is(.button, .icon-button):active) {
         --_delta: calc((var(--_power) / 2) * -1);
       }
 
-      &:has(+ :is(.btn, .icon-btn):last-child:active) {
+      &:has(+ :is(.button, .icon-button):last-child:active) {
         --_delta: calc(var(--_power) * -1);
       }
 
-      :is(.btn, .icon-btn):first-child:active + & {
+      :is(.button, .icon-button):first-child:active + & {
         --_delta: calc(var(--_power) * -1);
       }
     }

@@ -1,31 +1,19 @@
 @layer design-system.components {
-  .icon-btn {
-    --_shadow: none;
-    --_motion: border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+  .icon-button {
+    --_button-transitions:
+      border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
+      outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+    --_button-corner: calc(min((var(--_block-size) - var(--_padding-block) * 2) / 2, (var(--_inline-size) - var(--_padding-inline) * 2) / 2));
 
-    /* Radius-full is calculated at the component level based on 
-       the block and inline size instead of using the "corner-full" 
-       to ensure smooth border-radius transitions. */
-
-    --_radius-full: calc(
-      min(
-        /* inner-block-size / 2 */ (var(--_block-size) - var(--_padding-block) * 2) / 2,
-        /* inner-inline-size / 2 */ (var(--_inline-size) - var(--_padding-inline) * 2) / 2
-      )
-    );
-
-    /* Radius is exactly half of the shorter side. */
-    --_btn-radius: var(--_radius-full);
-    --_btn-radius-expand: var(--sys-shape-corner-small);
-
-    /* state tokens */
-    --_bg: var(--sys-color-primary);
+    /* Interaction-state tokens. */
+    --_background: var(--sys-color-primary);
     --_border: none;
-    --_corner: var(--_btn-radius);
+    --_border-radius: var(--_button-corner);
     --_cursor: pointer;
-    --_on-bg: var(--sys-color-on-primary);
+    --_color: var(--sys-color-on-primary);
     --_state: none;
     --_outline-width: 0px;
+    --_shadow: none;
 
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -41,56 +29,64 @@
     padding-block: var(--_padding-block);
     inline-size: var(--_inline-size);
     block-size: var(--_block-size);
-    color: var(--_on-bg);
+    color: var(--_color);
     font: var(--_font);
     user-select: none;
     text-decoration: none;
 
     .icon {
+      --_fill: 1;
       display: inline-block;
       grid-area: 1/1;
+      inline-size: var(--_icon-font-size);
+      block-size: var(--_icon-font-size);
+      overflow: clip;
       font-size: var(--_icon-font-size);
       line-height: 1;
       font-family: var(--ref-typeface-symbols);
       font-variation-settings:
-        "FILL" 1,
+        "FILL" var(--_fill),
         "wght" 400,
         "GRAD" 0,
         "opsz" 24;
-      -webkit-font-feature-settings: "liga";
       font-feature-settings: "liga";
       white-space: nowrap;
+
+      &.no-fill {
+        --_fill: 0;
+      }
+
+      &:is(svg) {
+        fill: var(--_color);
+      }
+
+      &:is(img) {
+        object-fit: cover;
+      }
     }
 
     &::before {
       display: block;
       grid-area: 1/1;
       z-index: -1;
-      transition: var(--_motion);
+      transition: var(--_button-transitions);
       outline: var(--_outline-width) solid var(--sys-color-secondary);
       outline-offset: 2px;
       box-shadow: var(--_shadow);
       border: var(--_border);
-      border-radius: var(--_corner);
-      background: var(--_bg);
+      border-radius: var(--_border-radius);
+      background: var(--_background);
       inline-size: 100%;
       block-size: 100%;
       content: "";
-
-      /* motionOK */
-      @media (prefers-reduced-motion: no-preference) {
-        transition:
-          var(--_motion),
-          outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
-      }
     }
 
     &::after {
       display: block;
       grid-area: 1/1;
       z-index: -1;
-      transition: var(--_motion);
-      border-radius: var(--_corner);
+      transition: var(--_button-transitions);
+      border-radius: var(--_border-radius);
       background: var(--_state);
       inline-size: 100%;
       block-size: 100%;
@@ -98,605 +94,489 @@
     }
 
     &:hover {
-      --_bg: var(--sys-color-primary);
-      --_border: none;
-      --_corner: var(--_btn-radius);
-      --_on-bg: var(--sys-color-on-primary);
-      --_state: oklch(from var(--sys-color-on-primary) l c h / 8%);
+      --_state: oklch(from var(--_color) l c h / 8%);
     }
 
     &:focus-visible {
-      --_bg: var(--sys-color-primary);
-      --_border: none;
-      --_corner: var(--_btn-radius);
-      --_on-bg: var(--sys-color-on-primary);
-      --_state: oklch(from var(--sys-color-on-primary) l c h / 10%);
+      --_state: oklch(from var(--_color) l c h / 10%);
       --_outline-width: 3px;
     }
 
     &:active {
-      --_bg: var(--sys-color-primary);
-      --_border: none;
-      --_corner: var(--_btn-radius-expand);
-      --_on-bg: var(--sys-color-on-primary);
-      --_state: oklch(from var(--sys-color-on-primary) l c h / 10%);
+      --_border-radius: var(--_pressed-button-corner);
+      --_state: oklch(from var(--_color) l c h / 10%);
     }
 
     &:disabled {
-      --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+      --_background: oklch(from var(--sys-color-on-surface) l c h / 10%);
       --_border: none;
-      --_corner: var(--_btn-radius);
+      --_border-radius: var(--_button-corner);
       --_cursor: not-allowed;
-      --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
-      --_state: none;
-    }
-
-    &.tonal {
-      --_bg: var(--sys-color-secondary-container);
-      --_border: none;
-      --_corner: var(--_btn-radius);
-      --_cursor: pointer;
-      --_on-bg: var(--sys-color-on-secondary-container);
+      --_color: oklch(from var(--sys-color-on-surface) l c h / 38%);
       --_state: none;
 
-      &:hover {
-        --_bg: var(--sys-color-secondary-container);
-        --_border: none;
-        --_corner: var(--_btn-radius);
-        --_on-bg: var(--sys-color-on-secondary-container);
-        --_state: oklch(from var(--sys-color-on-secondary-container) l c h / 8%);
-      }
-
-      &:focus-visible {
-        --_bg: var(--sys-color-secondary-container);
-        --_border: none;
-        --_corner: var(--_btn-radius);
-        --_on-bg: var(--sys-color-on-secondary-container);
-        --_state: oklch(from var(--sys-color-on-secondary-container) l c h / 10%);
-      }
-
-      &:active {
-        --_bg: var(--sys-color-secondary-container);
-        --_border: none;
-        --_corner: var(--_btn-radius-expand);
-        --_on-bg: var(--sys-color-on-secondary-container);
-        --_state: oklch(from var(--sys-color-on-secondary-container) l c h / 10%);
-      }
-
-      &:disabled {
-        --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
-        --_border: none;
-        --_corner: var(--_btn-radius);
-        --_cursor: not-allowed;
-        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
-        --_state: none;
+      &.outline {
+        --_border: 1px solid var(--sys-color-outline-variant);
       }
     }
 
-    &.outline {
-      --_bg: none;
-      --_border: 1px solid var(--sys-color-outline-variant);
-      --_corner: var(--_btn-radius);
-      --_cursor: pointer;
-      --_on-bg: var(--sys-color-on-surface-variant);
-      --_state: none;
+    &:not(:disabled) {
+      &.tonal {
+        --_background: var(--sys-color-secondary-container);
+        --_color: var(--sys-color-on-secondary-container);
+      }
 
-      &:hover {
-        --_bg: none;
+      &.outline {
+        --_background: none;
         --_border: 1px solid var(--sys-color-outline-variant);
-        --_corner: var(--_btn-radius);
-        --_on-bg: var(--sys-color-on-surface-variant);
-        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 8%);
+        --_color: var(--sys-color-on-surface-variant);
       }
 
-      &:focus-visible {
-        --_bg: none;
-        --_border: 1px solid var(--sys-color-outline-variant);
-        --_corner: var(--_btn-radius);
-        --_on-bg: var(--sys-color-on-surface-variant);
-        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
-      }
-
-      &:active {
-        --_bg: none;
-        --_border: 1px solid var(--sys-color-outline-variant);
-        --_corner: var(--_btn-radius-expand);
-        --_on-bg: var(--sys-color-on-surface-variant);
-        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
-      }
-
-      &:disabled {
-        --_bg: none;
-        --_border: 1px solid var(--sys-color-outline-variant);
-        --_corner: var(--_btn-radius);
-        --_cursor: not-allowed;
-        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
-        --_state: none;
-      }
-    }
-
-    &.standard {
-      --_bg: none;
-      --_border: none;
-      --_corner: var(--_btn-radius);
-      --_cursor: pointer;
-      --_on-bg: var(--sys-color-on-surface-variant);
-      --_state: none;
-
-      &:hover {
-        --_bg: none;
-        --_border: none;
-        --_corner: var(--_btn-radius);
-        --_on-bg: var(--sys-color-on-surface-variant);
-        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 8%);
-      }
-
-      &:focus-visible {
-        --_bg: none;
-        --_border: none;
-        --_corner: var(--_btn-radius);
-        --_on-bg: var(--sys-color-on-surface-variant);
-        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
-      }
-
-      &:active {
-        --_bg: none;
-        --_border: none;
-        --_corner: var(--_btn-radius-expand);
-        --_on-bg: var(--sys-color-on-surface-variant);
-        --_state: oklch(from var(--sys-color-on-surface-variant) l c h / 10%);
-      }
-
-      &:disabled {
-        --_bg: none;
-        --_border: none;
-        --_corner: var(--_btn-radius);
-        --_cursor: not-allowed;
-        --_on-bg: oklch(from var(--sys-color-on-surface) l c h / 38%);
-        --_state: none;
+      &.standard {
+        --_background: none;
+        --_color: var(--sys-color-on-surface-variant);
       }
     }
   }
 
-  /* Variants */
-  .icon-btn {
+  /* Size and width variants. */
+  .icon-button {
     --_block-size: 3rem;
     --_icon-font-size: 1.25rem;
     --_inline-size: 3rem;
-    --_padding-block: 0.25rem;
-    --_padding-inline: 0.25rem;
+    --_padding-block: var(--sys-measurement-space-50);
+    --_padding-inline: var(--sys-measurement-space-50);
+    --_pressed-button-corner: var(--sys-shape-corner-small);
 
     &:not(.normal) {
-      @container style(--width: narrow) {
+      @container style(--width-items: narrow) {
         --_block-size: 3rem;
         --_inline-size: 3rem;
-        --_padding-block: 0.25rem;
-        --_padding-inline: 0.5rem;
+        --_padding-block: var(--sys-measurement-space-50);
+        --_padding-inline: var(--sys-measurement-space-100);
       }
 
-      @container style(--width: wide) {
+      @container style(--width-items: wide) {
         --_block-size: 3rem;
         --_inline-size: 3.25rem;
-        --_padding-block: 0.25rem;
-        --_padding-inline: 0rem;
+        --_padding-block: var(--sys-measurement-space-50);
+        --_padding-inline: var(--sys-measurement-space-0);
       }
     }
 
     &:not(.round) {
-      @container style(--shape: square) {
-        --_btn-radius: var(--sys-shape-corner-medium);
+      @container style(--shape-items: square) {
+        --_button-corner: var(--sys-shape-corner-medium);
       }
     }
 
     &.narrow {
       --_block-size: 3rem;
       --_inline-size: 3rem;
-      --_padding-block: 0.25rem;
-      --_padding-inline: 0.5rem;
+      --_padding-block: var(--sys-measurement-space-50);
+      --_padding-inline: var(--sys-measurement-space-100);
     }
 
     &.wide {
       --_block-size: 3rem;
       --_inline-size: 3.25rem;
-      --_padding-block: 0.25rem;
-      --_padding-inline: 0rem;
+      --_padding-block: var(--sys-measurement-space-50);
+      --_padding-inline: var(--sys-measurement-space-0);
     }
 
     &.square {
-      --_btn-radius: var(--sys-shape-corner-medium);
-    }
-  }
-
-  .icon-btn:not(.sm) {
-    &.xs {
-      --_block-size: 3rem;
-      --_inline-size: 3rem;
-      --_padding-block: 0.5rem;
-      --_padding-inline: 0.5rem;
-      --_icon-font-size: 1.25rem;
-
-      &:not(.normal) {
-        @container style(--width: narrow) {
-          --_block-size: 3rem;
-          --_inline-size: 3rem;
-          --_padding-block: 0.5rem;
-          --_padding-inline: 0.625rem;
-        }
-
-        @container style(--width: wide) {
-          --_block-size: 3rem;
-          --_inline-size: 3rem;
-          --_padding-block: 0.5rem;
-          --_padding-inline: 0.25rem;
-        }
-      }
-
-      &:not(.round) {
-        @container style(--shape: square) {
-          --_btn-radius: var(--sys-shape-corner-medium);
-        }
-      }
-
-      &.narrow {
-        --_block-size: 3rem;
-        --_inline-size: 3rem;
-        --_padding-block: 0.5rem;
-        --_padding-inline: 0.625rem;
-      }
-
-      &.wide {
-        --_block-size: 3rem;
-        --_inline-size: 3rem;
-        --_padding-block: 0.5rem;
-        --_padding-inline: 0.25rem;
-      }
-
-      &.square {
-        --_btn-radius: var(--sys-shape-corner-medium);
-      }
+      --_button-corner: var(--sys-shape-corner-medium);
     }
 
-    &.md {
-      --_block-size: 3.5rem;
-      --_icon-font-size: 1.5rem;
-      --_inline-size: 3.5rem;
-      --_padding-block: 0rem;
-      --_padding-inline: 0rem;
-      --_btn-radius-expand: var(--sys-shape-corner-medium);
+    &:not(.small) {
+      @container style(--size-items: extra-small) {
+        --_block-size: 3rem;
+        --_inline-size: 3rem;
+        --_padding-block: var(--sys-measurement-space-100);
+        --_padding-inline: var(--sys-measurement-space-100);
+        --_icon-font-size: 1.25rem;
 
-      &:not(.normal) {
-        @container style(--width: narrow) {
+        &:not(.normal) {
+          @container style(--width-items: narrow) {
+            --_block-size: 3rem;
+            --_inline-size: 3rem;
+            --_padding-block: var(--sys-measurement-space-100);
+            --_padding-inline: var(--sys-measurement-space-125);
+          }
+
+          @container style(--width-items: wide) {
+            --_block-size: 3rem;
+            --_inline-size: 3rem;
+            --_padding-block: var(--sys-measurement-space-100);
+            --_padding-inline: var(--sys-measurement-space-50);
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape-items: square) {
+            --_button-corner: var(--sys-shape-corner-medium);
+          }
+        }
+
+        &.narrow {
+          --_block-size: 3rem;
+          --_inline-size: 3rem;
+          --_padding-block: var(--sys-measurement-space-100);
+          --_padding-inline: var(--sys-measurement-space-125);
+        }
+
+        &.wide {
+          --_block-size: 3rem;
+          --_inline-size: 3rem;
+          --_padding-block: var(--sys-measurement-space-100);
+          --_padding-inline: var(--sys-measurement-space-50);
+        }
+
+        &.square {
+          --_button-corner: var(--sys-shape-corner-medium);
+        }
+      }
+
+      @container style(--size-items: medium) {
+        --_block-size: 3.5rem;
+        --_icon-font-size: 1.5rem;
+        --_inline-size: 3.5rem;
+        --_padding-block: var(--sys-measurement-space-0);
+        --_padding-inline: var(--sys-measurement-space-0);
+        --_pressed-button-corner: var(--sys-shape-corner-medium);
+
+        &:not(.normal) {
+          @container style(--width-items: narrow) {
+            --_block-size: 3.5rem;
+            --_inline-size: 3.5rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-50);
+          }
+
+          @container style(--width-items: wide) {
+            --_block-size: 3.5rem;
+            --_inline-size: 4.5rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape-items: square) {
+            --_button-corner: var(--sys-shape-corner-large);
+          }
+        }
+
+        &.narrow {
           --_block-size: 3.5rem;
           --_inline-size: 3.5rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0.25rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-50);
         }
 
-        @container style(--width: wide) {
+        &.wide {
           --_block-size: 3.5rem;
           --_inline-size: 4.5rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
+        }
+
+        &.square {
+          --_button-corner: var(--sys-shape-corner-large);
         }
       }
 
-      &:not(.round) {
-        @container style(--shape: square) {
-          --_btn-radius: var(--sys-shape-corner-large);
+      @container style(--size-items: large) {
+        --_block-size: 6rem;
+        --_icon-font-size: 2rem;
+        --_inline-size: 6rem;
+        --_padding-block: var(--sys-measurement-space-0);
+        --_padding-inline: var(--sys-measurement-space-0);
+        --_pressed-button-corner: var(--sys-shape-corner-large);
+
+        &:not(.normal) {
+          @container style(--width-items: narrow) {
+            --_block-size: 6rem;
+            --_inline-size: 4rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
+
+          @container style(--width-items: wide) {
+            --_block-size: 6rem;
+            --_inline-size: 8rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
         }
-      }
 
-      &.narrow {
-        --_block-size: 3.5rem;
-        --_inline-size: 3.5rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0.25rem;
-      }
+        &:not(.round) {
+          @container style(--shape-items: square) {
+            --_button-corner: var(--sys-shape-corner-extra-large);
+          }
+        }
 
-      &.wide {
-        --_block-size: 3.5rem;
-        --_inline-size: 4.5rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
-
-      &.square {
-        --_btn-radius: var(--sys-shape-corner-large);
-      }
-    }
-
-    &.lg {
-      --_block-size: 6rem;
-      --_icon-font-size: 2rem;
-      --_inline-size: 6rem;
-      --_padding-block: 0rem;
-      --_padding-inline: 0rem;
-      --_btn-radius-expand: var(--sys-shape-corner-large);
-
-      &:not(.normal) {
-        @container style(--width: narrow) {
+        &.narrow {
           --_block-size: 6rem;
           --_inline-size: 4rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
         }
 
-        @container style(--width: wide) {
+        &.wide {
           --_block-size: 6rem;
           --_inline-size: 8rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
+        }
+
+        &.square {
+          --_button-corner: var(--sys-shape-corner-extra-large);
         }
       }
 
-      &:not(.round) {
-        @container style(--shape: square) {
-          --_btn-radius: var(--sys-shape-corner-extra-large);
+      @container style(--size-items: extra-large) {
+        --_block-size: 8.5rem;
+        --_icon-font-size: 2.5rem;
+        --_inline-size: 8.5rem;
+        --_padding-block: var(--sys-measurement-space-0);
+        --_padding-inline: var(--sys-measurement-space-0);
+        --_pressed-button-corner: var(--sys-shape-corner-large);
+
+        &:not(.normal) {
+          @container style(--width-items: narrow) {
+            --_block-size: 8.5rem;
+            --_inline-size: 6.5rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
+
+          @container style(--width-items: wide) {
+            --_block-size: 8.5rem;
+            --_inline-size: 11.5rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
         }
-      }
 
-      &.narrow {
-        --_block-size: 6rem;
-        --_inline-size: 4rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
+        &:not(.round) {
+          @container style(--shape-items: square) {
+            --_button-corner: var(--sys-shape-corner-extra-large);
+          }
+        }
 
-      &.wide {
-        --_block-size: 6rem;
-        --_inline-size: 8rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
-
-      &.square {
-        --_btn-radius: var(--sys-shape-corner-extra-large);
-      }
-    }
-
-    &.xl {
-      --_block-size: 8.5rem;
-      --_icon-font-size: 2.5rem;
-      --_inline-size: 8.5rem;
-      --_padding-block: 0rem;
-      --_padding-inline: 0rem;
-      --_btn-radius-expand: var(--sys-shape-corner-large);
-
-      &:not(.normal) {
-        @container style(--width: narrow) {
+        &.narrow {
           --_block-size: 8.5rem;
           --_inline-size: 6.5rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
         }
 
-        @container style(--width: wide) {
+        &.wide {
           --_block-size: 8.5rem;
           --_inline-size: 11.5rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
+        }
+
+        &.square {
+          --_button-corner: var(--sys-shape-corner-extra-large);
         }
       }
 
-      &:not(.round) {
-        @container style(--shape: square) {
-          --_btn-radius: var(--sys-shape-corner-extra-large);
-        }
-      }
-
-      &.narrow {
-        --_block-size: 8.5rem;
-        --_inline-size: 6.5rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
-
-      &.wide {
-        --_block-size: 8.5rem;
-        --_inline-size: 11.5rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
-
-      &.square {
-        --_btn-radius: var(--sys-shape-corner-extra-large);
-      }
-    }
-  }
-
-  .icon-btn:not(.sm) {
-    @container style(--size: xs) {
-      --_block-size: 3rem;
-      --_inline-size: 3rem;
-      --_padding-block: 0.5rem;
-      --_padding-inline: 0.5rem;
-      --_icon-font-size: 1.25rem;
-
-      &:not(.normal) {
-        @container style(--width: narrow) {
-          --_block-size: 3rem;
-          --_inline-size: 3rem;
-          --_padding-block: 0.5rem;
-          --_padding-inline: 0.625rem;
-        }
-
-        @container style(--width: wide) {
-          --_block-size: 3rem;
-          --_inline-size: 3rem;
-          --_padding-block: 0.5rem;
-          --_padding-inline: 0.25rem;
-        }
-      }
-
-      &:not(.round) {
-        @container style(--shape: square) {
-          --_btn-radius: var(--sys-shape-corner-medium);
-        }
-      }
-
-      &.narrow {
+      &.extra-small {
         --_block-size: 3rem;
         --_inline-size: 3rem;
-        --_padding-block: 0.5rem;
-        --_padding-inline: 0.625rem;
+        --_padding-block: var(--sys-measurement-space-100);
+        --_padding-inline: var(--sys-measurement-space-100);
+        --_icon-font-size: 1.25rem;
+
+        &:not(.normal) {
+          @container style(--width-items: narrow) {
+            --_block-size: 3rem;
+            --_inline-size: 3rem;
+            --_padding-block: var(--sys-measurement-space-100);
+            --_padding-inline: var(--sys-measurement-space-125);
+          }
+
+          @container style(--width-items: wide) {
+            --_block-size: 3rem;
+            --_inline-size: 3rem;
+            --_padding-block: var(--sys-measurement-space-100);
+            --_padding-inline: var(--sys-measurement-space-50);
+          }
+        }
+
+        &:not(.round) {
+          @container style(--shape-items: square) {
+            --_button-corner: var(--sys-shape-corner-medium);
+          }
+        }
+
+        &.narrow {
+          --_block-size: 3rem;
+          --_inline-size: 3rem;
+          --_padding-block: var(--sys-measurement-space-100);
+          --_padding-inline: var(--sys-measurement-space-125);
+        }
+
+        &.wide {
+          --_block-size: 3rem;
+          --_inline-size: 3rem;
+          --_padding-block: var(--sys-measurement-space-100);
+          --_padding-inline: var(--sys-measurement-space-50);
+        }
+
+        &.square {
+          --_button-corner: var(--sys-shape-corner-medium);
+        }
       }
 
-      &.wide {
-        --_block-size: 3rem;
-        --_inline-size: 3rem;
-        --_padding-block: 0.5rem;
-        --_padding-inline: 0.25rem;
-      }
+      &.medium {
+        --_block-size: 3.5rem;
+        --_icon-font-size: 1.5rem;
+        --_inline-size: 3.5rem;
+        --_padding-block: var(--sys-measurement-space-0);
+        --_padding-inline: var(--sys-measurement-space-0);
+        --_pressed-button-corner: var(--sys-shape-corner-medium);
 
-      &.square {
-        --_btn-radius: var(--sys-shape-corner-medium);
-      }
-    }
+        &:not(.normal) {
+          @container style(--width-items: narrow) {
+            --_block-size: 3.5rem;
+            --_inline-size: 3.5rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-50);
+          }
 
-    @container style(--size: md) {
-      --_block-size: 3.5rem;
-      --_icon-font-size: 1.5rem;
-      --_inline-size: 3.5rem;
-      --_padding-block: 0rem;
-      --_padding-inline: 0rem;
-      --_btn-radius-expand: var(--sys-shape-corner-medium);
+          @container style(--width-items: wide) {
+            --_block-size: 3.5rem;
+            --_inline-size: 4.5rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
+        }
 
-      &:not(.normal) {
-        @container style(--width: narrow) {
+        &:not(.round) {
+          @container style(--shape-items: square) {
+            --_button-corner: var(--sys-shape-corner-large);
+          }
+        }
+
+        &.narrow {
           --_block-size: 3.5rem;
           --_inline-size: 3.5rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0.25rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-50);
         }
 
-        @container style(--width: wide) {
+        &.wide {
           --_block-size: 3.5rem;
           --_inline-size: 4.5rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
+        }
+
+        &.square {
+          --_button-corner: var(--sys-shape-corner-large);
         }
       }
 
-      &:not(.round) {
-        @container style(--shape: square) {
-          --_btn-radius: var(--sys-shape-corner-large);
+      &.large {
+        --_block-size: 6rem;
+        --_icon-font-size: 2rem;
+        --_inline-size: 6rem;
+        --_padding-block: var(--sys-measurement-space-0);
+        --_padding-inline: var(--sys-measurement-space-0);
+        --_pressed-button-corner: var(--sys-shape-corner-large);
+
+        &:not(.normal) {
+          @container style(--width-items: narrow) {
+            --_block-size: 6rem;
+            --_inline-size: 4rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
+
+          @container style(--width-items: wide) {
+            --_block-size: 6rem;
+            --_inline-size: 8rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
         }
-      }
 
-      &.narrow {
-        --_block-size: 3.5rem;
-        --_inline-size: 3.5rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0.25rem;
-      }
+        &:not(.round) {
+          @container style(--shape-items: square) {
+            --_button-corner: var(--sys-shape-corner-extra-large);
+          }
+        }
 
-      &.wide {
-        --_block-size: 3.5rem;
-        --_inline-size: 4.5rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
-
-      &.square {
-        --_btn-radius: var(--sys-shape-corner-large);
-      }
-    }
-
-    @container style(--size: lg) {
-      --_block-size: 6rem;
-      --_icon-font-size: 2rem;
-      --_inline-size: 6rem;
-      --_padding-block: 0rem;
-      --_padding-inline: 0rem;
-      --_btn-radius-expand: var(--sys-shape-corner-large);
-
-      &:not(.normal) {
-        @container style(--width: narrow) {
+        &.narrow {
           --_block-size: 6rem;
           --_inline-size: 4rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
         }
 
-        @container style(--width: wide) {
+        &.wide {
           --_block-size: 6rem;
           --_inline-size: 8rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
+        }
+
+        &.square {
+          --_button-corner: var(--sys-shape-corner-extra-large);
         }
       }
 
-      &:not(.round) {
-        @container style(--shape: square) {
-          --_btn-radius: var(--sys-shape-corner-extra-large);
+      &.extra-large {
+        --_block-size: 8.5rem;
+        --_icon-font-size: 2.5rem;
+        --_inline-size: 8.5rem;
+        --_padding-block: var(--sys-measurement-space-0);
+        --_padding-inline: var(--sys-measurement-space-0);
+        --_pressed-button-corner: var(--sys-shape-corner-large);
+
+        &:not(.normal) {
+          @container style(--width-items: narrow) {
+            --_block-size: 8.5rem;
+            --_inline-size: 6.5rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
+
+          @container style(--width-items: wide) {
+            --_block-size: 8.5rem;
+            --_inline-size: 11.5rem;
+            --_padding-block: var(--sys-measurement-space-0);
+            --_padding-inline: var(--sys-measurement-space-0);
+          }
         }
-      }
 
-      &.narrow {
-        --_block-size: 6rem;
-        --_inline-size: 4rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
+        &:not(.round) {
+          @container style(--shape-items: square) {
+            --_button-corner: var(--sys-shape-corner-extra-large);
+          }
+        }
 
-      &.wide {
-        --_block-size: 6rem;
-        --_inline-size: 8rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
-
-      &.square {
-        --_btn-radius: var(--sys-shape-corner-extra-large);
-      }
-    }
-
-    @container style(--size: xl) {
-      --_block-size: 8.5rem;
-      --_icon-font-size: 2.5rem;
-      --_inline-size: 8.5rem;
-      --_padding-block: 0rem;
-      --_padding-inline: 0rem;
-      --_btn-radius-expand: var(--sys-shape-corner-large);
-
-      &:not(.normal) {
-        @container style(--width: narrow) {
+        &.narrow {
           --_block-size: 8.5rem;
           --_inline-size: 6.5rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
         }
 
-        @container style(--width: wide) {
+        &.wide {
           --_block-size: 8.5rem;
           --_inline-size: 11.5rem;
-          --_padding-block: 0rem;
-          --_padding-inline: 0rem;
+          --_padding-block: var(--sys-measurement-space-0);
+          --_padding-inline: var(--sys-measurement-space-0);
         }
-      }
 
-      &:not(.round) {
-        @container style(--shape: square) {
-          --_btn-radius: var(--sys-shape-corner-extra-large);
+        &.square {
+          --_button-corner: var(--sys-shape-corner-extra-large);
         }
-      }
-
-      &.narrow {
-        --_block-size: 8.5rem;
-        --_inline-size: 6.5rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
-
-      &.wide {
-        --_block-size: 8.5rem;
-        --_inline-size: 11.5rem;
-        --_padding-block: 0rem;
-        --_padding-inline: 0rem;
-      }
-
-      &.square {
-        --_btn-radius: var(--sys-shape-corner-extra-large);
       }
     }
   }

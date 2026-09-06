@@ -12,13 +12,14 @@
     --we-icon-close: "\e5cd";
     --we-icon-font-family: "WE-Internal-Icons";
 
-    --_bg: var(--sys-color-surface-container-highest);
+    --_background: var(--sys-color-surface-container-highest);
     --_target-color: var(--sys-color-outline);
     --_state: transparent;
     --_border: 2px solid var(--sys-color-outline);
-    --_padding: 0.75rem;
+    --_padding: var(--sys-measurement-space-150);
     --_translate-x: -0.625rem;
     --_outline-width: 0px;
+    --_corner: 6.25rem;
 
     --_icon-color: var(--sys-color-surface-container-highest);
     --_icon-content: "";
@@ -31,7 +32,7 @@
     appearance: none;
     cursor: pointer;
     outline: none;
-    border-radius: 6.25rem;
+    border-radius: var(--_corner);
     inline-size: 3.25rem;
     block-size: 3rem;
 
@@ -44,101 +45,87 @@
     }
 
     &.icon {
-      --_icon-content: "\e5cd" / "close";
-      --_padding: 0.5rem;
+      --_icon-content: var(--we-icon-close) / "close";
+      --_padding: var(--sys-measurement-space-100);
 
-      &:is(:hover, :focus-within, :disabled) {
-        --_padding: 0.5rem;
+      &:is(:hover, :focus-visible, :disabled) {
+        --_padding: var(--sys-measurement-space-100);
       }
 
       &:not(:disabled):active {
-        --_padding: 0.375rem;
+        --_padding: var(--sys-measurement-space-75);
       }
 
       &:checked {
-        --_icon-content: "\e5ca" / "check";
+        --_icon-content: var(--we-icon-check) / "check";
       }
     }
 
     &:hover {
-      --_bg: var(--sys-color-surface-container-highest);
       --_target-color: var(--sys-color-on-surface-variant);
       --_state: oklch(from var(--sys-color-on-surface) l c h / 8%);
-      --_border: 2px solid var(--sys-color-outline);
-      --_padding: 0.75rem;
+      --_padding: var(--sys-measurement-space-150);
     }
 
     &:focus-visible {
-      --_bg: var(--sys-color-surface-container-highest);
       --_target-color: var(--sys-color-on-surface-variant);
       --_state: oklch(from var(--sys-color-on-surface) l c h / 12%);
-      --_border: 2px solid var(--sys-color-outline);
-      --_padding: 0.75rem;
+      --_padding: var(--sys-measurement-space-150);
       --_outline-width: 3px;
     }
 
     &:active {
-      --_bg: var(--sys-color-surface-container-highest);
       --_target-color: var(--sys-color-on-surface-variant);
       --_state: oklch(from var(--sys-color-on-surface) l c h / 12%);
-      --_border: 2px solid var(--sys-color-outline);
-      --_padding: 0.375rem;
+      --_padding: var(--sys-measurement-space-75);
     }
 
     &:disabled {
       cursor: not-allowed;
-      --_bg: oklch(from var(--sys-color-surface-variant) l c h / 10%);
+      --_background: oklch(from var(--sys-color-surface-variant) l c h / 10%);
       --_target-color: oklch(from var(--sys-color-on-surface) l c h / 38%);
       --_state: transparent;
       --_border: 2px solid oklch(from var(--sys-color-on-surface) l c h / 10%);
-      --_padding: 0.75rem;
+      --_padding: var(--sys-measurement-space-150);
       --_icon-color: oklch(from var(--sys-color-surface-container-highest) l c h / 38%);
     }
 
-    /* Checked */
+    /* Checked state. */
 
     &:checked {
-      --_bg: var(--sys-color-primary);
+      --_background: var(--sys-color-primary);
       --_target-color: var(--sys-color-on-primary);
       --_state: transparent;
       --_border: none;
-      --_padding: 0.5rem;
+      --_padding: var(--sys-measurement-space-100);
       --_translate-x: 0.625rem;
       --_icon-color: var(--sys-color-on-primary-container);
 
       &:hover {
-        --_bg: var(--sys-color-primary);
         --_target-color: var(--sys-color-primary-container);
         --_state: oklch(from var(--sys-color-primary) l c h / 8%);
-        --_border: none;
-        --_padding: 0.5rem;
+        --_padding: var(--sys-measurement-space-100);
       }
 
       &:focus-visible {
-        --_bg: var(--sys-color-primary);
         --_target-color: var(--sys-color-primary-container);
         --_state: oklch(from var(--sys-color-primary) l c h / 10%);
-        --_border: none;
-        --_padding: 0.5rem;
+        --_padding: var(--sys-measurement-space-100);
       }
 
       &:active {
-        --_bg: var(--sys-color-primary);
         --_target-color: var(--sys-color-primary-container);
         --_state: oklch(from var(--sys-color-primary) l c h / 10%);
-        --_border: none;
-        --_padding: 0.375rem;
+        --_padding: var(--sys-measurement-space-75);
       }
 
       &:disabled {
         cursor: not-allowed;
-
-        --_bg: oklch(from var(--sys-color-on-surface) l c h / 10%);
+        --_background: oklch(from var(--sys-color-on-surface) l c h / 10%);
         --_target-color: var(--sys-color-surface);
         --_state: transparent;
         --_border: none;
-        --_padding: 0.5rem;
-
+        --_padding: var(--sys-measurement-space-100);
         --_icon-color: oklch(from var(--sys-color-on-surface) l c h / 38%);
       }
     }
@@ -148,13 +135,13 @@
       outline: var(--_outline-width) solid var(--sys-color-secondary);
       outline-offset: 2px;
       border: var(--_border);
-      border-radius: 6.25rem;
-      background: var(--_bg);
+      border-radius: var(--_corner);
+      background: var(--_background);
       inline-size: 3.25rem;
       block-size: 2rem;
       content: "";
 
-      /* motionOK */
+      /* Respect the user's reduced-motion preference. */
       @media (prefers-reduced-motion: no-preference) {
         transition: outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
       }
@@ -171,7 +158,7 @@
         translate var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
         border-width var(--sys-motion-spring-default-effects-duration) var(--sys-motion-spring-default-effects);
       border: var(--_padding) solid transparent;
-      border-radius: 6.25rem;
+      border-radius: var(--_corner);
       background:
         linear-gradient(var(--_target-color), var(--_target-color)) padding-box,
         linear-gradient(var(--_state), var(--_state)) border-box;

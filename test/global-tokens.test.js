@@ -1,16 +1,16 @@
-import { test } from 'node:test';
-import assert from 'node:assert';
-import fs from 'node:fs';
+import { test } from "node:test";
+import assert from "node:assert";
+import fs from "node:fs";
 
-test('Global tokens contain specific required variables', () => {
-  const content = fs.readFileSync('lib/_global-tokens.css', 'utf-8');
+test("Global tokens contain specific required variables", () => {
+  const content = fs.readFileSync("lib/_global-tokens.css", "utf-8");
 
   const expectedTokens = [
-    '--sys-motion-spring-fast-spatial', // Animation
-    '--sys-typescale-display-large',    // Typography
-    '--sys-shape-corner-medium',        // Shapes
-    '--sys-elevation-level1',           // Elevation
-    '--ref-typeface-brand'              // Typeface
+    "--sys-motion-spring-fast-spatial", // Animation
+    "--sys-typescale-display-large", // Typography
+    "--sys-shape-corner-medium", // Shapes
+    "--sys-elevation-level-1", // Elevation
+    "--ref-typeface-brand", // Typeface
   ];
 
   for (const token of expectedTokens) {

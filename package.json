@@ -28,6 +28,7 @@
   "exports": {
     "./core.css": "./dist/core.css",
     "./components/*": "./dist/components/*",
+    "./shapes/*": "./dist/shapes/*",
     "./schemes/*": "./dist/schemes/*"
   },
   "scripts": {

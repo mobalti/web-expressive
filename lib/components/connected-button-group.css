@@ -1,222 +1,116 @@
 @layer design-system.groups {
-  .connected-btn-group {
-    --size: sm;
+  .connected-button-group {
+    --size-items: small;
+
+    display: grid;
+    grid-auto-columns: 1fr;
+
+    grid-auto-flow: column;
+    gap: var(--sys-measurement-space-25);
+    inline-size: 100%;
+    min-inline-size: max-content;
+
+    &:not(.small) {
+      @container style(--size-items: extra-small) {
+        --size-items: extra-small;
+      }
+      @container style(--size-items: medium) {
+        --size-items: medium;
+      }
+      @container style(--size-items: large) {
+        --size-items: large;
+      }
+      @container style(--size-items: extra-large) {
+        --size-items: extra-large;
+      }
+    }
 
     &:not(.round) {
-      @container style(--shape: square) {
-        --shape: square;
+      @container style(--shape-items: square) {
+        --shape-items: square;
       }
     }
 
+    &.extra-small {
+      --size-items: extra-small;
+    }
+    &.medium {
+      --size-items: medium;
+    }
+    &.large {
+      --size-items: large;
+    }
+    &.extra-large {
+      --size-items: extra-large;
+    }
     &.square {
-      --shape: square;
+      --shape-items: square;
     }
 
-    &:not(.sm) {
-      &.xs {
-        --size: xs;
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      &.md {
-        --size: md;
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      &.lg {
-        --size: lg;
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      &.xl {
-        --size: xl;
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      @container style(--size: xs) {
-        --size: xs;
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      @container style(--size: md) {
-        --size: md;
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      @container style(--size: lg) {
-        --size: lg;
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-
-      @container style(--size: xl) {
-        --size: xl;
-
-        &:not(.round) {
-          @container style(--shape: square) {
-            --shape: square;
-          }
-        }
-
-        &.square {
-          --shape: square;
-        }
-      }
-    }
-  }
-
-  .connected-btn-group {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.125rem;
-    inline-size: 100%;
-    min-inline-size: fit-content;
-
-    .toggle-btn {
+    .toggle-button {
       inline-size: 100%;
+
+      /* Extra small and small connected button groups have 48px target areas and a minimum width of 48px. */
+      min-inline-size: 3rem;
+
       --_edge-corner: var(--_radius-full);
-
-      --_corner: var(--_inner-corner);
       --_inner-corner: var(--sys-shape-corner-small);
+      --_border-radius: var(--_inner-corner);
 
-      &:not(.round) {
-        @container style(--shape: square) {
-          --_edge-corner: var(--sys-shape-corner-small);
-        }
+      @container style(--size-items: extra-small) {
+        --_inner-corner: var(--sys-shape-corner-extra-small);
+      }
+      @container style(--size-items: medium) {
+        --_inner-corner: var(--sys-shape-corner-small);
+      }
+      @container style(--size-items: large) {
+        --_inner-corner: var(--sys-shape-corner-large);
+      }
+      @container style(--size-items: extra-large) {
+        --_inner-corner: var(--sys-shape-corner-large-increased);
       }
 
-      &.square {
-        --_edge-corner: var(--sys-shape-corner-small);
-      }
-
-      &:not(.sm) {
-        &.xs {
-          --_inner-corner: var(--sys-shape-corner-extra-small);
-
-          &.square {
-            --_edge-corner: var(--sys-shape-corner-extra-small);
-          }
-        }
-
-        &.md {
-          --_inner-corner: var(--sys-shape-corner-small);
-
-          &:not(.round) {
-            @container style(--shape: square) {
-              --_edge-corner: var(--sys-shape-corner-small);
-            }
-          }
-
-          &.square {
-            --_edge-corner: var(--sys-shape-corner-small);
-          }
-        }
-
-        &.lg {
-          --_inner-corner: var(--sys-shape-corner-large);
-
-          &:not(.round) {
-            @container style(--shape: square) {
-              --_edge-corner: var(--sys-shape-corner-large);
-            }
-          }
-
-          &.square {
-            --_edge-corner: var(--sys-shape-corner-large);
-          }
-        }
-
-        &.xl {
-          --_inner-corner: var(--sys-shape-corner-large-increased);
-
-          &:not(.round) {
-            @container style(--shape: square) {
-              --_edge-corner: var(--sys-shape-corner-large-increased);
-            }
-          }
-
-          &.square {
-            --_edge-corner: var(--sys-shape-corner-large-increased);
-          }
-        }
+      @container style(--shape-items: square) {
+        --_edge-corner: var(--_inner-corner);
       }
 
       &:has(.input:checked) {
-        --_corner: var(--_radius-full);
+        --_border-radius: var(--_radius-full);
       }
 
       &:is(:last-child) {
-        --_corner: var(--_inner-corner) var(--_edge-corner) var(--_edge-corner) var(--_inner-corner);
+        --_border-radius: var(--_inner-corner) var(--_edge-corner) var(--_edge-corner) var(--_inner-corner);
       }
 
       &:is(:first-child) {
-        --_corner: var(--_edge-corner) var(--_inner-corner) var(--_inner-corner) var(--_edge-corner);
+        --_border-radius: var(--_edge-corner) var(--_inner-corner) var(--_inner-corner) var(--_edge-corner);
       }
 
       .label {
         inline-size: 100%;
+      }
+
+      &:has(.icon:only-of-type.selected) {
+        .label {
+          gap: 0rem;
+          transition: gap var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+        }
+
+        .selected {
+          display: block;
+          transition: inline-size var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects);
+          inline-size: 0rem;
+          overflow: clip;
+        }
+
+        &:has(.input:checked) {
+          .label {
+            gap: var(--_gap);
+          }
+          .selected {
+            inline-size: calc(var(--_icon-font-size));
+          }
+        }
       }
     }
   }
