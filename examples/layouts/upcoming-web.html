@@ -33,7 +33,7 @@
     <!-- Keep icon_names alphabetical so Material Symbols requests stay reliable. -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back,attach_file,edit,event,more_vert,stars&display=block"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back,attach_file,chevron_backward,chevron_forward,edit,event,more_vert,stars&display=block"
     />
 
     <link rel="stylesheet" href="../../lib/core.css" />
@@ -370,6 +370,7 @@
             font-size: 1.5rem;
             line-height: 1;
             font-family: var(--ref-typeface-symbols);
+            font-feature-settings: "liga";
             font-variation-settings:
               "FILL" var(--_icon-fill),
               "wght" 400,
@@ -475,6 +476,12 @@
         /* Home */
 
         @scope (.home) {
+          /*
+            Progressive enhancement: supporting browsers generate carousel
+            buttons. Without this feature, the horizontal scroller remains
+            fully usable.
+            https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels
+          */
           @supports (scroll-marker-group: after) {
             .carousel {
               --_button-size: 2.5rem;
@@ -521,6 +528,7 @@
                 color: var(--sys-color-on-surface-variant);
                 font-size: var(--_icon-button-font-size);
                 font-family: var(--ref-typeface-symbols);
+                font-feature-settings: "liga";
                 user-select: none;
                 overflow: clip;
 
