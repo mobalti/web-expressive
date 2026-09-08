@@ -1,6 +1,6 @@
 # Layout examples
 
-These layouts are starting points for creating product interfaces with Web Expressive. Choose the example closest to your content model, then adapt its hierarchy, components, color scheme, and responsive behavior.
+Example layouts are meant to be starting points, not final destinations. Modify them, experiment, and add your own touch to create an interface that feels truly yours.
 
 | Starter | Use it for |
 | --- | --- |
@@ -12,14 +12,89 @@ These layouts are starting points for creating product interfaces with Web Expre
 | [Messaging](messaging-web.html) | Conversation navigation, message history, composing, and suggested replies. |
 | [Reviews and ratings](review-web.html) | Rating summaries, featured feedback, and review lists. |
 
-## Scope
+Use the library's structure as provided, or reorganize the markup and styles to fit your needs, framework, and project conventions.
 
-The examples provide the UI layer: semantic markup, styling, responsive behavior, and small interactions where the interface needs them. Adapt them to the project's stack, file structure, and conventions, then connect them to its routing, data, and state.
+## Using a layout
 
-Each example stays in one HTML file deliberately. This makes it easy to inspect, download, experiment with, or give to an AI agent before adapting it to a project.
+Choose the starter closest to your product. Click its preview or use the download link to get the complete single-file HTML starter.
 
-## Using a layout with an AI agent
+### Home feed
 
-Give the agent the downloaded HTML file and describe the product, content, and target environment. Each layout includes direct references to the Web Expressive setup guide, imports, component API, design tokens, schemes, and other examples.
+<a href="https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/home-web.html">
+  <picture>
+    <source media="(max-width: 600px)" srcset="previews/home-small-screen.jpg">
+    <img src="previews/home-large-screen.jpg" alt="Home feed layout preview">
+  </picture>
+</a>
 
-Repository examples use local library paths. Ask the agent to keep them for repository work or replace them with the documented npm or CDN imports for another project.
+[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/home-web.html)
+
+### Gallery
+
+<a href="https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/gallery-web.html">
+  <picture>
+    <source media="(max-width: 600px)" srcset="previews/gallery-small-screen.jpg">
+    <img src="previews/gallery-large-screen.jpg" alt="Gallery layout preview">
+  </picture>
+</a>
+
+[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/gallery-web.html)
+
+### Library
+
+<a href="https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/library-web.html">
+  <picture>
+    <source media="(max-width: 600px)" srcset="previews/library-small-screen.jpg">
+    <img src="previews/library-large-screen.jpg" alt="Library layout preview">
+  </picture>
+</a>
+
+[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/library-web.html)
+
+### Detailed view
+
+<a href="https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/detailed-view-web.html">
+  <picture>
+    <source media="(max-width: 600px)" srcset="previews/detailed-view-small-screen.jpg">
+    <img src="previews/detailed-view-large-screen.jpg" alt="Detailed view layout preview">
+  </picture>
+</a>
+
+[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/detailed-view-web.html)
+
+### Upcoming content
+
+<a href="https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/upcoming-web.html">
+  <picture>
+    <source media="(max-width: 600px)" srcset="previews/upcoming-small-screen.jpg">
+    <img src="previews/upcoming-large-screen.jpg" alt="Upcoming content layout preview">
+  </picture>
+</a>
+
+[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/upcoming-web.html)
+
+### Messaging
+
+<a href="https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/messaging-web.html">
+  <picture>
+    <source media="(max-width: 600px)" srcset="previews/messaging-small-screen.jpg">
+    <img src="previews/messaging-large-screen.jpg" alt="Messaging layout preview">
+  </picture>
+</a>
+
+[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/messaging-web.html)
+
+### Reviews and ratings
+
+<a href="https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/review-web.html">
+  <picture>
+    <source media="(max-width: 600px)" srcset="previews/review-small-screen.jpg">
+    <img src="previews/review-large-screen.jpg" alt="Reviews and ratings layout preview">
+  </picture>
+</a>
+
+[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/review-web.html)
+
+Each layout stays in one HTML file so it can be opened, inspected, adapted, or separated into project files immediately.
+
+**Using a layout with an AI agent:** Give the agent the downloaded HTML file and, when useful, a screenshot. Describe the product, content, and target environment. Each layout includes direct references to the Web Expressive setup guide, imports, component API, design tokens, schemes, and other examples.

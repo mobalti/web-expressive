@@ -301,8 +301,6 @@ Floating action button with a text label. These can be implemented using `<butto
 </a>
 ```
 
-The label does not require a component class. Wrap it in a project-owned element such as `.label-text` only when it needs independent styling or animation, as demonstrated by the scroll-responsive layout examples.
-
 <h3 id="fab">FAB</h3>
 
 Floating action button for high-emphasis actions. These can be implemented using `<button>` for actions or `<a>` for navigation. Always include an `aria-label` when the FAB contains only an icon.
