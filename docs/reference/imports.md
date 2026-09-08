@@ -68,9 +68,9 @@ Button groups style their layout only. Also import the component styles used ins
 
 ## Schemes
 
-Each scheme provides the Material 3 color roles and supports light and dark mode. Import one scheme globally. You can also load multiple schemes and select one on a subtree with its matching `data-theme` value. See the [color token reference](tokens.md#color-reference) for the available roles.
+Each scheme provides the Material 3 color roles and supports light and dark mode. For an ordinary single-theme interface, import one scheme globally; no HTML attribute is required. See the [color token reference](tokens.md#color-reference) for the available roles.
 
-For example, `fuchsia-tonal.css` applies globally and can also be selected with `data-theme="fuchsia-tonal"`:
+For example, import `fuchsia-tonal.css` globally:
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-tonal.css" />
@@ -92,16 +92,44 @@ Available scheme filenames:
 - `porcelain-expressive.css`, `porcelain-neutral.css`, `porcelain-tonal.css`, `porcelain-vibrant.css`
 - `sun-expressive.css`, `sun-neutral.css`, `sun-tonal.css`, `sun-vibrant.css`
 - `baseline.css`, `monochrome.css`
-- `blue.css`, `green.css`, `orange.css`, `red.css`, `violet.css`, `yellow.css`
+- `blue.css`, `green.css`, `indigo.css`, `orange.css`, `red.css`, `violet.css`, `yellow.css`
 - `blue-green.css`, `green-orange.css`, `light-purple-blue.css`, `pink-indigo.css`, `yellow-red.css`
 
-Start with `schemes/alpha/`: these palettes align with the newer Android color direction and tend to be more vivid, or "juicy." Use the regular `schemes/` collection when you want colors closer to the Material Design and Figma toolkit palettes, need a quieter result, or encounter a contrast issue while testing a particular UI.
+### Select a scheme
 
-Both collections expose the same filenames and color-role tokens, so switching between them only changes the import path. Web Expressive will continue to update both collections. Here, `alpha` identifies the newer palette collection; it does not change the stability of the CSS API.
+#### 1. Identify the brand direction
 
-These schemes currently generate identical values in both collections: `blue-green.css`, `blue.css`, `green-orange.css`, `green.css`, `indigo.css`, `light-purple-blue.css`, `monochrome.css`, `orange.css`, `pink-indigo.css`, `red.css`, `violet.css`, `yellow-red.css`, and `yellow.css`. They are intentionally present in both locations so the import structure stays predictable.
+Use an explicit user choice first. Otherwise, identify the primary brand color from the logo, key imagery, existing assets, or product domain. Prefer the color carrying the brand emphasis rather than averaging every color in an asset.
 
-To choose a regular palette instead, remove `alpha/` from either import format:
+#### 2. Choose a variant family and start with tonal
+
+Unless the user requests a particular scheme or specialized surface behavior, match the brand color against these variant-family sources:
+
+- Variant families: `aqua` `#006a62`; `berry` `#924759`; `carbon` `#578f70`; `classic` `#6e84b2`; `forest` `#3b6930`; `fuchsia` `#834a7d`; `paper` `#837eb2`; `porcelain` `#6f5d00`; `sun` `#aa7b40`.
+
+Start with that family's `-tonal.css` variant. Tonal is the primary and most balanced choice. Select another variant only when the product context or user direction calls for a different character:
+
+- **Default, corporate, or professional:** keep `-tonal.css`.
+- **Quiet, minimalist, or reading-focused:** use `-neutral.css`.
+- **Energetic, sporty, or action-focused:** use `-vibrant.css`.
+- **Editorial, creative, bold, or emotional:** use `-expressive.css`.
+
+For example, a blue identity can start with `classic-tonal.css`, while a violet identity can start with `paper-tonal.css`. Move within the selected family only when the requested character changes. Product context and explicit user direction take priority over these defaults.
+
+#### 3. Use a specialized scheme when its behavior is required
+
+Treat single- and dual-color schemes as purposeful alternatives to the variant-family path. Re-evaluate the brand color against the relevant source list instead of carrying over the previously selected family.
+
+- **Untinted surfaces:** choose the closest single-color scheme: `blue` `#3689c9`; `green` `#5f913f`; `indigo` `#8777cf`; `orange` `#ba7412`; `red` `#cb656c`; `violet` `#ae6bb6`; or `yellow` `#9f8000`. Surface roles remain neutral white, gray, and black while key roles retain color.
+- **Playful or multi-hue:** choose the closest dual-color scheme: `blue-green` `#3f8da4`; `green-orange` `#728c4b`; `light-purple-blue` `#8f79b5`; `pink-indigo` `#b07095`; or `yellow-red` `#968333`.
+
+Use one of these schemes when the user explicitly selects it or when its behavior clearly fits the product.
+
+#### 4. Use the default collection and validate
+
+Start with `schemes/alpha/`. If validation finds one or two contrast problems, override the affected role group in project CSS as shown below. If contrast problems are widespread, or the product needs a quieter palette overall, use the matching filename from `schemes/` by removing `alpha/` from the import path.
+
+Both collections expose the same filenames and color-role tokens, so changing collection only changes the import path:
 
 ```css
 @import "web-expressive/schemes/fuchsia-tonal.css";
@@ -127,3 +155,11 @@ html {
 ```
 
 Override related foreground and container roles together, then verify contrast in both light and dark modes.
+
+### Multiple schemes in one document
+
+Only use `data-theme` when a project intentionally loads multiple scheme files. Each loaded scheme applies globally and can also be selected on a subtree with its matching `data-theme` value, such as `data-theme="fuchsia-tonal"`. A single-theme interface does not need this attribute.
+
+### Complete the theme
+
+Scheme selection is only one part of the product identity. Use the [typography tokens](tokens.md#typography-reference), [shape tokens](tokens.md#shape-corner-reference), and documented [component variants and sizes](components.md) to make the complete UI match its purpose.

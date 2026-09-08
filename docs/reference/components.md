@@ -4,6 +4,8 @@ This guide documents the standard components and patterns available in Web Expre
 
 Load `core.css` and a scheme first, then import the stylesheet for each component you use.
 
+If a needed UI is not supplied, compose it with semantic HTML and project-owned CSS using Web Expressive system tokens. Follow the existing component patterns and Material 3 Expressive principles rather than inventing undocumented Web Expressive classes; the list below is the current component API.
+
 ## Contents
 
 - [Buttons](#buttons)
@@ -289,15 +291,17 @@ Floating action button with a text label. These can be implemented using `<butto
 <!-- Default extended FAB -->
 <button class="extended-fab [modifiers]">
   <span class="icon" aria-hidden="true">add</span>
-  <span class="label-text">Create</span>
+  Create
 </button>
 
 <!-- Use <a> for navigation while maintaining extended FAB styling -->
 <a href="..." class="extended-fab [modifiers]">
   <span class="icon" aria-hidden="true">add</span>
-  <span class="label-text">Create</span>
+  Create
 </a>
 ```
+
+The label does not require a component class. Wrap it in a project-owned element such as `.label-text` only when it needs independent styling or animation, as demonstrated by the scroll-responsive layout examples.
 
 <h3 id="fab">FAB</h3>
 

@@ -174,8 +174,11 @@
                     }
                   }
 
-                  /* Collapse the compact FAB after the page starts scrolling.
-                     Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries */
+                  /* Progressive enhancement: collapse the Extended FAB to a FAB
+                     while scrolling toward block-end, then expand it toward block-start.
+                     .label-text is a local animation hook, not a component requirement.
+                     Material guidance: https://m3.material.io/components/extended-fab/guidelines
+                     CSS technique: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries */
 
                   @container scroller scroll-state(scrolled: block-end) {
                     inline-size: var(--_block-size);

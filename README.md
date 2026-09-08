@@ -46,7 +46,7 @@ Load the core foundation first, then a scheme, then any components you need.
 Install with:
 
 ```bash
-npm install web-expressive@0.5.1
+npm install web-expressive
 ```
 
 Import the styles you need into your global stylesheet:
