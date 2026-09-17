@@ -399,11 +399,26 @@
         /* Main Content */
 
         @scope (.app-content) to (.app-bar) {
-          /* Local additions between or beyond the shared spacing tokens. */
-          --_extended-measurement-space-1000: 5rem; /* 80px */
+          :scope {
+            /* Local additions between or beyond the shared spacing tokens. */
+            --_extended-measurement-space-1000: 5rem; /* 80px */
+            --_extended-measurement-space-1500: 7.5rem; /* 120px */
 
-          background: var(--sys-color-surface-container-lowest);
-          padding-block-end: var(--_extended-measurement-space-1000);
+            background: var(--sys-color-surface-container-lowest);
+            padding-block-end: var(--_extended-measurement-space-1500);
+
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-end: var(--_extended-measurement-space-1000);
+            }
+          }
+
+          .main {
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-start: var(--sys-measurement-space-250);
+            }
+          }
         }
 
         @scope (.app-bar) {
@@ -451,7 +466,6 @@
           }
 
           .supporting-text {
-            visibility: hidden;
             color: var(--sys-color-on-surface-variant);
             font: var(--sys-typescale-label-large);
 
@@ -691,14 +705,24 @@
               display: grid;
 
               gap: var(--sys-measurement-space-100);
-              padding-inline: var(--_section-padding-inline);
+
               padding-block: var(--sys-measurement-space-600)
                 var(--sys-measurement-space-200);
+
+              /* window-medium-wider */
+              @media (width >= 600px) {
+                padding-inline: var(--_section-padding-inline);
+              }
             }
 
             .header {
               display: flex;
               align-items: center;
+
+              /* window-compact */
+              @media (width < 600px) {
+                padding-inline-start: var(--_section-padding-inline);
+              }
             }
 
             .title {
@@ -729,6 +753,12 @@
 
               &:hover {
                 scrollbar-color: var(--sys-color-outline-variant) transparent;
+              }
+
+              /* window-compact */
+              @media (width < 600px) {
+                padding-inline: var(--_section-padding-inline);
+                scroll-padding-inline: var(--_section-padding-inline);
               }
             }
 
@@ -873,10 +903,10 @@
 
         <div class="text-content">
           <h1 class="headline">Label</h1>
-          <p class="supporting-text">Supporting text</p>
+          <!-- <p class="supporting-text">Supporting text</p> -->
         </div>
       </header>
-      <main class="home">
+      <main class="main">
         <div class="large-screen-content">
           <section class="section-01">
             <div class="grid">

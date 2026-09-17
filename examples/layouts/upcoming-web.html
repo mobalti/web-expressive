@@ -400,11 +400,26 @@
         /* Main Content */
 
         @scope (.app-content) to (.app-bar) {
-          /* Local additions between or beyond the shared spacing tokens. */
-          --_extended-measurement-space-1000: 5rem; /* 80px */
+          :scope {
+            /* Local additions between or beyond the shared spacing tokens. */
+            --_extended-measurement-space-1000: 5rem; /* 80px */
+            --_extended-measurement-space-1500: 7.5rem; /* 120px */
 
-          background: var(--sys-color-surface-container-lowest);
-          padding-block-end: var(--_extended-measurement-space-1000);
+            background: var(--sys-color-surface-container-lowest);
+            padding-block-end: var(--_extended-measurement-space-1500);
+
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-end: var(--_extended-measurement-space-1000);
+            }
+          }
+
+          .main {
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-start: var(--sys-measurement-space-250);
+            }
+          }
         }
 
         @scope (.app-bar) {
@@ -452,7 +467,6 @@
           }
 
           .supporting-text {
-            visibility: hidden;
             color: var(--sys-color-on-surface-variant);
             font: var(--sys-typescale-label-large);
 
@@ -476,9 +490,9 @@
     <!-- Content -->
     <style>
       @layer layout {
-        /* Home */
+        /* main */
 
-        @scope (.home) {
+        @scope (.main) {
           /*
             Progressive enhancement: supporting browsers generate carousel
             buttons. Without this feature, the horizontal scroller remains
@@ -487,6 +501,7 @@
           */
           @supports (scroll-marker-group: after) {
             .carousel {
+              --_buttons-margin-inline-end: var(--sys-measurement-space-0);
               --_button-size: 2.5rem;
               --_button-group-gap: var(--sys-measurement-space-100);
               --_icon-button-font-size: 1.5rem;
@@ -500,6 +515,11 @@
 
               scroll-snap-type: inline mandatory;
               anchor-scope: all;
+
+              /* window-compact */
+              @media (width < 600px) {
+                --_buttons-margin-inline-end: var(--_section-padding-inline);
+              }
 
               &::scroll-button(*) {
                 --_outline-width: 0;
@@ -515,11 +535,11 @@
                   border-radius var(--sys-motion-spring-fast-spatial-duration)
                     var(--sys-motion-spring-fast-spatial);
                 cursor: pointer;
-                inset-block-start: calc(
-                  anchor(start) - var(--sys-measurement-space-700)
-                );
+                inset-block-start: calc(anchor(start) - 3.75rem);
 
-                inset-inline-end: calc(anchor(end));
+                inset-inline-end: calc(
+                  anchor(end) + var(--_buttons-margin-inline-end)
+                );
                 outline: var(--_outline-width) solid var(--sys-color-secondary);
                 outline-offset: 2px;
                 border: 1px solid var(--sys-color-outline-variant);
@@ -533,6 +553,7 @@
                 font-family: var(--ref-typeface-symbols);
                 font-feature-settings: "liga";
                 user-select: none;
+
                 overflow: clip;
 
                 @container not scroll-state(scrollable) {
@@ -562,7 +583,8 @@
 
               &::scroll-button(inline-start) {
                 inset-inline-end: calc(
-                  anchor(end) + var(--_button-group-gap) + var(--_button-size)
+                  anchor(end) + var(--_button-group-gap) + var(--_button-size) +
+                    var(--_buttons-margin-inline-end)
                 );
                 content: "chevron_backward" / "Scroll back";
               }
@@ -591,14 +613,24 @@
           :scope {
             display: grid;
             gap: var(--sys-measurement-space-200);
-            padding-inline: var(--_section-padding-inline);
+
             padding-block-start: var(--sys-measurement-space-800);
             padding-block-end: var(--sys-measurement-space-200);
+
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-inline: var(--_section-padding-inline);
+            }
           }
 
           .header {
             display: flex;
             align-items: center;
+
+            /* window-compact */
+            @media (width < 600px) {
+              padding-inline-start: var(--_section-padding-inline);
+            }
           }
 
           .title {
@@ -629,6 +661,12 @@
             &:hover {
               scrollbar-color: var(--sys-color-outline-variant) transparent;
             }
+            /* window-compact */
+            @media (width < 600px) {
+              gap: var(--sys-measurement-space-200);
+              padding-inline: var(--_section-padding-inline);
+              scroll-padding-inline: var(--_section-padding-inline);
+            }
           }
 
           .link-wrapper {
@@ -651,7 +689,9 @@
             border-radius: var(--sys-shape-corner-extra-large);
             background: var(--sys-color-surface-container-high);
             aspect-ratio: 4/3;
-            inline-size: 90cqi;
+            inline-size: 200px;
+            inline-size: 80cqi;
+
             overflow: clip;
 
             position: relative;
@@ -669,11 +709,6 @@
 
             /* window-medium-wider */
             @media (width >=600px) {
-              inline-size: 60cqi;
-            }
-
-            /* window-large-wider */
-            @media (width >=1200px) {
               inline-size: 40cqi;
             }
 
@@ -696,9 +731,6 @@
             grid-auto-flow: column;
             justify-content: space-between;
             inline-size: 100%;
-          }
-
-          .text-content {
           }
 
           .label {
@@ -905,7 +937,10 @@
             <button class="icon-button medium standard" aria-label="Calendar">
               <span class="icon" aria-hidden="true">event</span>
             </button>
-            <button class="icon-button medium standard" aria-label="More options">
+            <button
+              class="icon-button medium standard"
+              aria-label="More options"
+            >
               <span class="icon" aria-hidden="true">more_vert</span>
             </button>
           </div>
@@ -913,10 +948,10 @@
 
         <div class="text-content">
           <h1 class="headline">Label</h1>
-          <p class="supporting-text">Supporting text</p>
+          <!-- <p class="supporting-text">Supporting text</p> -->
         </div>
       </header>
-      <main class="home">
+      <main class="main">
         <section class="section-01">
           <div class="carousel-container">
             <ul class="carousel">

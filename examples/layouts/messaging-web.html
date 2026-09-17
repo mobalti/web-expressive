@@ -316,7 +316,7 @@
 
         /* Conversation pane */
 
-        @scope (.home) {
+        @scope (.main) {
           :scope {
             display: grid;
             place-items: normal center;
@@ -800,13 +800,16 @@
             >
               <span class="icon" aria-hidden="true">attach_file</span>
             </button>
-            <button class="icon-button medium standard" aria-label="More options">
+            <button
+              class="icon-button medium standard"
+              aria-label="More options"
+            >
               <span class="icon" aria-hidden="true">more_vert</span>
             </button>
           </div>
         </div>
       </header>
-      <main class="home">
+      <main class="main">
         <div class="container">
           <div class="conversation" data-chat-log>
             <div class="message" data-message>
@@ -855,7 +858,10 @@
 
             <div class="input-container">
               <div class="leading-elements">
-                <button class="icon-button standard" aria-label="Message options">
+                <button
+                  class="icon-button standard"
+                  aria-label="Message options"
+                >
                   <span class="icon no-fill" aria-hidden="true">menu</span>
                 </button>
               </div>
@@ -870,7 +876,10 @@
                 ></textarea>
               </div>
               <div class="trailing-elements">
-                <button class="icon-button standard" aria-label="Search messages">
+                <button
+                  class="icon-button standard"
+                  aria-label="Search messages"
+                >
                   <span class="icon no-fill" aria-hidden="true">search</span>
                 </button>
               </div>

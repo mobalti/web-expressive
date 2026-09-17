@@ -410,11 +410,26 @@
         /* Main Content */
 
         @scope (.app-content) to (.app-bar) {
-          /* Local additions between or beyond the shared spacing tokens. */
-          --_extended-measurement-space-1000: 5rem; /* 80px */
+          :scope {
+            /* Local additions between or beyond the shared spacing tokens. */
+            --_extended-measurement-space-1000: 5rem; /* 80px */
+            --_extended-measurement-space-1500: 7.5rem; /* 120px */
 
-          background: var(--sys-color-surface-container-lowest);
-          padding-block-end: var(--_extended-measurement-space-1000);
+            background: var(--sys-color-surface-container-lowest);
+            padding-block-end: var(--_extended-measurement-space-1500);
+
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-end: var(--_extended-measurement-space-1000);
+            }
+          }
+
+          .main {
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-start: var(--sys-measurement-space-250);
+            }
+          }
         }
 
         @scope (.app-bar) {
@@ -462,7 +477,6 @@
           }
 
           .supporting-text {
-            visibility: hidden;
             color: var(--sys-color-on-surface-variant);
             font: var(--sys-typescale-label-large);
 
@@ -499,8 +513,11 @@
             @media (width < 600px) {
               background: transparent;
               position: absolute;
+              padding-block: var(--sys-measurement-space-100);
+              padding-inline: var(--sys-measurement-space-50);
             }
           }
+
           /* window-compact */
           .window-compact-controls {
             color-scheme: light;
@@ -586,9 +603,9 @@
           );
         }
 
-        /* Home */
+        /* main */
 
-        @scope (.home) {
+        @scope (.main) {
           :scope {
             padding-block-end: var(--sys-measurement-space-800);
           }
@@ -652,14 +669,15 @@
             isolation: isolate;
             background: var(--sys-color-surface-container);
 
-            padding: var(--sys-measurement-space-200);
+            padding-block: var(--sys-measurement-space-200);
             inline-size: 100%;
-            min-block-size: 65cqi;
+            min-block-size: 364px;
             overflow: clip;
 
             /* window-expanded-wider */
             @media (width >=600px) {
               border-radius: var(--sys-shape-corner-extra-large);
+              padding: var(--sys-measurement-space-200);
             }
 
             /* window-expanded-wider */
@@ -714,6 +732,7 @@
             display: grid;
             gap: var(--sys-measurement-space-100);
             color-scheme: light;
+            padding-inline: var(--sys-measurement-space-100);
 
             @media (width >=1600px) {
               gap: var(--sys-measurement-space-300);
@@ -975,7 +994,7 @@
           </div>
         </div>
       </header>
-      <main class="home">
+      <main class="main">
         <section class="hero">
           <div class="content">
             <div class="visual">

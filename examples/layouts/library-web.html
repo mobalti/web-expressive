@@ -416,11 +416,26 @@
         /* Main Content */
 
         @scope (.app-content) to (.app-bar) {
-          /* Local additions between or beyond the shared spacing tokens. */
-          --_extended-measurement-space-1000: 5rem; /* 80px */
+          :scope {
+            /* Local additions between or beyond the shared spacing tokens. */
+            --_extended-measurement-space-1000: 5rem; /* 80px */
+            --_extended-measurement-space-1500: 7.5rem; /* 120px */
 
-          background: var(--sys-color-surface-container-lowest);
-          padding-block-end: var(--_extended-measurement-space-1000);
+            background: var(--sys-color-surface-container-lowest);
+            padding-block-end: var(--_extended-measurement-space-1500);
+
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-end: var(--_extended-measurement-space-1000);
+            }
+          }
+
+          .main {
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-start: var(--sys-measurement-space-250);
+            }
+          }
         }
 
         @scope (.app-bar) {
@@ -468,7 +483,6 @@
           }
 
           .supporting-text {
-            visibility: hidden;
             color: var(--sys-color-on-surface-variant);
             font: var(--sys-typescale-label-large);
 
@@ -494,7 +508,7 @@
       @layer layout {
         /* Filter Carousel */
 
-        @scope (.home) to (.card-grid) {
+        @scope (.main) to (.card-grid) {
           /*
             Progressive enhancement: supporting browsers generate carousel
             buttons. Without this feature, the horizontal scroller remains
@@ -532,7 +546,9 @@
                   border-radius var(--sys-motion-spring-fast-spatial-duration)
                     var(--sys-motion-spring-fast-spatial);
                 cursor: pointer;
-                inset-block-start: calc(anchor(start));
+                inset-block-start: calc(
+                  anchor(start) + var(--sys-measurement-space-50)
+                );
                 outline: var(--_outline-width) solid var(--sys-color-secondary);
                 outline-offset: 2px;
                 box-shadow: var(--sys-elevation-level-3);
@@ -619,12 +635,12 @@
             display: grid;
             border: none;
             padding: var(--sys-measurement-space-0);
+            padding-block: var(--sys-measurement-space-50);
           }
 
-          .toggle-button:not(:has(.input:checked)) {
-            .icon {
-              display: none;
-            }
+          .group {
+            display: flex;
+            gap: var(--sys-measurement-space-100);
           }
         }
 
@@ -795,14 +811,14 @@
 
         <div class="text-content">
           <h1 class="headline">Label</h1>
-          <p class="supporting-text">Supporting text</p>
+          <!-- <p class="supporting-text">Supporting text</p> -->
         </div>
       </header>
-      <main class="home">
+      <main class="main">
         <header class="header">
           <form class="filter-carousel">
             <fieldset class="fieldset" aria-label="Select drink size">
-              <div class="standard-button-group square">
+              <div class="group square">
                 <div class="toggle-button outline">
                   <input
                     type="radio"

@@ -400,11 +400,26 @@
         /* Main Content */
 
         @scope (.app-content) to (.app-bar) {
-          /* Local additions between or beyond the shared spacing tokens. */
-          --_extended-measurement-space-1000: 5rem; /* 80px */
+          :scope {
+            /* Local additions between or beyond the shared spacing tokens. */
+            --_extended-measurement-space-1000: 5rem; /* 80px */
+            --_extended-measurement-space-1500: 7.5rem; /* 120px */
 
-          background: var(--sys-color-surface-container-lowest);
-          padding-block-end: var(--_extended-measurement-space-1000);
+            background: var(--sys-color-surface-container-lowest);
+            padding-block-end: var(--_extended-measurement-space-1500);
+
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-end: var(--_extended-measurement-space-1000);
+            }
+          }
+
+          .main {
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-block-start: var(--sys-measurement-space-250);
+            }
+          }
         }
 
         @scope (.app-bar) {
@@ -452,7 +467,6 @@
           }
 
           .supporting-text {
-            visibility: hidden;
             color: var(--sys-color-on-surface-variant);
             font: var(--sys-typescale-label-large);
 
@@ -829,7 +843,10 @@
             <button class="icon-button medium standard" aria-label="Bookmark">
               <span class="icon" aria-hidden="true">bookmark</span>
             </button>
-            <button class="icon-button medium standard" aria-label="More options">
+            <button
+              class="icon-button medium standard"
+              aria-label="More options"
+            >
               <span class="icon" aria-hidden="true">more_vert</span>
             </button>
           </div>
@@ -837,10 +854,10 @@
 
         <div class="text-content">
           <p class="headline">Label</p>
-          <p class="supporting-text">Supporting text</p>
+          <!-- <p class="supporting-text">Supporting text</p> -->
         </div>
       </header>
-      <main class="home">
+      <main class="main">
         <section class="section-01">
           <header class="header-large-screen">
             <div class="visual">
