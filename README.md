@@ -1,6 +1,6 @@
 # Web Expressive
 
-Web Expressive is a toolkit built on web standards that helps developers and AI agents build user interfaces for the web. It brings the design intent of Material 3 Expressive to HTML and CSS through design tokens, components, and adaptable UI patterns.
+Web Expressive is a toolkit built on web standards that simplifies and accelerates UI development for the web. It brings the design intent of Material 3 Expressive to HTML and CSS through design tokens, components, and adaptable layout patterns.
 
 ## Quick start
 
@@ -72,11 +72,6 @@ If you are starting from scratch, the usual path is:
 3. Add components as needed.
    Component stylesheets are optional. Import only the components you need, or build your own with the system tokens. Use [Imports](docs/reference/imports.md#components) for CDN and npm paths and [Components API](docs/reference/components.md) for component markup and modifiers.
 
-## Using with an AI agent
-
-Give the agent this repository URL or one of the [single-file layout starters](examples/layouts/Readme.md), then describe the interface you want and your target environment. The repository provides the import paths, component markup, system tokens, scheme guidance, and adaptable patterns it needs to build the UI layer.
-
-Ask the agent to adapt the UI to your project's stack, file structure, and conventions, then connect it to your existing routing, data, and state.
 
 ## Resources
 

@@ -8,4 +8,4 @@ First official release of Web Expressive.
 - Added buttons, toggle buttons, icon buttons, toggle icon buttons, FABs, button groups, and switches.
 - Added light and dark color schemes, including the recommended `schemes/alpha/` collection.
 - Added abstract shape tokens for clipping and masking.
-- Added reference documentation and adaptable single-file layout starters for developers and AI agents.
+- Added reference documentation and adaptable single-file layout starters.

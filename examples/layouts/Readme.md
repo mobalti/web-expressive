@@ -27,7 +27,7 @@ Choose the starter closest to your product. Click its preview or use the downloa
   </picture>
 </a>
 
-[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/home-web.html)
+[Raw HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/home-web.html)
 
 ### Gallery
 
@@ -38,7 +38,7 @@ Choose the starter closest to your product. Click its preview or use the downloa
   </picture>
 </a>
 
-[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/gallery-web.html)
+[Raw HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/gallery-web.html)
 
 ### Library
 
@@ -49,7 +49,7 @@ Choose the starter closest to your product. Click its preview or use the downloa
   </picture>
 </a>
 
-[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/library-web.html)
+[Raw HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/library-web.html)
 
 ### Detailed view
 
@@ -60,7 +60,7 @@ Choose the starter closest to your product. Click its preview or use the downloa
   </picture>
 </a>
 
-[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/detailed-view-web.html)
+[Raw HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/detailed-view-web.html)
 
 ### Upcoming content
 
@@ -71,7 +71,7 @@ Choose the starter closest to your product. Click its preview or use the downloa
   </picture>
 </a>
 
-[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/upcoming-web.html)
+[Raw HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/upcoming-web.html)
 
 ### Messaging
 
@@ -82,7 +82,7 @@ Choose the starter closest to your product. Click its preview or use the downloa
   </picture>
 </a>
 
-[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/messaging-web.html)
+[Raw HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/messaging-web.html)
 
 ### Reviews and ratings
 
@@ -93,8 +93,6 @@ Choose the starter closest to your product. Click its preview or use the downloa
   </picture>
 </a>
 
-[Download HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/review-web.html)
+[Raw HTML](https://raw.githubusercontent.com/mobalti/web-expressive/main/examples/layouts/review-web.html)
 
 Each layout stays in one HTML file so it can be opened, inspected, adapted, or separated into project files immediately.
-
-**Using a layout with an AI agent:** Give the agent the downloaded HTML file and, when useful, a screenshot. Describe the product, content, and target environment. Each layout includes direct references to the Web Expressive setup guide, imports, component API, design tokens, schemes, and other examples.
