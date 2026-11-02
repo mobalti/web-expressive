@@ -58,7 +58,7 @@
   initial-value: round;
 }
 
-:where(html) {
+html {
   --sys-shape-corner-none: 0px;
   --sys-shape-corner-extra-small: 0.25rem;
   --sys-shape-corner-small: 0.5rem;
@@ -109,27 +109,11 @@
   --sys-motion-spring-slow-effects-duration: 300ms;
 }
 
-:where(html, [data-mode="light"], .light-mode) {
-  --sys-elevation-level-1: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-  --sys-elevation-level-2: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
-  --sys-elevation-level-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level-4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level-5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-:where([data-mode="dark"], .dark-mode) {
-  --sys-elevation-level-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level-4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
-  --sys-elevation-level-5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-:where(html) {
+html {
   --sys-motion-spring-pop-focus: linear(0 0%, 2.5 25%, 2.5 50%, 1 100%);
 }
 
-:where(html) {
+html {
   --sys-measurement-space-0: 0rem; /* 0px */
   --sys-measurement-space-25: 0.125rem; /* 2px */
   --sys-measurement-space-50: 0.25rem; /* 4px */
@@ -150,7 +134,7 @@
   --sys-measurement-space-900: 4.5rem; /* 72px */
 }
 
-:where(html) {
+html {
   --ref-typeface-brand: var(--ref-typeface-base);
   --ref-typeface-plain: var(--ref-typeface-base);
   --ref-typeface-emphasized-brand: var(--ref-typeface-brand);
@@ -188,4 +172,21 @@
   --sys-typescale-emphasized-title-large: 500 1.375rem/1.75rem var(--ref-typeface-emphasized-brand), var(--ref-typeface-generic);
   --sys-typescale-emphasized-title-medium: 600 1rem/1.5rem var(--ref-typeface-emphasized-plain), var(--ref-typeface-generic);
   --sys-typescale-emphasized-title-small: 600 0.875rem/1.25rem var(--ref-typeface-emphasized-plain), var(--ref-typeface-generic);
+}
+
+/* ----------------------------------------------------- */
+/* ELEVATION (BOX-SHADOW) TOKENS                         */
+/* ----------------------------------------------------- */
+
+html {
+  --sys-elevation-level-1: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --sys-elevation-level-2: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --sys-elevation-level-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
+  --sys-elevation-level-5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+  @media (prefers-color-scheme: dark) {
+    --sys-elevation-level-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+    --sys-elevation-level-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+  }
 }
