@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive starter</title>
+
+    <!-- 1. Typography -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap" />
+
+    <!-- 2. Core (reset + essential tokens) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/core.css" />
+
+    <!-- 3. Scheme -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/classic-vibrant.css" />
+
+    <!-- 4. Components -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/button.css" />
+
+    <style>
+      @scope (.hero) {
+        :scope {
+          display: grid;
+          padding: var(--sys-measurement-space-200);
+          min-block-size: 100svb;
+        }
+
+        .content {
+          display: grid;
+          place-content: center;
+          place-items: center;
+          gap: var(--sys-measurement-space-500);
+          border-radius: var(--sys-shape-corner-extra-large);
+          background: var(--sys-color-surface-container);
+          padding: var(--sys-measurement-space-200);
+
+          /* window-expanded-wider */
+          @media (width >= 840px) {
+            gap: var(--sys-measurement-space-700);
+          }
+        }
+        .text-content {
+          display: grid;
+          place-items: center;
+          gap: var(--sys-measurement-space-300);
+        }
+        .headline {
+          gap: var(--sys-measurement-space-100);
+          max-inline-size: 50rem;
+          font: var(--sys-typescale-emphasized-display-medium);
+
+          text-align: center;
+          text-wrap: pretty;
+
+          @media (width >= 840px) {
+            font: var(--sys-typescale-emphasized-display-large);
+            line-height: 1.33em;
+          }
+        }
+        .supporting-text {
+          font: var(--sys-typescale-body-large);
+          text-align: center;
+          text-wrap: pretty;
+
+          /* window-expanded-wider */
+          @media (width >= 840px) {
+            font: var(--sys-typescale-title-large);
+          }
+        }
+        .actions {
+          --size-items: medium;
+          display: grid;
+          grid-auto-flow: column;
+          gap: var(--sys-measurement-space-150);
+
+          @media (width >= 840px) {
+            --size-items: large;
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="content">
+        <div class="text-content">
+          <h1 class="headline">Build apps users can feel with Web Expressive</h1>
+          <p class="supporting-text">A modern toolkit for building fast, standards-first web applications.</p>
+        </div>
+        <div class="actions">
+          <a href="https://mobalti.github.io/web-expressive/" class="button">Get started</a>
+          <a href="https://mobalti.github.io/web-expressive/docs/index.html" class="button outline">View Docs</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

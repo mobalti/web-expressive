@@ -1,0 +1,1423 @@
+<!doctype html>
+<html lang="en" data-theme="berry-tonal">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive scheme - Alpha collection</title>
+    <meta
+      name="description"
+      content="Explore Web Expressive's alpha color schemes with richer color variants, preview light and dark modes, and get CDN or npm import snippets."
+    />
+    <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- 1. Typography -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=code,check,article,download,edit,palette,stars&display=block"
+    />
+
+    <!-- 2. Core (reset + essential tokens) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/core.css" />
+
+    <!-- 4. Components -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/button.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/toggle-button.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/fab.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/extended-fab.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/icon-button.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/connected-button-group.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/berry-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/berry-neutral.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/berry-vibrant.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/berry-expressive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/sun-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/sun-neutral.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/sun-vibrant.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/sun-expressive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/porcelain-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/porcelain-neutral.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/porcelain-vibrant.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/porcelain-expressive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/forest-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/forest-neutral.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/forest-vibrant.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/forest-expressive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/carbon-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/carbon-neutral.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/carbon-vibrant.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/carbon-expressive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/aqua-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/aqua-neutral.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/aqua-vibrant.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/aqua-expressive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/classic-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/classic-neutral.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/classic-vibrant.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/classic-expressive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-neutral.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-vibrant.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-expressive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/paper-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/paper-neutral.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/paper-vibrant.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/paper-expressive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/monochrome.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/baseline.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/red.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/orange.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/yellow.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/green.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/blue.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/indigo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/violet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/yellow-red.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/green-orange.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/blue-green.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/light-purple-blue.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/pink-indigo.css" />
+
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        @view-transition {
+          navigation: auto;
+        }
+      }
+
+      @layer layout {
+        html {
+          --nav-block-size: 88px;
+
+          ::search-text {
+            background: var(--sys-color-secondary-container);
+            color: var(--sys-color-on-secondary-container);
+          }
+
+          ::search-text:current {
+            background: var(--sys-color-tertiary-container);
+            color: var(--sys-color-on-tertiary-container);
+          }
+        }
+
+        body {
+          display: grid;
+
+          @media (width >=840px) {
+            grid-template-columns: 413px 1fr;
+          }
+        }
+
+        @scope (body) to (.scheme) {
+          .main {
+            container-type: inline-size;
+            --_inline-padding: 5cqi;
+
+            @media (width < 840px) {
+              padding-block-end: 12.5rem;
+            }
+          }
+        }
+
+        @scope (.aside) {
+          :scope {
+            display: grid;
+
+            /* window-expanded-up */
+            @media (width >=840px) {
+              display: grid;
+              position: sticky;
+              inset-block-start: var(--sys-measurement-space-0);
+              block-size: 100svb;
+              overflow-block: auto;
+              overscroll-behavior-block: contain;
+              scrollbar-color: var(--sys-color-outline-variant) var(--sys-color-surface);
+            }
+
+            @media (width < 840px) {
+              position: fixed;
+              z-index: 100;
+              backdrop-filter: blur(28px);
+              inset-block-end: var(--sys-measurement-space-0);
+              inset-inline: var(--sys-measurement-space-0);
+              background: oklch(from var(--sys-color-surface) l c h / 85%);
+              padding-inline: var(--sys-measurement-space-200) var(--sys-measurement-space-0);
+            }
+          }
+
+          .legend {
+            display: grid;
+            gap: var(--sys-measurement-space-200);
+            z-index: 100;
+            inline-size: 100%;
+            color: var(--sys-color-on-surface-variant);
+
+            /* window-expanded-up */
+            @media (width >=840px) {
+              position: sticky;
+              backdrop-filter: blur(28px);
+              inset-block-start: var(--sys-measurement-space-0);
+              background: oklch(from var(--sys-color-surface) l c h / 65%);
+              padding-inline: var(--sys-measurement-space-200);
+              padding-block: var(--sys-measurement-space-200);
+            }
+
+            /* window-medium-down */
+            @media (width < 840px) {
+              inset-block-start: var(--nav-block-size);
+              padding-block: var(--sys-measurement-space-200);
+            }
+          }
+
+          .headline {
+            color: var(--sys-color-on-surface);
+            font: var(--sys-typescale-title-large);
+          }
+
+          .heading {
+            font: var(--sys-type);
+          }
+
+          .form {
+            display: grid;
+          }
+
+          .fieldset {
+            display: grid;
+            border: none;
+            padding: var(--sys-measurement-space-0);
+            padding-block-end: var(--sys-measurement-space-600);
+
+            /* window-medium-down */
+            @media (width < 840px) {
+              grid-template-columns: 1fr;
+            }
+          }
+
+          .scheme-picker {
+            /* window-expanded-wider */
+            @media (width >=840px) {
+              padding-inline: var(--sys-measurement-space-200);
+            }
+
+            /* window-medium-down */
+            @media (width < 840px) {
+              display: grid;
+              grid-auto-flow: column;
+              gap: var(--sys-measurement-space-50);
+              padding-inline-end: var(--sys-measurement-space-200);
+              overflow-inline: auto;
+            }
+          }
+        }
+
+        @scope (.scheme) {
+          :scope {
+            display: grid;
+            place-items: center;
+            gap: var(--sys-measurement-space-200);
+            background: var(--sys-color-surface-container);
+            padding-inline: var(--sys-measurement-space-200);
+            padding-block: var(--sys-measurement-space-800);
+            overflow-inline: auto;
+
+            font: var(--sys-typescale-label-medium);
+
+            /* window-expanded-wider */
+            @media (width >=840px) {
+              padding-inline: var(--sys-measurement-space-600);
+            }
+          }
+
+          .header {
+            inline-size: min(100%, 1000px);
+            min-inline-size: 700px;
+          }
+
+          .heading {
+            color: var(--sys-color-on-surface);
+
+            font: var(--sys-typescale-title-large);
+          }
+
+          .wrapper {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: var(--sys-measurement-space-300);
+            inline-size: min(100%, 1000px);
+            min-inline-size: 700px;
+          }
+
+          .main-roles {
+            display: grid;
+            gap: var(--sys-measurement-space-300);
+          }
+
+          .swatch-group {
+            display: grid;
+            grid-template-rows: 87px 40px;
+          }
+
+          .swatch {
+            padding: var(--sys-measurement-space-100);
+          }
+
+          .base {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--sys-measurement-space-50);
+          }
+
+          .surfaces {
+            .row-1 {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              min-block-size: 84px;
+            }
+
+            .row-2 {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+              min-block-size: 91px;
+            }
+
+            .row-3 {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              min-block-size: 45px;
+            }
+          }
+
+          .fixed {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--sys-measurement-space-50);
+
+            .row-1 {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              block-size: 60px;
+            }
+
+            .row-2 {
+              display: grid;
+              block-size: 80px;
+            }
+          }
+
+          .side {
+            display: grid;
+            align-content: space-between;
+
+            .row-1 {
+              display: grid;
+              gap: var(--sys-measurement-space-50);
+            }
+
+            .row-2 {
+              display: grid;
+              gap: var(--sys-measurement-space-450);
+
+              .swatch {
+                block-size: 45px;
+              }
+
+              .row-3 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--sys-measurement-space-200);
+              }
+            }
+          }
+        }
+      }
+
+      @scope (.preview) {
+        :scope {
+          display: grid;
+          place-items: center;
+          background: var(--sys-color-surface-container-highest);
+          padding: var(--sys-measurement-space-400) var(--_inline-padding);
+        }
+
+        .preview-content {
+          display: grid;
+          position: relative;
+          place-items: center;
+          border-radius: var(--sys-shape-corner-large);
+          background: var(--sys-color-surface-container-lowest);
+          padding: var(--sys-measurement-space-200);
+          inline-size: min(100%, 600px);
+          color: var(--sys-color-on-surface);
+        }
+
+        .title {
+          font: var(--sys-typescale-title-medium);
+        }
+
+        .content {
+          display: grid;
+          position: relative;
+          border-radius: var(--sys-shape-corner-small);
+          background: var(--sys-color-surface-container-low);
+          padding: var(--sys-measurement-space-200);
+          min-inline-size: 100%;
+        }
+
+        .header {
+          display: grid;
+          grid-template-columns: 1fr min-content;
+        }
+
+        .leading-elements {
+          display: flex;
+          gap: var(--sys-measurement-space-100);
+        }
+
+        .avatar {
+          display: grid;
+          place-items: center;
+          border-radius: var(--sys-shape-corner-full);
+          background: var(--sys-color-surface-container-highest);
+          inline-size: 40px;
+          block-size: 40px;
+          overflow: clip;
+          color: var(--sys-color-on-surface-variant);
+        }
+
+        .avatar-icon {
+          inline-size: 24px;
+          block-size: 24px;
+        }
+
+        .title-subtitle {
+          color: var(--sys-color-on-surface);
+
+          /* window-compact */
+          @media (width < 600px) {
+          }
+        }
+
+        .avatar-title {
+          font: var(--sys-typescale-body-medium);
+        }
+
+        .supporting-text {
+          color: var(--sys-color-on-surface-variant);
+          font: var(--sys-typescale-body-small);
+        }
+
+        .tag {
+          border-radius: var(--sys-shape-corner-extra-small);
+          background: var(--sys-color-surface-dim);
+          padding: var(--sys-measurement-space-25) var(--sys-measurement-space-50);
+          block-size: fit-content;
+          color: var(--sys-color-on-surface);
+          font: var(--sys-typescale-label-small);
+        }
+
+        .fab {
+          position: absolute;
+          inset-inline-end: var(--sys-measurement-space-200);
+        }
+      }
+
+      .main {
+        position: relative;
+      }
+
+      @scope (.app-bar) {
+        :scope {
+          position: fixed;
+          z-index: 100;
+          inset-block-start: var(--sys-measurement-space-200);
+          inset-inline-end: var(--sys-measurement-space-200);
+        }
+      }
+
+      .installation-dialog {
+        html:has(&:open) {
+          overflow-block: hidden;
+          scrollbar-gutter: stable;
+        }
+      }
+
+      @scope (.installation-dialog) {
+        :scope {
+          --_pre-link-display: none;
+          --_import-link-display: none;
+          border: none;
+          border-radius: var(--sys-shape-corner-extra-large);
+          background: var(--sys-color-surface-container-high);
+          padding: var(--sys-measurement-space-0);
+          inline-size: min(100%, 560px);
+          min-inline-size: 280px;
+          overflow: clip;
+          color: var(--sys-color-on-surface-variant);
+
+          &:has(.link-toggle:checked) {
+            --_pre-link-display: block;
+          }
+
+          &:has(.import-toggle:checked) {
+            --_import-link-display: block;
+          }
+
+          &::backdrop {
+            background: oklch(from var(--sys-color-shadow) l c h / 40%);
+          }
+
+          @media (prefers-reduced-motion: no-preference) {
+            scale: 0.8;
+            opacity: 0;
+            transition:
+              opacity var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects),
+              scale var(--sys-motion-spring-slow-effects-duration) var(--sys-motion-spring-slow-effects),
+              overlay var(--sys-motion-spring-slow-effects-duration) var(--sys-motion-spring-slow-effects) allow-discrete,
+              display var(--sys-motion-spring-slow-effects-duration) var(--sys-motion-spring-slow-effects) allow-discrete;
+
+            &:open {
+              scale: 1;
+              opacity: 1;
+
+              @starting-style {
+                scale: 0.8;
+                opacity: 0;
+              }
+            }
+
+            &::backdrop {
+              opacity: 0;
+              transition:
+                opacity var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects),
+                overlay var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects) allow-discrete,
+                display var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects) allow-discrete;
+            }
+
+            &:open::backdrop {
+              opacity: 1;
+
+              @starting-style {
+                opacity: 0;
+              }
+            }
+          }
+        }
+
+        .fieldset {
+          border: none;
+          padding: var(--sys-measurement-space-100);
+          overflow-inline: auto;
+        }
+
+        .dialog-container {
+          display: grid;
+          position: relative;
+          grid-template-rows: min-content 1fr min-content;
+          gap: var(--sys-measurement-space-200);
+          padding: var(--sys-measurement-space-300);
+          max-block-size: calc(80svb - var(--sys-measurement-space-125));
+        }
+
+        .header {
+          display: grid;
+          place-items: center;
+          gap: var(--sys-measurement-space-200);
+        }
+
+        .headline {
+          color: var(--sys-color-on-surface);
+          font: var(--sys-typescale-headline-large);
+        }
+
+        .container {
+          max-block-size: 100%;
+          overflow-block: auto;
+          scrollbar-color: var(--sys-color-outline-variant) transparent;
+        }
+
+        .dialog-content {
+          display: grid;
+          flex-direction: column;
+          gap: var(--sys-measurement-space-200);
+          container-type: inline-size;
+          padding-block: var(--sys-measurement-space-200) var(--sys-measurement-space-300);
+        }
+
+        .supporting-text {
+          font: var(--sys-typescale-title-small);
+
+          &:nth-child(1) {
+            font: var(--sys-typescale-title-medium);
+          }
+        }
+
+        .code {
+          font: var(--sys-typescale-label-large);
+          font-family: monospace;
+        }
+
+        .dialog-footer {
+          margin-block-start: var(--sys-measurement-space-200);
+        }
+
+        .link {
+          color: var(--sys-color-primary);
+        }
+
+        .pre {
+          display: block;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          border: 1px solid var(--sys-color-surface-variant);
+          border-radius: var(--sys-shape-corner-large);
+          background: var(--sys-color-surface-dim);
+          padding: var(--sys-measurement-space-200);
+          overflow-inline: auto;
+          scrollbar-color: var(--sys-color-outline) var(--sys-color-surface-container);
+          color: var(--sys-color-on-surface);
+
+          &.pre-link {
+            display: var(--_pre-link-display);
+          }
+
+          &.pre-import {
+            display: var(--_import-link-display);
+          }
+        }
+
+        .link {
+          font: var(--sys-typescale-label-large);
+        }
+
+        .trailing-elements {
+          display: grid;
+          position: sticky;
+          place-items: center end;
+          inset-block-end: 0;
+          background: var(--sys-color-surface-container-high);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <aside class="aside">
+      <form class="form" data-theme-form>
+        <fieldset class="fieldset">
+          <legend class="legend">
+            <h1 class="headline">Web Expressive schemes</h1>
+            <p>Alpha collection:</p>
+          </legend>
+
+          <div class="scheme-picker">
+            <!-- Berry -->
+            <div class="toggle-button">
+              <input class="input" checked type="radio" name="scheme" id="berry-tonal" value="berry-tonal" />
+              <label class="label" for="berry-tonal"><span class="icon" aria-hidden="true">palette</span> Berry tonal</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="berry-neutral" value="berry-neutral" />
+              <label class="label" for="berry-neutral"><span class="icon" aria-hidden="true">palette</span> Berry neutral</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="berry-vibrant" value="berry-vibrant" />
+              <label class="label" for="berry-vibrant"><span class="icon" aria-hidden="true">palette</span> Berry vibrant</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="berry-expressive" value="berry-expressive" />
+              <label class="label" for="berry-expressive"><span class="icon" aria-hidden="true">palette</span> Berry expressive</label>
+            </div>
+
+            <!-- Sun -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="sun-tonal" value="sun-tonal" />
+              <label class="label" for="sun-tonal"><span class="icon" aria-hidden="true">palette</span> Sun tonal</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="sun-neutral" value="sun-neutral" />
+              <label class="label" for="sun-neutral"><span class="icon" aria-hidden="true">palette</span> Sun neutral</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="sun-vibrant" value="sun-vibrant" />
+              <label class="label" for="sun-vibrant"><span class="icon" aria-hidden="true">palette</span> Sun vibrant</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="sun-expressive" value="sun-expressive" />
+              <label class="label" for="sun-expressive"><span class="icon" aria-hidden="true">palette</span> Sun expressive</label>
+            </div>
+
+            <!-- Porcelain -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="porcelain-tonal" value="porcelain-tonal" />
+              <label class="label" for="porcelain-tonal"><span class="icon" aria-hidden="true">palette</span> Porcelain tonal</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="porcelain-neutral" value="porcelain-neutral" />
+              <label class="label" for="porcelain-neutral"><span class="icon" aria-hidden="true">palette</span> Porcelain neutral</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="porcelain-vibrant" value="porcelain-vibrant" />
+              <label class="label" for="porcelain-vibrant"><span class="icon" aria-hidden="true">palette</span> Porcelain vibrant</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="porcelain-expressive" value="porcelain-expressive" />
+              <label class="label" for="porcelain-expressive"><span class="icon" aria-hidden="true">palette</span> Porcelain expressive</label>
+            </div>
+
+            <!-- Forest -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="forest-tonal" value="forest-tonal" />
+              <label class="label" for="forest-tonal"><span class="icon" aria-hidden="true">palette</span> Forest tonal</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="forest-neutral" value="forest-neutral" />
+              <label class="label" for="forest-neutral"><span class="icon" aria-hidden="true">palette</span> Forest neutral</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="forest-vibrant" value="forest-vibrant" />
+              <label class="label" for="forest-vibrant"><span class="icon" aria-hidden="true">palette</span> Forest vibrant</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="forest-expressive" value="forest-expressive" />
+              <label class="label" for="forest-expressive"><span class="icon" aria-hidden="true">palette</span> Forest expressive</label>
+            </div>
+
+            <!-- Carbon -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="carbon-tonal" value="carbon-tonal" />
+              <label class="label" for="carbon-tonal"><span class="icon" aria-hidden="true">palette</span> Carbon tonal</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="carbon-neutral" value="carbon-neutral" />
+              <label class="label" for="carbon-neutral"><span class="icon" aria-hidden="true">palette</span> Carbon neutral</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="carbon-vibrant" value="carbon-vibrant" />
+              <label class="label" for="carbon-vibrant"><span class="icon" aria-hidden="true">palette</span> Carbon vibrant</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="carbon-expressive" value="carbon-expressive" />
+              <label class="label" for="carbon-expressive"><span class="icon" aria-hidden="true">palette</span> Carbon expressive</label>
+            </div>
+
+            <!-- Aqua -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="aqua-tonal" value="aqua-tonal" />
+              <label class="label" for="aqua-tonal"><span class="icon" aria-hidden="true">palette</span> Aqua tonal</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="aqua-neutral" value="aqua-neutral" />
+              <label class="label" for="aqua-neutral"><span class="icon" aria-hidden="true">palette</span> Aqua neutral</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="aqua-vibrant" value="aqua-vibrant" />
+              <label class="label" for="aqua-vibrant"><span class="icon" aria-hidden="true">palette</span> Aqua vibrant</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="aqua-expressive" value="aqua-expressive" />
+              <label class="label" for="aqua-expressive"><span class="icon" aria-hidden="true">palette</span> Aqua expressive</label>
+            </div>
+
+            <!-- Classic -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="classic-tonal" value="classic-tonal" />
+              <label class="label" for="classic-tonal"><span class="icon" aria-hidden="true">palette</span> Classic tonal</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="classic-neutral" value="classic-neutral" />
+              <label class="label" for="classic-neutral"><span class="icon" aria-hidden="true">palette</span> Classic neutral</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="classic-vibrant" value="classic-vibrant" />
+              <label class="label" for="classic-vibrant"><span class="icon" aria-hidden="true">palette</span> Classic vibrant</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="classic-expressive" value="classic-expressive" />
+              <label class="label" for="classic-expressive"><span class="icon" aria-hidden="true">palette</span> Classic expressive</label>
+            </div>
+
+            <!-- Fuchsia -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="fuchsia-tonal" value="fuchsia-tonal" />
+              <label class="label" for="fuchsia-tonal"><span class="icon" aria-hidden="true">palette</span> Fuchsia tonal</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="fuchsia-neutral" value="fuchsia-neutral" />
+              <label class="label" for="fuchsia-neutral"><span class="icon" aria-hidden="true">palette</span> Fuchsia neutral</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="fuchsia-vibrant" value="fuchsia-vibrant" />
+              <label class="label" for="fuchsia-vibrant"><span class="icon" aria-hidden="true">palette</span> Fuchsia vibrant</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="fuchsia-expressive" value="fuchsia-expressive" />
+              <label class="label" for="fuchsia-expressive"><span class="icon" aria-hidden="true">palette</span> Fuchsia expressive</label>
+            </div>
+
+            <!-- Paper -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="paper-tonal" value="paper-tonal" />
+              <label class="label" for="paper-tonal"><span class="icon" aria-hidden="true">palette</span> Paper tonal</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="paper-neutral" value="paper-neutral" />
+              <label class="label" for="paper-neutral"><span class="icon" aria-hidden="true">palette</span> Paper neutral</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="paper-vibrant" value="paper-vibrant" />
+              <label class="label" for="paper-vibrant"><span class="icon" aria-hidden="true">palette</span> Paper vibrant</label>
+            </div>
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="paper-expressive" value="paper-expressive" />
+              <label class="label" for="paper-expressive"><span class="icon" aria-hidden="true">palette</span> Paper expressive</label>
+            </div>
+
+            <!-- Monochrome -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="monochrome" value="monochrome" />
+              <label class="label" for="monochrome"><span class="icon" aria-hidden="true">palette</span> Monochrome</label>
+            </div>
+
+            <!-- Baseline -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="baseline" value="baseline" />
+              <label class="label" for="baseline"><span class="icon" aria-hidden="true">palette</span> Baseline</label>
+            </div>
+
+            <!-- Red -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="red" value="red" />
+              <label class="label" for="red"><span class="icon" aria-hidden="true">palette</span> Red</label>
+            </div>
+
+            <!-- Orange -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="orange" value="orange" />
+              <label class="label" for="orange"><span class="icon" aria-hidden="true">palette</span> Orange</label>
+            </div>
+
+            <!-- Yellow -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="yellow" value="yellow" />
+              <label class="label" for="yellow"><span class="icon" aria-hidden="true">palette</span> Yellow</label>
+            </div>
+
+            <!-- Green -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="green" value="green" />
+              <label class="label" for="green"><span class="icon" aria-hidden="true">palette</span> Green</label>
+            </div>
+
+            <!-- Blue -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="blue" value="blue" />
+              <label class="label" for="blue"><span class="icon" aria-hidden="true">palette</span> Blue</label>
+            </div>
+
+            <!-- Indigo -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="indigo" value="indigo" />
+              <label class="label" for="indigo"><span class="icon" aria-hidden="true">palette</span> Indigo</label>
+            </div>
+
+            <!-- Violet -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="violet" value="violet" />
+              <label class="label" for="violet"><span class="icon" aria-hidden="true">palette</span> Violet</label>
+            </div>
+
+            <!-- Yellow Red -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="yellow-red" value="yellow-red" />
+              <label class="label" for="yellow-red"><span class="icon" aria-hidden="true">palette</span> Yellow and red</label>
+            </div>
+
+            <!-- Green orange -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="green-orange" value="green-orange" />
+              <label class="label" for="green-orange"><span class="icon" aria-hidden="true">palette</span> Green and orange</label>
+            </div>
+
+            <!-- Blue Green -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="blue-green" value="blue-green" />
+              <label class="label" for="blue-green"><span class="icon" aria-hidden="true">palette</span> Blue and green</label>
+            </div>
+
+            <!-- Light Purple Blue -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="light-purple-blue" value="light-purple-blue" />
+              <label class="label" for="light-purple-blue"><span class="icon" aria-hidden="true">palette</span> Light purple and blue</label>
+            </div>
+
+            <!-- Pink Indigo -->
+            <div class="toggle-button">
+              <input class="input" type="radio" name="scheme" id="pink-indigo" value="pink-indigo" />
+              <label class="label" for="pink-indigo"><span class="icon" aria-hidden="true">palette</span> Pink and indigo</label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </aside>
+    <main class="main">
+      <div class="app-bar">
+        <button command="show-modal" commandfor="installation-dialog" class="extended-fab">
+          <span aria-hidden="true" class="icon">code</span>
+          <span class="label-text">Get embed code</span>
+        </button>
+
+        <dialog id="installation-dialog" class="installation-dialog" closedby="any">
+          <div class="dialog-container">
+            <div class="header">
+              <h2 class="headline">Embed code</h2>
+            </div>
+
+            <div class="container">
+              <div class="dialog-content">
+                <p class="supporting-text">
+                  Embed the code in the
+                  <code class="code">&lt;head&gt;</code> of your HTML.
+                </p>
+
+                <fieldset class="fieldset main-feed" aria-label="Embed methods">
+                  <div class="connected-button-group">
+                    <div class="toggle-button">
+                      <input type="radio" checked name="embed" class="input link-toggle" id="link" />
+                      <label class="label" for="link">
+                        <span class="icon selected">check</span>
+                        &lt;link&gt;
+                      </label>
+                    </div>
+                    <div class="toggle-button">
+                      <input type="radio" name="embed" class="input import-toggle" id="import" />
+                      <label class="label" for="import">
+                        <span class="icon selected">check</span>
+                        @import
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <pre
+                  class="pre pre-link"
+                ><code class="code">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/<span data-dynamic-scheme>berry-tonal</span>.css" /&gt;</code></pre>
+
+                <pre class="pre pre-import"><code class="code">&lt;style&gt;
+@import url('https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/<span data-dynamic-scheme>berry-tonal</span>.css');
+&lt;/style&gt;</code></pre>
+
+                <p class="supporting-text">Example usage</p>
+                <pre class="pre"><code class="code">.card {
+    background: var(--sys-color-primary-container);
+    color: var(--sys-color-on-primary-container);
+}</code></pre>
+
+                <p class="supporting-text">Via npm</p>
+                <pre class="pre"><code class="code">npm install web-expressive</code></pre>
+
+                <p class="supporting-text">Import the scheme into your global stylesheet</p>
+                <pre
+                  class="pre"
+                ><code class="code">@import "web-expressive/schemes/alpha/<span data-dynamic-scheme>berry-tonal</span>.css";</code></pre>
+
+                <div class="dialog-footer">
+                  <a class="link" href="https://mobalti.github.io/web-expressive/">Learn more about Web Expressive</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="trailing-elements">
+              <button class="button text" commandfor="installation-dialog" command="close">Close</button>
+            </div>
+          </div>
+        </dialog>
+      </div>
+      <section class="section" style="color-scheme: light">
+        <div class="scheme" style="color-scheme: light">
+          <header class="header">
+            <h2 class="heading">Light mode</h2>
+          </header>
+          <div class="wrapper">
+            <div class="main-roles">
+              <div class="base">
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-primary); color: var(--sys-color-on-primary)">Primary</div>
+                  <div class="swatch" style="background: var(--sys-color-on-primary); color: var(--sys-color-primary)">On Primary</div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-secondary); color: var(--sys-color-on-secondary)">Secondary</div>
+                  <div class="swatch" style="background: var(--sys-color-on-secondary); color: var(--sys-color-secondary)">On Secondary</div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-tertiary); color: var(--sys-color-on-tertiary)">Tertiary</div>
+                  <div class="swatch" style="background: var(--sys-color-on-tertiary); color: var(--sys-color-tertiary)">On Tertiary</div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-primary-container); color: var(--sys-color-on-primary-container)">
+                    Primary Container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-on-primary-container); color: var(--sys-color-primary-container)">
+                    On Primary Container
+                  </div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-secondary-container); color: var(--sys-color-on-secondary-container)">
+                    Secondary Container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-on-secondary-container); color: var(--sys-color-secondary-container)">
+                    On Secondary Container
+                  </div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-tertiary-container); color: var(--sys-color-on-tertiary-container)">
+                    Tertiary container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-on-tertiary-container); color: var(--sys-color-tertiary-container)">
+                    On Tertiary container
+                  </div>
+                </div>
+              </div>
+
+              <!-- fixed -->
+              <div class="fixed">
+                <div class="col-1">
+                  <div class="row-1">
+                    <div class="swatch" style="background: var(--sys-color-primary-fixed); color: var(--sys-color-on-primary-fixed)">
+                      Primary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-primary-fixed-dim); color: var(--sys-color-on-primary-fixed)">
+                      Primary Fixed Dim
+                    </div>
+                  </div>
+                  <div class="row-2">
+                    <div class="swatch" style="background: var(--sys-color-on-primary-fixed); color: var(--sys-color-primary-fixed)">
+                      On Primary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-on-primary-fixed-variant); color: var(--sys-color-primary-fixed)">
+                      On Primary Fixed Variant
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-2">
+                  <div class="row-1">
+                    <div class="swatch" style="background: var(--sys-color-secondary-fixed); color: var(--sys-color-on-secondary-fixed)">
+                      Secondary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-secondary-fixed-dim); color: var(--sys-color-on-secondary-fixed)">
+                      Secondary Fixed Dim
+                    </div>
+                  </div>
+                  <div class="row-2">
+                    <div class="swatch" style="background: var(--sys-color-on-secondary-fixed); color: var(--sys-color-secondary-fixed)">
+                      On Secondary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-on-secondary-fixed-variant); color: var(--sys-color-secondary-fixed)">
+                      On Secondary Fixed Variant
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-1">
+                  <div class="row-1">
+                    <div class="swatch" style="background: var(--sys-color-tertiary-fixed); color: var(--sys-color-on-tertiary-fixed)">
+                      Tertiary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-tertiary-fixed-dim); color: var(--sys-color-on-tertiary-fixed)">
+                      Tertiary Fixed Dim
+                    </div>
+                  </div>
+                  <div class="row-2">
+                    <div class="swatch" style="background: var(--sys-color-on-tertiary-fixed); color: var(--sys-color-tertiary-fixed)">
+                      On Tertiary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-on-tertiary-fixed-variant); color: var(--sys-color-tertiary-fixed)">
+                      On Tertiary Fixed Variant
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="surfaces">
+                <div class="row-1">
+                  <div class="swatch" style="background: var(--sys-color-surface-dim); color: var(--sys-color-on-surface)">Surface Dim</div>
+                  <div class="swatch" style="background: var(--sys-color-surface); color: var(--sys-color-on-surface)">Surface</div>
+                  <div class="swatch" style="background: var(--sys-color-surface-bright); color: var(--sys-color-on-surface)">Surface Bright</div>
+                </div>
+                <div class="row-2">
+                  <div class="swatch" style="background: var(--sys-color-surface-container-lowest); color: var(--sys-color-on-surface)">
+                    Surface Container Lowest
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-surface-container-low); color: var(--sys-color-on-surface)">
+                    Surface Container Low
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-surface-container); color: var(--sys-color-on-surface)">
+                    Surface Container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-surface-container-high); color: var(--sys-color-on-surface)">
+                    Surface Container High
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-surface-container-highest); color: var(--sys-color-on-surface)">
+                    Surface Container Highest
+                  </div>
+                </div>
+                <div class="row-3">
+                  <div class="swatch" style="background: var(--sys-color-on-surface); color: var(--sys-color-surface)">On Surface</div>
+                  <div class="swatch" style="background: var(--sys-color-on-surface-variant); color: var(--sys-color-surface)">
+                    On Surface Variant
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-outline); color: var(--sys-color-surface)">Outline</div>
+                  <div class="swatch" style="background: var(--sys-color-outline-variant); color: var(--sys-color-on-surface)">Outline Variant</div>
+                </div>
+              </div>
+            </div>
+            <div class="side">
+              <div class="row-1">
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-error); color: var(--sys-color-on-error)">Error</div>
+                  <div class="swatch" style="background: var(--sys-color-on-error); color: var(--sys-color-error)">On Error</div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-error-container); color: var(--sys-color-on-error-container)">
+                    Error Container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-on-error-container); color: var(--sys-color-error-container)">
+                    On Error Container
+                  </div>
+                </div>
+              </div>
+
+              <div class="row-2">
+                <div class="row-1">
+                  <div>
+                    <div class="swatch" style="background: var(--sys-color-inverse-surface); color: var(--sys-color-inverse-on-surface)">
+                      Inverse Surface
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-inverse-on-surface); color: var(--sys-color-inverse-surface)">
+                      Inverse On Surface
+                    </div>
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-inverse-primary); color: var(--sys-color-inverse-surface)">
+                    Inverse Primary
+                  </div>
+                </div>
+
+                <div class="row-3">
+                  <div class="swatch" style="background: var(--sys-color-scrim); color: white">Scrim</div>
+                  <div class="swatch" style="background: var(--sys-color-shadow); color: white">Shadow</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="preview">
+          <div class="preview-content">
+            <h2 class="title">Preview</h2>
+            <div class="content">
+              <header class="header">
+                <div class="leading-elements">
+                  <div class="avatar">
+                    <div class="avatar">
+                      <svg
+                        class="avatar-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM247-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47Zm466 0q-47 47-113 47-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113q0 66-47 113Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="title-subtitle">
+                    <h3 class="avatar-title">Helen Adam</h3>
+                    <p class="supporting-text">2 days ago</p>
+                  </div>
+
+                  <div class="tag">Follow up?</div>
+                </div>
+
+                <div class="trailing-elements">
+                  <button class="icon-button" aria-label="Favorite">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </header>
+              <div class="text-content">
+                <div class="title">Business trip report</div>
+                <p class="supporting-text">For further assistance, please reach out to myself or Helen.</p>
+              </div>
+              <div class="preview-footer">
+                <button class="button square tonal extra-small"><span aria-hidden="true" class="icon">article</span> Client Expenses</button>
+                <button class="fab tertiary-container" aria-label="Label text">
+                  <span class="icon" aria-hidden="true">edit</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="color-scheme: dark">
+        <article class="scheme" style="color-scheme: dark">
+          <header class="header">
+            <h2 class="heading">Dark mode</h2>
+          </header>
+          <div class="wrapper">
+            <div class="main-roles">
+              <div class="base">
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-primary); color: var(--sys-color-on-primary)">Primary</div>
+                  <div class="swatch" style="background: var(--sys-color-on-primary); color: var(--sys-color-primary)">On Primary</div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-secondary); color: var(--sys-color-on-secondary)">Secondary</div>
+                  <div class="swatch" style="background: var(--sys-color-on-secondary); color: var(--sys-color-secondary)">On Secondary</div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-tertiary); color: var(--sys-color-on-tertiary)">Tertiary</div>
+                  <div class="swatch" style="background: var(--sys-color-on-tertiary); color: var(--sys-color-tertiary)">On Tertiary</div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-primary-container); color: var(--sys-color-on-primary-container)">
+                    Primary Container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-on-primary-container); color: var(--sys-color-primary-container)">
+                    On Primary Container
+                  </div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-secondary-container); color: var(--sys-color-on-secondary-container)">
+                    Secondary Container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-on-secondary-container); color: var(--sys-color-secondary-container)">
+                    On Secondary Container
+                  </div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-tertiary-container); color: var(--sys-color-on-tertiary-container)">
+                    Tertiary container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-on-tertiary-container); color: var(--sys-color-tertiary-container)">
+                    On Tertiary container
+                  </div>
+                </div>
+              </div>
+
+              <!-- fixed -->
+              <div class="fixed">
+                <div class="col-1">
+                  <div class="row-1">
+                    <div class="swatch" style="background: var(--sys-color-primary-fixed); color: var(--sys-color-on-primary-fixed)">
+                      Primary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-primary-fixed-dim); color: var(--sys-color-on-primary-fixed)">
+                      Primary Fixed Dim
+                    </div>
+                  </div>
+                  <div class="row-2">
+                    <div class="swatch" style="background: var(--sys-color-on-primary-fixed); color: var(--sys-color-primary-fixed)">
+                      On Primary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-on-primary-fixed-variant); color: var(--sys-color-primary-fixed)">
+                      On Primary Fixed Variant
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-2">
+                  <div class="row-1">
+                    <div class="swatch" style="background: var(--sys-color-secondary-fixed); color: var(--sys-color-on-secondary-fixed)">
+                      Secondary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-secondary-fixed-dim); color: var(--sys-color-on-secondary-fixed)">
+                      Secondary Fixed Dim
+                    </div>
+                  </div>
+                  <div class="row-2">
+                    <div class="swatch" style="background: var(--sys-color-on-secondary-fixed); color: var(--sys-color-secondary-fixed)">
+                      On Secondary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-on-secondary-fixed-variant); color: var(--sys-color-secondary-fixed)">
+                      On Secondary Fixed Variant
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-1">
+                  <div class="row-1">
+                    <div class="swatch" style="background: var(--sys-color-tertiary-fixed); color: var(--sys-color-on-tertiary-fixed)">
+                      Tertiary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-tertiary-fixed-dim); color: var(--sys-color-on-tertiary-fixed)">
+                      Tertiary Fixed Dim
+                    </div>
+                  </div>
+                  <div class="row-2">
+                    <div class="swatch" style="background: var(--sys-color-on-tertiary-fixed); color: var(--sys-color-tertiary-fixed)">
+                      On Tertiary Fixed
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-on-tertiary-fixed-variant); color: var(--sys-color-tertiary-fixed)">
+                      On Tertiary Fixed Variant
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="surfaces">
+                <div class="row-1">
+                  <div class="swatch" style="background: var(--sys-color-surface-dim); color: var(--sys-color-on-surface)">Surface Dim</div>
+                  <div class="swatch" style="background: var(--sys-color-surface); color: var(--sys-color-on-surface)">Surface</div>
+                  <div class="swatch" style="background: var(--sys-color-surface-bright); color: var(--sys-color-on-surface)">Surface Bright</div>
+                </div>
+                <div class="row-2">
+                  <div class="swatch" style="background: var(--sys-color-surface-container-lowest); color: var(--sys-color-on-surface)">
+                    Surface Container Lowest
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-surface-container-low); color: var(--sys-color-on-surface)">
+                    Surface Container Low
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-surface-container); color: var(--sys-color-on-surface)">
+                    Surface Container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-surface-container-high); color: var(--sys-color-on-surface)">
+                    Surface Container High
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-surface-container-highest); color: var(--sys-color-on-surface)">
+                    Surface Container Highest
+                  </div>
+                </div>
+                <div class="row-3">
+                  <div class="swatch" style="background: var(--sys-color-on-surface); color: var(--sys-color-surface)">On Surface</div>
+                  <div class="swatch" style="background: var(--sys-color-on-surface-variant); color: var(--sys-color-surface)">
+                    On Surface Variant
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-outline); color: var(--sys-color-surface)">Outline</div>
+                  <div class="swatch" style="background: var(--sys-color-outline-variant); color: var(--sys-color-on-surface)">Outline Variant</div>
+                </div>
+              </div>
+            </div>
+            <div class="side">
+              <div class="row-1">
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-error); color: var(--sys-color-on-error)">Error</div>
+                  <div class="swatch" style="background: var(--sys-color-on-error); color: var(--sys-color-error)">On Error</div>
+                </div>
+
+                <div class="swatch-group">
+                  <div class="swatch" style="background: var(--sys-color-error-container); color: var(--sys-color-on-error-container)">
+                    Error Container
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-on-error-container); color: var(--sys-color-error-container)">
+                    On Error Container
+                  </div>
+                </div>
+              </div>
+
+              <div class="row-2">
+                <div class="row-1">
+                  <div>
+                    <div class="swatch" style="background: var(--sys-color-inverse-surface); color: var(--sys-color-inverse-on-surface)">
+                      Inverse Surface
+                    </div>
+                    <div class="swatch" style="background: var(--sys-color-inverse-on-surface); color: var(--sys-color-inverse-surface)">
+                      Inverse On Surface
+                    </div>
+                  </div>
+                  <div class="swatch" style="background: var(--sys-color-inverse-primary); color: var(--sys-color-inverse-surface)">
+                    Inverse Primary
+                  </div>
+                </div>
+
+                <div class="row-3">
+                  <div class="swatch" style="background: var(--sys-color-scrim); color: white">Scrim</div>
+                  <div class="swatch" style="background: var(--sys-color-shadow); color: white">Shadow</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="preview">
+          <div class="preview-content">
+            <h2 class="title">Preview</h2>
+            <div class="content">
+              <header class="header">
+                <div class="leading-elements">
+                  <div class="avatar">
+                    <div class="avatar">
+                      <svg
+                        class="avatar-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM247-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47Zm466 0q-47 47-113 47-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113q0 66-47 113Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="title-subtitle">
+                    <h3 class="avatar-title">Helen Adam</h3>
+                    <p class="supporting-text">2 days ago</p>
+                  </div>
+
+                  <div class="tag">Follow up?</div>
+                </div>
+
+                <div class="trailing-elements">
+                  <button class="icon-button" aria-label="Favorite">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </header>
+              <div class="text-content">
+                <div class="title">Business trip report</div>
+                <p class="supporting-text">For further assistance, please reach out to myself or Helen.</p>
+              </div>
+              <div class="preview-footer">
+                <button class="button square tonal extra-small"><span aria-hidden="true" class="icon">article</span> Client Expenses</button>
+                <button class="fab tertiary-container" aria-label="Label text">
+                  <span class="icon" aria-hidden="true">edit</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const form = document.querySelector("[data-theme-form]");
+      form.addEventListener("change", () => {
+        const theme = new FormData(form).get("scheme");
+        if (!theme) return;
+        document.documentElement.setAttribute("data-theme", theme);
+        document.querySelectorAll("[data-dynamic-scheme]").forEach((element) => {
+          element.textContent = theme;
+        });
+      });
+    </script>
+  </body>
+</html>

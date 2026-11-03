@@ -1,0 +1,2916 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive Documentation</title>
+    <meta
+      name="description"
+      content="Comprehensive developer documentation and token specification for Web Expressive. Learn how to configure color roles, 30 typography scales, elevation, motion, shapes, and native components."
+    />
+    <meta name="theme-color" content="#5091ff" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mobalti.github.io/web-expressive/docs/" />
+    <meta property="og:title" content="Web Expressive Documentation — Design Tokens, Theming & Primitives" />
+    <meta
+      property="og:description"
+      content="Comprehensive developer documentation and token specification for Web Expressive. Learn how to configure color roles, 30 typography scales, elevation, motion, shapes, and native components."
+    />
+    <meta property="og:image" content="https://mobalti.github.io/web-expressive/assets/images/hero-img.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://mobalti.github.io/web-expressive/docs/" />
+    <meta name="twitter:title" content="Web Expressive Documentation — Design Tokens, Theming & Primitives" />
+    <meta
+      name="twitter:description"
+      content="Comprehensive developer documentation and token specification for Web Expressive. Learn how to configure color roles, 30 typography scales, elevation, motion, shapes, and native components."
+    />
+    <meta name="twitter:image" content="https://mobalti.github.io/web-expressive/assets/images/hero-img.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/docs.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/core.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/classic-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/extended-fab.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/button.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/shapes/clip-tokens.css" />
+
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        @view-transition {
+          navigation: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="markdown-body">
+      <div class="content">
+        <nav class="doc-nav">
+          <a href="#table-of-contents" class="extended-fab secondary-container table-content-button-link" table-content-action>
+            <span>Table of contents</span>
+          </a>
+        </nav>
+
+        <h1 id="web-expressive-documentation">Web Expressive Documentation</h1>
+        <p>
+          Web Expressive is a toolkit built on web standards that simplifies and accelerates UI development for the web. It brings the design intent
+          of Material 3 Expressive to HTML and CSS through design tokens, components, and adaptable layout patterns.
+        </p>
+
+        <h2 id="table-of-contents">
+          <a class="heading-anchor" href="#table-of-contents">Table of contents</a>
+        </h2>
+        <ul>
+          <li>
+            <a href="#getting-started">Getting Started</a>
+            <ul>
+              <li><a href="#quick-start">Quick Start (CDN)</a></li>
+              <li><a href="#via-npm">Installation via npm</a></li>
+              <li><a href="#modular-imports">Modular Imports</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#theming">Theming</a>
+            <ul>
+              <li><a href="#theming-overview">Theming Overview</a></li>
+              <li><a href="#choosing-a-scheme">Choosing a Scheme</a></li>
+              <li><a href="#handling-modes">Handling Modes</a></li>
+              <li><a href="#customizing-typefaces">Customizing Typefaces</a></li>
+              <li><a href="#managing-overrides">Managing Overrides</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#tokens-reference">Tokens Reference</a>
+            <ul>
+              <li><a href="#tokens-overview">Tokens Overview</a></li>
+              <li><a href="#color">Color</a></li>
+              <li><a href="#typography">Typography</a></li>
+              <li><a href="#elevation">Elevation</a></li>
+              <li><a href="#motion">Motion</a></li>
+              <li><a href="#spacing">Spacing</a></li>
+              <li><a href="#shape-corners">Shape Corners</a></li>
+              <li><a href="#abstract-shapes">Abstract Shapes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#components-guide">Components Guide</a>
+            <ul>
+              <li><a href="#components-overview">Components Overview</a></li>
+              <li><a href="#button">Button</a></li>
+              <li><a href="#toggle-button">Toggle Button</a></li>
+              <li><a href="#icon-button">Icon Button</a></li>
+              <li><a href="#toggle-icon-button">Toggle Icon Button</a></li>
+              <li><a href="#standard-button-group">Standard Button Group</a></li>
+              <li><a href="#connected-button-group">Connected Button Group</a></li>
+              <li><a href="#extended-fab">Extended FAB</a></li>
+              <li><a href="#fab">FAB</a></li>
+              <li><a href="#switch">Switch</a></li>
+              <li><a href="#implementation-notes">Implementation Notes</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2 id="getting-started">
+          <a class="heading-anchor" href="#getting-started">Getting Started</a>
+        </h2>
+        <a id="get-started"></a>
+
+        <p>Web Expressive helps you build performant and beautiful web applications with:</p>
+        <ul>
+          <li>
+            <strong>Zero-Runtime:</strong> Built with a standards-first approach using modern CSS (Container Queries, <code>@scope</code>, CSS Layers,
+            Relative Colors) and native HTML, saving maximum performance for your app&#39;s logic.
+          </li>
+          <li>
+            <strong>Production-Ready Theming:</strong> 50&#43; built-in light/dark schemes, full M3 Expressive system tokens, 35 abstract shapes,
+            configurable components with dedicated APIs, and instant theme-swapping with friction-free overrides.
+          </li>
+          <li>
+            <strong>Drop-in Modularity:</strong> Pick only what you need, from tokens to individual components, without adding bundle bloat or
+            breaking existing workflows.
+          </li>
+        </ul>
+
+        <h3 id="quick-start">
+          <a class="heading-anchor" href="#quick-start">Quick Start (CDN)</a>
+        </h3>
+        <ol>
+          <li>Create a new <code>index.html</code> file.</li>
+          <li>Copy the starter template below:</li>
+        </ol>
+        <figure>
+          <pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Web Expressive Starter&lt;/title&gt;
+
+    &lt;!-- 1. Typography --&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
+    &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..600&amp;display=swap" /&gt;
+
+    &lt;!-- 2. Core (reset + system tokens) --&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/core.css" /&gt;
+
+    &lt;!-- 3. Scheme --&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-tonal.css" /&gt;
+
+    &lt;!-- 4. Components --&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/button.css" /&gt;
+
+    &lt;style&gt;
+      html {
+        --ref-typeface-base: "Roboto Flex";
+      }
+      .headline {
+        font: var(--sys-typescale-headline-large);
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 class="headline"&gt;Hello, World!&lt;/h1&gt;
+    &lt;button class="button tonal large"&gt;Get Started&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          <figcaption>
+            A buildless starter loading Web Expressive from a CDN with Roboto Flex, the Fuchsia Tonal color scheme, and a tonal button.
+          </figcaption>
+        </figure>
+
+        <p>
+          You can also <a href="../assets/downloads/web-expressive-starter.html" download="index.html">download the standalone starter template</a>.
+        </p>
+        <p>
+          From here, you can start assembling your UI with <a href="#tokens-reference">tokens</a>, adding <a href="#components-guide">components</a>,
+          or exploring ready-made <a href="example-layouts.html">example layouts</a> as a starting point.
+        </p>
+
+        <h3 id="via-npm">
+          <a class="heading-anchor" href="#via-npm">Installation via npm</a>
+        </h3>
+        <p>Install the package in your project:</p>
+        <pre><code class="language-bash">npm install web-expressive
+</code></pre>
+        <p>Import the required stylesheets into your global CSS:</p>
+        <pre><code class="language-css">@import "web-expressive/core.css";
+@import "web-expressive/schemes/alpha/fuchsia-tonal.css"; /* Replace with any of the available schemes. */
+@import "web-expressive/components/button.css";         /* Optional: import only the components you use. */
+</code></pre>
+
+        <h3 id="modular-imports">
+          <a class="heading-anchor" href="#modular-imports">Modular Imports</a>
+        </h3>
+        <p>
+          Web Expressive organizes design system resources into four modular imports categories: <strong>core</strong>, <strong>schemes</strong>,
+          <strong>components</strong>, and <strong>shapes</strong>. Embed stylesheets in your HTML <code>&lt;head&gt;</code> via CDN or import them
+          into CSS via npm.
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Resource</th>
+                <th>Stylesheet</th>
+                <th>Requirement</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Core</strong></td>
+                <td><code>core.css</code></td>
+                <td>Required</td>
+                <td>
+                  CSS <a href="https://github.com/mobalti/web-expressive/blob/main/lib/core.css">reset</a> and
+                  <a href="#tokens-reference">system tokens</a> (typography, spacing, corners, motion, elevation).
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Scheme</strong></td>
+                <td><code>schemes/[collection]/[scheme].css</code></td>
+                <td>Required</td>
+                <td>Color roles for light and dark modes. Single scheme recommended.</td>
+              </tr>
+              <tr>
+                <td><strong>Components</strong></td>
+                <td><code>components/[component].css</code></td>
+                <td>Optional</td>
+                <td>Modular interactive components. Import only what you use.</td>
+              </tr>
+              <tr>
+                <td><strong>Shapes</strong></td>
+                <td><code>shapes/clip-tokens.css</code></td>
+                <td>Optional</td>
+                <td>35 Material 3 Expressive abstract shape clipping and masking paths.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Load core first, followed by your chosen scheme. Then add the components and shape tokens your page uses.</p>
+
+        <p><strong>Via CDN:</strong> Embed the stylesheets in your HTML <code>&lt;head&gt;</code>:</p>
+        <pre><code class="language-html">&lt;!-- Required: core and one color scheme --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/core.css" /&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-tonal.css" /&gt;
+
+&lt;!-- Optional: components used on this page --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/button.css" /&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/icon-button.css" /&gt;
+
+&lt;!-- Optional: shape tokens for clip-path or mask-image --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/shapes/clip-tokens.css" /&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/shapes/mask-tokens.css" /&gt;
+</code></pre>
+
+        <p><strong>Via npm:</strong> Import the necessary modules at the top of your CSS build entry file.</p>
+        <pre><code class="language-css">/* Required: core and one color scheme */
+@import "web-expressive/core.css";
+@import "web-expressive/schemes/alpha/fuchsia-tonal.css";
+
+/* Optional: components used on this page */
+@import "web-expressive/components/button.css";
+@import "web-expressive/components/icon-button.css";
+
+/* Optional: shape tokens for clip-path or mask-image */
+@import "web-expressive/shapes/clip-tokens.css";
+@import "web-expressive/shapes/mask-tokens.css";
+</code></pre>
+        <p>Replace the scheme with your preferred one and omit any optional imports you do not need.</p>
+
+        <h2 id="theming">
+          <a class="heading-anchor" href="#theming">Theming</a>
+        </h2>
+        <a id="schemes-theming"></a>
+        <p>
+          Theming is the architectural backbone of Web Expressive. It empowers products to express distinct visual identities without starting from
+          scratch, while providing granular control over every color, corner, typeface, and layout dimension.
+        </p>
+
+        <h3 id="theming-overview">
+          <a class="heading-anchor" href="#theming-overview">Theming Overview</a>
+        </h3>
+        <p>Web Expressive theming is built on four structural pillars:</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Pillar</th>
+                <th>Mechanism</th>
+                <th>What It Provides</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Color Schemes</strong></td>
+                <td>Static stylesheets via <code>light-dark()</code></td>
+                <td>Instant swapping between 50+ curated color schemes with automatic dark and light modes.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Typeface Mapping</strong></td>
+                <td><code>@property</code> registered reference tokens</td>
+                <td>Decoupled font loading; map any brand font to the entire typescale with one token.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Density &amp; Shape APIs</strong></td>
+                <td>Container style queries (<code>--size-items</code>, <code>--shape-items</code>, <code>--width-items</code>)</td>
+                <td>Declaratively adjust component density, width, and corner roundness per container.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Zero-Friction Overrides</strong></td>
+                <td>CSS Cascade Layers (<code>@layer design-system</code>)</td>
+                <td>Project styles override library rules naturally without specificity battles or <code>!important</code>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Understanding Tokens in Web Expressive</strong></p>
+        <p>
+          Web Expressive exposes all Material 3
+          <a href="https://m3.material.io/foundations/design-tokens/overview#7f084930-cf5f-4b7e-b83c-614888f18a77" target="_blank" rel="noopener"
+            >system tokens</a
+          >
+          as CSS custom properties prefixed with <code style="white-space: nowrap">--sys-*</code>. These are the public tokens you use to build and
+          style your interfaces. For the complete list, see the <a href="#tokens-reference">Tokens Reference</a>.
+        </p>
+        <p>
+          When inspecting components in browser DevTools, you will also see custom properties prefixed with
+          <code style="white-space: nowrap">--_*</code>. These are private CSS custom properties used internally to build the components. Be cautious
+          when overriding them, as incorrect overrides can break component styling.
+        </p>
+
+        <h3 id="choosing-a-scheme">
+          <a class="heading-anchor" href="#choosing-a-scheme">Choosing a Scheme</a>
+        </h3>
+        <p>
+          <a href="https://m3.material.io/styles/color/roles">A color scheme</a> is a group of colors assigned to semantic roles, which are then
+          mapped to UI elements. Web Expressive represents these roles as CSS custom properties with built-in support for light and dark modes through
+          the native CSS light-dark() function.
+          <a href="https://github.com/mobalti/web-expressive/blob/main/lib/schemes/alpha/carbon-tonal.css">See a color scheme stylesheet example</a>.
+        </p>
+        <p>
+          Web Expressive provides two parallel collections with identical filenames and CSS variable names. Switch between them anytime by adding or
+          removing <code>alpha/</code> in your import path.
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Collection</th>
+                <th>Import Path</th>
+                <th>Based On</th>
+                <th>Visual Explorer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Alpha</strong> (Default)</td>
+                <td><code>schemes/alpha/[scheme].css</code></td>
+                <td>Newer Android releases featuring richer, juicier color generation.</td>
+                <td><a href="../tools/schemes/alpha/index.html">Alpha Explorer</a></td>
+              </tr>
+              <tr>
+                <td><strong>Standard</strong></td>
+                <td><code>schemes/[scheme].css</code></td>
+                <td>Official Material Design 3 guidelines and Figma toolkit.</td>
+                <td><a href="../tools/schemes/index.html">Standard Explorer</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul>
+          <li>
+            <strong>Path Parity</strong>: Both collections share identical filenames and variable names. Swapping between them requires only toggling
+            <code>alpha/</code> in the stylesheet path.
+          </li>
+          <li>
+            <strong>Collection Differences:</strong> The collections differ in their variant families and baseline scheme. Single-color, dual-color,
+            and monochrome schemes are identical across both collections.
+          </li>
+          <li><strong>Regular Updates</strong>: Both collections are regularly updated.</li>
+        </ul>
+
+        <p>
+          Preview all 50+ schemes live, test light and dark modes, and grab your import snippet instantly using the
+          <a href="../tools/schemes/alpha/index.html">Alpha Schemes Explorer</a> or the
+          <a href="../tools/schemes/index.html">Standard Schemes Explorer</a>.
+        </p>
+
+        <p><strong>CDN Import Example</strong></p>
+        <pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-tonal.css" /&gt;
+</code></pre>
+        <p><strong>npm Import Example</strong></p>
+        <pre><code class="language-css">@import "web-expressive/schemes/alpha/fuchsia-tonal.css";
+</code></pre>
+
+        <p><strong>The Four Variant Flavors</strong></p>
+        <ul>
+          <li>
+            <strong><code>-tonal</code> (Recommended Default)</strong>: Balanced contrast, versatile surfaces, and consistent branding across light
+            and dark modes.
+          </li>
+          <li>
+            <strong><code>-neutral</code></strong
+            >: Subtle, understated surface tinting ideal for productivity tools and content-heavy layouts.
+          </li>
+          <li>
+            <strong><code>-vibrant</code></strong
+            >: High-chroma accents with energetic contrast for dynamic, high-engagement experiences.
+          </li>
+          <li>
+            <strong><code>-expressive</code></strong
+            >: Bold color pairings and heightened chromatic contrast for memorable visual hierarchy.
+          </li>
+        </ul>
+
+        <h4>Variant Families (50+ Palettes)</h4>
+        <p>Each family is derived from a key source color and provides all four tonal variants:</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Family</th>
+                <th>Available Files</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Aqua</strong></td>
+                <td>
+                  <code>aqua-tonal.css</code>, <code>aqua-neutral.css</code>, <code>aqua-vibrant.css</code>,
+                  <code>aqua-expressive.css</code>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Berry</strong></td>
+                <td>
+                  <code>berry-tonal.css</code>, <code>berry-neutral.css</code>, <code>berry-vibrant.css</code>,
+                  <code>berry-expressive.css</code>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Carbon</strong></td>
+                <td>
+                  <code>carbon-tonal.css</code>, <code>carbon-neutral.css</code>, <code>carbon-vibrant.css</code>,
+                  <code>carbon-expressive.css</code>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Classic</strong></td>
+                <td>
+                  <code>classic-tonal.css</code>, <code>classic-neutral.css</code>, <code>classic-vibrant.css</code>,
+                  <code>classic-expressive.css</code>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Forest</strong></td>
+                <td>
+                  <code>forest-tonal.css</code>, <code>forest-neutral.css</code>, <code>forest-vibrant.css</code>,
+                  <code>forest-expressive.css</code>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Fuchsia</strong></td>
+                <td>
+                  <code>fuchsia-tonal.css</code>, <code>fuchsia-neutral.css</code>, <code>fuchsia-vibrant.css</code>,
+                  <code>fuchsia-expressive.css</code>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Paper</strong></td>
+                <td>
+                  <code>paper-tonal.css</code>, <code>paper-neutral.css</code>, <code>paper-vibrant.css</code>,
+                  <code>paper-expressive.css</code>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Porcelain</strong></td>
+                <td>
+                  <code>porcelain-tonal.css</code>, <code>porcelain-neutral.css</code>, <code>porcelain-vibrant.css</code>,
+                  <code>porcelain-expressive.css</code>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Sun</strong></td>
+                <td>
+                  <code>sun-tonal.css</code>, <code>sun-neutral.css</code>, <code>sun-vibrant.css</code>,
+                  <code>sun-expressive.css</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Specialized Single-Color Schemes</h4>
+        <p>Single-color schemes feature untinted neutral surfaces (pure white, gray, black) while preserving color across key roles.</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Scheme</th>
+                <th>Filename</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Blue</strong></td>
+                <td><code>blue.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Green</strong></td>
+                <td><code>green.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Indigo</strong></td>
+                <td><code>indigo.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Orange</strong></td>
+                <td><code>orange.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Red</strong></td>
+                <td><code>red.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Violet</strong></td>
+                <td><code>violet.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Yellow</strong></td>
+                <td><code>yellow.css</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Specialized Dual-Color Schemes</h4>
+        <p>Dual-color schemes combine harmonious dual hues for playful and expressive color combinations between the surfaces and the accents.</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Scheme</th>
+                <th>Filename</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Blue and Green</strong></td>
+                <td><code>blue-green.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Green and Orange</strong></td>
+                <td><code>green-orange.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Light Purple and Blue</strong></td>
+                <td><code>light-purple-blue.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Pink and Indigo</strong></td>
+                <td><code>pink-indigo.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Yellow and Red</strong></td>
+                <td><code>yellow-red.css</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Foundational Schemes</h4>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Scheme</th>
+                <th>Description</th>
+                <th>Filename</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Baseline</strong></td>
+                <td>Standard Material 3 baseline palette</td>
+                <td><code>baseline.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Monochrome</strong></td>
+                <td>Pure neutral grayscale palette</td>
+                <td><code>monochrome.css</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Single vs. Multiple Schemes in One Document</strong></p>
+        <p>To scope a secondary scheme to an isolated container, use the <code>data-theme</code> attribute:</p>
+        <pre><code class="language-html">&lt;!-- Global scheme applies to main document --&gt;
+&lt;button class="button"&gt;Global Primary&lt;/button&gt;
+
+&lt;!-- Scoped secondary scheme on an isolated section --&gt;
+&lt;section data-theme="fuchsia-tonal"&gt;
+  &lt;button class="button tonal"&gt;Scoped Fuchsia Action&lt;/button&gt;
+&lt;/section&gt;
+</code></pre>
+        <blockquote>
+          <p><strong>Caution:</strong> Scoping multiple schemes requires importing both scheme stylesheets. Use multiple schemes sparingly.</p>
+        </blockquote>
+
+        <h3 id="handling-modes">
+          <a class="heading-anchor" href="#handling-modes">Handling Modes</a>
+        </h3>
+        <p>
+          Web Expressive features a unified theming engine where <strong>colors</strong> and <strong>elevation shadows</strong> adapt in perfect
+          synchrony across light and dark modes.
+        </p>
+
+        <p><strong>1. Automatic System Adaptation (Default)</strong></p>
+        <p>
+          Out of the box, Web Expressive configures <code>color-scheme: light dark;</code> on <code>html</code> in <code>core.css</code>, while
+          elevation tokens automatically invert their key and ambient shadow layers for dark surfaces using
+          <code>@media (prefers-color-scheme: dark)</code>.
+        </p>
+        <p>Your application automatically honors the visitor's operating system preferences with zero configuration or JavaScript required.</p>
+
+        <p><strong>2. Explicit Mode Control (Data Attribute or Class)</strong></p>
+        <p>
+          Native CSS <code>color-scheme</code> only manages color keywords and <code>light-dark()</code> calculations—it does not alter box shadows.
+          To toggle or force modes, Web Expressive provides built-in mode selectors in <code>core.css</code> that update both
+          <code>color-scheme</code> and elevation tokens in lockstep:
+        </p>
+        <ul>
+          <li><strong>Light Mode</strong>: <code>[data-mode="light"]</code> or <code>.light-mode</code></li>
+          <li><strong>Dark Mode</strong>: <code>[data-mode="dark"]</code> or <code>.dark-mode</code></li>
+        </ul>
+        <pre><code class="language-html">&lt;!-- Force Dark Mode on the entire page --&gt;
+&lt;html lang="en" data-mode="dark"&gt;
+
+&lt;!-- Or via class --&gt;
+&lt;html lang="en" class="dark-mode"&gt;
+</code></pre>
+
+        <blockquote>
+          <p>
+            <strong>Tip (3-State Toggles):</strong> To restore automatic OS adaptation (system mode), simply remove the
+            <code>data-mode</code> attribute (or mode class), or set <code>data-mode="system"</code>; the document naturally falls back to default
+            <code>color-scheme: light dark</code> and responsive elevation shadows.
+          </p>
+        </blockquote>
+
+        <p><strong>3. Scoped Island Theming (Subtree Overrides)</strong></p>
+        <p>
+          Mode selectors work on any element in your layout. To render an inverted dark card or sidebar inside an otherwise light page, apply
+          <code>data-mode="dark"</code> or <code>.dark-mode</code> directly to that container. All child colors and elevation shadows switch locally:
+        </p>
+        <pre><code class="language-html">&lt;!-- An inverted dark card inside a light document --&gt;
+&lt;div class="card dark-mode"&gt;
+  &lt;h4&gt;Featured Dark Card&lt;/h4&gt;
+  &lt;button class="button tonal"&gt;Action&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <h3 id="customizing-typefaces">
+          <a class="heading-anchor" href="#customizing-typefaces">Customizing Typefaces</a>
+        </h3>
+        <p>Web Expressive decouples font loading from typography tokens, making font configuration clean, modular, and centralized.</p>
+        <p>
+          In CSS, a typeface corresponds to a <code>font-family</code>. Web Expressive splits font family definitions into two complementary parts:
+          <strong>custom font names</strong> (a list of quoted strings passed to <code>--ref-typeface-*</code>) and a
+          <strong>generic system fallback</strong>
+          (<code>--ref-typeface-generic</code>). To make typography configuration effortless, Web Expressive assigns these family references across
+          the typescale using role-based cascading.
+        </p>
+        <p>
+          Load your chosen web font using any provider (such as Google Fonts) or via <code>@font-face</code> definitions. For the typescale tokens to
+          render accurately across all standard and emphasized styles, your loaded font family should include weights <strong>400</strong> (Regular),
+          <strong>500</strong> (Medium), and <strong>600</strong>
+          (Semi-Bold).
+        </p>
+
+        <blockquote>
+          <p>
+            <strong>Important:</strong> All typeface customizations must be declared on the <code>html</code> selector (or <code>:root</code>) so
+            typography tokens resolve correctly across the page.
+          </p>
+        </blockquote>
+
+        <pre><code class="language-text">[html root custom properties]
+ │
+ ├─► (None Defined) 
+ │   └─► Fallback to [--ref-typeface-generic] ("sans-serif")
+ │
+ ├─► [--ref-typeface-base] (Global Cascade)
+ │   └─► Cascades down to ALL [--sys-typescale-*] &amp; [--sys-typescale-emphasized-*] tokens
+ │
+ ├─► Baseline Role Splits:
+ │   ├── [--ref-typeface-brand] ──────────► [--sys-typescale-* (Title Large ──► Display Large)]
+ │   └── [--ref-typeface-plain] ──────────► [--sys-typescale-* (Label Small ──► Title Medium)]
+ │
+ └─► Emphasized Role Splits:
+     ├── [--ref-typeface-emphasized-brand] ► [--sys-typescale-emphasized-* (Title Large ──► Display Large)]
+     └── [--ref-typeface-emphasized-plain] ► [--sys-typescale-emphasized-* (Label Small ──► Title Medium)]
+</code></pre>
+
+        <p>To change the font family for the full typography system, override the base variable:</p>
+        <pre><code class="language-css">html {
+  --ref-typeface-base: "Open Sans";
+}
+</code></pre>
+
+        <p>To split the family by role, override the brand and plain references separately:</p>
+        <pre><code class="language-css">html {
+  --ref-typeface-brand: "Inter"; /* Display, Headline, Title large */
+  --ref-typeface-plain: "Open Sans"; /* Title small/medium, Body, Label */
+}
+</code></pre>
+
+        <p>Emphasized typography inherits from the brand and plain references by default, but you can override those families separately:</p>
+        <pre><code class="language-css">html {
+  --ref-typeface-emphasized-brand: "Anton"; /* Display Emphasized, Headline Emphasized, Title large Emphasized */
+  --ref-typeface-emphasized-plain: "Anton"; /* Title small/medium, Body, Label */
+}
+</code></pre>
+
+        <p>You can provide one or more fallback fonts, but <strong>all font names must be quoted</strong>:</p>
+        <pre><code class="language-css">html {
+  --ref-typeface-base: "Inter", "Arial", "-apple-system", "BlinkMacSystemFont";
+}
+</code></pre>
+
+        <p>
+          Use <code>--ref-typeface-generic</code> for the generic fallback. It defaults to <code>sans-serif</code> and accepts
+          <strong>one unquoted value</strong> from the following list: <code>serif</code>, <code>sans-serif</code>, <code>system-ui</code>,
+          <code>monospace</code>, <code>cursive</code>, <code>fantasy</code>, <code>math</code>.
+        </p>
+        <pre><code class="language-css">html {
+  --ref-typeface-generic: cursive;
+}
+</code></pre>
+
+        <blockquote>
+          <p>
+            <strong>Tip:</strong> Prioritize changing <code>--ref-typeface-base</code> first. Only specialize roles if the design intent requires
+            distinct visual weights or stylistic contrast.
+          </p>
+        </blockquote>
+
+        <p>
+          To explore how Web Expressive maps custom properties to CSS <code>font</code> shorthands under the hood, read
+          <a href="https://mobalti.com/the-power-of-css-shorthands/" target="_blank" rel="noopener">The Power of CSS Shorthands</a>.
+        </p>
+
+        <h3 id="managing-overrides">
+          <a class="heading-anchor" href="#managing-overrides">Managing Overrides</a>
+        </h3>
+        <p>
+          Web Expressive eliminates specificity battles. By utilizing CSS Cascade Layers, project styles override library tokens and components
+          naturally without <code>!important</code>.
+        </p>
+
+        <p><strong>1. Built-in Cascade Layers (@layer design-system)</strong></p>
+        <p>
+          All Web Expressive rules are encapsulated within the <code>design-system</code> layer. For normal author declarations,
+          <strong>unlayered styles take precedence over layered styles</strong> regardless of selector specificity:
+        </p>
+        <pre><code class="language-text">[ Unlayered User Styles ]  (Highest layer precedence for normal author declarations)
+            │
+            ▼
+[ User Defined Layers ]    (e.g., @layer app, declared after design-system)
+            │
+            ▼
+[ @layer design-system ]   (Web Expressive library defaults)
+</code></pre>
+
+        <p><strong>2. Adapting a Scheme (Role Overrides)</strong></p>
+        <p>Override individual roles on <code>html</code> (or <code>:root</code>) to customize specific colors without editing the library:</p>
+        <pre><code class="language-css">html {
+  --sys-color-error: light-dark(oklch(50% 0.18 29), oklch(83% 0.07 22));
+  --sys-color-on-error: light-dark(oklch(100% 0 0), oklch(32% 0.11 28));
+  --sys-color-error-container: light-dark(oklch(92% 0.03 23), oklch(42% 0.15 28));
+  --sys-color-on-error-container: light-dark(oklch(25% 0.08 28), oklch(92% 0.03 23));
+}
+</code></pre>
+
+        <p><strong>3. Typography Token Resolution</strong></p>
+        <p>
+          Web Expressive uses the CSS <code>font</code> shorthand exclusively for typescale tokens. Shorthand values resolve at the element where they
+          are declared. Always declare <code>--ref-typeface-*</code> overrides on <code>html</code> (or <code>:root</code>) to ensure the entire
+          typescale recalculates correctly.
+        </p>
+
+        <h2 id="tokens-reference">
+          <a class="heading-anchor" href="#tokens-reference">Tokens Reference</a>
+        </h2>
+        <p>
+          Design tokens are the foundational building blocks of Web Expressive. They store visual attributes, including colors, typography, elevation,
+          motion, spacing, and shapes, as standardized CSS custom properties.
+        </p>
+
+        <h3 id="tokens-overview">
+          <a class="heading-anchor" href="#tokens-overview">Tokens Overview</a>
+        </h3>
+
+        <p>Web Expressive organizes design tokens across 7 core categories:</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Stylesheet Source</th>
+                <th>Description</th>
+                <th>Token Prefix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Color</strong></td>
+                <td><code>schemes/[scheme].css</code></td>
+                <td>Accessible color roles mapped via <code>light-dark()</code></td>
+                <td><code>--sys-color-*</code></td>
+              </tr>
+              <tr>
+                <td><strong>Typography</strong></td>
+                <td><code>core.css</code></td>
+                <td>30 typescale shorthand font tokens (15 baseline, 15 emphasized) across 5 roles</td>
+                <td><code>--sys-typescale-*</code></td>
+              </tr>
+              <tr>
+                <td><strong>Elevation</strong></td>
+                <td><code>core.css</code></td>
+                <td>6 depth levels defining layered box shadows</td>
+                <td><code>--sys-elevation-*</code></td>
+              </tr>
+              <tr>
+                <td><strong>Motion</strong></td>
+                <td><code>core.css</code></td>
+                <td>Expressive spring curves and duration tokens</td>
+                <td><code>--sys-motion-*</code></td>
+              </tr>
+              <tr>
+                <td><strong>Measurement Space</strong></td>
+                <td><code>core.css</code></td>
+                <td>18-step spacing scale based on 4px/8px increments</td>
+                <td><code>--sys-measurement-space-*</code></td>
+              </tr>
+              <tr>
+                <td><strong>Shape Corners</strong></td>
+                <td><code>core.css</code></td>
+                <td>10 corner radius tokens from sharp (0px) to pill (9999px)</td>
+                <td><code>--sys-shape-corner-*</code></td>
+              </tr>
+              <tr>
+                <td><strong>Abstract Shapes</strong></td>
+                <td><code>shapes/clip-tokens.css</code></td>
+                <td>35 organic and geometric clipping and masking paths</td>
+                <td><code>--sys-shape-clip-*</code> / <code>--sys-shape-mask-*</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Composing System Tokens in Custom CSS</strong></p>
+        <pre><code class="language-css">/* A custom card built entirely by composing system tokens. */
+.card {
+  background: var(--sys-color-surface-container);
+  color: var(--sys-color-on-surface);
+  border: 1px solid var(--sys-color-outline-variant);
+  border-radius: var(--sys-shape-corner-medium);
+  padding: var(--sys-measurement-space-300);
+  gap: var(--sys-measurement-space-150);
+  box-shadow: var(--sys-elevation-level-1);
+  transition:
+    box-shadow var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects),
+    transform var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+
+  &amp;:hover {
+    box-shadow: var(--sys-elevation-level-2);
+    transform: translateY(-2px);
+  }
+}
+
+.title {
+  font: var(--sys-typescale-title-large);
+}
+
+.supporting-text {
+  font: var(--sys-typescale-body-medium);
+  color: var(--sys-color-on-surface-variant);
+}
+</code></pre>
+        <blockquote>
+          <p>
+            <strong>Attribution:</strong> Token descriptions and guidelines are adapted from the official
+            <a href="https://m3.material.io/styles" target="_blank" rel="noopener">Material Design 3 Styles Documentation</a>.
+          </p>
+        </blockquote>
+        <h3 id="color">
+          <a class="heading-anchor" href="#color">Color</a>
+        </h3>
+        <p>
+          Per Material 3 guidelines, color roles are like the "numbers" in a paint-by-number canvas. They're the connective tissue between elements of
+          the UI and what color goes where. These roles are implemented in design and code through tokens.
+        </p>
+        <p>Web Expressive uses CSS custom properties with built-in <code>light-dark()</code> to represent these tokens.</p>
+        <p>
+          Color roles are organized into groups: primary, secondary, tertiary, error, surface, and outline, along with optional add-on roles for fixed
+          accents, bright and dim surfaces, and utility elevation.
+        </p>
+
+        <p><strong>General Concepts</strong></p>
+        <p>Helpful-to-know terms used in color role names:</p>
+        <ul>
+          <li><strong>Surface</strong> – A role used for backgrounds and large, low-emphasis areas of the screen.</li>
+          <li><strong>Primary, Secondary, Tertiary</strong> – Accent color roles used to emphasize or de-emphasize foreground elements.</li>
+          <li>
+            <strong>Container</strong> – Roles used as a fill color for foreground elements like buttons. They should not be used for text or icons.
+          </li>
+          <li>
+            <strong>On</strong> – Roles starting with this term indicate a color for text or icons on <em>top</em> of its paired parent color (for
+            example, <code>on primary</code> is used for text and icons against the <code>primary</code> fill color).
+          </li>
+          <li>
+            <strong>Variant</strong> – Roles ending with this term offer a lower emphasis alternative to its non-variant pair (for example,
+            <code>outline variant</code> is a less emphasized version of the <code>outline</code> color).
+          </li>
+        </ul>
+
+        <blockquote>
+          <p>
+            <strong>Pairing and Layering Colors:</strong> The color system is built on accessible color pairings. These color pairs provide an
+            accessible minimum 3:1 contrast. To ensure accessible visual contrast in your app, apply colors only in the intended pairs or layering
+            orders. Combining colors improperly may break contrast necessary for visual accessibility.
+          </p>
+        </blockquote>
+
+        <pre><code class="language-css">.card {
+  background: var(--sys-color-surface-container);
+  color: var(--sys-color-on-surface);
+  border: 1px solid var(--sys-color-outline-variant);
+}
+</code></pre>
+
+        <h4 id="color-primary">
+          <a class="heading-anchor" href="#color-primary">Primary</a>
+        </h4>
+        <p>Use primary roles for the most prominent components across the UI, such as the FAB, high-emphasis buttons, and active states.</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-color-primary</code></td>
+                <td>High-emphasis fills, texts, and icons against surface</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-primary</code></td>
+                <td>Text and icons against primary</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-primary-container</code></td>
+                <td>Standout fill color against surface, for key components like FAB</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-primary-container</code></td>
+                <td>Text and icons against primary container</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 id="color-secondary">
+          <a class="heading-anchor" href="#color-secondary">Secondary</a>
+        </h4>
+        <p>Use secondary roles for less prominent components in the UI such as filter chips.</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-color-secondary</code></td>
+                <td>Less prominent fills, text, and icons against surface</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-secondary</code></td>
+                <td>Text and icons against secondary</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-secondary-container</code></td>
+                <td>Less prominent fill color against surface, for recessive components like tonal buttons</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-secondary-container</code></td>
+                <td>Text and icons against secondary container</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 id="color-tertiary">
+          <a class="heading-anchor" href="#color-tertiary">Tertiary</a>
+        </h4>
+        <p>
+          Use tertiary roles for contrasting accents that balance primary and secondary colors or bring heightened attention to an element such as an
+          input field. Tertiary color roles can be applied at the designer's discretion to support broader color expression.
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-color-tertiary</code></td>
+                <td>Complementary fills, text, and icons against surface</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-tertiary</code></td>
+                <td>Text and icons against tertiary</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-tertiary-container</code></td>
+                <td>Complementary container color against surface, for components like input fields</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-tertiary-container</code></td>
+                <td>Text and icons against tertiary container</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 id="color-error">
+          <a class="heading-anchor" href="#color-error">Error</a>
+        </h4>
+        <p>
+          Use error roles to communicate error states, such as an incorrect password entered into a text field. Error color roles are made static by
+          default with any dynamic color scheme while still adapting to light and dark modes.
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-color-error</code></td>
+                <td>Attention-grabbing color against surface for fills, icons, and text, indicating urgency</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-error</code></td>
+                <td>Text and icons against error</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-error-container</code></td>
+                <td>Attention-grabbing fill color against surface</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-error-container</code></td>
+                <td>Text and icons against error container</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 id="color-surface">
+          <a class="heading-anchor" href="#color-surface">Surface</a>
+        </h4>
+        <p>Use surface roles for more neutral backgrounds, and container colors for components like cards, sheets, and dialogs.</p>
+        <p>
+          For surface container roles, surface container is the default role, but the others are especially helpful for creating hierarchy and nested
+          containers in layouts for expanded screens.
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2" style="background: var(--sys-color-surface-container-low)"><strong>Surface Roles</strong></td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-surface</code></td>
+                <td>Default color for backgrounds</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-surface</code></td>
+                <td>Text and icons against any surface or surface container color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-surface-variant</code></td>
+                <td>Lower-emphasis color for text and icons against any surface or surface container color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-surface-variant</code></td>
+                <td>Decorative surface alternative to standard surface; lower-emphasis surface variant</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="background: var(--sys-color-surface-container-low)">
+                  <strong>Surface Container Roles</strong> (Emphasis Hierarchy)
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-surface-container-lowest</code></td>
+                <td>Lowest-emphasis container color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-surface-container-low</code></td>
+                <td>Low-emphasis container color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-surface-container</code></td>
+                <td>Default container color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-surface-container-high</code></td>
+                <td>High-emphasis container color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-surface-container-highest</code></td>
+                <td>Highest-emphasis container color</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="background: var(--sys-color-surface-container-low)"><strong>Inverse Colors</strong> (Reverse Contrast)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-inverse-surface</code></td>
+                <td>Background fills for elements which contrast against surface</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-inverse-on-surface</code></td>
+                <td>Text and icons against inverse surface</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-inverse-primary</code></td>
+                <td>Actionable elements, such as text buttons, against inverse surface</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 id="color-outline">
+          <a class="heading-anchor" href="#color-outline">Outline</a>
+        </h4>
+        <p>There are two outline colors to be used against a surface:</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-color-outline</code></td>
+                <td>Important boundaries, such as a text field outline</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-outline-variant</code></td>
+                <td>Decorative elements, such as dividers, and when other elements provide 4.5:1 contrast</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Applying Outline Colors:</strong></p>
+        <ul>
+          <li>
+            Don't use the <code>outline</code> color for dividers since they have different contrast requirements. Instead, use
+            <code>outline variant</code>.
+          </li>
+          <li>
+            Don't use the <code>outline</code> color for components that contain multiple elements, such as cards. Instead, use
+            <code>outline variant</code>.
+          </li>
+          <li>
+            Don't use the <code>outline variant</code> color to create visual hierarchy or define the visual boundary of targets. Instead, use the
+            <code>outline</code> color or another color providing 3:1 contrast with the surface color.
+          </li>
+        </ul>
+
+        <h4 id="color-add-on-roles">
+          <a class="heading-anchor" href="#color-add-on-roles">Add-on Color Roles</a>
+        </h4>
+        <p>
+          Most products won't need to use these add-on color roles. However, some products require the greater flexibility and control that add-on
+          roles provide. If you aren't sure whether your product should use the add-on roles, it probably shouldn't and you can ignore them.
+        </p>
+
+        <p><strong>Fixed Accent Colors</strong></p>
+        <p>
+          Primary fixed, secondary fixed, and tertiary fixed are fill colors used against surface. These colors maintain the same tone in light and
+          dark modes, as opposed to regular container colors, which change in tone between these themes. The fixed color role may be used instead of
+          the equivalent container role in situations where such fixed behavior is desired.
+        </p>
+        <p>
+          The primary fixed dim, secondary fixed dim, and tertiary fixed dim roles provide a stronger, more emphasized tone relative to the equivalent
+          fixed color. They may be used where a deeper color but the same fixed behavior is desired.
+        </p>
+        <p>
+          On fixed colors are used for text and icons which sit on top of the corresponding fixed color. On fixed variant colors are used for text and
+          icons needing lower emphasis against the corresponding fixed color.
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-color-primary-fixed</code></td>
+                <td>Fill color used against surface; maintains the same tone in light and dark themes</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-primary-fixed-dim</code></td>
+                <td>Stronger, more emphasized tone relative to primary fixed; same tone in light and dark themes</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-primary-fixed</code></td>
+                <td>Text and icons which sit on top of the primary fixed color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-primary-fixed-variant</code></td>
+                <td>Text and icons needing lower emphasis against the primary fixed color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-secondary-fixed</code></td>
+                <td>Fill color used against surface; maintains the same tone in light and dark themes</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-secondary-fixed-dim</code></td>
+                <td>Stronger, more emphasized tone relative to secondary fixed; same tone in light and dark themes</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-secondary-fixed</code></td>
+                <td>Text and icons which sit on top of the secondary fixed color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-secondary-fixed-variant</code></td>
+                <td>Text and icons needing lower emphasis against the secondary fixed color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-tertiary-fixed</code></td>
+                <td>Fill color used against surface; maintains the same tone in light and dark themes</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-tertiary-fixed-dim</code></td>
+                <td>Stronger, more emphasized tone relative to tertiary fixed; same tone in light and dark themes</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-tertiary-fixed</code></td>
+                <td>Text and icons which sit on top of the tertiary fixed color</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-tertiary-fixed-variant</code></td>
+                <td>Text and icons needing lower emphasis against the tertiary fixed color</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Bright and Dim Surface Roles</strong></p>
+        <p>
+          There are two add-on surface roles: <code>surface dim</code> and <code>surface bright</code>. While the default surface color automatically
+          inverts between light and dark themes (it's a light color in light theme and it flips to a dark color in dark theme), the surface bright and
+          surface dim colors keep their relative brightness across both light and dark theme.
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-color-surface-dim</code></td>
+                <td>Dimmest surface color in light and dark themes</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-surface-bright</code></td>
+                <td>Brightest surface color in light and dark themes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Additional Framework &amp; Utility Roles</strong></p>
+        <p>Web Expressive schemes also expose utility elevation and canvas fallback custom properties:</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-color-surface-tint</code></td>
+                <td>Brand-colored overlay applied to surfaces to indicate elevation</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-shadow</code></td>
+                <td>Color used for elevation drop shadows</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-scrim</code></td>
+                <td>Overlay color for backdrop scrims behind modals and sheets</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-background</code></td>
+                <td>Foundational app background canvas (equivalent to <code>--sys-color-surface</code>)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-color-on-background</code></td>
+                <td>Main body text against the background canvas (equivalent to <code>--sys-color-on-surface</code>)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="typography">
+          <a class="heading-anchor" href="#typography">Typography</a>
+        </h3>
+        <p>
+          The Material 3 Expressive type scale consists of <strong>30 type styles</strong>: 15 baseline styles and 15 emphasized styles. Both style
+          sets follow the same scale across five distinct roles: <strong>Display</strong>, <strong>Headline</strong>, <strong>Title</strong>,
+          <strong>Body</strong>, and <strong>Label</strong>, each available in <strong>Large</strong>, <strong>Medium</strong>, and
+          <strong>Small</strong>.
+        </p>
+        <p>
+          For interactive specifications, variable font axes, and language considerations, explore the official
+          <a href="https://m3.material.io/styles/typography/" target="_blank" rel="noopener">Material Design 3 Typography Documentation</a>.
+        </p>
+
+        <p><strong>Style Roles &amp; Hierarchy</strong></p>
+        <p>Roles describe the functional purpose and context of text across layouts:</p>
+        <ul>
+          <li>
+            <strong>Display</strong> (Large, Medium, Small) – As the largest text on the screen, display styles are reserved for short, important text
+            or numerals. They work best on large screens and can accommodate expressive or brand-forward typefaces.
+          </li>
+          <li>
+            <strong>Headline</strong> (Large, Medium, Small) – Best-suited for short, high-emphasis text on smaller screens, marking primary passages
+            of text or key regions of content.
+          </li>
+          <li>
+            <strong>Title</strong> (Large, Medium, Small) – Smaller than headline styles, titles are used for medium-emphasis text that remains
+            relatively short (such as section dividers, dialog headers, or category labels).
+          </li>
+          <li>
+            <strong>Body</strong> (Large, Medium, Small) – Used for longer passages of reading text throughout your interface. Body styles are
+            optimized for sustained legibility at smaller sizes; avoid decorative or script fonts for body text.
+          </li>
+          <li>
+            <strong>Label</strong> (Large, Medium, Small) – Utilitarian styles used for text inside interactive components (such as buttons, chips,
+            and navigation items) or very small metadata, such as captions and timecodes.
+          </li>
+        </ul>
+
+        <p><strong>When to Use Baseline vs. Emphasized Styles</strong></p>
+        <p>Baseline and emphasized styles are meant to be used together to create expressive experiences without compromising readability:</p>
+        <ul>
+          <li>
+            <strong>Baseline styles</strong> serve as the standard typographic default for all components, long-form content, and everyday layout
+            elements.
+          </li>
+          <li>
+            <strong>Emphasized styles</strong> were introduced in the M3 Expressive update to add weight and presence to highlighted moments. They
+            feature higher weights (500 for Display/Headline/Title Large/Body, 600 for Title/Label) and optical refinements.
+          </li>
+          <li>
+            <strong>Components</strong>: Use emphasized styles to communicate importance or active status, such as primary action buttons, Extended
+            FABs, active navigation items, unread messages, or badges.
+          </li>
+          <li>
+            <strong>Weight &amp; Context</strong>: Apply emphasized styles to draw attention to specific aspects of components or text that is already
+            bolded for greater stylistic expression.
+          </li>
+        </ul>
+
+        <blockquote>
+          <p>
+            <strong>Implementation Note:</strong> Web Expressive packages each typescale into a single CSS <code>font</code> shorthand token (bundling
+            <code>font-weight</code>, <code>font-size/line-height</code>, and <code>font-family</code>). Always consume typescale variables via the
+            shorthand <code>font</code> property.
+          </p>
+        </blockquote>
+
+        <pre><code class="language-css">/* Standard content uses baseline styles */
+.article-body {
+  font: var(--sys-typescale-body-large);
+  color: var(--sys-color-on-surface);
+}
+
+/* Expressive hero titles and primary actions use emphasized styles */
+.hero-headline {
+  font: var(--sys-typescale-emphasized-display-small);
+  color: var(--sys-color-primary);
+}
+
+.button-primary {
+  font: var(--sys-typescale-emphasized-label-large);
+}
+</code></pre>
+
+        <p>Typescale tokens reference (15 baseline and 15 emphasized styles):</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Role</th>
+                <th>Baseline Style</th>
+                <th>Emphasized Style</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Display -->
+              <tr>
+                <td rowspan="3"><strong>Display</strong></td>
+                <td>
+                  <code>--sys-typescale-display-large</code>
+                  <small class="token-spec">400 &bull; 3.562rem / 4rem (57px / 64px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-display-large</code>
+                  <small class="token-spec">500 &bull; 3.562rem / 4rem (57px / 64px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-display-medium</code>
+                  <small class="token-spec">400 &bull; 2.812rem / 3.25rem (45px / 52px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-display-medium</code>
+                  <small class="token-spec">500 &bull; 2.812rem / 3.25rem (45px / 52px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-display-small</code>
+                  <small class="token-spec">400 &bull; 2.25rem / 2.75rem (36px / 44px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-display-small</code>
+                  <small class="token-spec">500 &bull; 2.25rem / 2.75rem (36px / 44px)</small>
+                </td>
+              </tr>
+              <!-- Headline -->
+              <tr>
+                <td rowspan="3"><strong>Headline</strong></td>
+                <td>
+                  <code>--sys-typescale-headline-large</code>
+                  <small class="token-spec">400 &bull; 2rem / 2.5rem (32px / 40px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-headline-large</code>
+                  <small class="token-spec">500 &bull; 2rem / 2.5rem (32px / 40px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-headline-medium</code>
+                  <small class="token-spec">400 &bull; 1.75rem / 2.25rem (28px / 36px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-headline-medium</code>
+                  <small class="token-spec">500 &bull; 1.75rem / 2.25rem (28px / 36px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-headline-small</code>
+                  <small class="token-spec">400 &bull; 1.5rem / 2rem (24px / 32px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-headline-small</code>
+                  <small class="token-spec">500 &bull; 1.5rem / 2rem (24px / 32px)</small>
+                </td>
+              </tr>
+              <!-- Title -->
+              <tr>
+                <td rowspan="3"><strong>Title</strong></td>
+                <td>
+                  <code>--sys-typescale-title-large</code>
+                  <small class="token-spec">400 &bull; 1.375rem / 1.75rem (22px / 28px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-title-large</code>
+                  <small class="token-spec">500 &bull; 1.375rem / 1.75rem (22px / 28px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-title-medium</code>
+                  <small class="token-spec">500 &bull; 1rem / 1.5rem (16px / 24px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-title-medium</code>
+                  <small class="token-spec">600 &bull; 1rem / 1.5rem (16px / 24px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-title-small</code>
+                  <small class="token-spec">500 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-title-small</code>
+                  <small class="token-spec">600 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
+                </td>
+              </tr>
+              <!-- Body -->
+              <tr>
+                <td rowspan="3"><strong>Body</strong></td>
+                <td>
+                  <code>--sys-typescale-body-large</code>
+                  <small class="token-spec">400 &bull; 1rem / 1.5rem (16px / 24px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-body-large</code>
+                  <small class="token-spec">500 &bull; 1rem / 1.5rem (16px / 24px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-body-medium</code>
+                  <small class="token-spec">400 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-body-medium</code>
+                  <small class="token-spec">500 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-body-small</code>
+                  <small class="token-spec">400 &bull; 0.75rem / 1rem (12px / 16px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-body-small</code>
+                  <small class="token-spec">500 &bull; 0.75rem / 1rem (12px / 16px)</small>
+                </td>
+              </tr>
+              <!-- Label -->
+              <tr>
+                <td rowspan="3"><strong>Label</strong></td>
+                <td>
+                  <code>--sys-typescale-label-large</code>
+                  <small class="token-spec">500 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-label-large</code>
+                  <small class="token-spec">600 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-label-medium</code>
+                  <small class="token-spec">500 &bull; 0.75rem / 1rem (12px / 16px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-label-medium</code>
+                  <small class="token-spec">600 &bull; 0.75rem / 1rem (12px / 16px)</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>--sys-typescale-label-small</code>
+                  <small class="token-spec">500 &bull; 0.688rem / 1rem (11px / 16px)</small>
+                </td>
+                <td>
+                  <code>--sys-typescale-emphasized-label-small</code>
+                  <small class="token-spec">600 &bull; 0.688rem / 1rem (11px / 16px)</small>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="elevation">
+          <a class="heading-anchor" href="#elevation">Elevation</a>
+        </h3>
+        <p>Elevation tokens define 6 layered box-shadow levels from flat surfaces to elevated modal dialogs.</p>
+
+        <blockquote>
+          <p>
+            <strong>Tip:</strong> Elevation shadows automatically adapt to the user's OS preference via
+            <code>@media (prefers-color-scheme: dark)</code>. To force or toggle modes, use <code>[data-mode="light|dark"]</code> or
+            <code>.light-mode</code> / <code>.dark-mode</code>. See <a href="#handling-modes">Handling Modes</a> in the Theming section.
+          </p>
+        </blockquote>
+
+        <pre><code class="language-css">.quick-settings {
+  box-shadow: var(--sys-elevation-level-5);
+}
+</code></pre>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Tokens</th>
+                <th>Common Use Cases</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>(Flat / Default)</code></td>
+                <td>Base layer, flat page background, standard cards without shadow.</td>
+              </tr>
+              <tr>
+                <td><code>--sys-elevation-level-1</code></td>
+                <td>Minimal lift: standard cards, unselected filter chips.</td>
+              </tr>
+              <tr>
+                <td><code>--sys-elevation-level-2</code></td>
+                <td>Raised: small FABs, hover states of level-1 surfaces.</td>
+              </tr>
+              <tr>
+                <td><code>--sys-elevation-level-3</code></td>
+                <td>Prominent: floating action buttons, date pickers.</td>
+              </tr>
+              <tr>
+                <td><code>--sys-elevation-level-4</code></td>
+                <td>High lift: navigation drawers, side sheets, scrolled search bars.</td>
+              </tr>
+              <tr>
+                <td><code>--sys-elevation-level-5</code></td>
+                <td>Maximum lift: modal dialogs, context menus, tooltips.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="motion">
+          <a class="heading-anchor" href="#motion">Motion</a>
+        </h3>
+        <p>Expressive spring curves and duration tokens provide natural, responsive physics for interactions.</p>
+
+        <pre><code class="language-css">.interactive-element {
+  transition:
+    transform var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
+    opacity var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects);
+}
+</code></pre>
+
+        <blockquote>
+          <p>
+            <strong>Implementation Note:</strong> Always consume companion duration variables (<code>*-duration</code>) rather than hardcoding
+            millisecond magic numbers into your CSS transitions to ensure global motion consistency.
+          </p>
+        </blockquote>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Spring Token</th>
+                <th>Duration Token &amp; Value</th>
+                <th>Common Use Cases</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Spatial -->
+              <tr>
+                <td rowspan="3"><strong>Spatial</strong><br /><br /><em>(movement &amp; scale)</em></td>
+                <td><code>--sys-motion-spring-fast-spatial</code></td>
+                <td><code>--sys-motion-spring-fast-spatial-duration</code><br /><br /><strong>(350ms)</strong></td>
+                <td>Short movement. Toggle switches, button icon motion, and chip removal.</td>
+              </tr>
+              <tr>
+                <td><code>--sys-motion-spring-default-spatial</code></td>
+                <td><code>--sys-motion-spring-default-spatial-duration</code><br /><br /><strong>(500ms)</strong></td>
+                <td>Standard movement. Navigation drawers, side sheets, and layout transitions.</td>
+              </tr>
+              <tr>
+                <td><code>--sys-motion-spring-slow-spatial</code></td>
+                <td><code>--sys-motion-spring-slow-spatial-duration</code><br /><br /><strong>(650ms)</strong></td>
+                <td>Large movement. Full-screen dialogs and hero card expansions.</td>
+              </tr>
+              <!-- Effects -->
+              <tr>
+                <td rowspan="3"><strong>Effects</strong><br /><br /><em>(fading &amp; styling)</em></td>
+                <td><code>--sys-motion-spring-fast-effects</code></td>
+                <td><code>--sys-motion-spring-fast-effects-duration</code><br /><br /><strong>(150ms)</strong></td>
+                <td>Quick effects. Hover, pressed states, and small icon tints.</td>
+              </tr>
+              <tr>
+                <td><code>--sys-motion-spring-default-effects</code></td>
+                <td><code>--sys-motion-spring-default-effects-duration</code><br /><br /><strong>(200ms)</strong></td>
+                <td>Standard effects. Tooltip fades and content cross-fades.</td>
+              </tr>
+              <tr>
+                <td><code>--sys-motion-spring-slow-effects</code></td>
+                <td><code>--sys-motion-spring-slow-effects-duration</code><br /><br /><strong>(300ms)</strong></td>
+                <td>Slow effects. Gradual background shifts and modal backdrop fades.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="spacing">
+          <a class="heading-anchor" href="#spacing">Spacing</a>
+        </h3>
+        <p>
+          An 18-step spacing scale using 8px increments where <code>--sys-measurement-space-100</code> equals <code>0.5rem</code> (8px). Apply spacing
+          tokens to the margins, padding, and gaps of a component, UI element, or layout. The system can be extended to add more spacing units and
+          patterns as needed.
+        </p>
+
+        <pre><code class="language-css">.container {
+  padding: var(--sys-measurement-space-300); /* 24px */
+  gap: var(--sys-measurement-space-150);     /* 12px */
+  margin-block-end: var(--sys-measurement-space-400); /* 32px */
+}
+</code></pre>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Tokens</th>
+                <th>Value (rem / px)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-measurement-space-0</code></td>
+                <td><code>0rem</code> (0px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-25</code></td>
+                <td><code>0.125rem</code> (2px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-50</code></td>
+                <td><code>0.25rem</code> (4px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-75</code></td>
+                <td><code>0.375rem</code> (6px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-100</code></td>
+                <td><code>0.5rem</code> (8px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-125</code></td>
+                <td><code>0.625rem</code> (10px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-150</code></td>
+                <td><code>0.75rem</code> (12px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-175</code></td>
+                <td><code>0.875rem</code> (14px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-200</code></td>
+                <td><code>1rem</code> (16px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-250</code></td>
+                <td><code>1.25rem</code> (20px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-300</code></td>
+                <td><code>1.5rem</code> (24px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-400</code></td>
+                <td><code>2rem</code> (32px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-450</code></td>
+                <td><code>2.25rem</code> (36px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-500</code></td>
+                <td><code>2.5rem</code> (40px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-600</code></td>
+                <td><code>3rem</code> (48px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-700</code></td>
+                <td><code>3.5rem</code> (56px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-800</code></td>
+                <td><code>4rem</code> (64px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-measurement-space-900</code></td>
+                <td><code>4.5rem</code> (72px)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="shape-corners">
+          <a class="heading-anchor" href="#shape-corners">Shape Corners</a>
+        </h3>
+        <p>Corner radii tokens define the visual softness and personality of layout containers and interactive controls.</p>
+
+        <pre><code class="language-css">.card {
+  border-radius: var(--sys-shape-corner-medium); /* 12px */
+}
+
+.modal-sheet {
+  border-radius: var(--sys-shape-corner-extra-large-increased); /* 32px */
+}
+
+.avatar {
+  border-radius: var(--sys-shape-corner-full); /* 9999px (circular) */
+}
+</code></pre>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Tokens</th>
+                <th>Value (rem / px)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--sys-shape-corner-none</code></td>
+                <td><code>0px</code></td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-corner-extra-small</code></td>
+                <td><code>0.25rem</code> (4px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-corner-small</code></td>
+                <td><code>0.5rem</code> (8px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-corner-medium</code></td>
+                <td><code>0.75rem</code> (12px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-corner-large</code></td>
+                <td><code>1rem</code> (16px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-corner-large-increased</code></td>
+                <td><code>1.25rem</code> (20px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-corner-extra-large</code></td>
+                <td><code>1.75rem</code> (28px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-corner-extra-large-increased</code></td>
+                <td><code>2rem</code> (32px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-corner-extra-extra-large</code></td>
+                <td><code>3rem</code> (48px)</td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-corner-full</code></td>
+                <td><code>9999px</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="abstract-shapes">
+          <a class="heading-anchor" href="#abstract-shapes">Abstract Shapes</a>
+        </h3>
+        <p>
+          35 Material 3 Expressive shapes available as CSS clipping (<code>clip-path</code>) or masking (<code>mask</code> / <code>mask-image</code>)
+          tokens. Require importing <code>shapes/clip-tokens.css</code> and/or <code>shapes/mask-tokens.css</code>.
+        </p>
+
+        <pre><code class="language-css">/* Using a clip token */
+.badge {
+  clip-path: var(--sys-shape-clip-diamond);
+}
+
+/* Using a mask token */
+.image-wrapper {
+  mask: var(--sys-shape-mask-flower) no-repeat center/contain;
+}
+</code></pre>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Clipping Variable</th>
+                <th>Masking Variable</th>
+                <th>Live Preview</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Geometric Solids -->
+              <tr>
+                <td><code>--sys-shape-clip-circle</code></td>
+                <td><code>--sys-shape-mask-circle</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-circle)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-square</code></td>
+                <td><code>--sys-shape-mask-square</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-square)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-triangle</code></td>
+                <td><code>--sys-shape-mask-triangle</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-triangle)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-diamond</code></td>
+                <td><code>--sys-shape-mask-diamond</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-diamond)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-clamshell</code></td>
+                <td><code>--sys-shape-mask-clamshell</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-clamshell)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-pentagon</code></td>
+                <td><code>--sys-shape-mask-pentagon</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-pentagon)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-oval</code></td>
+                <td><code>--sys-shape-mask-oval</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-oval)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-pill</code></td>
+                <td><code>--sys-shape-mask-pill</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-pill)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-semicircle</code></td>
+                <td><code>--sys-shape-mask-semicircle</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-semicircle)"></div>
+                </td>
+              </tr>
+              <!-- Organic Shapes -->
+              <tr>
+                <td><code>--sys-shape-clip-4-leaf-clover</code></td>
+                <td><code>--sys-shape-mask-4-leaf-clover</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-4-leaf-clover)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-8-leaf-clover</code></td>
+                <td><code>--sys-shape-mask-8-leaf-clover</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-8-leaf-clover)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-4-sided-cookie</code></td>
+                <td><code>--sys-shape-mask-4-sided-cookie</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-4-sided-cookie)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-6-sided-cookie</code></td>
+                <td><code>--sys-shape-mask-6-sided-cookie</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-6-sided-cookie)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-7-sided-cookie</code></td>
+                <td><code>--sys-shape-mask-7-sided-cookie</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-7-sided-cookie)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-9-sided-cookie</code></td>
+                <td><code>--sys-shape-mask-9-sided-cookie</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-9-sided-cookie)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-12-sided-cookie</code></td>
+                <td><code>--sys-shape-mask-12-sided-cookie</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-12-sided-cookie)"></div>
+                </td>
+              </tr>
+              <!-- Radiating Shapes -->
+              <tr>
+                <td><code>--sys-shape-clip-sunny</code></td>
+                <td><code>--sys-shape-mask-sunny</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-sunny)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-very-sunny</code></td>
+                <td><code>--sys-shape-mask-very-sunny</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-very-sunny)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-burst</code></td>
+                <td><code>--sys-shape-mask-burst</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-burst)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-soft-burst</code></td>
+                <td><code>--sys-shape-mask-soft-burst</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-soft-burst)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-boom</code></td>
+                <td><code>--sys-shape-mask-boom</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-boom)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-soft-boom</code></td>
+                <td><code>--sys-shape-mask-soft-boom</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-soft-boom)"></div>
+                </td>
+              </tr>
+              <!-- Thematic & Soft Shapes -->
+              <tr>
+                <td><code>--sys-shape-clip-heart</code></td>
+                <td><code>--sys-shape-mask-heart</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-heart)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-flower</code></td>
+                <td><code>--sys-shape-mask-flower</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-flower)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-gem</code></td>
+                <td><code>--sys-shape-mask-gem</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-gem)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-fan</code></td>
+                <td><code>--sys-shape-mask-fan</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-fan)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-ghost-ish</code></td>
+                <td><code>--sys-shape-mask-ghost-ish</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-ghost-ish)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-pixel-circle</code></td>
+                <td><code>--sys-shape-mask-pixel-circle</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-pixel-circle)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-pixel-triangle</code></td>
+                <td><code>--sys-shape-mask-pixel-triangle</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-pixel-triangle)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-arch</code></td>
+                <td><code>--sys-shape-mask-arch</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-arch)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-arrow</code></td>
+                <td><code>--sys-shape-mask-arrow</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-arrow)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-slanted</code></td>
+                <td><code>--sys-shape-mask-slanted</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-slanted)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-puffy</code></td>
+                <td><code>--sys-shape-mask-puffy</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-puffy)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-puffy-diamond</code></td>
+                <td><code>--sys-shape-mask-puffy-diamond</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-puffy-diamond)"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--sys-shape-clip-bun</code></td>
+                <td><code>--sys-shape-mask-bun</code></td>
+                <td>
+                  <div class="shape-preview" style="--shape-path: var(--sys-shape-clip-bun)"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="components-guide">
+          <a class="heading-anchor" href="#components-guide">Components Guide</a>
+        </h2>
+        <p>
+          Web Expressive components translate Material 3 Expressive tactile feedback and spring physics to native HTML and modern CSS with zero
+          runtime JavaScript.
+        </p>
+
+        <h3 id="components-overview">
+          <a class="heading-anchor" href="#components-overview">Components Overview</a>
+        </h3>
+        <p>
+          Web Expressive provides a curated set of high-impact, highly configurable UI primitives. Rather than replicating an exhaustive catalog, the
+          library focuses on essential building blocks. Any components outside this set can be built by composing Web Expressive design tokens.
+        </p>
+        <p>
+          All action buttons (<strong>Button</strong>, <strong>Icon Button</strong>, <strong>FAB</strong>, and <strong>Extended FAB</strong>) support
+          both <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements. Selection controls (<strong>Toggle Button</strong>,
+          <strong>Toggle Icon Button</strong>, and <strong>Switch</strong>) use native input primitives with browser-managed state.
+        </p>
+        <p>To see these components composed in full-page templates, explore our <a href="example-layouts.html">Example Layouts</a>.</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Primary Role &amp; Purpose</th>
+                <th>Stylesheet Export</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Button</strong></td>
+                <td>Triggers actions or navigates to a new page</td>
+                <td><code>components/button.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Toggle Button</strong></td>
+                <td>Toggles a choice on or off, or selects an option</td>
+                <td><code>components/toggle-button.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Icon Button</strong></td>
+                <td>Compact icon trigger for actions in constrained spaces</td>
+                <td><code>components/icon-button.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Toggle Icon Button</strong></td>
+                <td>Toggles a single icon state, such as bookmarking or favoriting</td>
+                <td><code>components/toggle-icon-button.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Standard Button Group</strong></td>
+                <td>Clusters related buttons with interactive layout response</td>
+                <td><code>components/standard-button-group.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Connected Button Group</strong></td>
+                <td>Connected controls for selecting between mutually exclusive options or views</td>
+                <td><code>components/connected-button-group.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Extended FAB</strong></td>
+                <td>Prominent floating action button with an icon and label for primary page actions</td>
+                <td><code>components/extended-fab.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>FAB</strong></td>
+                <td>Prominent floating action button for the primary constructive action on a screen</td>
+                <td><code>components/fab.css</code></td>
+              </tr>
+              <tr>
+                <td><strong>Switch</strong></td>
+                <td>Toggles the state of a single standalone setting immediately</td>
+                <td><code>components/switch.css</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <blockquote>
+          <p>
+            <strong>Implicit Defaults:</strong> Modifier classes like <code>.filled</code>, <code>.small</code>, <code>.round</code>, and
+            <code>.normal</code> are applied automatically by default when no competing modifier is present. Do not include default classes explicitly
+            in your HTML unless overriding a container style query.
+          </p>
+        </blockquote>
+
+        <!-- BUTTON -->
+        <h3 id="button">
+          <a class="heading-anchor" href="#button">Button</a>
+        </h3>
+        <p>
+          Buttons communicate actions that people can take across dialogs, modals, forms, cards, and toolbars. Can be implemented using
+          <code>&lt;button&gt;</code> for page actions or <code>&lt;a&gt;</code> for navigation links.
+        </p>
+
+        <p><strong>Choosing Buttons &amp; Hierarchy (M3 Specification)</strong></p>
+        <p>When choosing a button style, consider the level of emphasis required by the action:</p>
+        <ul>
+          <li>
+            <strong>Filled (High Emphasis, Default)</strong>: Uses the primary color palette. The filled button has the most visual impact after the
+            FAB and should be reserved for final or unblocking actions in a flow (such as <em>Save</em>, <em>Confirm</em>, or <em>Done</em>). Use
+            sparingly—ideally one prominent primary action per screen.
+          </li>
+          <li>
+            <strong>Tonal (Medium Emphasis)</strong>: Uses the secondary container color palette. Useful for important actions that don't distract
+            users from the main task, or for supporting secondary actions (such as <em>Next</em> in an onboarding flow).
+          </li>
+          <li>
+            <strong>Elevated (Medium Emphasis)</strong>: Features a secondary container fill and drop shadow (elevation 1). Use <strong>only</strong>
+            when a button requires visual separation from a patterned or visually prominent background.
+          </li>
+          <li>
+            <strong>Outlined (Medium Emphasis)</strong>: Features a container stroke with no fill at rest. Ideal for actions that need attention but
+            aren't the primary action (such as <em>See all</em> or <em>Add to cart</em>), or for providing escape actions (like <em>Cancel</em>).
+          </li>
+          <li>
+            <strong>Text (Low Emphasis)</strong>: Has no outline or container at rest. Best used for lowest-priority actions not essential to the user
+            journey, such as actions inside dialogs, cards, or snackbars where a visible container would distract from nearby content.
+          </li>
+        </ul>
+
+        <ul>
+          <li><strong>Export path</strong>: <code>components/button.css</code></li>
+          <li><strong>Base class</strong>: <code>.button</code></li>
+          <li>
+            <strong>Modifiers</strong>:
+            <ul>
+              <li>
+                <strong>Variants</strong>: <code>.filled</code> (default), <code>.tonal</code>, <code>.outline</code>, <code>.elevated</code>,
+                <code>.text</code>
+              </li>
+              <li>
+                <strong>Sizes</strong>: <code>.extra-small</code> (32px), <code>.small</code> (40px, default), <code>.medium</code> (56px),
+                <code>.large</code> (96px), <code>.extra-large</code> (136px)
+              </li>
+              <li><strong>Shape</strong>: <code>.round</code> (default), <code>.square</code></li>
+            </ul>
+          </li>
+        </ul>
+
+        <pre><code class="language-html">&lt;!-- Primary filled action button (filled &amp; small are implicit defaults) --&gt;
+&lt;button class="button"&gt;Action&lt;/button&gt;
+
+&lt;!-- Tonal button with leading icon --&gt;
+&lt;button class="button tonal extra-large"&gt;
+  &lt;span class="icon" aria-hidden="true"&gt;stars&lt;/span&gt;
+  Get Started
+&lt;/button&gt;
+
+&lt;!-- Navigation link styled as an outlined button --&gt;
+&lt;a href="/docs" class="button outline medium"&gt;Documentation&lt;/a&gt;
+</code></pre>
+
+        <p>
+          <a href="../examples/components/button.html">See live Button example</a>
+        </p>
+
+        <!-- TOGGLE BUTTON -->
+        <h3 id="toggle-button">
+          <a class="heading-anchor" href="#toggle-button">Toggle Button</a>
+        </h3>
+        <p>
+          Used for binary or mutually exclusive selection states (such as <em>Save</em>, <em>Favorite</em>, or selecting choices). When pressed or
+          selected, toggle buttons change color and morph shape (from round when unselected to square when selected).
+        </p>
+        <p>
+          Web Expressive builds toggle buttons by wrapping native <code>&lt;input type="checkbox"&gt;</code> (for multi-selection) or
+          <code>&lt;input type="radio"&gt;</code> (for single-selection) with an explicit <code>&lt;label for="..."&gt;</code>, allowing the browser
+          to manage selection states and form data natively. (Per M3 guidelines, toggle buttons do not support the text style).
+        </p>
+        <ul>
+          <li><strong>Export path</strong>: <code>components/toggle-button.css</code></li>
+          <li><strong>Base class</strong>: <code>.toggle-button</code> (wraps <code>.input</code> and <code>.label</code>)</li>
+          <li>
+            <strong>Modifiers</strong>:
+            <ul>
+              <li>
+                <strong>Variants</strong>: <code>.filled</code> (default), <code>.tonal</code>, <code>.outline</code>,
+                <code>.elevated</code>
+              </li>
+              <li>
+                <strong>Sizes</strong>: <code>.extra-small</code>, <code>.small</code> (default), <code>.medium</code>, <code>.large</code>,
+                <code>.extra-large</code>
+              </li>
+              <li><strong>Shape</strong>: <code>.round</code> (default), <code>.square</code></li>
+            </ul>
+          </li>
+        </ul>
+
+        <pre><code class="language-html">&lt;!-- Checkbox toggle button (multi-select) --&gt;
+&lt;div class="toggle-button tonal"&gt;
+  &lt;input class="input" type="checkbox" id="check-notifications" /&gt;
+  &lt;label class="label" for="check-notifications"&gt;Notifications&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Radio toggle button (single-select) --&gt;
+&lt;div class="toggle-button outline"&gt;
+  &lt;input class="input" type="radio" name="plan" id="plan-standard" /&gt;
+  &lt;label class="label" for="plan-standard"&gt;Standard&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Toggle button with checkmark icon when selected --&gt;
+&lt;div class="toggle-button"&gt;
+  &lt;input class="input" type="checkbox" id="fav-toggle" /&gt;
+  &lt;label class="label" for="fav-toggle"&gt;
+    &lt;span class="icon selected" aria-hidden="true"&gt;check&lt;/span&gt;
+    Save
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <p>
+          <a href="../examples/components/toggle-button.html">See live Toggle Button example</a>
+        </p>
+
+        <!-- ICON BUTTON -->
+        <h3 id="icon-button">
+          <a class="heading-anchor" href="#icon-button">Icon Button</a>
+        </h3>
+        <p>
+          The most compact and subtle type of button, icon buttons are used for optional or supplementary actions (such as
+          <em>Bookmark</em>, <em>Star</em>, or <em>Print</em>). Can be implemented using <code>&lt;button&gt;</code> for actions or
+          <code>&lt;a&gt;</code> for links. Always provide an accessible label (such as <code>aria-label</code>) because icon buttons contain no
+          visible text.
+        </p>
+        <ul>
+          <li><strong>Export path</strong>: <code>components/icon-button.css</code></li>
+          <li><strong>Base class</strong>: <code>.icon-button</code></li>
+          <li>
+            <strong>Modifiers</strong>:
+            <ul>
+              <li>
+                <strong>Variants</strong>: <code>.filled</code> (default), <code>.tonal</code>, <code>.outline</code>,
+                <code>.standard</code>
+              </li>
+              <li>
+                <strong>Sizes</strong>: <code>.extra-small</code>, <code>.small</code> (default), <code>.medium</code>, <code>.large</code>,
+                <code>.extra-large</code>
+              </li>
+              <li><strong>Shape</strong>: <code>.round</code> (default), <code>.square</code></li>
+              <li><strong>Width</strong>: <code>.narrow</code>, <code>.normal</code> (default), <code>.wide</code></li>
+            </ul>
+          </li>
+        </ul>
+
+        <pre><code class="language-html">&lt;!-- Action icon button --&gt;
+&lt;button class="icon-button" aria-label="Bookmark"&gt;
+  &lt;span class="icon" aria-hidden="true"&gt;bookmark&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Tonal wide icon button --&gt;
+&lt;button class="icon-button tonal wide" aria-label="Settings"&gt;
+  &lt;span class="icon" aria-hidden="true"&gt;settings&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Outline navigation link icon button --&gt;
+&lt;a href="/home" class="icon-button outline" aria-label="Go Home"&gt;
+  &lt;span class="icon" aria-hidden="true"&gt;home&lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+
+        <p>
+          <a href="../examples/components/icon-button.html">See live Icon Button example</a>
+        </p>
+
+        <!-- TOGGLE ICON BUTTON -->
+        <h3 id="toggle-icon-button">
+          <a class="heading-anchor" href="#toggle-icon-button">Toggle Icon Button</a>
+        </h3>
+        <p>
+          Visual icon toggles for binary selection states like bookmarking, favoriting, or pinning items. Built with native
+          <code>&lt;input type="checkbox"&gt;</code> or <code>&lt;input type="radio"&gt;</code> and an explicit <code>&lt;label for="..."&gt;</code>.
+          Supports outlined icons when unselected and filled icons when selected via <code>.selected</code>. Always provide an <code>aria-label</code>
+          on the input.
+        </p>
+        <ul>
+          <li><strong>Export path</strong>: <code>components/toggle-icon-button.css</code></li>
+          <li><strong>Base class</strong>: <code>.toggle-icon-button</code> (wraps <code>.input</code> and <code>.label</code>)</li>
+          <li>
+            <strong>Modifiers</strong>:
+            <ul>
+              <li>
+                <strong>Variants</strong>: <code>.filled</code> (default), <code>.tonal</code>, <code>.outline</code>,
+                <code>.standard</code>
+              </li>
+              <li>
+                <strong>Sizes</strong>: <code>.extra-small</code>, <code>.small</code> (default), <code>.medium</code>, <code>.large</code>,
+                <code>.extra-large</code>
+              </li>
+              <li><strong>Shape</strong>: <code>.round</code> (default), <code>.square</code></li>
+              <li><strong>Width</strong>: <code>.narrow</code>, <code>.normal</code> (default), <code>.wide</code></li>
+            </ul>
+          </li>
+        </ul>
+
+        <pre><code class="language-html">&lt;!-- Bookmark toggle icon button (checkbox) --&gt;
+&lt;div class="toggle-icon-button standard"&gt;
+  &lt;input class="input" type="checkbox" aria-label="Bookmark" id="bm-toggle" /&gt;
+  &lt;label class="label" for="bm-toggle"&gt;
+    &lt;span class="icon" aria-hidden="true"&gt;bookmark&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- View selection toggle icon button (radio) --&gt;
+&lt;div class="toggle-icon-button tonal"&gt;
+  &lt;input class="input" type="radio" name="view-mode" aria-label="Grid view" id="view-grid" /&gt;
+  &lt;label class="label" for="view-grid"&gt;
+    &lt;span class="icon" aria-hidden="true"&gt;grid_view&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <p>
+          <a href="../examples/components/toggle-icon-button.html">See live Toggle Icon Button example</a>
+        </p>
+
+        <!-- STANDARD BUTTON GROUP -->
+        <h3 id="standard-button-group">
+          <a class="heading-anchor" href="#standard-button-group">Standard Button Group</a>
+        </h3>
+        <p>
+          Organizes buttons and adds interactive layout dynamics between them. In Material 3 Expressive, standard button groups add interaction
+          between adjacent buttons: when a button is pressed or selected, it changes width and shape while adjacent buttons animate smoothly. Can
+          combine standard buttons, toggle buttons, and icon buttons.
+        </p>
+        <p>
+          Wrap the group inside a native <code>&lt;fieldset class="fieldset" disabled&gt;</code> to disable all child buttons simultaneously without
+          JavaScript loops.
+        </p>
+        <ul>
+          <li><strong>Export path</strong>: <code>components/standard-button-group.css</code></li>
+          <li><strong>Base class</strong>: <code>.standard-button-group</code></li>
+          <li>
+            <strong>Modifiers</strong>:
+            <ul>
+              <li>
+                <strong>Sizes</strong>: <code>.extra-small</code>, <code>.small</code> (default), <code>.medium</code>, <code>.large</code>,
+                <code>.extra-large</code>
+              </li>
+              <li><strong>Shape</strong>: <code>.round</code> (default), <code>.square</code></li>
+              <li>
+                <strong>Width</strong>: <code>.narrow</code>, <code>.normal</code> (default), <code>.wide</code> (applies to contained icon buttons)
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <pre><code class="language-html">&lt;!-- Standard button group --&gt;
+&lt;div class="standard-button-group" role="group" aria-label="Quick Actions"&gt;
+  &lt;button class="button tonal"&gt;Save Draft&lt;/button&gt;
+  &lt;button class="button"&gt;Publish&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Disabled group via native fieldset --&gt;
+&lt;fieldset class="fieldset" aria-label="Actions" disabled&gt;
+  &lt;div class="standard-button-group"&gt;
+    &lt;button class="button"&gt;Option A&lt;/button&gt;
+    &lt;button class="button"&gt;Option B&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+
+        <p>
+          <a href="../examples/components/standard-button-group.html">See live Standard Button Group example</a>
+        </p>
+
+        <!-- CONNECTED BUTTON GROUP -->
+        <h3 id="connected-button-group">
+          <a class="heading-anchor" href="#connected-button-group">Connected Button Group</a>
+        </h3>
+        <p>
+          Connected button groups replace the deprecated segmented button from earlier Material versions. They join related toggle options into a
+          single unified segmented strip, ideal for selecting between views, filtering categories, or choosing product variations (e.g. sizes).
+        </p>
+        <p>
+          Unlike standard button groups, selecting a button in a connected button group morphs only that button's shape and color without shifting
+          adjacent buttons. The connected group spans its container width and maintains a consistent 2px inner boundary between items.
+        </p>
+        <ul>
+          <li><strong>Export path</strong>: <code>components/connected-button-group.css</code></li>
+          <li><strong>Base class</strong>: <code>.connected-button-group</code></li>
+          <li>
+            <strong>Modifiers</strong>:
+            <ul>
+              <li>
+                <strong>Sizes</strong>: <code>.extra-small</code>, <code>.small</code> (default), <code>.medium</code>, <code>.large</code>,
+                <code>.extra-large</code>
+              </li>
+              <li><strong>Shape</strong>: <code>.round</code> (default), <code>.square</code></li>
+            </ul>
+          </li>
+        </ul>
+
+        <pre><code class="language-html">&lt;!-- Connected button group for single selection --&gt;
+&lt;div class="connected-button-group" role="group" aria-label="Size Selection"&gt;
+  &lt;div class="toggle-button"&gt;
+    &lt;input type="radio" checked name="product-size" class="input" id="size-sm" /&gt;
+    &lt;label class="label" for="size-sm"&gt;
+      &lt;span class="icon selected" aria-hidden="true"&gt;check&lt;/span&gt;
+      Small
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="toggle-button"&gt;
+    &lt;input type="radio" name="product-size" class="input" id="size-lg" /&gt;
+    &lt;label class="label" for="size-lg"&gt;
+      &lt;span class="icon selected" aria-hidden="true"&gt;check&lt;/span&gt;
+      Large
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <p>
+          <a href="../examples/components/connected-button-group.html">See live Connected Button Group example</a>
+        </p>
+
+        <!-- EXTENDED FAB -->
+        <h3 id="extended-fab">
+          <a class="heading-anchor" href="#extended-fab">Extended FAB</a>
+        </h3>
+        <p>
+          The floating action button represents the primary, most important, or most common constructive action on a screen (such as
+          <em>Create</em>, <em>Compose</em>, or <em>New thread</em>). Use an Extended FAB instead of a regular FAB when label text is needed alongside
+          the icon to make the action clear, or when floating above long-scrolling content.
+        </p>
+        <p>
+          Supports <code>&lt;button&gt;</code> for actions or <code>&lt;a&gt;</code> for navigation links. Only <strong>one</strong> FAB or Extended
+          FAB should be present per screen to preserve clear visual hierarchy.
+        </p>
+        <ul>
+          <li><strong>Export path</strong>: <code>components/extended-fab.css</code></li>
+          <li><strong>Base class</strong>: <code>.extended-fab</code></li>
+          <li>
+            <strong>Modifiers</strong>:
+            <ul>
+              <li>
+                <strong>Variants</strong>: <code>.primary-container</code> (default), <code>.secondary-container</code>,
+                <code>.tertiary-container</code>, <code>.primary</code>, <code>.secondary</code>, <code>.tertiary</code>
+              </li>
+              <li><strong>Sizes</strong>: <code>.small</code> (56px, default), <code>.medium</code> (80px), <code>.large</code> (96px)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <pre><code class="language-html">&lt;!-- Default primary container extended FAB --&gt;
+&lt;button class="extended-fab"&gt;
+  &lt;span class="icon" aria-hidden="true"&gt;add&lt;/span&gt;
+  Create
+&lt;/button&gt;
+
+&lt;!-- Navigation link extended FAB --&gt;
+&lt;a href="/compose" class="extended-fab primary medium"&gt;
+  &lt;span class="icon" aria-hidden="true"&gt;edit&lt;/span&gt;
+  Compose
+&lt;/a&gt;
+</code></pre>
+
+        <p>
+          <a href="../examples/components/extended-fab.html">See live Extended FAB example</a>
+        </p>
+
+        <!-- FAB -->
+        <h3 id="fab">
+          <a class="heading-anchor" href="#fab">FAB</a>
+        </h3>
+        <p>
+          Compact floating action button for the single most important action on a screen. Persists on screen as content scrolls (typically positioned
+          in the lower trailing corner or navigation rail). Always provide an <code>aria-label</code> because FABs contain only an icon.
+        </p>
+        <p>
+          Per Material 3 guidelines, FABs promote positive, constructive actions (such as <em>Create</em>, <em>Share</em>, or
+          <em>Start a process</em>). Avoid using FABs for minor, overflow, or destructive actions (like trash, archive, or volume controls). Do not
+          disable FABs: if the action is unavailable, the FAB should not appear.
+        </p>
+        <ul>
+          <li><strong>Export path</strong>: <code>components/fab.css</code></li>
+          <li><strong>Base class</strong>: <code>.fab</code> (supports <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code>)</li>
+          <li>
+            <strong>Modifiers</strong>:
+            <ul>
+              <li>
+                <strong>Variants</strong>: <code>.primary-container</code> (default), <code>.secondary-container</code>,
+                <code>.tertiary-container</code>, <code>.primary</code>, <code>.secondary</code>, <code>.tertiary</code>
+              </li>
+              <li><strong>Sizes</strong>: <code>.small</code> (56px, default), <code>.medium</code> (80px), <code>.large</code> (96px)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <pre><code class="language-html">&lt;!-- Default FAB for primary action --&gt;
+&lt;button class="fab" aria-label="Add item"&gt;
+  &lt;span class="icon" aria-hidden="true"&gt;add&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Large primary FAB --&gt;
+&lt;button class="fab primary large" aria-label="Compose message"&gt;
+  &lt;span class="icon" aria-hidden="true"&gt;edit&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+
+        <p>
+          <a href="../examples/components/fab.html">See live FAB example</a>
+        </p>
+
+        <!-- SWITCH -->
+        <h3 id="switch">
+          <a class="heading-anchor" href="#switch">Switch</a>
+        </h3>
+        <p>
+          Switches toggle the state of a single standalone option or setting on and off. When toggled, the effect takes place immediately without
+          requiring a separate "Save" action. Always pair switches with an adjacent label describing what the control does when active.
+        </p>
+        <p><strong>Selection Control Guidance (M3 Specification)</strong>:</p>
+        <ul>
+          <li>Use <strong>switches</strong> to toggle a single standalone setting or activate/deactivate a feature immediately.</li>
+          <li>
+            Do <strong>not</strong> use switches to choose between mutually exclusive opposing options (such as <em>List view</em> vs
+            <em>Map view</em>)—use a Connected Button Group instead.
+          </li>
+          <li>
+            Do <strong>not</strong> use switches in lists where multiple options must be confirmed with a "Save" or "Update" button—use native
+            checkboxes instead.
+          </li>
+        </ul>
+        <ul>
+          <li><strong>Export path</strong>: <code>components/switch.css</code></li>
+          <li><strong>Base element</strong>: <code>&lt;input class="switch" type="checkbox" role="switch" /&gt;</code></li>
+          <li>
+            <strong>Modifiers</strong>:
+            <ul>
+              <li><strong>Icon</strong>: <code>.icon</code> (displays embedded checkmark and cross indicators within the handle)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <pre><code class="language-html">&lt;!-- Standard switch with adjacent label --&gt;
+&lt;label for="wifi-switch"&gt;Wi-Fi&lt;/label&gt;
+&lt;input class="switch" id="wifi-switch" type="checkbox" role="switch" /&gt;
+
+&lt;!-- Switch with embedded icons --&gt;
+&lt;input class="switch icon" type="checkbox" role="switch" checked aria-label="Dark mode" /&gt;
+
+&lt;!-- Disabled switch --&gt;
+&lt;input class="switch" type="checkbox" role="switch" disabled aria-label="Airplane mode (unavailable)" /&gt;
+</code></pre>
+
+        <p>
+          <a href="../examples/components/switch.html">See live Switch example</a>
+        </p>
+
+        <!-- IMPLEMENTATION NOTES -->
+        <h3 id="implementation-notes">
+          <a class="heading-anchor" href="#implementation-notes">Implementation Notes</a>
+        </h3>
+
+        <h4>Icons</h4>
+        <p>
+          Buttons, toggle buttons, icon buttons, toggle icon buttons, FABs, and extended FABs accept Material Symbols, inline SVGs, and
+          <code>&lt;img&gt;</code>. All formats must use the <code>.icon</code> class. Icons are filled by default; add <code>.no-fill</code> for
+          outlined icons. Use <code>.selected</code> for icons that appear only while a toggle input is checked.
+        </p>
+
+        <h4>Container Style Queries (Zero-JS Declarative Configuration)</h4>
+        <p>
+          Web Expressive components have built-in Container Style Query listeners compiled directly into their CSS stylesheets.
+          <strong>You do not need to implement or write container queries yourself.</strong>
+        </p>
+        <p>
+          The core problem they solve is <strong>declarative component configuration without runtime JavaScript</strong>: when you want child buttons,
+          toggle buttons, or icon buttons to automatically adapt their size (<code>extra-small</code> to <code>extra-large</code>), shape (<code
+            >round</code
+          >
+          or <code>square</code>), or width (<code>narrow</code> to <code>wide</code>) across responsive breakpoints or container widths, you simply
+          declare registered custom properties on the parent container element:
+        </p>
+        <pre><code class="language-css">/* Declarative container configuration: child components adapt with zero JavaScript */
+.toolbar {
+  @media (width >= 840px) {
+    --size-items: large;
+    --shape-items: square;
+    --width-items: wide;
+  }
+}
+</code></pre>
+        <blockquote>
+          <p>
+            <strong>Scoped to Immediate Children:</strong> These container properties affect only immediate child components within the container,
+            preventing unwanted style leaking into deeper nested layouts.
+          </p>
+        </blockquote>
+        <blockquote>
+          <p>
+            <strong>Explicit Modifiers Win:</strong> Any modifier class added directly to a component (like
+            <code>&lt;button class="button extra-large"&gt;</code>) takes precedence over container rules.
+          </p>
+        </blockquote>
+        <p>Components that do not support a property simply ignore it. The registered properties and supported components are:</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Custom Property</th>
+                <th>Syntax &amp; Values (Default)</th>
+                <th>Supported Components</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--size-items</code></td>
+                <td><code>extra-small | small | medium | large | extra-large</code> (default: <code>small</code>)</td>
+                <td>
+                  <code>.button</code>, <code>.toggle-button</code>, <code>.icon-button</code>, <code>.toggle-icon-button</code>,<br />
+                  <code>.fab</code> (<code>small</code>, <code>medium</code>, <code>large</code> only),<br />
+                  <code>.extended-fab</code> (<code>small</code>, <code>medium</code>, <code>large</code> only)
+                </td>
+              </tr>
+              <tr>
+                <td><code>--shape-items</code></td>
+                <td><code>round | square</code> (default: <code>round</code>)</td>
+                <td>
+                  <code>.button</code>, <code>.toggle-button</code>, <code>.icon-button</code>,
+                  <code>.toggle-icon-button</code>
+                </td>
+              </tr>
+              <tr>
+                <td><code>--width-items</code></td>
+                <td><code>narrow | normal | wide</code> (default: <code>normal</code>)</td>
+                <td><code>.icon-button</code>, <code>.toggle-icon-button</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          For an in-depth conceptual walkthrough, see
+          <a href="https://mobalti.com/responsive-components-style-queries/">Responsive Components with Style Queries</a>.
+        </p>
+
+        <footer>
+          <p class="footer-note">
+            Web Expressive is licensed under the <a href="https://opensource.org/licenses/MIT">MIT license</a>, current version v0.5.1.
+          </p>
+        </footer>
+      </div>
+    </main>
+
+    <script src="assets/js/prism.js" defer></script>
+    <script>
+      const tocButton = document.querySelector("[table-content-action]");
+
+      if (tocButton) {
+        tocButton.addEventListener("click", (e) => {
+          const targetId = e.currentTarget.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (!targetElement) return;
+
+          // Prevent default instant anchor jump
+          e.preventDefault();
+
+          // Update the URL hash without triggering browser scroll jumps
+          history.pushState(null, "", targetId);
+
+          // Check if browser supports View Transitions
+          if (!document.startViewTransition) {
+            // Fallback for older browsers: instant jump
+            targetElement.scrollIntoView({ behavior: "auto" });
+            return;
+          }
+
+          // Trigger the View Transition
+          document.startViewTransition(() => {
+            targetElement.scrollIntoView({ behavior: "instant" });
+          });
+        });
+      }
+    </script>
+
+    <script type="speculationrules">
+      {
+        "prefetch": [
+          {
+            "source": "document",
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+  </body>
+</html>

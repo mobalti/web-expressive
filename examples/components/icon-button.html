@@ -1,0 +1,1571 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive — Icon Button</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <meta name="description" content="An expressive icon button component built with standard HTML and CSS, with no framework or build step." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=design_services,stars,arrow_back,code,more_vert&display=block"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/core.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/classic-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/icon-button.css" />
+
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        @view-transition {
+          navigation: auto;
+        }
+      }
+      @layer layout {
+        @scope (.main) {
+          :scope {
+            display: grid;
+          }
+
+          @scope (:scope)  to (.app-bar, .section) {
+            .content {
+              display: grid;
+              place-content: center;
+              place-items: start center;
+              padding-block: var(--sys-measurement-space-400);
+            }
+          }
+        }
+
+        @scope (.app-bar) {
+          :scope {
+            position: sticky;
+            z-index: 100;
+            inset-block-start: var(--sys-measurement-space-0);
+            background: var(--sys-color-surface-container);
+            background: linear-gradient(
+              in oklab,
+
+              var(--sys-color-surface),
+              transparent
+            );
+
+            background: var(--sys-color-surface);
+
+            padding-block: var(--sys-measurement-space-100);
+          }
+
+          .container {
+            display: grid;
+            grid-template-columns: 1fr min-content;
+            justify-content: space-between;
+            place-items: center;
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              padding-inline: var(--sys-measurement-space-100);
+            }
+          }
+          .leading-elements {
+            display: grid;
+            grid-template-columns: min-content 1fr;
+            place-items: center start;
+            inline-size: 100%;
+            --size-items: medium;
+            /* window-compact */
+            @media (width < 600px) {
+              --width-items: narrow;
+            }
+
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              gap: var(--sys-measurement-space-100);
+            }
+          }
+
+          .headline {
+            display: block;
+            inline-size: 100%;
+            overflow: hidden;
+            font: var(--sys-typescale-emphasized-title-large);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            /* window-medium-wider */
+            @media (width >= 600px) {
+              font: var(--sys-typescale-emphasized-headline-small);
+            }
+          }
+          .trailing-elements {
+            display: grid;
+            --size-items: medium;
+
+            /* window-compact */
+            @media (width < 600px) {
+              --width-items: narrow;
+            }
+          }
+
+          .options-menu-popover {
+            position-anchor: --options-menu-popover-trigger;
+            position-area: block-end;
+            inset-inline-end: calc(anchor(end));
+            border: none;
+
+            @media (prefers-reduced-motion: no-preference) {
+              /* MODERN IMPLEMENTATION: Height unfolding via calc-size() */
+              @supports (block-size: calc-size(auto, size)) {
+                opacity: 0;
+
+                /* Keep display & overlay active for the full spatial spring duration (500ms) */
+                transition:
+                  opacity var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects),
+                  block-size var(--sys-motion-spring-default-spatial-duration) var(--sys-motion-spring-default-spatial),
+                  overlay var(--sys-motion-spring-default-spatial-duration) allow-discrete,
+                  display var(--sys-motion-spring-default-spatial-duration) allow-discrete;
+                block-size: 0;
+                overflow: clip; /* Prevents internal content overflow while height collapses */
+
+                &:popover-open {
+                  opacity: 1;
+                  block-size: calc-size(auto, size);
+
+                  @starting-style {
+                    opacity: 0;
+                    block-size: 0;
+                  }
+                }
+              }
+
+              /* FALLBACK IMPLEMENTATION: Scale-fade transform for Firefox & Safari */
+              @supports not (block-size: calc-size(auto, size)) {
+                transform-origin: right top;
+                scale: 0.8;
+                opacity: 0;
+
+                /* Discrete transitions match the 150ms fast-effects duration used by scale & opacity */
+                transition:
+                  opacity var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects),
+                  scale var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects),
+                  overlay var(--sys-motion-spring-fast-effects-duration) allow-discrete,
+                  display var(--sys-motion-spring-fast-effects-duration) allow-discrete;
+
+                &:popover-open {
+                  scale: 1;
+                  opacity: 1;
+
+                  @starting-style {
+                    scale: 0.8;
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+
+            @media (width < 600px) {
+              inset-inline-end: calc(anchor(end) + var(--sys-measurement-space-100));
+            }
+          }
+
+          .options-menu-popover-trigger {
+            anchor-name: --options-menu-popover-trigger;
+            .app-bar:has(.options-menu-popover:popover-open) & {
+              --_border-radius: var(--_pressed-button-corner);
+              --_state: oklch(from var(--_color) l c h / 10%);
+            }
+          }
+        }
+
+        @scope (.section) {
+          :scope {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding-inline: 2rem;
+            padding-block: 4rem;
+            inline-size: 100%;
+            overflow-inline: auto;
+
+            /* window-medium-narrower */
+            @media (width < 840px) {
+            }
+          }
+
+          @scope (:scope)  to (.article) {
+            .headline {
+              inline-size: max-content;
+              font: var(--sys-typescale-title-medium);
+            }
+
+            .header {
+              display: grid;
+              place-items: center;
+            }
+
+            .content {
+              display: grid;
+              grid-auto-flow: column;
+              inline-size: max-content;
+            }
+          }
+        }
+
+        @scope (.article) {
+          :scope {
+          }
+          .headline {
+            color: var(--sys-color-on-surface);
+            font: var(--sys-typescale-label-large);
+          }
+
+          .content {
+            display: flex;
+            gap: 2rem;
+            padding-inline: 1rem;
+          }
+
+          .header {
+            border-block-end: 1px solid var(--sys-color-outline-variant);
+
+            text-align: center;
+          }
+
+          .group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+          }
+        }
+      }
+
+      @layer components {
+        @scope (.menu) {
+          :scope {
+            --_background: var(--sys-color-surface-container-low);
+            --_color: var(--sys-color-on-surface);
+            --_outline-width: 0px;
+            box-shadow: var(--sys-elevation-level-3);
+
+            border-radius: var(--sys-shape-corner-large);
+            background: var(--_background);
+            padding: var(--sys-measurement-space-25);
+            min-inline-size: 208px;
+          }
+
+          .list {
+            padding: var(--sys-measurement-space-0);
+            list-style: none;
+          }
+
+          .item-action {
+            --_background: none;
+            display: grid;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background: transparent;
+            padding: var(--sys-measurement-space-25);
+            inline-size: 100%;
+            block-size: 3rem;
+            color: var(--_color);
+            user-select: none;
+            text-decoration: none;
+            text-decoration: none;
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+
+            &:hover {
+              --_background: oklch(from var(--_color) l c h / 8%);
+            }
+
+            &:focus-visible {
+              --_background: oklch(from var(--_color) l c h / 10%);
+              --_outline-width: 3px;
+            }
+
+            &:active {
+              --_background: oklch(from var(--_color) l c h / 10%);
+            }
+          }
+
+          .item-layout {
+            display: grid;
+            position: relative;
+            grid-template-columns: min-content 1fr auto min-content;
+            grid-template-areas: "leading text badge trailing";
+            align-items: center;
+            outline: var(--_outline-width) solid var(--sys-color-secondary);
+            outline-offset: 2px;
+            border-radius: var(--sys-shape-corner-extra-small);
+            background: none;
+            isolation: isolate;
+            padding-inline: var(--sys-measurement-space-150);
+            inline-size: 100%;
+            block-size: 100%;
+            color: var(--_color);
+            &::before {
+              position: absolute;
+              z-index: -1;
+              inset: 0;
+              border-radius: inherit;
+              background: var(--_background);
+              content: "";
+            }
+
+            .menu-item:first-child & {
+              border-start-start-radius: var(--sys-shape-corner-medium);
+              border-start-end-radius: var(--sys-shape-corner-medium);
+            }
+            .menu-item:last-child & {
+              border-end-start-radius: var(--sys-shape-corner-medium);
+              border-end-end-radius: var(--sys-shape-corner-medium);
+            }
+          }
+
+          .icon {
+            --_fill: 1;
+            display: inline-block;
+            inline-size: 1.25rem;
+            block-size: 1.25rem;
+            overflow: clip;
+            font-size: 1.25rem;
+            line-height: 1;
+            font-family: var(--ref-typeface-symbols);
+            font-variation-settings:
+              "FILL" var(--_fill),
+              "wght" 400,
+              "GRAD" 0,
+              "opsz" 24;
+            font-feature-settings: "liga";
+            white-space: nowrap;
+
+            &.no-fill {
+              --_fill: 0;
+            }
+
+            &:is(svg) {
+              fill: var(--_color);
+            }
+
+            &:is(img) {
+              object-fit: cover;
+            }
+          }
+
+          .text-content {
+            display: grid;
+            grid-area: text;
+            text-align: start;
+          }
+
+          .menu-item-text {
+            overflow: hidden;
+            font: var(--sys-typescale-label-large);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .supporting-text {
+            overflow: hidden;
+            color: var(--sys-color-on-surface-variant);
+            font: var(--sys-typescale-body-small);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          /* | leading + 8px | text | +8px badge | +8px trailing | */
+
+          .leading-icon {
+            grid-area: leading;
+            margin-inline-end: var(--sys-measurement-space-100);
+          }
+          .badge {
+            grid-area: badge;
+            margin-inline-start: var(--sys-measurement-space-100);
+          }
+          .trailing-icon {
+            grid-area: trailing;
+            margin-inline-start: var(--sys-measurement-space-100);
+          }
+
+          .badge {
+            border-radius: var(--sys-shape-corner-full);
+            background: var(--sys-color-primary-container);
+            padding-inline: var(--sys-measurement-space-50);
+            overflow: clip;
+            color: var(--sys-color-on-primary-container);
+            font: var(--sys-typescale-label-small);
+          }
+
+          .divider {
+            display: grid;
+            place-items: center;
+            padding-inline: var(--sys-measurement-space-125);
+            padding-block: var(--sys-measurement-space-25);
+            &::before {
+              background: var(--sys-color-outline-variant);
+              inline-size: 100%;
+              block-size: 1px;
+              content: "";
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--
+        Web Expressive
+        GitHub: https://github.com/mobalti/web-expressive
+    -->
+
+    <!-- Icon button -->
+    <main class="main">
+      <header class="app-bar">
+        <div class="container">
+          <div class="leading-elements">
+            <a href="/index.html" class="icon-button standard" aria-label="Go back home">
+              <span class="icon" aria-hidden="true">arrow_back</span>
+            </a>
+            <h1 class="headline">Web Expressive Icon Button</h1>
+          </div>
+
+          <div class="trailing-elements">
+            <button
+              class="icon-button standard options-menu-popover-trigger"
+              popovertarget="options-menu-popover"
+              aria-label="More options"
+              title="More options"
+            >
+              <span class="icon" aria-hidden="true">more_vert</span>
+            </button>
+
+            <div class="menu options-menu-popover" popover id="options-menu-popover">
+              <div class="content">
+                <ul class="list">
+                  <li class="menu-item">
+                    <a href="../../docs/index.html#icon-button" class="item-action">
+                      <div class="item-layout">
+                        <div class="text-content">
+                          <div class="menu-item-text">View developer docs</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="https://github.com/mobalti/web-expressive/blob/main/lib/components/icon-button.css" class="item-action">
+                      <div class="item-layout">
+                        <div class="text-content">
+                          <div class="menu-item-text">View source code</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div aria-hidden="true" class="divider"></div>
+                  </li>
+                  <li class="menu-item">
+                    <a href="https://github.com/mobalti/web-expressive/issues" class="item-action">
+                      <div class="item-layout">
+                        <div class="text-content">
+                          <div class="menu-item-text">Report an issue</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div aria-hidden="true" class="divider"></div>
+                  </li>
+                  <li class="menu-item">
+                    <a href="https://m3.material.io/components/icon-buttons/overview" class="item-action">
+                      <div class="item-layout">
+                        <div class="text-content">
+                          <div class="menu-item-text">View design guidelines</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="https://github.com/mobalti/web-expressive/blob/main/LICENSE" class="item-action">
+                      <div class="item-layout">
+                        <div class="text-content">
+                          <div class="menu-item-text">Open source licenses</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="section">
+          <header class="header">
+            <h2 class="headline">Icon button</h2>
+          </header>
+          <div class="content">
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Default</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Narrow</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button narrow extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button narrow small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button narrow medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button narrow large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button narrow extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button narrow extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button narrow small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button narrow medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button narrow large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button narrow extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Wide</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button wide extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button wide small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button wide medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button wide large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button wide extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button wide extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button wide small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button wide medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button wide large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button wide extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <header class="header">
+            <h2 class="headline">Icon button - square</h2>
+          </header>
+
+          <div class="content">
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Default</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button square extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button square extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Narrow</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button square narrow extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square narrow small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square narrow medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square narrow large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square narrow extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button square narrow extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square narrow small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square narrow medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square narrow large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square narrow extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Wide</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button square wide extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square wide small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square wide medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square wide large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square wide extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button square wide extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square wide small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square wide medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square wide large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button square wide extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Icon button tonal -->
+        <section class="section">
+          <header class="header">
+            <h2 class="headline">Icon button - tonal</h2>
+          </header>
+          <div class="content">
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Default</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button tonal extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button tonal extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Narrow</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button tonal narrow extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal narrow small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal narrow medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal narrow large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal narrow extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button tonal narrow extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal narrow small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal narrow medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal narrow large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal narrow extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Wide</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button tonal wide extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal wide small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal wide medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal wide large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal wide extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button tonal wide extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal wide small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal wide medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal wide large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal wide extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <header class="header">
+            <h2 class="headline">Icon button - square - tonal</h2>
+          </header>
+
+          <div class="content">
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Default</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button tonal square extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button tonal square extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Narrow</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button tonal square narrow extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square narrow small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square narrow medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square narrow large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square narrow extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button tonal square narrow extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square narrow small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square narrow medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square narrow large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square narrow extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Wide</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button tonal square wide extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square wide small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square wide medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square wide large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square wide extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button tonal square wide extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square wide small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square wide medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square wide large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button tonal square wide extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Icon button outline -->
+
+        <section class="section">
+          <header class="header">
+            <h2 class="headline">Icon button - outline</h2>
+          </header>
+          <div class="content">
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Default</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button outline extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button outline extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Narrow</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button outline narrow extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline narrow small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline narrow medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline narrow large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline narrow extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button outline narrow extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline narrow small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline narrow medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline narrow large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline narrow extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Wide</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button outline wide extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline wide small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline wide medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline wide large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline wide extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button outline wide extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline wide small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline wide medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline wide large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline wide extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <header class="header">
+            <h2 class="headline">Icon button - square - outline</h2>
+          </header>
+
+          <div class="content">
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Default</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button outline square extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button outline square extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Narrow</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button outline square narrow extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square narrow small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square narrow medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square narrow large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square narrow extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button outline square narrow extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square narrow small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square narrow medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square narrow large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square narrow extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Wide</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button outline square wide extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square wide small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square wide medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square wide large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square wide extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button outline square wide extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square wide small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square wide medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square wide large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button outline square wide extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Icon button standard -->
+        <section class="section">
+          <header class="header">
+            <h2 class="headline">Icon button - standard</h2>
+          </header>
+          <div class="content">
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Default</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button standard extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button standard extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Narrow</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button standard narrow extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard narrow small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard narrow medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard narrow large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard narrow extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button standard narrow extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard narrow small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard narrow medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard narrow large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard narrow extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Wide</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button standard wide extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard wide small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard wide medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard wide large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard wide extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button standard wide extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard wide small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard wide medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard wide large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard wide extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <header class="header">
+            <h2 class="headline">Icon button - square - standard</h2>
+          </header>
+
+          <div class="content">
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Default</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button standard square extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button standard square extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Narrow</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button standard square narrow extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square narrow small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square narrow medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square narrow large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square narrow extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button standard square narrow extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square narrow small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square narrow medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square narrow large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square narrow extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <header class="header">
+                <h2 class="headline">Wide</h2>
+              </header>
+              <div class="content">
+                <div class="group">
+                  <button class="icon-button standard square wide extra-small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square wide small" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square wide medium" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square wide large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square wide extra-large" aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+                <div class="group">
+                  <button class="icon-button standard square wide extra-small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square wide small" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square wide medium" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square wide large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                  <button class="icon-button standard square wide extra-large" disabled aria-label="Label">
+                    <span class="icon" aria-hidden="true">stars</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

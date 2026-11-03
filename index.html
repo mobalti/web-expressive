@@ -1,53 +1,663 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Expressive — Expressive UI Toolkit Built on Web Standards</title>
     <meta
       name="description"
-      content="Live Web Expressive layout examples."
+      content="A standards-first frontend UI toolkit bringing Material 3 Expressive design tokens, components, and responsive layout patterns to the modern web."
     />
-    <title>Web Expressive Layout Examples</title>
+    <meta name="theme-color" content="#5091ff" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mobalti.github.io/web-expressive/" />
+    <meta property="og:title" content="Web Expressive — Expressive UI Toolkit Built on Web Standards" />
+    <meta
+      property="og:description"
+      content="A standards-first frontend UI toolkit bringing Material 3 Expressive design tokens, components, and responsive layout patterns to the modern web."
+    />
+    <meta property="og:image" content="https://mobalti.github.io/web-expressive/assets/images/hero-img.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://mobalti.github.io/web-expressive/" />
+    <meta name="twitter:title" content="Web Expressive — Expressive UI Toolkit Built on Web Standards" />
+    <meta
+      name="twitter:description"
+      content="A standards-first frontend UI toolkit bringing Material 3 Expressive design tokens, components, and responsive layout patterns to the modern web."
+    />
+    <meta name="twitter:image" content="https://mobalti.github.io/web-expressive/assets/images/hero-img.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- 1. Typography -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap" />
+
+    <!-- 2. Core (reset + essential tokens) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/core.css" />
+
+    <!-- 3. Scheme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/classic-tonal.css" />
+
+    <!-- 4. Components -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/button.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/icon-button.css" />
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+
+      @layer layout {
+        html {
+          --placeholder-image: url("data:image/svg+xml,%3Csvg width='96' height='96' viewBox='0 0 96 96' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.5927 22.1228C53.754 20.7919 52.9004 19.4426 51.7664 18.3859C50.6325 17.3265 49.1635 16.578 47.6574 16.6755C46.3348 16.7625 45.1091 17.4951 44.1414 18.4517C43.1737 19.4084 42.4218 20.5864 41.6824 21.7538C39.6824 24.9057 37.68 28.0575 35.6801 31.212C34.7297 32.7089 33.7546 34.2716 33.4916 36.0557C33.174 38.2114 34.03 40.4067 35.5486 41.8403C37.1366 43.3398 39.7097 43.2186 41.6427 42.8075C43.7617 42.3568 45.8336 41.5082 47.9948 41.5109C49.8459 41.5109 51.6349 42.1381 53.4364 42.594C55.2353 43.0473 57.1683 43.3266 58.9052 42.652C61.0614 41.8166 62.6098 39.4421 62.5676 37.0045C62.5279 34.7802 60.1558 30.9432 60.1558 30.9432C60.1558 30.9432 56.4467 25.0631 54.5927 22.1228Z' fill='%238D8D8D'/%3E%3Cpath d='M52.0054 70.6317C52.2398 72.8701 52.357 73.9893 52.7875 74.8724C53.4103 76.1504 54.4973 77.1371 55.8224 77.6278C56.7382 77.9668 57.8538 77.9668 60.0849 77.9668H71.3508C74.049 77.9668 75.3981 77.9668 76.428 77.5247C77.9192 76.8847 79.0539 75.6127 79.5281 74.0494C79.8556 72.9697 79.7139 71.6162 79.4303 68.9092L78.2857 57.9807C78.0513 55.7423 77.9341 54.6231 77.5036 53.7399C76.8807 52.462 75.7938 51.4752 74.4687 50.9846C73.5529 50.6456 72.4373 50.6456 70.2062 50.6456H58.9403C56.2421 50.6456 54.893 50.6456 53.8631 51.0876C52.3719 51.7276 51.2372 52.9997 50.763 54.563C50.4355 55.6427 50.5772 56.9962 50.8608 59.7032L52.0054 70.6317Z' fill='%238D8D8D'/%3E%3Cpath d='M29.496 50.0216C30.1185 49.0319 31.5788 49.0319 32.2013 50.0216L33.6935 52.394C34.1028 53.0447 34.9284 53.3092 35.6473 53.02L38.2686 51.9656C39.3622 51.5257 40.5436 52.3722 40.4573 53.5337L40.2504 56.3179C40.1936 57.0816 40.7039 57.7742 41.4579 57.9569L44.2071 58.6233C45.354 58.9012 45.8052 60.2708 45.043 61.1605L43.2161 63.293C42.715 63.8779 42.715 64.734 43.2161 65.3189L45.043 67.4515C45.8052 68.3412 45.354 69.7107 44.2071 69.9887L41.4579 70.655C40.7039 70.8378 40.1936 71.5304 40.2504 72.294L40.4573 75.0782C40.5436 76.2398 39.3622 77.0862 38.2686 76.6463L35.6473 75.5919C34.9284 75.3027 34.1028 75.5673 33.6935 76.218L32.2013 78.5904C31.5788 79.5801 30.1185 79.5801 29.496 78.5904L28.0038 76.218C27.5946 75.5673 26.7689 75.3027 26.05 75.5919L23.4287 76.6463C22.3352 77.0862 21.1538 76.2398 21.2401 75.0782L21.447 72.294C21.5037 71.5304 20.9934 70.8378 20.2394 70.655L17.4903 69.9887C16.3434 69.7107 15.8921 68.3412 16.6543 67.4515L18.4812 65.3189C18.9823 64.734 18.9823 63.8779 18.4812 63.293L16.6543 61.1605C15.8921 60.2708 16.3434 58.9012 17.4903 58.6233L20.2394 57.9569C20.9934 57.7742 21.5037 57.0816 21.447 56.3179L21.2401 53.5337C21.1538 52.3722 22.3352 51.5257 23.4287 51.9656L26.05 53.02C26.7689 53.3092 27.5946 53.0447 28.0038 52.394L29.496 50.0216Z' fill='%238D8D8D'/%3E%3C/svg%3E%0A");
+          --comp-card-corner: var(--sys-shape-corner-extra-large);
+        }
+
+        @scope (.main) to (.section) {
+          :scope {
+            display: grid;
+          }
+
+          .header {
+            display: grid;
+            place-items: start center;
+            padding: var(--sys-measurement-space-100);
+            min-block-size: 544px;
+
+            /* window-extra-large */
+            @media (width >=1600px) {
+              min-block-size: 544px;
+            }
+          }
+
+          .container {
+            display: grid;
+            gap: var(--sys-measurement-space-100);
+            inline-size: 100%;
+            max-inline-size: 1760px;
+
+            block-size: 100%;
+
+            /* window-large-wider */
+            @media (width >=1200px) {
+            }
+
+            /* window-large-narrower */
+            @media (width < 1600px) {
+              grid-template-rows: 1fr min-content;
+            }
+
+            /* window-extra-large */
+            @media (width >=1600px) {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+
+          .content {
+            display: grid;
+            place-content: center start;
+            gap: var(--sys-measurement-space-200);
+            container-type: inline-size;
+            border-radius: var(--sys-shape-corner-extra-large);
+            background: var(--sys-color-surface-container);
+            padding: var(--sys-measurement-space-400);
+            overflow: clip;
+
+            --size-items: medium;
+
+            /* window-large-wider */
+            @media (width >=1200px) {
+              --size-items: large;
+              padding: var(--sys-measurement-space-700);
+            }
+          }
+
+          .headline {
+            --_extended-typescale-display-large: 500 6rem/7rem var(--ref-typeface-brand), var(--ref-typeface-generic);
+
+            font: var(--sys-typescale-emphasized-display-medium);
+
+            /* window-large-wider */
+            @media (width >=1200px) {
+              font: var(--_extended-typescale-display-large);
+            }
+          }
+
+          .supporting-text {
+            padding-block-end: var(--sys-measurement-space-300);
+            max-inline-size: 60rem;
+            font: var(--sys-typescale-body-large);
+            text-wrap: pretty;
+
+            /* window-large-wider */
+            @media (width >=1200px) {
+              font: var(--sys-typescale-title-large);
+            }
+          }
+
+          .visual {
+            display: block;
+            border-radius: var(--sys-shape-corner-extra-large);
+            background: var(--sys-color-surface-container-high);
+            block-size: 100%;
+            overflow: clip;
+
+            /* window-large-wider */
+            @media (width < 1600px) {
+              aspect-ratio: 16/6.5;
+            }
+
+            /* window-expanded-narrower */
+            @media (width < 1200px) {
+              aspect-ratio: 16/9;
+            }
+
+            position: relative;
+            isolation: isolate;
+
+            &:not(:has(.img)) {
+              &::after {
+                display: block;
+                position: absolute;
+                mask: var(--placeholder-image) center/contain no-repeat;
+                background: oklch(from var(--sys-color-on-surface) l c h / 16%);
+                inline-size: 100%;
+                block-size: 100%;
+                content: "";
+              }
+            }
+          }
+
+          .img {
+            display: block;
+            inline-size: 100%;
+            block-size: 100%;
+            object-fit: cover;
+          }
+
+          .wrapper {
+            padding-block: var(--sys-measurement-space-300) var(--sys-measurement-space-800);
+
+            /* window-expanded-wider */
+            @media (width >=840px) {
+              padding-block: var(--sys-measurement-space-800);
+            }
+          }
+        }
+
+        @scope (.section) {
+          :scope {
+            display: grid;
+            place-items: normal center;
+            padding-inline: var(--sys-measurement-space-100);
+            padding-block: var(--sys-measurement-space-300);
+
+            @media (width >=840px) {
+              padding-block: var(--sys-measurement-space-500);
+            }
+          }
+
+          @scope (:scope) to (.header, .list) {
+            .container {
+              inline-size: min(100%, 1000px);
+
+              /* window-extra-large */
+              @media (width >=1600px) {
+                inline-size: min(100%, 1200px);
+              }
+            }
+          }
+
+          @scope (.header) {
+            :scope {
+              display: grid;
+              gap: var(--sys-measurement-space-125);
+              padding: var(--sys-measurement-space-300);
+            }
+
+            .headline-action {
+              display: flex;
+              align-items: center;
+              gap: var(--sys-measurement-space-50);
+              /* window-expanded-wider */
+              @media (width >= 840px) {
+                gap: var(--sys-measurement-space-100);
+                --size-items: medium;
+              }
+            }
+
+            .headline {
+              font: var(--sys-typescale-emphasized-display-small);
+
+              /* window-expanded-wider */
+              @media (width >=840px) {
+                font: var(--sys-typescale-emphasized-display-medium);
+              }
+
+              /* window-extra-large */
+              @media (width >=1600px) {
+                font: var(--sys-typescale-emphasized-display-large);
+              }
+            }
+
+            .supporting-text {
+              max-inline-size: 45rem;
+              color: var(--sys-color-on-surface-variant);
+              font: var(--sys-typescale-body-large);
+              text-wrap: pretty;
+
+              /* window-medium-wider */
+              @media (width >=600px) {
+                font: var(--sys-typescale-title-large);
+                line-height: 1.875rem;
+              }
+            }
+
+            .link {
+              color: var(--sys-color-primary);
+            }
+          }
+
+          @scope (.list) {
+            :scope {
+              display: grid;
+              gap: var(--sys-measurement-space-100);
+              padding: 0;
+              list-style: none;
+
+              /* window-medium-wider */
+              @media (width >=600px) {
+                grid-template-columns: 1fr 1fr;
+              }
+
+              /* window-extra-large */
+              @media (width >=1200px) {
+                grid-template-columns: 1fr 1fr 1fr;
+              }
+            }
+
+            .list-item {
+              container-type: inline-size;
+            }
+
+            .featured {
+              /* window-medium-wider */
+              @media (width >=600px) {
+                grid-column: 1/-1;
+                --auto-flow-items: column;
+              }
+            }
+
+            .post-link-wrapper {
+              display: grid;
+              grid-template-rows: min-content 1fr;
+              align-items: start;
+
+              transition: border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
+              border-radius: var(--sys-shape-corner-extra-large);
+              background: var(--sys-color-surface-container);
+              block-size: 100%;
+              overflow: clip;
+              color: var(--sys-color-on-surface);
+              text-decoration: none;
+
+              &:hover {
+                background: var(--sys-color-secondary-container);
+                color: var(--sys-color-on-secondary-container);
+              }
+
+              &:focus-visible {
+                background: var(--sys-color-secondary-container);
+                color: var(--sys-color-on-secondary-container);
+              }
+
+              &:is(:active) {
+                border-radius: var(--sys-shape-corner-extra-extra-large);
+                background: linear-gradient(oklch(from var(--sys-color-on-secondary-container) l c h / 8%)), var(--sys-color-secondary-container);
+              }
+
+              @container style(--auto-flow-items: column) {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+              }
+            }
+
+            .visual {
+              display: block;
+
+              position: relative;
+              border-radius: var(--sys-shape-corner-extra-large);
+              background: var(--sys-color-surface-container-high);
+              isolation: isolate;
+              block-size: 200px;
+              overflow: clip;
+
+              &:not(:has(.img)) {
+                &::after {
+                  display: block;
+                  position: absolute;
+                  mask: var(--placeholder-image) center/contain no-repeat;
+                  background: oklch(from var(--sys-color-on-surface) l c h / 16%);
+                  inline-size: 100%;
+                  block-size: 100%;
+                  content: "";
+                }
+              }
+
+              /* window-medium-wider */
+              @media (width >=600px) {
+                block-size: 200px;
+
+                @container style(--auto-flow-items: column) {
+                  block-size: 400px;
+                }
+              }
+            }
+
+            .img {
+              display: block;
+              inline-size: 100%;
+              block-size: 100%;
+              object-fit: cover;
+            }
+
+            .text-content {
+              display: grid;
+              gap: var(--sys-measurement-space-175);
+              container-type: inline-size;
+              padding: var(--sys-measurement-space-300);
+            }
+
+            .date {
+              color: var(--sys-color-on-surface-variant);
+
+              /* window-compact */
+              @media (width < 600px) {
+                font: var(--sys-typescale-body-medium);
+              }
+            }
+
+            .title-supporting-text {
+              display: grid;
+              gap: var(--sys-measurement-space-100);
+            }
+
+            .title {
+              font: var(--sys-typescale-emphasized-headline-small);
+              text-wrap: pretty;
+
+              /* window-medium-wider */
+            }
+
+            .supporting-text {
+              /* window-compact */
+              @media (width < 600px) {
+                font: var(--sys-typescale-body-medium);
+              }
+            }
+          }
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <header>
-      <h1>Web Expressive</h1>
-      <p>Adaptable layout examples built with Web Expressive.</p>
-    </header>
+    <main class="main">
+      <header class="header">
+        <div class="container">
+          <div class="content">
+            <h1 class="headline">Web Expressive</h1>
+            <p class="supporting-text">A toolkit built on web standards that simplifies and accelerates UI development for the web.</p>
+            <a href="docs/index.html" class="button large"> Get started </a>
+          </div>
+          <div class="visual" aria-hidden="true">
+            <img class="img" src="assets/images/hero-img.jpg" alt="" />
+          </div>
+        </div>
+      </header>
 
-    <main>
-      <h2>Layout examples</h2>
-      <ul>
-        <li>
-          <a href="examples/layouts/home-web.html">Home feed</a>
-          <p>A content-rich landing experience with featured and supporting sections.</p>
-        </li>
-        <li>
-          <a href="examples/layouts/gallery-web.html">Gallery</a>
-          <p>Image-led browsing with responsive collections and alternate content views.</p>
-        </li>
-        <li>
-          <a href="examples/layouts/library-web.html">Library</a>
-          <p>Searchable or filterable collections of saved, owned, or cataloged items.</p>
-        </li>
-        <li>
-          <a href="examples/layouts/detailed-view-web.html">Detailed view</a>
-          <p>A focused item, article, or product view with actions and related content.</p>
-        </li>
-        <li>
-          <a href="examples/layouts/upcoming-web.html">Upcoming content</a>
-          <p>Scheduled releases, events, episodes, or other time-oriented content.</p>
-        </li>
-        <li>
-          <a href="examples/layouts/messaging-web.html">Messaging</a>
-          <p>Conversation navigation, message history, composing, and suggested replies.</p>
-        </li>
-        <li>
-          <a href="examples/layouts/review-web.html">Reviews and ratings</a>
-          <p>Rating summaries, featured feedback, and review lists.</p>
-        </li>
-      </ul>
+      <div class="wrapper">
+        <section class="section" aria-labelledby="layouts-title">
+          <div class="container">
+            <header class="header">
+              <div class="headline-action">
+                <h2 class="headline" id="layouts-title">Example Layouts</h2>
+                <a href="./docs/example-layouts.html" class="icon-button tonal" aria-label="See example layouts">
+                  <span class="icon" aria-hidden="true">arrow_forward</span>
+                </a>
+              </div>
+              <p class="supporting-text">
+                Production-ready starter layouts designed to jumpstart your application. Each layout is responsive, accessible, and easily adaptable
+                to your stack or framework.
+              </p>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <a href="./examples/example-layouts/home.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Home feed</h3>
+                      <p class="supporting-text">A content-rich landing experience with featured and supporting sections.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/example-layouts/gallery.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Gallery</h3>
+                      <p class="supporting-text">Image-led browsing with responsive collections and alternate content views.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/example-layouts/library.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Library</h3>
+                      <p class="supporting-text">Searchable or filterable collections of saved, owned, or cataloged items.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/example-layouts/detailed-view.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Detailed view</h3>
+                      <p class="supporting-text">A focused item, article, or product view with actions and related content.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/example-layouts/upcoming.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Upcoming content</h3>
+                      <p class="supporting-text">Scheduled releases, events, episodes, or other time-oriented content.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/example-layouts/messaging.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Messaging</h3>
+                      <p class="supporting-text">Conversation navigation, message history, composing, and suggested replies.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/example-layouts/review.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Reviews and ratings</h3>
+                      <p class="supporting-text">Rating summaries, featured feedback, and review lists.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section" aria-labelledby="components-title">
+          <div class="container">
+            <header class="header">
+              <h2 class="headline" id="components-title">Components</h2>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <a href="./examples/components/button.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Button</h3>
+                      <p class="supporting-text">Standard actions for buttons and navigation links.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/components/toggle-button.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Toggle button</h3>
+                      <p class="supporting-text">Accessible checkbox and radio controls with button styling.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/components/icon-button.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Icon button</h3>
+                      <p class="supporting-text">Compact actions with accessible icon labels.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/components/toggle-icon-button.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Toggle icon button</h3>
+                      <p class="supporting-text">Icon-first controls for selected and unselected states.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/components/standard-button-group.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Standard button group</h3>
+                      <p class="supporting-text">A flexible group for related button controls.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/components/connected-button-group.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Connected button group</h3>
+                      <p class="supporting-text">Connected toggle controls for related selections.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="list-item">
+                <a href="./examples/components/extended-fab.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Extended FAB</h3>
+                      <p class="supporting-text">A floating action button with an icon and text label.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/components/fab.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">FAB</h3>
+                      <p class="supporting-text">A compact floating action button for high-emphasis actions.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="./examples/components/switch.html" class="post-link-wrapper">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Switch</h3>
+                      <p class="supporting-text">A native control for immediate on and off settings.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="tools-title">
+          <div class="container">
+            <header class="header">
+              <h2 class="headline" id="tools-title">Tools</h2>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <a class="post-link-wrapper" href="./tools/schemes/">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Schemes</h3>
+                      <p class="supporting-text">Explore the standard Web Expressive scheme collection.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="post-link-wrapper" href="./tools/schemes/alpha/">
+                  <div class="text-content">
+                    <div class="title-supporting-text">
+                      <h3 class="title">Alpha schemes</h3>
+                      <p class="supporting-text">Explore the more vivid alpha scheme collection.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </main>
+
+    <script type="speculationrules">
+      {
+        "prefetch": [
+          {
+            "source": "document",
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
   </body>
 </html>

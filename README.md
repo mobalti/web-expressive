@@ -1,12 +1,18 @@
 # Web Expressive
 
-Web Expressive is a toolkit built on web standards that simplifies and accelerates UI development for the web. It brings the design intent of Material 3 Expressive to HTML and CSS through design tokens, components, and adaptable layout patterns.
+A toolkit built on web standards that simplifies and accelerates UI development for the web. It brings the design intent of Material 3 Expressive to HTML and CSS through design tokens, components, and adaptable layout patterns.
 
-## Quick start
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mobalti/web-expressive/blob/main/LICENSE) [![npm package](https://img.shields.io/npm/v/web-expressive.svg?color=green)](https://www.npmjs.com/package/web-expressive) [![Web Standards](https://img.shields.io/badge/built%20with-web%20standards-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-To start without a build step, load `web-expressive` from a CDN.
 
-Load the core foundation first, then a scheme, then any components you need.
+## Resources
+
+- [Homepage](https://mobalti.github.io/web-expressive/)
+- [Documentation](https://mobalti.github.io/web-expressive/docs/index.html)
+
+### [Quick start](https://mobalti.github.io/web-expressive/docs/index.html#quick-start)
+
+This code snippet is a buildless example that loads `web-expressive` from a CDN. Check out the [quick start](https://mobalti.github.io/web-expressive/docs/index.html#quick-start) guide for more information.
 
 ```html
 <!doctype html>
@@ -15,68 +21,44 @@ Load the core foundation first, then a scheme, then any components you need.
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Expressive Starter</title>
-
     <!-- 1. Typography -->
-    <!-- Web Expressive uses Google Sans Flex by default. -->
-    <!-- To use a custom font, load it here and update --ref-typeface-base with your own value. -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..600&display=swap" />
 
     <!-- 2. Core (reset + essential tokens) -->
-    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/core.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/core.css" />
 
     <!-- 3. A scheme -->
-    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/schemes/alpha/fuchsia-tonal.css" />
 
     <!-- 4. Components (as needed) -->
-    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/button.css" />
-    <link rel="stylesheet" href="https://unpkg.com/web-expressive@0.5.1/dist/components/switch.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@0.5.1/dist/components/button.css" />
+    <style>
+      html {
+        /* Update the font family for the typography system after loading the font from the CDN */
+        --ref-typeface-base: "Roboto Flex";
+      }
+      .headline {
+        font: var(--sys-typescale-headline-large);
+      }
+    </style>
   </head>
-
   <body>
-    <button class="button tonal extra-large">Get Started</button>
-    <input class="switch" type="checkbox" role="switch" aria-label="Enable feature" />
+    <h1 class="headline">Hello, World!</h1>
+    <button class="button tonal large">Get Started</button>
   </body>
 </html>
 ```
 
----
-
 ### Via npm
 
-Install with:
-
-```bash
+```sh
 npm install web-expressive
 ```
 
-Import the styles you need into your global stylesheet:
+See the [npm usage instructions](https://mobalti.github.io/web-expressive/docs/index.html#via-npm) to import the styles into your project.
 
-```css
-@import "web-expressive/core.css";
-@import "web-expressive/schemes/alpha/classic-tonal.css";
-@import "web-expressive/components/button.css";
-```
+## Support
 
-Refer to [Imports](docs/reference/imports.md) for the full list of npm and CDN paths.
-
-## Overview
-
-Web Expressive is modular. Core foundations, schemes, and components ship as separate layers, so you can import the full toolkit or only the parts you need.
-
-If you are starting from scratch, the usual path is:
-
-1. Load `core.css`.
-   This file provides the required foundation: a minimal reset and global system tokens based on the Material 3 token specification, such as typography, shape corners, and elevation. It does not include scheme colors or abstract shape tokens. Refer to [Tokens](docs/reference/tokens.md) for the full reference.
-2. Load one or more schemes.
-   Schemes provide the Material 3 color roles such as primary, secondary, tertiary, surface, error, and `on-*` variants. Each scheme includes light and dark mode, and multiple schemes can coexist. Start with the more vivid [`schemes/alpha/` collection](https://unpkg.com/browse/web-expressive@0.5.1/dist/schemes/alpha/). See [Imports](docs/reference/imports.md#schemes) for the full scheme guidance.
-3. Add components as needed.
-   Component stylesheets are optional. Import only the components you need, or build your own with the system tokens. Use [Imports](docs/reference/imports.md#components) for CDN and npm paths and [Components API](docs/reference/components.md) for component markup and modifiers.
-
-
-## Resources
-
-- [Layout starters](examples/layouts/Readme.md)
-- [Tokens](docs/reference/tokens.md)
-- [Imports](docs/reference/imports.md)
-- [Available schemes](https://unpkg.com/browse/web-expressive@0.5.1/dist/schemes/alpha/)
-- [Components API](docs/reference/components.md)
+Having trouble? Get help via [GitHub Discussions](https://github.com/mobalti/web-expressive/discussions).
