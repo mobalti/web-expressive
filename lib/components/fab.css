@@ -11,7 +11,7 @@
     display: inline-grid;
     position: relative;
     place-items: center;
-    transition: outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+    transition: outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring);
     cursor: pointer;
     outline: var(--_outline-width) solid var(--sys-color-secondary);
     outline-offset: 2px;

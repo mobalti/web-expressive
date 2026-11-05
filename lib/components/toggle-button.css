@@ -4,7 +4,7 @@
     --_button-transitions:
       border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
       background var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects),
-      outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+      outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring);
 
     /* Calculate the full radius from the rendered size so border-radius can transition smoothly. */
     --_radius-full: calc((var(--_block-size) - var(--_inner-padding) * 2) / 2);

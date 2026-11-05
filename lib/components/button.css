@@ -3,7 +3,7 @@
     --_button-corner: calc((var(--_block-size) - var(--_inner-padding) * 2) / 2);
     --_button-transitions:
       border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
-      outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+      outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring);
 
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;

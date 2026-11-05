@@ -109,8 +109,10 @@ html {
   --sys-motion-spring-slow-effects-duration: 300ms;
 }
 
+/* Focus ring motion: expands beyond its resting width, then settles back. */
 html {
-  --sys-motion-spring-pop-focus: linear(0 0%, 2.5 25%, 2.5 50%, 1 100%);
+  --focus-ring-motion-spring: linear(0 0%, 2.5 25%, 2.5 50%, 1 100%);
+  --focus-ring-motion-duration: 350ms;
 }
 
 html {
