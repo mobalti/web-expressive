@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..700&display=swap" />
     <!-- Keep icon_names alphabetical so Material Symbols requests stay reliable. -->
     <link
       rel="stylesheet"
@@ -305,7 +305,7 @@
                 content: "";
 
                 @media (prefers-reduced-motion: no-preference) {
-                  transition: outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+                  transition: outline-width var(--focus-ring-motion-duration, var(--sys-motion-spring-fast-spatial-duration)) var(--focus-ring-motion-spring, var(--sys-motion-spring-pop-focus));
                 }
               }
             }
@@ -336,7 +336,7 @@
 
                 /* Respect the user's reduced-motion preference. */
                 @media (prefers-reduced-motion: no-preference) {
-                  transition: outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus);
+                  transition: outline-width var(--focus-ring-motion-duration, var(--sys-motion-spring-fast-spatial-duration)) var(--focus-ring-motion-spring, var(--sys-motion-spring-pop-focus));
                 }
               }
 
@@ -510,7 +510,7 @@
                 position-anchor: --carousel;
                 place-items: center;
                 transition:
-                  outline-width var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-pop-focus),
+                  outline-width var(--focus-ring-motion-duration, var(--sys-motion-spring-fast-spatial-duration)) var(--focus-ring-motion-spring, var(--sys-motion-spring-pop-focus)),
                   border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
                 cursor: pointer;
                 inset-block-start: calc(anchor(start) - 3.75rem);

@@ -8,11 +8,11 @@ A toolkit built on web standards that simplifies and accelerates UI development 
 ## Resources
 
 - [Homepage](https://mobalti.github.io/web-expressive/)
-- [Documentation](https://mobalti.github.io/web-expressive/docs/index.html)
+- [Documentation](https://mobalti.github.io/web-expressive/docs/)
 
-### [Quick start](https://mobalti.github.io/web-expressive/docs/index.html#quick-start)
+### Quick start
 
-This code snippet is a buildless example that loads `web-expressive` from a CDN. Check out the [quick start](https://mobalti.github.io/web-expressive/docs/index.html#quick-start) guide for more information.
+This code snippet is a buildless example that loads `web-expressive` from a CDN. Check out the [quick start](https://mobalti.github.io/web-expressive/docs/#quick-start) guide for more information.
 
 ```html
 <!doctype html>
@@ -24,9 +24,9 @@ This code snippet is a buildless example that loads `web-expressive` from a CDN.
     <!-- 1. Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..700&display=swap" />
 
-    <!-- 2. Core (reset + essential tokens) -->
+    <!-- 2. Core (reset + system tokens) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/core.css" />
 
     <!-- 3. A scheme -->
@@ -57,7 +57,7 @@ This code snippet is a buildless example that loads `web-expressive` from a CDN.
 npm install web-expressive
 ```
 
-See the [npm usage instructions](https://mobalti.github.io/web-expressive/docs/index.html#via-npm) to import the styles into your project.
+See the [npm usage instructions](https://mobalti.github.io/web-expressive/docs/#via-npm) to import the styles into your project.
 
 ## Support
 

@@ -6,7 +6,7 @@
     <title>Web Expressive Documentation</title>
     <meta
       name="description"
-      content="Comprehensive developer documentation and token specification for Web Expressive. Learn how to configure color roles, 30 typography scales, elevation, motion, shapes, and native components."
+      content="Comprehensive developer documentation and token specification for Web Expressive. Learn how to configure color roles, 30 type styles, elevation, motion, shapes, and native components."
     />
     <meta name="theme-color" content="#5091ff" />
 
@@ -16,7 +16,7 @@
     <meta property="og:title" content="Web Expressive Documentation — Design Tokens, Theming & Primitives" />
     <meta
       property="og:description"
-      content="Comprehensive developer documentation and token specification for Web Expressive. Learn how to configure color roles, 30 typography scales, elevation, motion, shapes, and native components."
+      content="Comprehensive developer documentation and token specification for Web Expressive. Learn how to configure color roles, 30 type styles, elevation, motion, shapes, and native components."
     />
     <meta property="og:image" content="https://mobalti.github.io/web-expressive/assets/images/hero-img.jpg" />
 
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Web Expressive Documentation — Design Tokens, Theming & Primitives" />
     <meta
       name="twitter:description"
-      content="Comprehensive developer documentation and token specification for Web Expressive. Learn how to configure color roles, 30 typography scales, elevation, motion, shapes, and native components."
+      content="Comprehensive developer documentation and token specification for Web Expressive. Learn how to configure color roles, 30 type styles, elevation, motion, shapes, and native components."
     />
     <meta name="twitter:image" content="https://mobalti.github.io/web-expressive/assets/images/hero-img.jpg" />
 
@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..600&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap"
     />
     <link rel="stylesheet" href="assets/css/docs.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/core.css" />
@@ -133,7 +133,7 @@
             Relative Colors) and native HTML, saving maximum performance for your app&#39;s logic.
           </li>
           <li>
-            <strong>Production-Ready Theming:</strong> 50&#43; built-in light/dark schemes, full M3 Expressive system tokens, 35 abstract shapes,
+            <strong>Production-Ready Theming:</strong> 50&#43; built-in light/dark schemes, a full set of documented system tokens, 35 abstract shapes,
             configurable components with dedicated APIs, and instant theme-swapping with friction-free overrides.
           </li>
           <li>
@@ -160,7 +160,7 @@
     &lt;!-- 1. Typography --&gt;
     &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
     &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
-    &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..600&amp;display=swap" /&gt;
+    &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..700&amp;display=swap" /&gt;
 
     &lt;!-- 2. Core (reset + system tokens) --&gt;
     &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/core.css" /&gt;
@@ -343,12 +343,13 @@
 
         <p><strong>Understanding Tokens in Web Expressive</strong></p>
         <p>
-          Web Expressive exposes all Material 3
+          Web Expressive exposes the full set of
           <a href="https://m3.material.io/foundations/design-tokens/overview#7f084930-cf5f-4b7e-b83c-614888f18a77" target="_blank" rel="noopener"
             >system tokens</a
           >
-          as CSS custom properties prefixed with <code style="white-space: nowrap">--sys-*</code>. These are the public tokens you use to build and
-          style your interfaces. For the complete list, see the <a href="#tokens-reference">Tokens Reference</a>.
+          documented in this reference as CSS custom properties prefixed with <code style="white-space: nowrap">--sys-*</code>. These are the
+          public tokens you use to build and style your interfaces. For the complete list, see the <a href="#tokens-reference">Tokens Reference</a>.
+          Web Expressive also provides <a href="#focus-ring-motion">focus-ring motion tokens</a> prefixed with <code>--focus-ring-*</code>.
         </p>
         <p>
           When inspecting components in browser DevTools, you will also see custom properties prefixed with
@@ -704,8 +705,8 @@
         <p>
           Load your chosen web font using any provider (such as Google Fonts) or via <code>@font-face</code> definitions. For the typescale tokens to
           render accurately across all standard and emphasized styles, your loaded font family should include weights <strong>400</strong> (Regular),
-          <strong>500</strong> (Medium), and <strong>600</strong>
-          (Semi-Bold).
+          <strong>500</strong> (Medium), and <strong>700</strong>
+          (Bold).
         </p>
 
         <blockquote>
@@ -859,19 +860,19 @@
               <tr>
                 <td><strong>Elevation</strong></td>
                 <td><code>core.css</code></td>
-                <td>6 depth levels defining layered box shadows</td>
+                <td>6 elevation levels represented by CSS box-shadow values</td>
                 <td><code>--sys-elevation-*</code></td>
               </tr>
               <tr>
                 <td><strong>Motion</strong></td>
                 <td><code>core.css</code></td>
-                <td>Expressive spring curves and duration tokens</td>
-                <td><code>--sys-motion-*</code></td>
+                <td>Expressive motion curves, durations, and focus-ring motion tokens</td>
+                <td><code>--sys-motion-*</code> / <code>--focus-ring-motion-*</code></td>
               </tr>
               <tr>
                 <td><strong>Measurement Space</strong></td>
                 <td><code>core.css</code></td>
-                <td>18-step spacing scale based on 4px/8px increments</td>
+                <td>18-step spacing scale based on an 8px unit</td>
                 <td><code>--sys-measurement-space-*</code></td>
               </tr>
               <tr>
@@ -1246,7 +1247,7 @@
         <p><strong>Fixed Accent Colors</strong></p>
         <p>
           Primary fixed, secondary fixed, and tertiary fixed are fill colors used against surface. These colors maintain the same tone in light and
-          dark modes, as opposed to regular container colors, which change in tone between these themes. The fixed color role may be used instead of
+          dark modes, as opposed to regular container colors, which change in tone between these modes. The fixed color role may be used instead of
           the equivalent container role in situations where such fixed behavior is desired.
         </p>
         <p>
@@ -1269,11 +1270,11 @@
             <tbody>
               <tr>
                 <td><code>--sys-color-primary-fixed</code></td>
-                <td>Fill color used against surface; maintains the same tone in light and dark themes</td>
+                <td>Fill color used against surface; maintains the same tone in light and dark modes</td>
               </tr>
               <tr>
                 <td><code>--sys-color-primary-fixed-dim</code></td>
-                <td>Stronger, more emphasized tone relative to primary fixed; same tone in light and dark themes</td>
+                <td>Stronger, more emphasized tone relative to primary fixed; same tone in light and dark modes</td>
               </tr>
               <tr>
                 <td><code>--sys-color-on-primary-fixed</code></td>
@@ -1285,11 +1286,11 @@
               </tr>
               <tr>
                 <td><code>--sys-color-secondary-fixed</code></td>
-                <td>Fill color used against surface; maintains the same tone in light and dark themes</td>
+                <td>Fill color used against surface; maintains the same tone in light and dark modes</td>
               </tr>
               <tr>
                 <td><code>--sys-color-secondary-fixed-dim</code></td>
-                <td>Stronger, more emphasized tone relative to secondary fixed; same tone in light and dark themes</td>
+                <td>Stronger, more emphasized tone relative to secondary fixed; same tone in light and dark modes</td>
               </tr>
               <tr>
                 <td><code>--sys-color-on-secondary-fixed</code></td>
@@ -1301,11 +1302,11 @@
               </tr>
               <tr>
                 <td><code>--sys-color-tertiary-fixed</code></td>
-                <td>Fill color used against surface; maintains the same tone in light and dark themes</td>
+                <td>Fill color used against surface; maintains the same tone in light and dark modes</td>
               </tr>
               <tr>
                 <td><code>--sys-color-tertiary-fixed-dim</code></td>
-                <td>Stronger, more emphasized tone relative to tertiary fixed; same tone in light and dark themes</td>
+                <td>Stronger, more emphasized tone relative to tertiary fixed; same tone in light and dark modes</td>
               </tr>
               <tr>
                 <td><code>--sys-color-on-tertiary-fixed</code></td>
@@ -1322,8 +1323,8 @@
         <p><strong>Bright and Dim Surface Roles</strong></p>
         <p>
           There are two add-on surface roles: <code>surface dim</code> and <code>surface bright</code>. While the default surface color automatically
-          inverts between light and dark themes (it's a light color in light theme and it flips to a dark color in dark theme), the surface bright and
-          surface dim colors keep their relative brightness across both light and dark theme.
+          inverts between light and dark modes (it's a light color in light mode and it flips to a dark color in dark mode), the surface bright and
+          surface dim colors keep their relative brightness across both light and dark modes.
         </p>
 
         <div class="table-wrapper">
@@ -1337,11 +1338,11 @@
             <tbody>
               <tr>
                 <td><code>--sys-color-surface-dim</code></td>
-                <td>Dimmest surface color in light and dark themes</td>
+                <td>Dimmest surface color in light and dark modes</td>
               </tr>
               <tr>
                 <td><code>--sys-color-surface-bright</code></td>
-                <td>Brightest surface color in light and dark themes</td>
+                <td>Brightest surface color in light and dark modes</td>
               </tr>
             </tbody>
           </table>
@@ -1361,7 +1362,7 @@
             <tbody>
               <tr>
                 <td><code>--sys-color-surface-tint</code></td>
-                <td>Brand-colored overlay applied to surfaces to indicate elevation</td>
+                <td>Legacy surface tint color, retained for compatibility. Surface tint is deprecated in Material 3.</td>
               </tr>
               <tr>
                 <td><code>--sys-color-shadow</code></td>
@@ -1423,19 +1424,19 @@
         </ul>
 
         <p><strong>When to Use Baseline vs. Emphasized Styles</strong></p>
-        <p>Baseline and emphasized styles are meant to be used together to create expressive experiences without compromising readability:</p>
+        <p>Use baseline and emphasized type styles together to achieve expressive experiences:</p>
         <ul>
           <li>
             <strong>Baseline styles</strong> serve as the standard typographic default for all components, long-form content, and everyday layout
             elements.
           </li>
           <li>
-            <strong>Emphasized styles</strong> were introduced in the M3 Expressive update to add weight and presence to highlighted moments. They
-            feature higher weights (500 for Display/Headline/Title Large/Body, 600 for Title/Label) and optical refinements.
+            <strong>Emphasized styles</strong> were introduced in the M3 Expressive update. They have a higher weight than baseline styles
+            and can be used for selection, actions, headlines, and other editorial treatments.
           </li>
           <li>
             <strong>Components</strong>: Use emphasized styles to communicate importance or active status, such as primary action buttons, Extended
-            FABs, active navigation items, unread messages, or badges.
+            FABs, selected list items, selected menu items, unread messages, or badges.
           </li>
           <li>
             <strong>Weight &amp; Context</strong>: Apply emphasized styles to draw attention to specific aspects of components or text that is already
@@ -1447,7 +1448,8 @@
           <p>
             <strong>Implementation Note:</strong> Web Expressive packages each typescale into a single CSS <code>font</code> shorthand token (bundling
             <code>font-weight</code>, <code>font-size/line-height</code>, and <code>font-family</code>). Always consume typescale variables via the
-            shorthand <code>font</code> property.
+            shorthand <code>font</code> property. Tracking is not included in these shorthand tokens; use <code>letter-spacing</code> separately
+            when needed.
           </p>
         </blockquote>
 
@@ -1484,21 +1486,21 @@
                 <td rowspan="3"><strong>Display</strong></td>
                 <td>
                   <code>--sys-typescale-display-large</code>
-                  <small class="token-spec">400 &bull; 3.562rem / 4rem (57px / 64px)</small>
+                  <small class="token-spec">400 &bull; 3.5625rem / 4rem (57px / 64px)</small>
                 </td>
                 <td>
                   <code>--sys-typescale-emphasized-display-large</code>
-                  <small class="token-spec">500 &bull; 3.562rem / 4rem (57px / 64px)</small>
+                  <small class="token-spec">500 &bull; 3.5625rem / 4rem (57px / 64px)</small>
                 </td>
               </tr>
               <tr>
                 <td>
                   <code>--sys-typescale-display-medium</code>
-                  <small class="token-spec">400 &bull; 2.812rem / 3.25rem (45px / 52px)</small>
+                  <small class="token-spec">400 &bull; 2.8125rem / 3.25rem (45px / 52px)</small>
                 </td>
                 <td>
                   <code>--sys-typescale-emphasized-display-medium</code>
-                  <small class="token-spec">500 &bull; 2.812rem / 3.25rem (45px / 52px)</small>
+                  <small class="token-spec">500 &bull; 2.8125rem / 3.25rem (45px / 52px)</small>
                 </td>
               </tr>
               <tr>
@@ -1562,7 +1564,7 @@
                 </td>
                 <td>
                   <code>--sys-typescale-emphasized-title-medium</code>
-                  <small class="token-spec">600 &bull; 1rem / 1.5rem (16px / 24px)</small>
+                  <small class="token-spec">700 &bull; 1rem / 1.5rem (16px / 24px)</small>
                 </td>
               </tr>
               <tr>
@@ -1572,7 +1574,7 @@
                 </td>
                 <td>
                   <code>--sys-typescale-emphasized-title-small</code>
-                  <small class="token-spec">600 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
+                  <small class="token-spec">700 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
                 </td>
               </tr>
               <!-- Body -->
@@ -1616,7 +1618,7 @@
                 </td>
                 <td>
                   <code>--sys-typescale-emphasized-label-large</code>
-                  <small class="token-spec">600 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
+                  <small class="token-spec">700 &bull; 0.875rem / 1.25rem (14px / 20px)</small>
                 </td>
               </tr>
               <tr>
@@ -1626,17 +1628,17 @@
                 </td>
                 <td>
                   <code>--sys-typescale-emphasized-label-medium</code>
-                  <small class="token-spec">600 &bull; 0.75rem / 1rem (12px / 16px)</small>
+                  <small class="token-spec">700 &bull; 0.75rem / 1rem (12px / 16px)</small>
                 </td>
               </tr>
               <tr>
                 <td>
                   <code>--sys-typescale-label-small</code>
-                  <small class="token-spec">500 &bull; 0.688rem / 1rem (11px / 16px)</small>
+                  <small class="token-spec">500 &bull; 0.6875rem / 1rem (11px / 16px)</small>
                 </td>
                 <td>
                   <code>--sys-typescale-emphasized-label-small</code>
-                  <small class="token-spec">600 &bull; 0.688rem / 1rem (11px / 16px)</small>
+                  <small class="token-spec">700 &bull; 0.6875rem / 1rem (11px / 16px)</small>
                 </td>
               </tr>
             </tbody>
@@ -1646,7 +1648,14 @@
         <h3 id="elevation">
           <a class="heading-anchor" href="#elevation">Elevation</a>
         </h3>
-        <p>Elevation tokens define 6 layered box-shadow levels from flat surfaces to elevated modal dialogs.</p>
+        <p>
+          Elevation is the distance between two surfaces on the z-axis. Material uses six levels of elevation, from 0 to 5. An element's resting
+          state can be on levels 0 to 3, while levels 4 and 5 are reserved for interaction states such as hover and dragged.
+        </p>
+        <p>
+          Web Expressive represents these levels through CSS <code>box-shadow</code> values. Apply a token with the <code>box-shadow</code>
+          property; <code>--sys-elevation-level-0</code> has the value <code>none</code>.
+        </p>
 
         <blockquote>
           <p>
@@ -1656,8 +1665,8 @@
           </p>
         </blockquote>
 
-        <pre><code class="language-css">.quick-settings {
-  box-shadow: var(--sys-elevation-level-5);
+        <pre><code class="language-css">.elevated-card {
+  box-shadow: var(--sys-elevation-level-1);
 }
 </code></pre>
 
@@ -1666,33 +1675,33 @@
             <thead>
               <tr>
                 <th>Tokens</th>
-                <th>Common Use Cases</th>
+                <th>Resting Component Examples</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><code>(Flat / Default)</code></td>
-                <td>Base layer, flat page background, standard cards without shadow.</td>
+                <td><code>--sys-elevation-level-0</code></td>
+                <td>Filled, tonal, and outlined buttons; button groups; filled and outlined cards.</td>
               </tr>
               <tr>
                 <td><code>--sys-elevation-level-1</code></td>
-                <td>Minimal lift: standard cards, unselected filter chips.</td>
+                <td>Elevated buttons, cards, and chips; modal bottom sheets, navigation drawers, and side sheets.</td>
               </tr>
               <tr>
                 <td><code>--sys-elevation-level-2</code></td>
-                <td>Raised: small FABs, hover states of level-1 surfaces.</td>
+                <td>Scrolled app bars, menus, navigation bars, rich tooltips, and toolbars.</td>
               </tr>
               <tr>
                 <td><code>--sys-elevation-level-3</code></td>
-                <td>Prominent: floating action buttons, date pickers.</td>
+                <td>FABs, extended FABs, modal dialogs, date pickers, time pickers, and search.</td>
               </tr>
               <tr>
                 <td><code>--sys-elevation-level-4</code></td>
-                <td>High lift: navigation drawers, side sheets, scrolled search bars.</td>
+                <td>Not assigned as a resting level. Reserved for interaction states.</td>
               </tr>
               <tr>
                 <td><code>--sys-elevation-level-5</code></td>
-                <td>Maximum lift: modal dialogs, context menus, tooltips.</td>
+                <td>Not assigned as a resting level. Reserved for interaction states.</td>
               </tr>
             </tbody>
           </table>
@@ -1701,7 +1710,14 @@
         <h3 id="motion">
           <a class="heading-anchor" href="#motion">Motion</a>
         </h3>
-        <p>Expressive spring curves and duration tokens provide natural, responsive physics for interactions.</p>
+        <p>
+          Spatial springs are used for movement, rotation, size, and rounded corners. Effects springs are used for color and opacity,
+          where there should be no overshoot. Each has three speeds: fast, default, and slow.
+        </p>
+        <p>
+          Web Expressive uses Material's recommended web curves and durations to approximate expressive springs for animations without
+          interruptions or gestures. Apply the curve and its companion duration in a CSS transition or animation.
+        </p>
 
         <pre><code class="language-css">.interactive-element {
   transition:
@@ -1712,8 +1728,8 @@
 
         <blockquote>
           <p>
-            <strong>Implementation Note:</strong> Always consume companion duration variables (<code>*-duration</code>) rather than hardcoding
-            millisecond magic numbers into your CSS transitions to ensure global motion consistency.
+            <strong>Implementation Note:</strong> Use companion duration variables (<code>*-duration</code>) with the motion curves to keep timing
+            consistent across your interface.
           </p>
         </blockquote>
 
@@ -1733,46 +1749,98 @@
                 <td rowspan="3"><strong>Spatial</strong><br /><br /><em>(movement &amp; scale)</em></td>
                 <td><code>--sys-motion-spring-fast-spatial</code></td>
                 <td><code>--sys-motion-spring-fast-spatial-duration</code><br /><br /><strong>(350ms)</strong></td>
-                <td>Short movement. Toggle switches, button icon motion, and chip removal.</td>
+                <td>Small components, such as switches and buttons.</td>
               </tr>
               <tr>
                 <td><code>--sys-motion-spring-default-spatial</code></td>
                 <td><code>--sys-motion-spring-default-spatial-duration</code><br /><br /><strong>(500ms)</strong></td>
-                <td>Standard movement. Navigation drawers, side sheets, and layout transitions.</td>
+                <td>Animations that partially cover the screen, such as a bottom sheet or expanded navigation rail.</td>
               </tr>
               <tr>
                 <td><code>--sys-motion-spring-slow-spatial</code></td>
                 <td><code>--sys-motion-spring-slow-spatial-duration</code><br /><br /><strong>(650ms)</strong></td>
-                <td>Large movement. Full-screen dialogs and hero card expansions.</td>
+                <td>Full-screen animations.</td>
               </tr>
               <!-- Effects -->
               <tr>
                 <td rowspan="3"><strong>Effects</strong><br /><br /><em>(fading &amp; styling)</em></td>
                 <td><code>--sys-motion-spring-fast-effects</code></td>
                 <td><code>--sys-motion-spring-fast-effects-duration</code><br /><br /><strong>(150ms)</strong></td>
-                <td>Quick effects. Hover, pressed states, and small icon tints.</td>
+                <td>Color change of the switch handle.</td>
               </tr>
               <tr>
                 <td><code>--sys-motion-spring-default-effects</code></td>
                 <td><code>--sys-motion-spring-default-effects-duration</code><br /><br /><strong>(200ms)</strong></td>
-                <td>Standard effects. Tooltip fades and content cross-fades.</td>
+                <td>Opacity of content within a navigation rail.</td>
               </tr>
               <tr>
                 <td><code>--sys-motion-spring-slow-effects</code></td>
                 <td><code>--sys-motion-spring-slow-effects-duration</code><br /><br /><strong>(300ms)</strong></td>
-                <td>Slow effects. Gradual background shifts and modal backdrop fades.</td>
+                <td>Full-screen content refresh.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
+        <h4 id="focus-ring-motion">
+          <a class="heading-anchor" href="#focus-ring-motion">Focus Ring Motion</a>
+        </h4>
+        <p>
+          Web Expressive provides two additional tokens for focus-ring motion. The ring expands beyond its resting width, then settles back.
+          These tokens are included in <code>core.css</code> and use the <code>--focus-ring-*</code> prefix. They are Web Expressive tokens,
+          separate from Material's system motion tokens.
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Default Value</th>
+                <th>Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--focus-ring-motion-spring</code></td>
+                <td><code>linear(0 0%, 2.5 25%, 2.5 50%, 1 100%)</code></td>
+                <td>The curve used to animate the focus ring's width. Use as a transition or animation timing function.</td>
+              </tr>
+              <tr>
+                <td><code>--focus-ring-motion-duration</code></td>
+                <td><code>350ms</code></td>
+                <td>The duration of the focus-ring animation. Use as a transition or animation duration.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Buttons, toggle buttons, icon buttons, toggle icon buttons, FABs, extended FABs, and switches use these tokens for their focus rings.
+          Override either token on <code>html</code> to customize it across the page, or on a component or container to customize it locally.
+          Focus-ring duration is independent of the spatial-motion duration tokens.
+        </p>
+        <pre><code class="language-css">.custom-control {
+  outline: 0 solid var(--sys-color-secondary);
+  outline-offset: 2px;
+}
+
+.custom-control:focus-visible {
+  outline-width: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .custom-control {
+    transition: outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring);
+  }
+}
+</code></pre>
+
         <h3 id="spacing">
           <a class="heading-anchor" href="#spacing">Spacing</a>
         </h3>
         <p>
-          An 18-step spacing scale using 8px increments where <code>--sys-measurement-space-100</code> equals <code>0.5rem</code> (8px). Apply spacing
-          tokens to the margins, padding, and gaps of a component, UI element, or layout. The system can be extended to add more spacing units and
-          patterns as needed.
+          An 18-step spacing scale based on an 8px unit, where <code>--sys-measurement-space-100</code> equals <code>0.5rem</code> (8px at a 16px root
+          size). Apply spacing tokens to the margins, padding, and gaps of a component, UI element, or layout. The system can be extended to add
+          more spacing units and patterns as needed.
         </p>
 
         <pre><code class="language-css">.container {
@@ -2223,7 +2291,7 @@
           <a class="heading-anchor" href="#components-guide">Components Guide</a>
         </h2>
         <p>
-          Web Expressive components translate Material 3 Expressive tactile feedback and spring physics to native HTML and modern CSS with zero
+          Web Expressive components implement Material 3 Expressive interaction patterns using native HTML and modern CSS with zero
           runtime JavaScript.
         </p>
 
@@ -2278,7 +2346,7 @@
               </tr>
               <tr>
                 <td><strong>Connected Button Group</strong></td>
-                <td>Connected controls for selecting between mutually exclusive options or views</td>
+                <td>Related toggle options for single or multiple selection</td>
                 <td><code>components/connected-button-group.css</code></td>
               </tr>
               <tr>
