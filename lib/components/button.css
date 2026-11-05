@@ -58,7 +58,7 @@
       --_cursor: pointer;
       --_color: var(--sys-color-on-primary);
       --_state: transparent;
-      --_shadow: none;
+      --_shadow: var(--sys-elevation-level-0);
       --_outline-width: 0px;
 
       &:hover {

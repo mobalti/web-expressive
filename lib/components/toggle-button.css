@@ -10,7 +10,7 @@
     --_radius-full: calc((var(--_block-size) - var(--_inner-padding) * 2) / 2);
 
     /* Interaction-state tokens. */
-    --_shadow: none;
+    --_shadow: var(--sys-elevation-level-0);
     --_background: var(--sys-color-surface-container);
     --_border: none;
     --_cursor: pointer;

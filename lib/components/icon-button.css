@@ -13,7 +13,7 @@
     --_color: var(--sys-color-on-primary);
     --_state: none;
     --_outline-width: 0px;
-    --_shadow: none;
+    --_shadow: var(--sys-elevation-level-0);
 
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;

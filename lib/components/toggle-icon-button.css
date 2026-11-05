@@ -8,7 +8,7 @@
 
     --_radius-full: calc(min((var(--_block-size) - var(--_padding-block) * 2) / 2, (var(--_inline-size) - var(--_padding-inline) * 2) / 2));
 
-    --_shadow: none;
+    --_shadow: var(--sys-elevation-level-0);
     --_background: var(--sys-color-surface-container);
     --_border: none;
     --_cursor: pointer;
