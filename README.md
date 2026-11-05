@@ -29,7 +29,7 @@ This code snippet is a buildless example that loads `web-expressive` from a CDN.
     <!-- 2. Core (reset + system tokens) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/core.css" />
 
-    <!-- 3. A scheme -->
+    <!-- 3. A color scheme -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/fuchsia-tonal.css" />
 
     <!-- 4. Components (as needed) -->
