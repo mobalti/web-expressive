@@ -27,12 +27,12 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back,chevron_backward,chevron_forward,edit,settings,stars&display=block"
     />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/core.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/components/icon-button.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/components/toggle-button.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/components/standard-button-group.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/schemes/alpha/classic-tonal.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/components/extended-fab.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/core.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/icon-button.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/toggle-button.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/standard-button-group.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/classic-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/extended-fab.css" />
 
     <!-- Scheme override -->
     <style>
@@ -317,7 +317,7 @@
                 content: "";
 
                 @media (prefers-reduced-motion: no-preference) {
-                  transition: outline-width var(--focus-ring-motion-duration, var(--sys-motion-spring-fast-spatial-duration)) var(--focus-ring-motion-spring, var(--sys-motion-spring-pop-focus));
+                  transition: outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring);
                 }
               }
             }
@@ -348,7 +348,7 @@
 
                 /* Respect the user's reduced-motion preference. */
                 @media (prefers-reduced-motion: no-preference) {
-                  transition: outline-width var(--focus-ring-motion-duration, var(--sys-motion-spring-fast-spatial-duration)) var(--focus-ring-motion-spring, var(--sys-motion-spring-pop-focus));
+                  transition: outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring);
                 }
               }
 
@@ -520,7 +520,7 @@
                 position-anchor: --carousel;
                 place-items: center;
                 transition:
-                  outline-width var(--focus-ring-motion-duration, var(--sys-motion-spring-fast-spatial-duration)) var(--focus-ring-motion-spring, var(--sys-motion-spring-pop-focus)),
+                  outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring),
                   border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
                 cursor: pointer;
                 inset-block-start: calc(anchor(start) + var(--sys-measurement-space-50));

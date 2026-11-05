@@ -27,13 +27,13 @@ This code snippet is a buildless example that loads `web-expressive` from a CDN.
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..700&display=swap" />
 
     <!-- 2. Core (reset + system tokens) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/core.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/core.css" />
 
     <!-- 3. A scheme -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/schemes/alpha/fuchsia-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/fuchsia-tonal.css" />
 
     <!-- 4. Components (as needed) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.0.0/dist/components/button.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/button.css" />
     <style>
       html {
         /* Update the font family for the typography system after loading the font from the CDN */
