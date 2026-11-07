@@ -26,7 +26,7 @@ This code snippet is a buildless example that loads `web-expressive` from a CDN.
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..700&display=swap" />
 
-    <!-- 2. Core (reset + system tokens) -->
+    <!-- 2. Core (reset + tokens) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/core.css" />
 
     <!-- 3. A color scheme -->
