@@ -33,8 +33,9 @@
     appearance: none;
     cursor: pointer;
     outline: none;
+    border: none;
     border-radius: var(--_corner);
-    background: transparent;
+    background: none;
     inline-size: 3.25rem;
     block-size: 3rem;
 

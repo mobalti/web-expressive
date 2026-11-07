@@ -31,6 +31,7 @@
     block-size: var(--_block-size);
     color: var(--_color);
     font: var(--_font);
+    -webkit-user-select: none;
     user-select: none;
     text-decoration: none;
 
