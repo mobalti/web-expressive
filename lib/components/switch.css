@@ -135,6 +135,7 @@
 
     &::before {
       grid-area: 1/1;
+      box-sizing: border-box;
       outline: var(--_outline-width) solid var(--sys-color-secondary);
       outline-offset: 2px;
       border: var(--_border);
@@ -156,10 +157,10 @@
       grid-area: 1/1;
       place-items: center;
       translate: calc(var(--_translate-x) * var(--isLTR)) 0px;
-
       transition:
         translate var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
         border-width var(--sys-motion-spring-default-effects-duration) var(--sys-motion-spring-default-effects);
+      box-sizing: border-box;
       border: var(--_padding) solid transparent;
       border-radius: var(--_corner);
       background:
