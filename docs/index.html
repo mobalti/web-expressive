@@ -348,8 +348,20 @@
             >system tokens</a
           >
           documented in this reference as CSS custom properties prefixed with <code style="white-space: nowrap">--sys-*</code>. These are the
-          public tokens you use to build and style your interfaces. For the complete list, see the <a href="#tokens-reference">Tokens Reference</a>.
-          Web Expressive also provides <a href="#focus-ring-motion">focus-ring motion tokens</a> prefixed with <code>--focus-ring-*</code>.
+          public tokens you use to build and style your interfaces.
+        </p>
+        <p>
+          In addition to system tokens, Web Expressive provides configuration custom properties that function as public component APIs.
+          These include container style query properties (<code style="white-space: nowrap">--size-items</code>,
+          <code style="white-space: nowrap">--width-items</code>, and <code style="white-space: nowrap">--shape-items</code>) to declaratively
+          adjust component sizing, width, and corner rounding per container, as well as typeface configuration properties
+          (<code style="white-space: nowrap">--ref-typeface-*</code>) to customize font families across the typescale.
+        </p>
+        <p>
+          Web Expressive also exposes its <a href="#focus-ring-motion">focus-ring motion tokens</a>
+          (<code style="white-space: nowrap">--focus-ring-motion-spring</code> and
+          <code style="white-space: nowrap">--focus-ring-motion-duration</code>). Focus rings are a common interaction behavior across Web Expressive
+          components, and these tokens are made available so you can apply the same spring outline behavior to your own custom components.
         </p>
         <p>
           When inspecting components in browser DevTools, you will also see custom properties prefixed with
@@ -696,11 +708,12 @@
         </h3>
         <p>Web Expressive decouples font loading from typography tokens, making font configuration clean, modular, and centralized.</p>
         <p>
-          In CSS, a typeface corresponds to a <code>font-family</code>. Web Expressive splits font family definitions into two complementary parts:
-          <strong>custom font names</strong> (a list of quoted strings passed to <code>--ref-typeface-*</code>) and a
-          <strong>generic system fallback</strong>
-          (<code>--ref-typeface-generic</code>). To make typography configuration effortless, Web Expressive assigns these family references across
-          the typescale using role-based cascading.
+          In CSS, the <code>font-family</code> property combines specific font family names with a generic family fallback. Web Expressive
+          separates these into two distinct custom properties: specific font names are set on <code>--ref-typeface-*</code> (which accepts
+          only a comma-separated list of quoted strings, such as <code>"Inter"</code> or <code>"Inter", "Arial", "Helvetica"</code>), while
+          the generic fallback is set on <code>--ref-typeface-generic</code> (such as <code>sans-serif</code> or <code>serif</code>). Because
+          the initial value for <code>--ref-typeface-generic</code> is <code>sans-serif</code>, you only need to declare it if your typography
+          requires a different generic family fallback.
         </p>
         <p>
           Load your chosen web font using any provider (such as Google Fonts) or via <code>@font-face</code> definitions. For the typescale tokens to
