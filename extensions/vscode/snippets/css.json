@@ -1,0 +1,1782 @@
+{
+  "Property: Size Items": {
+    "prefix": [
+      "--size-items",
+      "size-items"
+    ],
+    "body": [
+      "--size-items: ${1|extra-small,small,medium,large,extra-large|};$0"
+    ],
+    "description": "Component size modifier. Declare on parent container. Syntax: extra-small | small (default) | medium | large | extra-large"
+  },
+  "Property: Width Items": {
+    "prefix": [
+      "--width-items",
+      "width-items"
+    ],
+    "body": [
+      "--width-items: ${1|narrow,normal,wide|};$0"
+    ],
+    "description": "Component width modifier. Declare on parent container. Syntax: narrow | normal (default) | wide"
+  },
+  "Property: Shape Items": {
+    "prefix": [
+      "--shape-items",
+      "shape-items"
+    ],
+    "body": [
+      "--shape-items: ${1|round,square|};$0"
+    ],
+    "description": "Component shape modifier. Declare on parent container. Syntax: round (default) | square"
+  },
+  "Property: Typeface Base": {
+    "prefix": [
+      "--ref-typeface-base",
+      "ref-typeface-base"
+    ],
+    "body": [
+      "--ref-typeface-base: ${1:\"Google Sans Flex\"};$0"
+    ],
+    "description": "Base font family for typography system. Declare on html or :root. Syntax: \"<string>#\""
+  },
+  "Property: Typeface Brand": {
+    "prefix": [
+      "--ref-typeface-brand",
+      "ref-typeface-brand"
+    ],
+    "body": [
+      "--ref-typeface-brand: ${1:\"Google Sans Flex\"};$0"
+    ],
+    "description": "Font family for display, headline, title large. Declare on html or :root. Syntax: \"<string>#\""
+  },
+  "Property: Typeface Plain": {
+    "prefix": [
+      "--ref-typeface-plain",
+      "ref-typeface-plain"
+    ],
+    "body": [
+      "--ref-typeface-plain: ${1:\"Google Sans Flex\"};$0"
+    ],
+    "description": "Font family for title medium/small, body, label. Declare on html or :root. Syntax: \"<string>#\""
+  },
+  "Property: Typeface Emphasized Brand": {
+    "prefix": [
+      "--ref-typeface-emphasized-brand",
+      "ref-typeface-emphasized-brand"
+    ],
+    "body": [
+      "--ref-typeface-emphasized-brand: ${1:\"Google Sans Flex\"};$0"
+    ],
+    "description": "Font family for emphasized display, headline, title large. Declare on html or :root. Syntax: \"<string>#\""
+  },
+  "Property: Typeface Emphasized Plain": {
+    "prefix": [
+      "--ref-typeface-emphasized-plain",
+      "ref-typeface-emphasized-plain"
+    ],
+    "body": [
+      "--ref-typeface-emphasized-plain: ${1:\"Google Sans Flex\"};$0"
+    ],
+    "description": "Font family for emphasized title medium/small, body, label. Declare on html or :root. Syntax: \"<string>#\""
+  },
+  "Property: Typeface Generic": {
+    "prefix": [
+      "--ref-typeface-generic",
+      "ref-typeface-generic"
+    ],
+    "body": [
+      "--ref-typeface-generic: ${1:sans-serif};$0"
+    ],
+    "description": "Fallback generic font family appended to font lists. Declare on html or :root. Syntax: <custom-ident>"
+  },
+  "Property: Typeface Symbols": {
+    "prefix": [
+      "--ref-typeface-symbols",
+      "ref-typeface-symbols"
+    ],
+    "body": [
+      "--ref-typeface-symbols: ${1:\"Material Symbols Outlined\"};$0"
+    ],
+    "description": "Font family for icon glyphs inside components. Declare on html or :root. Syntax: \"<string>#\""
+  },
+  "Display large": {
+    "prefix": "--sys-typescale-display-large",
+    "body": [
+      "var(--sys-typescale-display-large)"
+    ],
+    "description": "400 • 3.5625rem / 4rem (57px / 64px). Use with CSS font shorthand."
+  },
+  "Emphasized display large": {
+    "prefix": "--sys-typescale-emphasized-display-large",
+    "body": [
+      "var(--sys-typescale-emphasized-display-large)"
+    ],
+    "description": "500 • 3.5625rem / 4rem (57px / 64px). Use with CSS font shorthand."
+  },
+  "Display medium": {
+    "prefix": "--sys-typescale-display-medium",
+    "body": [
+      "var(--sys-typescale-display-medium)"
+    ],
+    "description": "400 • 2.8125rem / 3.25rem (45px / 52px). Use with CSS font shorthand."
+  },
+  "Emphasized display medium": {
+    "prefix": "--sys-typescale-emphasized-display-medium",
+    "body": [
+      "var(--sys-typescale-emphasized-display-medium)"
+    ],
+    "description": "500 • 2.8125rem / 3.25rem (45px / 52px). Use with CSS font shorthand."
+  },
+  "Display small": {
+    "prefix": "--sys-typescale-display-small",
+    "body": [
+      "var(--sys-typescale-display-small)"
+    ],
+    "description": "400 • 2.25rem / 2.75rem (36px / 44px). Use with CSS font shorthand."
+  },
+  "Emphasized display small": {
+    "prefix": "--sys-typescale-emphasized-display-small",
+    "body": [
+      "var(--sys-typescale-emphasized-display-small)"
+    ],
+    "description": "500 • 2.25rem / 2.75rem (36px / 44px). Use with CSS font shorthand."
+  },
+  "Headline large": {
+    "prefix": "--sys-typescale-headline-large",
+    "body": [
+      "var(--sys-typescale-headline-large)"
+    ],
+    "description": "400 • 2rem / 2.5rem (32px / 40px). Use with CSS font shorthand."
+  },
+  "Emphasized headline large": {
+    "prefix": "--sys-typescale-emphasized-headline-large",
+    "body": [
+      "var(--sys-typescale-emphasized-headline-large)"
+    ],
+    "description": "500 • 2rem / 2.5rem (32px / 40px). Use with CSS font shorthand."
+  },
+  "Headline medium": {
+    "prefix": "--sys-typescale-headline-medium",
+    "body": [
+      "var(--sys-typescale-headline-medium)"
+    ],
+    "description": "400 • 1.75rem / 2.25rem (28px / 36px). Use with CSS font shorthand."
+  },
+  "Emphasized headline medium": {
+    "prefix": "--sys-typescale-emphasized-headline-medium",
+    "body": [
+      "var(--sys-typescale-emphasized-headline-medium)"
+    ],
+    "description": "500 • 1.75rem / 2.25rem (28px / 36px). Use with CSS font shorthand."
+  },
+  "Headline small": {
+    "prefix": "--sys-typescale-headline-small",
+    "body": [
+      "var(--sys-typescale-headline-small)"
+    ],
+    "description": "400 • 1.5rem / 2rem (24px / 32px). Use with CSS font shorthand."
+  },
+  "Emphasized headline small": {
+    "prefix": "--sys-typescale-emphasized-headline-small",
+    "body": [
+      "var(--sys-typescale-emphasized-headline-small)"
+    ],
+    "description": "500 • 1.5rem / 2rem (24px / 32px). Use with CSS font shorthand."
+  },
+  "Title large": {
+    "prefix": "--sys-typescale-title-large",
+    "body": [
+      "var(--sys-typescale-title-large)"
+    ],
+    "description": "400 • 1.375rem / 1.75rem (22px / 28px). Use with CSS font shorthand."
+  },
+  "Emphasized title large": {
+    "prefix": "--sys-typescale-emphasized-title-large",
+    "body": [
+      "var(--sys-typescale-emphasized-title-large)"
+    ],
+    "description": "500 • 1.375rem / 1.75rem (22px / 28px). Use with CSS font shorthand."
+  },
+  "Title medium": {
+    "prefix": "--sys-typescale-title-medium",
+    "body": [
+      "var(--sys-typescale-title-medium)"
+    ],
+    "description": "500 • 1rem / 1.5rem (16px / 24px). Use with CSS font shorthand."
+  },
+  "Emphasized title medium": {
+    "prefix": "--sys-typescale-emphasized-title-medium",
+    "body": [
+      "var(--sys-typescale-emphasized-title-medium)"
+    ],
+    "description": "700 • 1rem / 1.5rem (16px / 24px). Use with CSS font shorthand."
+  },
+  "Title small": {
+    "prefix": "--sys-typescale-title-small",
+    "body": [
+      "var(--sys-typescale-title-small)"
+    ],
+    "description": "500 • 0.875rem / 1.25rem (14px / 20px). Use with CSS font shorthand."
+  },
+  "Emphasized title small": {
+    "prefix": "--sys-typescale-emphasized-title-small",
+    "body": [
+      "var(--sys-typescale-emphasized-title-small)"
+    ],
+    "description": "700 • 0.875rem / 1.25rem (14px / 20px). Use with CSS font shorthand."
+  },
+  "Body large": {
+    "prefix": "--sys-typescale-body-large",
+    "body": [
+      "var(--sys-typescale-body-large)"
+    ],
+    "description": "400 • 1rem / 1.5rem (16px / 24px). Use with CSS font shorthand."
+  },
+  "Emphasized body large": {
+    "prefix": "--sys-typescale-emphasized-body-large",
+    "body": [
+      "var(--sys-typescale-emphasized-body-large)"
+    ],
+    "description": "500 • 1rem / 1.5rem (16px / 24px). Use with CSS font shorthand."
+  },
+  "Body medium": {
+    "prefix": "--sys-typescale-body-medium",
+    "body": [
+      "var(--sys-typescale-body-medium)"
+    ],
+    "description": "400 • 0.875rem / 1.25rem (14px / 20px). Use with CSS font shorthand."
+  },
+  "Emphasized body medium": {
+    "prefix": "--sys-typescale-emphasized-body-medium",
+    "body": [
+      "var(--sys-typescale-emphasized-body-medium)"
+    ],
+    "description": "500 • 0.875rem / 1.25rem (14px / 20px). Use with CSS font shorthand."
+  },
+  "Body small": {
+    "prefix": "--sys-typescale-body-small",
+    "body": [
+      "var(--sys-typescale-body-small)"
+    ],
+    "description": "400 • 0.75rem / 1rem (12px / 16px). Use with CSS font shorthand."
+  },
+  "Emphasized body small": {
+    "prefix": "--sys-typescale-emphasized-body-small",
+    "body": [
+      "var(--sys-typescale-emphasized-body-small)"
+    ],
+    "description": "500 • 0.75rem / 1rem (12px / 16px). Use with CSS font shorthand."
+  },
+  "Label large": {
+    "prefix": "--sys-typescale-label-large",
+    "body": [
+      "var(--sys-typescale-label-large)"
+    ],
+    "description": "500 • 0.875rem / 1.25rem (14px / 20px). Use with CSS font shorthand."
+  },
+  "Emphasized label large": {
+    "prefix": "--sys-typescale-emphasized-label-large",
+    "body": [
+      "var(--sys-typescale-emphasized-label-large)"
+    ],
+    "description": "700 • 0.875rem / 1.25rem (14px / 20px). Use with CSS font shorthand."
+  },
+  "Label medium": {
+    "prefix": "--sys-typescale-label-medium",
+    "body": [
+      "var(--sys-typescale-label-medium)"
+    ],
+    "description": "500 • 0.75rem / 1rem (12px / 16px). Use with CSS font shorthand."
+  },
+  "Emphasized label medium": {
+    "prefix": "--sys-typescale-emphasized-label-medium",
+    "body": [
+      "var(--sys-typescale-emphasized-label-medium)"
+    ],
+    "description": "700 • 0.75rem / 1rem (12px / 16px). Use with CSS font shorthand."
+  },
+  "Label small": {
+    "prefix": "--sys-typescale-label-small",
+    "body": [
+      "var(--sys-typescale-label-small)"
+    ],
+    "description": "500 • 0.6875rem / 1rem (11px / 16px). Use with CSS font shorthand."
+  },
+  "Emphasized label small": {
+    "prefix": "--sys-typescale-emphasized-label-small",
+    "body": [
+      "var(--sys-typescale-emphasized-label-small)"
+    ],
+    "description": "700 • 0.6875rem / 1rem (11px / 16px). Use with CSS font shorthand."
+  },
+  "Primary": {
+    "prefix": "--sys-color-primary",
+    "body": [
+      "var(--sys-color-primary)"
+    ],
+    "description": "High-emphasis fills, texts, and icons against surface"
+  },
+  "On primary": {
+    "prefix": "--sys-color-on-primary",
+    "body": [
+      "var(--sys-color-on-primary)"
+    ],
+    "description": "Text and icons against primary"
+  },
+  "Primary container": {
+    "prefix": "--sys-color-primary-container",
+    "body": [
+      "var(--sys-color-primary-container)"
+    ],
+    "description": "Standout fill color against surface, for key components like FAB"
+  },
+  "On primary container": {
+    "prefix": "--sys-color-on-primary-container",
+    "body": [
+      "var(--sys-color-on-primary-container)"
+    ],
+    "description": "Text and icons against primary container"
+  },
+  "Secondary": {
+    "prefix": "--sys-color-secondary",
+    "body": [
+      "var(--sys-color-secondary)"
+    ],
+    "description": "Less prominent fills, text, and icons against surface"
+  },
+  "On secondary": {
+    "prefix": "--sys-color-on-secondary",
+    "body": [
+      "var(--sys-color-on-secondary)"
+    ],
+    "description": "Text and icons against secondary"
+  },
+  "Secondary container": {
+    "prefix": "--sys-color-secondary-container",
+    "body": [
+      "var(--sys-color-secondary-container)"
+    ],
+    "description": "Less prominent fill color against surface, for recessive components like tonal buttons"
+  },
+  "On secondary container": {
+    "prefix": "--sys-color-on-secondary-container",
+    "body": [
+      "var(--sys-color-on-secondary-container)"
+    ],
+    "description": "Text and icons against secondary container"
+  },
+  "Tertiary": {
+    "prefix": "--sys-color-tertiary",
+    "body": [
+      "var(--sys-color-tertiary)"
+    ],
+    "description": "Complementary fills, text, and icons against surface"
+  },
+  "On tertiary": {
+    "prefix": "--sys-color-on-tertiary",
+    "body": [
+      "var(--sys-color-on-tertiary)"
+    ],
+    "description": "Text and icons against tertiary"
+  },
+  "Tertiary container": {
+    "prefix": "--sys-color-tertiary-container",
+    "body": [
+      "var(--sys-color-tertiary-container)"
+    ],
+    "description": "Complementary container color against surface, for components like input fields"
+  },
+  "On tertiary container": {
+    "prefix": "--sys-color-on-tertiary-container",
+    "body": [
+      "var(--sys-color-on-tertiary-container)"
+    ],
+    "description": "Text and icons against tertiary container"
+  },
+  "Error": {
+    "prefix": "--sys-color-error",
+    "body": [
+      "var(--sys-color-error)"
+    ],
+    "description": "Attention-grabbing color against surface for fills, icons, and text, indicating urgency"
+  },
+  "On error": {
+    "prefix": "--sys-color-on-error",
+    "body": [
+      "var(--sys-color-on-error)"
+    ],
+    "description": "Text and icons against error"
+  },
+  "Error container": {
+    "prefix": "--sys-color-error-container",
+    "body": [
+      "var(--sys-color-error-container)"
+    ],
+    "description": "Attention-grabbing fill color against surface"
+  },
+  "On error container": {
+    "prefix": "--sys-color-on-error-container",
+    "body": [
+      "var(--sys-color-on-error-container)"
+    ],
+    "description": "Text and icons against error container"
+  },
+  "Background": {
+    "prefix": "--sys-color-background",
+    "body": [
+      "var(--sys-color-background)"
+    ],
+    "description": "Foundational app background canvas (equivalent to --sys-color-surface )"
+  },
+  "On background": {
+    "prefix": "--sys-color-on-background",
+    "body": [
+      "var(--sys-color-on-background)"
+    ],
+    "description": "Main body text against the background canvas (equivalent to --sys-color-on-surface )"
+  },
+  "Surface": {
+    "prefix": "--sys-color-surface",
+    "body": [
+      "var(--sys-color-surface)"
+    ],
+    "description": "Default color for backgrounds"
+  },
+  "On surface": {
+    "prefix": "--sys-color-on-surface",
+    "body": [
+      "var(--sys-color-on-surface)"
+    ],
+    "description": "Text and icons against any surface or surface container color"
+  },
+  "Surface variant": {
+    "prefix": "--sys-color-surface-variant",
+    "body": [
+      "var(--sys-color-surface-variant)"
+    ],
+    "description": "Decorative surface alternative to standard surface; lower-emphasis surface variant"
+  },
+  "On surface variant": {
+    "prefix": "--sys-color-on-surface-variant",
+    "body": [
+      "var(--sys-color-on-surface-variant)"
+    ],
+    "description": "Lower-emphasis color for text and icons against any surface or surface container color"
+  },
+  "Surface bright": {
+    "prefix": "--sys-color-surface-bright",
+    "body": [
+      "var(--sys-color-surface-bright)"
+    ],
+    "description": "Brightest surface color in light and dark modes"
+  },
+  "Surface dim": {
+    "prefix": "--sys-color-surface-dim",
+    "body": [
+      "var(--sys-color-surface-dim)"
+    ],
+    "description": "Dimmest surface color in light and dark modes"
+  },
+  "Surface container lowest": {
+    "prefix": "--sys-color-surface-container-lowest",
+    "body": [
+      "var(--sys-color-surface-container-lowest)"
+    ],
+    "description": "Lowest-emphasis container color"
+  },
+  "Surface container low": {
+    "prefix": "--sys-color-surface-container-low",
+    "body": [
+      "var(--sys-color-surface-container-low)"
+    ],
+    "description": "Low-emphasis container color"
+  },
+  "Surface container": {
+    "prefix": "--sys-color-surface-container",
+    "body": [
+      "var(--sys-color-surface-container)"
+    ],
+    "description": "Default container color"
+  },
+  "Surface container high": {
+    "prefix": "--sys-color-surface-container-high",
+    "body": [
+      "var(--sys-color-surface-container-high)"
+    ],
+    "description": "High-emphasis container color"
+  },
+  "Surface container highest": {
+    "prefix": "--sys-color-surface-container-highest",
+    "body": [
+      "var(--sys-color-surface-container-highest)"
+    ],
+    "description": "Highest-emphasis container color"
+  },
+  "Primary fixed": {
+    "prefix": "--sys-color-primary-fixed",
+    "body": [
+      "var(--sys-color-primary-fixed)"
+    ],
+    "description": "Fill color used against surface; maintains the same tone in light and dark modes"
+  },
+  "On primary fixed": {
+    "prefix": "--sys-color-on-primary-fixed",
+    "body": [
+      "var(--sys-color-on-primary-fixed)"
+    ],
+    "description": "Text and icons which sit on top of the primary fixed color"
+  },
+  "Primary fixed dim": {
+    "prefix": "--sys-color-primary-fixed-dim",
+    "body": [
+      "var(--sys-color-primary-fixed-dim)"
+    ],
+    "description": "Stronger, more emphasized tone relative to primary fixed; same tone in light and dark modes"
+  },
+  "On primary fixed variant": {
+    "prefix": "--sys-color-on-primary-fixed-variant",
+    "body": [
+      "var(--sys-color-on-primary-fixed-variant)"
+    ],
+    "description": "Text and icons needing lower emphasis against the primary fixed color"
+  },
+  "Secondary fixed": {
+    "prefix": "--sys-color-secondary-fixed",
+    "body": [
+      "var(--sys-color-secondary-fixed)"
+    ],
+    "description": "Fill color used against surface; maintains the same tone in light and dark modes"
+  },
+  "On secondary fixed": {
+    "prefix": "--sys-color-on-secondary-fixed",
+    "body": [
+      "var(--sys-color-on-secondary-fixed)"
+    ],
+    "description": "Text and icons which sit on top of the secondary fixed color"
+  },
+  "Secondary fixed dim": {
+    "prefix": "--sys-color-secondary-fixed-dim",
+    "body": [
+      "var(--sys-color-secondary-fixed-dim)"
+    ],
+    "description": "Stronger, more emphasized tone relative to secondary fixed; same tone in light and dark modes"
+  },
+  "On secondary fixed variant": {
+    "prefix": "--sys-color-on-secondary-fixed-variant",
+    "body": [
+      "var(--sys-color-on-secondary-fixed-variant)"
+    ],
+    "description": "Text and icons needing lower emphasis against the secondary fixed color"
+  },
+  "Tertiary fixed": {
+    "prefix": "--sys-color-tertiary-fixed",
+    "body": [
+      "var(--sys-color-tertiary-fixed)"
+    ],
+    "description": "Fill color used against surface; maintains the same tone in light and dark modes"
+  },
+  "On tertiary fixed": {
+    "prefix": "--sys-color-on-tertiary-fixed",
+    "body": [
+      "var(--sys-color-on-tertiary-fixed)"
+    ],
+    "description": "Text and icons which sit on top of the tertiary fixed color"
+  },
+  "Tertiary fixed dim": {
+    "prefix": "--sys-color-tertiary-fixed-dim",
+    "body": [
+      "var(--sys-color-tertiary-fixed-dim)"
+    ],
+    "description": "Stronger, more emphasized tone relative to tertiary fixed; same tone in light and dark modes"
+  },
+  "On tertiary fixed variant": {
+    "prefix": "--sys-color-on-tertiary-fixed-variant",
+    "body": [
+      "var(--sys-color-on-tertiary-fixed-variant)"
+    ],
+    "description": "Text and icons needing lower emphasis against the tertiary fixed color"
+  },
+  "Outline": {
+    "prefix": "--sys-color-outline",
+    "body": [
+      "var(--sys-color-outline)"
+    ],
+    "description": "Important boundaries, such as a text field outline"
+  },
+  "Outline variant": {
+    "prefix": "--sys-color-outline-variant",
+    "body": [
+      "var(--sys-color-outline-variant)"
+    ],
+    "description": "Decorative elements, such as dividers, and when other elements provide 4.5:1 contrast"
+  },
+  "Shadow": {
+    "prefix": "--sys-color-shadow",
+    "body": [
+      "var(--sys-color-shadow)"
+    ],
+    "description": "Color used for elevation drop shadows"
+  },
+  "Scrim": {
+    "prefix": "--sys-color-scrim",
+    "body": [
+      "var(--sys-color-scrim)"
+    ],
+    "description": "Overlay color for backdrop scrims behind modals and sheets"
+  },
+  "Surface tint": {
+    "prefix": "--sys-color-surface-tint",
+    "body": [
+      "var(--sys-color-surface-tint)"
+    ],
+    "description": "Legacy surface tint color, retained for compatibility. Surface tint is deprecated in Material 3."
+  },
+  "Inverse surface": {
+    "prefix": "--sys-color-inverse-surface",
+    "body": [
+      "var(--sys-color-inverse-surface)"
+    ],
+    "description": "Background fills for elements which contrast against surface"
+  },
+  "Inverse on surface": {
+    "prefix": "--sys-color-inverse-on-surface",
+    "body": [
+      "var(--sys-color-inverse-on-surface)"
+    ],
+    "description": "Text and icons against inverse surface"
+  },
+  "Inverse primary": {
+    "prefix": "--sys-color-inverse-primary",
+    "body": [
+      "var(--sys-color-inverse-primary)"
+    ],
+    "description": "Actionable elements, such as text buttons, against inverse surface"
+  },
+  "Level0": {
+    "prefix": "--sys-elevation-level-0",
+    "body": [
+      "var(--sys-elevation-level-0)"
+    ],
+    "description": "none. Use with box-shadow. Filled, tonal, and outlined buttons; button groups; filled and outlined cards."
+  },
+  "Level1": {
+    "prefix": "--sys-elevation-level-1",
+    "body": [
+      "var(--sys-elevation-level-1)"
+    ],
+    "description": "Use with box-shadow. Elevated buttons, cards, and chips; modal bottom sheets, navigation drawers, and side sheets."
+  },
+  "Level2": {
+    "prefix": "--sys-elevation-level-2",
+    "body": [
+      "var(--sys-elevation-level-2)"
+    ],
+    "description": "Use with box-shadow. Scrolled app bars, menus, navigation bars, rich tooltips, and toolbars."
+  },
+  "Level3": {
+    "prefix": "--sys-elevation-level-3",
+    "body": [
+      "var(--sys-elevation-level-3)"
+    ],
+    "description": "Use with box-shadow. FABs, extended FABs, modal dialogs, date pickers, time pickers, and search."
+  },
+  "Level4": {
+    "prefix": "--sys-elevation-level-4",
+    "body": [
+      "var(--sys-elevation-level-4)"
+    ],
+    "description": "Use with box-shadow. Not assigned as a resting level. Reserved for interaction states."
+  },
+  "Level5": {
+    "prefix": "--sys-elevation-level-5",
+    "body": [
+      "var(--sys-elevation-level-5)"
+    ],
+    "description": "Use with box-shadow. Not assigned as a resting level. Reserved for interaction states."
+  },
+  "Spring fast spatial": {
+    "prefix": "--sys-motion-spring-fast-spatial",
+    "body": [
+      "var(--sys-motion-spring-fast-spatial)"
+    ],
+    "description": "Use as the transition or animation timing function. Small components, such as switches and buttons."
+  },
+  "Spring fast spatial duration": {
+    "prefix": "--sys-motion-spring-fast-spatial-duration",
+    "body": [
+      "var(--sys-motion-spring-fast-spatial-duration)"
+    ],
+    "description": "350ms. Use as the transition or animation duration with --sys-motion-spring-fast-spatial."
+  },
+  "Spring default spatial": {
+    "prefix": "--sys-motion-spring-default-spatial",
+    "body": [
+      "var(--sys-motion-spring-default-spatial)"
+    ],
+    "description": "Use as the transition or animation timing function. Animations that partially cover the screen, such as a bottom sheet or expanded navigation rail."
+  },
+  "Spring default spatial duration": {
+    "prefix": "--sys-motion-spring-default-spatial-duration",
+    "body": [
+      "var(--sys-motion-spring-default-spatial-duration)"
+    ],
+    "description": "500ms. Use as the transition or animation duration with --sys-motion-spring-default-spatial."
+  },
+  "Spring slow spatial": {
+    "prefix": "--sys-motion-spring-slow-spatial",
+    "body": [
+      "var(--sys-motion-spring-slow-spatial)"
+    ],
+    "description": "Use as the transition or animation timing function. Full-screen animations."
+  },
+  "Spring slow spatial duration": {
+    "prefix": "--sys-motion-spring-slow-spatial-duration",
+    "body": [
+      "var(--sys-motion-spring-slow-spatial-duration)"
+    ],
+    "description": "650ms. Use as the transition or animation duration with --sys-motion-spring-slow-spatial."
+  },
+  "Spring fast effects": {
+    "prefix": "--sys-motion-spring-fast-effects",
+    "body": [
+      "var(--sys-motion-spring-fast-effects)"
+    ],
+    "description": "Use as the transition or animation timing function. Color change of the switch handle."
+  },
+  "Spring fast effects duration": {
+    "prefix": "--sys-motion-spring-fast-effects-duration",
+    "body": [
+      "var(--sys-motion-spring-fast-effects-duration)"
+    ],
+    "description": "150ms. Use as the transition or animation duration with --sys-motion-spring-fast-effects."
+  },
+  "Spring default effects": {
+    "prefix": "--sys-motion-spring-default-effects",
+    "body": [
+      "var(--sys-motion-spring-default-effects)"
+    ],
+    "description": "Use as the transition or animation timing function. Opacity of content within a navigation rail."
+  },
+  "Spring default effects duration": {
+    "prefix": "--sys-motion-spring-default-effects-duration",
+    "body": [
+      "var(--sys-motion-spring-default-effects-duration)"
+    ],
+    "description": "200ms. Use as the transition or animation duration with --sys-motion-spring-default-effects."
+  },
+  "Spring slow effects": {
+    "prefix": "--sys-motion-spring-slow-effects",
+    "body": [
+      "var(--sys-motion-spring-slow-effects)"
+    ],
+    "description": "Use as the transition or animation timing function. Full-screen content refresh."
+  },
+  "Spring slow effects duration": {
+    "prefix": "--sys-motion-spring-slow-effects-duration",
+    "body": [
+      "var(--sys-motion-spring-slow-effects-duration)"
+    ],
+    "description": "300ms. Use as the transition or animation duration with --sys-motion-spring-slow-effects."
+  },
+  "Focus ring motion spring": {
+    "prefix": "--focus-ring-motion-spring",
+    "body": [
+      "var(--focus-ring-motion-spring)"
+    ],
+    "description": "Animates the focus ring beyond its resting width, then settles back. Use as the transition or animation timing function with --focus-ring-motion-duration."
+  },
+  "Focus ring motion duration": {
+    "prefix": "--focus-ring-motion-duration",
+    "body": [
+      "var(--focus-ring-motion-duration)"
+    ],
+    "description": "350ms. Use as the transition or animation duration with --focus-ring-motion-spring."
+  },
+  "Shape corner none": {
+    "prefix": "--sys-shape-corner-none",
+    "body": [
+      "var(--sys-shape-corner-none)"
+    ],
+    "description": "0px. Use with border-radius."
+  },
+  "Shape corner extra small": {
+    "prefix": "--sys-shape-corner-extra-small",
+    "body": [
+      "var(--sys-shape-corner-extra-small)"
+    ],
+    "description": "0.25rem (4px). Use with border-radius."
+  },
+  "Shape corner small": {
+    "prefix": "--sys-shape-corner-small",
+    "body": [
+      "var(--sys-shape-corner-small)"
+    ],
+    "description": "0.5rem (8px). Use with border-radius."
+  },
+  "Shape corner medium": {
+    "prefix": "--sys-shape-corner-medium",
+    "body": [
+      "var(--sys-shape-corner-medium)"
+    ],
+    "description": "0.75rem (12px). Use with border-radius."
+  },
+  "Shape corner large": {
+    "prefix": "--sys-shape-corner-large",
+    "body": [
+      "var(--sys-shape-corner-large)"
+    ],
+    "description": "1rem (16px). Use with border-radius."
+  },
+  "Shape corner large increased": {
+    "prefix": "--sys-shape-corner-large-increased",
+    "body": [
+      "var(--sys-shape-corner-large-increased)"
+    ],
+    "description": "1.25rem (20px). Use with border-radius."
+  },
+  "Shape corner extra large": {
+    "prefix": "--sys-shape-corner-extra-large",
+    "body": [
+      "var(--sys-shape-corner-extra-large)"
+    ],
+    "description": "1.75rem (28px). Use with border-radius."
+  },
+  "Shape corner extra large increased": {
+    "prefix": "--sys-shape-corner-extra-large-increased",
+    "body": [
+      "var(--sys-shape-corner-extra-large-increased)"
+    ],
+    "description": "2rem (32px). Use with border-radius."
+  },
+  "Shape corner extra extra large": {
+    "prefix": "--sys-shape-corner-extra-extra-large",
+    "body": [
+      "var(--sys-shape-corner-extra-extra-large)"
+    ],
+    "description": "3rem (48px). Use with border-radius."
+  },
+  "Shape corner full": {
+    "prefix": "--sys-shape-corner-full",
+    "body": [
+      "var(--sys-shape-corner-full)"
+    ],
+    "description": "9999px. Use with border-radius."
+  },
+  "Window compact": {
+    "prefix": "window-compact",
+    "body": [
+      "/* window-compact */",
+      "@media (width < 600px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Compact breakpoint: width < 600px."
+  },
+  "Window medium": {
+    "prefix": "window-medium",
+    "body": [
+      "/* window-medium */",
+      "@media (600px <= width < 840px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Medium breakpoint: 600px <= width < 840px."
+  },
+  "Window medium and wider": {
+    "prefix": "window-medium-wider",
+    "body": [
+      "/* window-medium-wider */",
+      "@media (width >= 600px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Width >= 600px. Medium and wider breakpoints."
+  },
+  "Window medium and narrower": {
+    "prefix": "window-medium-narrower",
+    "body": [
+      "/* window-medium-narrower */",
+      "@media (width < 840px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Width < 840px. Medium and narrower breakpoints."
+  },
+  "Window expanded": {
+    "prefix": "window-expanded",
+    "body": [
+      "/* window-expanded */",
+      "@media (840px <= width < 1200px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Expanded breakpoint: 840px <= width < 1200px."
+  },
+  "Window expanded and wider": {
+    "prefix": "window-expanded-wider",
+    "body": [
+      "/* window-expanded-wider */",
+      "@media (width >= 840px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Width >= 840px. Expanded and wider breakpoints."
+  },
+  "Window expanded and narrower": {
+    "prefix": "window-expanded-narrower",
+    "body": [
+      "/* window-expanded-narrower */",
+      "@media (width < 1200px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Width < 1200px. Expanded and narrower breakpoints."
+  },
+  "Window large": {
+    "prefix": "window-large",
+    "body": [
+      "/* window-large */",
+      "@media (1200px <= width < 1600px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Large breakpoint: 1200px <= width < 1600px."
+  },
+  "Window large and wider": {
+    "prefix": "window-large-wider",
+    "body": [
+      "/* window-large-wider */",
+      "@media (width >= 1200px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Width >= 1200px. Large and wider breakpoints."
+  },
+  "Window large and narrower": {
+    "prefix": "window-large-narrower",
+    "body": [
+      "/* window-large-narrower */",
+      "@media (width < 1600px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Width < 1600px. Large and narrower breakpoints."
+  },
+  "Window extra large": {
+    "prefix": "window-extra-large",
+    "body": [
+      "/* window-extra-large */",
+      "@media (width >= 1600px) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Extra-large breakpoint: width >= 1600px."
+  },
+  "Media Query: Motion No Preference": {
+    "prefix": "media-motion-no-preference",
+    "body": [
+      "@media (prefers-reduced-motion: no-preference) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-reduced-motion: no-preference. User has made no preference known regarding reducing motion."
+  },
+  "Media Query: Motion Reduce": {
+    "prefix": "media-motion-reduce",
+    "body": [
+      "@media (prefers-reduced-motion: reduce) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-reduced-motion: reduce. User has requested the system minimize non-essential motion."
+  },
+  "Media Query: Transparency No Preference": {
+    "prefix": "media-transparency-no-preference",
+    "body": [
+      "@media (prefers-reduced-transparency: no-preference) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-reduced-transparency: no-preference. User has made no preference regarding reduced transparency."
+  },
+  "Media Query: Transparency Reduce": {
+    "prefix": "media-transparency-reduce",
+    "body": [
+      "@media (prefers-reduced-transparency: reduce) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-reduced-transparency: reduce. User has requested the system minimize transparent layer effects."
+  },
+  "Media Query: Data No Preference": {
+    "prefix": "media-data-no-preference",
+    "body": [
+      "@media (prefers-reduced-data: no-preference) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-reduced-data: no-preference. User has made no preference regarding reduced data."
+  },
+  "Media Query: Data Reduce": {
+    "prefix": "media-data-reduce",
+    "body": [
+      "@media (prefers-reduced-data: reduce) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-reduced-data: reduce. User has expressed preference for lightweight alternate content."
+  },
+  "Media Query: Scheme Dark": {
+    "prefix": "media-scheme-dark",
+    "body": [
+      "@media (prefers-color-scheme: dark) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-color-scheme: dark. User has requested a dark mode."
+  },
+  "Media Query: Scheme Light": {
+    "prefix": "media-scheme-light",
+    "body": [
+      "@media (prefers-color-scheme: light) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-color-scheme: light. User has requested a light mode."
+  },
+  "Media Query: Contrast More": {
+    "prefix": "media-contrast-more",
+    "body": [
+      "@media (prefers-contrast: more) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-contrast: more. User has requested a higher contrast."
+  },
+  "Media Query: Contrast Less": {
+    "prefix": "media-contrast-less",
+    "body": [
+      "@media (prefers-contrast: less) {",
+      "  $0",
+      "}"
+    ],
+    "description": "prefers-contrast: less. User has requested a lower contrast."
+  },
+  "Media Query: Inverted Colors": {
+    "prefix": "media-inverted-colors",
+    "body": [
+      "@media (inverted-colors: inverted) {",
+      "  $0",
+      "}"
+    ],
+    "description": "inverted-colors: inverted. Colors are inverted by the OS."
+  },
+  "Media Query: Forced Colors Active": {
+    "prefix": "media-forced-colors",
+    "body": [
+      "@media (forced-colors: active) {",
+      "  $0",
+      "}"
+    ],
+    "description": "forced-colors: active. User has enabled forced colors mode (e.g. Windows High Contrast)."
+  },
+  "Media Query: Landscape": {
+    "prefix": "media-landscape",
+    "body": [
+      "@media (orientation: landscape) {",
+      "  $0",
+      "}"
+    ],
+    "description": "orientation: landscape. Viewport is in landscape orientation."
+  },
+  "Media Query: HDR Display": {
+    "prefix": "media-hdr",
+    "body": [
+      "@media ((dynamic-range: high) or (color-gamut: p3)) {",
+      "  $0",
+      "}"
+    ],
+    "description": "dynamic-range: high. Device supports high dynamic range (HDR) or P3 wide color gamut."
+  },
+  "Media Query: Touch Interface": {
+    "prefix": "media-touch",
+    "body": [
+      "@media (hover: none) and (pointer: coarse) {",
+      "  $0",
+      "}"
+    ],
+    "description": "pointer: coarse. Primary input is a touch screen (phones, tablets)."
+  },
+  "Media Query: Stylus on Non-Hover": {
+    "prefix": "media-stylus",
+    "body": [
+      "@media (hover: none) and (pointer: fine) {",
+      "  $0",
+      "}"
+    ],
+    "description": "pointer: fine and hover: none. Primary input is a stylus on a screen without hover."
+  },
+  "Media Query: Hover with Coarse Pointer": {
+    "prefix": "media-hover-coarse",
+    "body": [
+      "@media (hover: hover) and (pointer: coarse) {",
+      "  $0",
+      "}"
+    ],
+    "description": "pointer: coarse and hover: hover. Primary input has hover but is coarse."
+  },
+  "Media Query: Mouse / Desktop": {
+    "prefix": "media-mouse",
+    "body": [
+      "@media (hover: hover) and (pointer: fine) {",
+      "  $0",
+      "}"
+    ],
+    "description": "pointer: fine and hover: hover. Primary input is a mouse or trackpad."
+  },
+  "Supports: animation-timeline": {
+    "prefix": "supports-animation-timeline",
+    "body": [
+      "@supports (animation-timeline: scroll()) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "@supports block checking for animation-timeline CSS support."
+  },
+  "Supports Not: animation-timeline": {
+    "prefix": "supports-not-animation-timeline",
+    "body": [
+      "@supports not (animation-timeline: scroll()) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "@supports block checking for missing animation-timeline CSS support."
+  },
+  "CSS Custom Property Registration": {
+    "prefix": "register-property",
+    "body": [
+      "@property --property-${1:name} {",
+      "  syntax: \"${2|<length>,<angle>,<color>,<custom-ident>,<image>,<integer>,<length-percentage>,<number>,<percentage>,<resolution>,<string>,<time>,<transform-function>,<transform-list>,<url>,*|}\";",
+      "  inherits: ${3|false,true|};",
+      "  initial-value: ${4:0px};",
+      "}$0"
+    ],
+    "description": "Register a typed CSS custom property. Choose an initial value that matches the selected syntax; the default is a length."
+  },
+  "Shape Clip: Very Sunny": {
+    "prefix": "--sys-shape-clip-very-sunny",
+    "body": [
+      "var(--sys-shape-clip-very-sunny)"
+    ],
+    "description": "Use with clip-path to create a very sunny-shaped boundary."
+  },
+  "Shape Clip: 4 Leaf Clover": {
+    "prefix": "--sys-shape-clip-4-leaf-clover",
+    "body": [
+      "var(--sys-shape-clip-4-leaf-clover)"
+    ],
+    "description": "Use with clip-path to create a 4-leaf clover-shaped boundary."
+  },
+  "Shape Clip: 4 Sided Cookie": {
+    "prefix": "--sys-shape-clip-4-sided-cookie",
+    "body": [
+      "var(--sys-shape-clip-4-sided-cookie)"
+    ],
+    "description": "Use with clip-path to create a 4-sided cookie-shaped boundary."
+  },
+  "Shape Clip: 6 Sided Cookie": {
+    "prefix": "--sys-shape-clip-6-sided-cookie",
+    "body": [
+      "var(--sys-shape-clip-6-sided-cookie)"
+    ],
+    "description": "Use with clip-path to create a 6-sided cookie-shaped boundary."
+  },
+  "Shape Clip: 7 Sided Cookie": {
+    "prefix": "--sys-shape-clip-7-sided-cookie",
+    "body": [
+      "var(--sys-shape-clip-7-sided-cookie)"
+    ],
+    "description": "Use with clip-path to create a 7-sided cookie-shaped boundary."
+  },
+  "Shape Clip: 8 Leaf Clover": {
+    "prefix": "--sys-shape-clip-8-leaf-clover",
+    "body": [
+      "var(--sys-shape-clip-8-leaf-clover)"
+    ],
+    "description": "Use with clip-path to create an 8-leaf clover-shaped boundary."
+  },
+  "Shape Clip: 12 Sided Cookie": {
+    "prefix": "--sys-shape-clip-12-sided-cookie",
+    "body": [
+      "var(--sys-shape-clip-12-sided-cookie)"
+    ],
+    "description": "Use with clip-path to create a 12-sided cookie-shaped boundary."
+  },
+  "Shape Clip: 9 Sided Cookie": {
+    "prefix": "--sys-shape-clip-9-sided-cookie",
+    "body": [
+      "var(--sys-shape-clip-9-sided-cookie)"
+    ],
+    "description": "Use with clip-path to create a 9-sided cookie-shaped boundary."
+  },
+  "Shape Clip: Arrow": {
+    "prefix": "--sys-shape-clip-arrow",
+    "body": [
+      "var(--sys-shape-clip-arrow)"
+    ],
+    "description": "Use with clip-path to create an arrow-shaped boundary."
+  },
+  "Shape Clip: Arch": {
+    "prefix": "--sys-shape-clip-arch",
+    "body": [
+      "var(--sys-shape-clip-arch)"
+    ],
+    "description": "Use with clip-path to create an arch-shaped boundary."
+  },
+  "Shape Clip: Boom": {
+    "prefix": "--sys-shape-clip-boom",
+    "body": [
+      "var(--sys-shape-clip-boom)"
+    ],
+    "description": "Use with clip-path to create a boom-shaped boundary."
+  },
+  "Shape Clip: Bun": {
+    "prefix": "--sys-shape-clip-bun",
+    "body": [
+      "var(--sys-shape-clip-bun)"
+    ],
+    "description": "Use with clip-path to create a bun-shaped boundary."
+  },
+  "Shape Clip: Burst": {
+    "prefix": "--sys-shape-clip-burst",
+    "body": [
+      "var(--sys-shape-clip-burst)"
+    ],
+    "description": "Use with clip-path to create a burst-shaped boundary."
+  },
+  "Shape Clip: Circle": {
+    "prefix": "--sys-shape-clip-circle",
+    "body": [
+      "var(--sys-shape-clip-circle)"
+    ],
+    "description": "Use with clip-path to create a circle-shaped boundary."
+  },
+  "Shape Clip: Diamond": {
+    "prefix": "--sys-shape-clip-diamond",
+    "body": [
+      "var(--sys-shape-clip-diamond)"
+    ],
+    "description": "Use with clip-path to create a diamond-shaped boundary."
+  },
+  "Shape Clip: Fan": {
+    "prefix": "--sys-shape-clip-fan",
+    "body": [
+      "var(--sys-shape-clip-fan)"
+    ],
+    "description": "Use with clip-path to create a fan-shaped boundary."
+  },
+  "Shape Clip: Flower": {
+    "prefix": "--sys-shape-clip-flower",
+    "body": [
+      "var(--sys-shape-clip-flower)"
+    ],
+    "description": "Use with clip-path to create a flower-shaped boundary."
+  },
+  "Shape Clip: Gem": {
+    "prefix": "--sys-shape-clip-gem",
+    "body": [
+      "var(--sys-shape-clip-gem)"
+    ],
+    "description": "Use with clip-path to create a gem-shaped boundary."
+  },
+  "Shape Clip: Ghost Ish": {
+    "prefix": "--sys-shape-clip-ghost-ish",
+    "body": [
+      "var(--sys-shape-clip-ghost-ish)"
+    ],
+    "description": "Use with clip-path to create a ghost-ish-shaped boundary."
+  },
+  "Shape Clip: Heart": {
+    "prefix": "--sys-shape-clip-heart",
+    "body": [
+      "var(--sys-shape-clip-heart)"
+    ],
+    "description": "Use with clip-path to create a heart-shaped boundary."
+  },
+  "Shape Clip: Clamshell": {
+    "prefix": "--sys-shape-clip-clamshell",
+    "body": [
+      "var(--sys-shape-clip-clamshell)"
+    ],
+    "description": "Use with clip-path to create a clamshell-shaped boundary."
+  },
+  "Shape Clip: Oval": {
+    "prefix": "--sys-shape-clip-oval",
+    "body": [
+      "var(--sys-shape-clip-oval)"
+    ],
+    "description": "Use with clip-path to create an oval-shaped boundary."
+  },
+  "Shape Clip: Pentagon": {
+    "prefix": "--sys-shape-clip-pentagon",
+    "body": [
+      "var(--sys-shape-clip-pentagon)"
+    ],
+    "description": "Use with clip-path to create a pentagon-shaped boundary."
+  },
+  "Shape Clip: Pill": {
+    "prefix": "--sys-shape-clip-pill",
+    "body": [
+      "var(--sys-shape-clip-pill)"
+    ],
+    "description": "Use with clip-path to create a pill-shaped boundary."
+  },
+  "Shape Clip: Pixel Circle": {
+    "prefix": "--sys-shape-clip-pixel-circle",
+    "body": [
+      "var(--sys-shape-clip-pixel-circle)"
+    ],
+    "description": "Use with clip-path to create a pixel circle-shaped boundary."
+  },
+  "Shape Clip: Pixel Triangle": {
+    "prefix": "--sys-shape-clip-pixel-triangle",
+    "body": [
+      "var(--sys-shape-clip-pixel-triangle)"
+    ],
+    "description": "Use with clip-path to create a pixel triangle-shaped boundary."
+  },
+  "Shape Clip: Puffy Diamond": {
+    "prefix": "--sys-shape-clip-puffy-diamond",
+    "body": [
+      "var(--sys-shape-clip-puffy-diamond)"
+    ],
+    "description": "Use with clip-path to create a puffy diamond-shaped boundary."
+  },
+  "Shape Clip: Puffy": {
+    "prefix": "--sys-shape-clip-puffy",
+    "body": [
+      "var(--sys-shape-clip-puffy)"
+    ],
+    "description": "Use with clip-path to create a puffy-shaped boundary."
+  },
+  "Shape Clip: Semicircle": {
+    "prefix": "--sys-shape-clip-semicircle",
+    "body": [
+      "var(--sys-shape-clip-semicircle)"
+    ],
+    "description": "Use with clip-path to create a semicircle-shaped boundary."
+  },
+  "Shape Clip: Slanted": {
+    "prefix": "--sys-shape-clip-slanted",
+    "body": [
+      "var(--sys-shape-clip-slanted)"
+    ],
+    "description": "Use with clip-path to create a slanted-shaped boundary."
+  },
+  "Shape Clip: Soft Boom": {
+    "prefix": "--sys-shape-clip-soft-boom",
+    "body": [
+      "var(--sys-shape-clip-soft-boom)"
+    ],
+    "description": "Use with clip-path to create a soft boom-shaped boundary."
+  },
+  "Shape Clip: Soft Burst": {
+    "prefix": "--sys-shape-clip-soft-burst",
+    "body": [
+      "var(--sys-shape-clip-soft-burst)"
+    ],
+    "description": "Use with clip-path to create a soft burst-shaped boundary."
+  },
+  "Shape Clip: Square": {
+    "prefix": "--sys-shape-clip-square",
+    "body": [
+      "var(--sys-shape-clip-square)"
+    ],
+    "description": "Use with clip-path to create a square-shaped boundary."
+  },
+  "Shape Clip: Sunny": {
+    "prefix": "--sys-shape-clip-sunny",
+    "body": [
+      "var(--sys-shape-clip-sunny)"
+    ],
+    "description": "Use with clip-path to create a sunny-shaped boundary."
+  },
+  "Shape Clip: Triangle": {
+    "prefix": "--sys-shape-clip-triangle",
+    "body": [
+      "var(--sys-shape-clip-triangle)"
+    ],
+    "description": "Use with clip-path to create a triangle-shaped boundary."
+  },
+  "Shape Mask: 4 Leaf Clover": {
+    "prefix": "--sys-shape-mask-4-leaf-clover",
+    "body": [
+      "var(--sys-shape-mask-4-leaf-clover)"
+    ],
+    "description": "Use with mask-image to apply a 4-leaf clover-shaped mask."
+  },
+  "Shape Mask: 4 Sided Cookie": {
+    "prefix": "--sys-shape-mask-4-sided-cookie",
+    "body": [
+      "var(--sys-shape-mask-4-sided-cookie)"
+    ],
+    "description": "Use with mask-image to apply a 4-sided cookie-shaped mask."
+  },
+  "Shape Mask: 6 Sided Cookie": {
+    "prefix": "--sys-shape-mask-6-sided-cookie",
+    "body": [
+      "var(--sys-shape-mask-6-sided-cookie)"
+    ],
+    "description": "Use with mask-image to apply a 6-sided cookie-shaped mask."
+  },
+  "Shape Mask: 7 Sided Cookie": {
+    "prefix": "--sys-shape-mask-7-sided-cookie",
+    "body": [
+      "var(--sys-shape-mask-7-sided-cookie)"
+    ],
+    "description": "Use with mask-image to apply a 7-sided cookie-shaped mask."
+  },
+  "Shape Mask: 8 Leaf Clover": {
+    "prefix": "--sys-shape-mask-8-leaf-clover",
+    "body": [
+      "var(--sys-shape-mask-8-leaf-clover)"
+    ],
+    "description": "Use with mask-image to apply an 8-leaf clover-shaped mask."
+  },
+  "Shape Mask: 9 Sided Cookie": {
+    "prefix": "--sys-shape-mask-9-sided-cookie",
+    "body": [
+      "var(--sys-shape-mask-9-sided-cookie)"
+    ],
+    "description": "Use with mask-image to apply a 9-sided cookie-shaped mask."
+  },
+  "Shape Mask: 12 Sided Cookie": {
+    "prefix": "--sys-shape-mask-12-sided-cookie",
+    "body": [
+      "var(--sys-shape-mask-12-sided-cookie)"
+    ],
+    "description": "Use with mask-image to apply a 12-sided cookie-shaped mask."
+  },
+  "Shape Mask: Arch": {
+    "prefix": "--sys-shape-mask-arch",
+    "body": [
+      "var(--sys-shape-mask-arch)"
+    ],
+    "description": "Use with mask-image to apply an arch-shaped mask."
+  },
+  "Shape Mask: Arrow": {
+    "prefix": "--sys-shape-mask-arrow",
+    "body": [
+      "var(--sys-shape-mask-arrow)"
+    ],
+    "description": "Use with mask-image to apply an arrow-shaped mask."
+  },
+  "Shape Mask: Boom": {
+    "prefix": "--sys-shape-mask-boom",
+    "body": [
+      "var(--sys-shape-mask-boom)"
+    ],
+    "description": "Use with mask-image to apply a boom-shaped mask."
+  },
+  "Shape Mask: Bun": {
+    "prefix": "--sys-shape-mask-bun",
+    "body": [
+      "var(--sys-shape-mask-bun)"
+    ],
+    "description": "Use with mask-image to apply a bun-shaped mask."
+  },
+  "Shape Mask: Burst": {
+    "prefix": "--sys-shape-mask-burst",
+    "body": [
+      "var(--sys-shape-mask-burst)"
+    ],
+    "description": "Use with mask-image to apply a burst-shaped mask."
+  },
+  "Shape Mask: Circle": {
+    "prefix": "--sys-shape-mask-circle",
+    "body": [
+      "var(--sys-shape-mask-circle)"
+    ],
+    "description": "Use with mask-image to apply a circle-shaped mask."
+  },
+  "Shape Mask: Diamond": {
+    "prefix": "--sys-shape-mask-diamond",
+    "body": [
+      "var(--sys-shape-mask-diamond)"
+    ],
+    "description": "Use with mask-image to apply a diamond-shaped mask."
+  },
+  "Shape Mask: Fan": {
+    "prefix": "--sys-shape-mask-fan",
+    "body": [
+      "var(--sys-shape-mask-fan)"
+    ],
+    "description": "Use with mask-image to apply a fan-shaped mask."
+  },
+  "Shape Mask: Flower": {
+    "prefix": "--sys-shape-mask-flower",
+    "body": [
+      "var(--sys-shape-mask-flower)"
+    ],
+    "description": "Use with mask-image to apply a flower-shaped mask."
+  },
+  "Shape Mask: Gem": {
+    "prefix": "--sys-shape-mask-gem",
+    "body": [
+      "var(--sys-shape-mask-gem)"
+    ],
+    "description": "Use with mask-image to apply a gem-shaped mask."
+  },
+  "Shape Mask: Ghost Ish": {
+    "prefix": "--sys-shape-mask-ghost-ish",
+    "body": [
+      "var(--sys-shape-mask-ghost-ish)"
+    ],
+    "description": "Use with mask-image to apply a ghost-ish-shaped mask."
+  },
+  "Shape Mask: Heart": {
+    "prefix": "--sys-shape-mask-heart",
+    "body": [
+      "var(--sys-shape-mask-heart)"
+    ],
+    "description": "Use with mask-image to apply a heart-shaped mask."
+  },
+  "Shape Mask: Clamshell": {
+    "prefix": "--sys-shape-mask-clamshell",
+    "body": [
+      "var(--sys-shape-mask-clamshell)"
+    ],
+    "description": "Use with mask-image to apply a clamshell-shaped mask."
+  },
+  "Shape Mask: Oval": {
+    "prefix": "--sys-shape-mask-oval",
+    "body": [
+      "var(--sys-shape-mask-oval)"
+    ],
+    "description": "Use with mask-image to apply an oval-shaped mask."
+  },
+  "Shape Mask: Pentagon": {
+    "prefix": "--sys-shape-mask-pentagon",
+    "body": [
+      "var(--sys-shape-mask-pentagon)"
+    ],
+    "description": "Use with mask-image to apply a pentagon-shaped mask."
+  },
+  "Shape Mask: Pill": {
+    "prefix": "--sys-shape-mask-pill",
+    "body": [
+      "var(--sys-shape-mask-pill)"
+    ],
+    "description": "Use with mask-image to apply a pill-shaped mask."
+  },
+  "Shape Mask: Pixel Circle": {
+    "prefix": "--sys-shape-mask-pixel-circle",
+    "body": [
+      "var(--sys-shape-mask-pixel-circle)"
+    ],
+    "description": "Use with mask-image to apply a pixel circle-shaped mask."
+  },
+  "Shape Mask: Pixel Triangle": {
+    "prefix": "--sys-shape-mask-pixel-triangle",
+    "body": [
+      "var(--sys-shape-mask-pixel-triangle)"
+    ],
+    "description": "Use with mask-image to apply a pixel triangle-shaped mask."
+  },
+  "Shape Mask: Puffy Diamond": {
+    "prefix": "--sys-shape-mask-puffy-diamond",
+    "body": [
+      "var(--sys-shape-mask-puffy-diamond)"
+    ],
+    "description": "Use with mask-image to apply a puffy diamond-shaped mask."
+  },
+  "Shape Mask: Puffy": {
+    "prefix": "--sys-shape-mask-puffy",
+    "body": [
+      "var(--sys-shape-mask-puffy)"
+    ],
+    "description": "Use with mask-image to apply a puffy-shaped mask."
+  },
+  "Shape Mask: Semicircle": {
+    "prefix": "--sys-shape-mask-semicircle",
+    "body": [
+      "var(--sys-shape-mask-semicircle)"
+    ],
+    "description": "Use with mask-image to apply a semicircle-shaped mask."
+  },
+  "Shape Mask: Slanted": {
+    "prefix": "--sys-shape-mask-slanted",
+    "body": [
+      "var(--sys-shape-mask-slanted)"
+    ],
+    "description": "Use with mask-image to apply a slanted-shaped mask."
+  },
+  "Shape Mask: Soft Boom": {
+    "prefix": "--sys-shape-mask-soft-boom",
+    "body": [
+      "var(--sys-shape-mask-soft-boom)"
+    ],
+    "description": "Use with mask-image to apply a soft boom-shaped mask."
+  },
+  "Shape Mask: Soft Burst": {
+    "prefix": "--sys-shape-mask-soft-burst",
+    "body": [
+      "var(--sys-shape-mask-soft-burst)"
+    ],
+    "description": "Use with mask-image to apply a soft burst-shaped mask."
+  },
+  "Shape Mask: Square": {
+    "prefix": "--sys-shape-mask-square",
+    "body": [
+      "var(--sys-shape-mask-square)"
+    ],
+    "description": "Use with mask-image to apply a square-shaped mask."
+  },
+  "Shape Mask: Sunny": {
+    "prefix": "--sys-shape-mask-sunny",
+    "body": [
+      "var(--sys-shape-mask-sunny)"
+    ],
+    "description": "Use with mask-image to apply a sunny-shaped mask."
+  },
+  "Shape Mask: Triangle": {
+    "prefix": "--sys-shape-mask-triangle",
+    "body": [
+      "var(--sys-shape-mask-triangle)"
+    ],
+    "description": "Use with mask-image to apply a triangle-shaped mask."
+  },
+  "Shape Mask: Very Sunny": {
+    "prefix": "--sys-shape-mask-very-sunny",
+    "body": [
+      "var(--sys-shape-mask-very-sunny)"
+    ],
+    "description": "Use with mask-image to apply a very sunny-shaped mask."
+  },
+  "System Measurement Space 0": {
+    "prefix": "--sys-measurement-space-0",
+    "body": [
+      "var(--sys-measurement-space-0)"
+    ],
+    "description": "0rem (0px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 25": {
+    "prefix": "--sys-measurement-space-25",
+    "body": [
+      "var(--sys-measurement-space-25)"
+    ],
+    "description": "0.125rem (2px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 50": {
+    "prefix": "--sys-measurement-space-50",
+    "body": [
+      "var(--sys-measurement-space-50)"
+    ],
+    "description": "0.25rem (4px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 75": {
+    "prefix": "--sys-measurement-space-75",
+    "body": [
+      "var(--sys-measurement-space-75)"
+    ],
+    "description": "0.375rem (6px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 100": {
+    "prefix": "--sys-measurement-space-100",
+    "body": [
+      "var(--sys-measurement-space-100)"
+    ],
+    "description": "0.5rem (8px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 125": {
+    "prefix": "--sys-measurement-space-125",
+    "body": [
+      "var(--sys-measurement-space-125)"
+    ],
+    "description": "0.625rem (10px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 150": {
+    "prefix": "--sys-measurement-space-150",
+    "body": [
+      "var(--sys-measurement-space-150)"
+    ],
+    "description": "0.75rem (12px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 175": {
+    "prefix": "--sys-measurement-space-175",
+    "body": [
+      "var(--sys-measurement-space-175)"
+    ],
+    "description": "0.875rem (14px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 200": {
+    "prefix": "--sys-measurement-space-200",
+    "body": [
+      "var(--sys-measurement-space-200)"
+    ],
+    "description": "1rem (16px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 250": {
+    "prefix": "--sys-measurement-space-250",
+    "body": [
+      "var(--sys-measurement-space-250)"
+    ],
+    "description": "1.25rem (20px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 300": {
+    "prefix": "--sys-measurement-space-300",
+    "body": [
+      "var(--sys-measurement-space-300)"
+    ],
+    "description": "1.5rem (24px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 400": {
+    "prefix": "--sys-measurement-space-400",
+    "body": [
+      "var(--sys-measurement-space-400)"
+    ],
+    "description": "2rem (32px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 450": {
+    "prefix": "--sys-measurement-space-450",
+    "body": [
+      "var(--sys-measurement-space-450)"
+    ],
+    "description": "2.25rem (36px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 500": {
+    "prefix": "--sys-measurement-space-500",
+    "body": [
+      "var(--sys-measurement-space-500)"
+    ],
+    "description": "2.5rem (40px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 600": {
+    "prefix": "--sys-measurement-space-600",
+    "body": [
+      "var(--sys-measurement-space-600)"
+    ],
+    "description": "3rem (48px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 700": {
+    "prefix": "--sys-measurement-space-700",
+    "body": [
+      "var(--sys-measurement-space-700)"
+    ],
+    "description": "3.5rem (56px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 800": {
+    "prefix": "--sys-measurement-space-800",
+    "body": [
+      "var(--sys-measurement-space-800)"
+    ],
+    "description": "4rem (64px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  },
+  "System Measurement Space 900": {
+    "prefix": "--sys-measurement-space-900",
+    "body": [
+      "var(--sys-measurement-space-900)"
+    ],
+    "description": "4.5rem (72px). Apply to the margins, padding, and gaps of a component, UI element, or layout."
+  }
+}

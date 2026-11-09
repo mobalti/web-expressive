@@ -1,0 +1,996 @@
+{
+  "Component: Button": {
+    "name": "Component: Button",
+    "prefix": [
+      "we-button",
+      "button"
+    ],
+    "body": [
+      "<button class=\"button ${1|filled,tonal,outline,elevated,text|}\">$2</button>$0"
+    ],
+    "description": "Buttons communicate actions across dialogs, modals, forms, cards, and toolbars.\nVariants: filled (default) | tonal | outline | elevated | text\nSizes: extra-small | small (default) | medium | large | extra-large\nShapes: round (default) | square"
+  },
+  "Component: Button Link": {
+    "name": "Component: Button Link",
+    "prefix": [
+      "we-button:a",
+      "button:a"
+    ],
+    "body": [
+      "<a class=\"button ${1|filled,tonal,outline,elevated,text|}\" href=\"$2\">$3</a>$0"
+    ],
+    "description": "Buttons communicate actions across dialogs, modals, forms, cards, and toolbars.\nVariants: filled (default) | tonal | outline | elevated | text\nSizes: extra-small | small (default) | medium | large | extra-large\nShapes: round (default) | square"
+  },
+  "Component: Toggle Button": {
+    "name": "Component: Toggle Button",
+    "prefix": [
+      "we-toggle-button",
+      "toggle-button"
+    ],
+    "body": [
+      "<div class=\"toggle-button ${1|filled,tonal,outline,elevated|}\">",
+      "  <input class=\"input\" type=\"${2|checkbox,radio|}\" name=\"$3\" id=\"$4\">",
+      "  <label class=\"label\" for=\"$4\">$0</label>",
+      "</div>"
+    ],
+    "description": "Toggle a choice on or off, or select an option using a native checkbox or radio.\nVariants: filled (default) | tonal | outline | elevated\nSizes: extra-small | small (default) | medium | large | extra-large\nShapes: round (default) | square"
+  },
+  "Component: Icon Button": {
+    "name": "Component: Icon Button",
+    "prefix": [
+      "we-icon-button",
+      "icon-button"
+    ],
+    "body": [
+      "<button class=\"icon-button ${1|filled,tonal,outline,standard|}\" aria-label=\"$2\">",
+      "  <span class=\"icon\" aria-hidden=\"true\">$3</span>",
+      "</button>$0"
+    ],
+    "description": "Compact button for supplementary actions. Always include an aria-label.\nVariants: filled (default) | tonal | outline | standard\nSizes: extra-small | small (default) | medium | large | extra-large\nShapes: round (default) | square\nWidths: narrow | normal (default) | wide"
+  },
+  "Component: Icon Button Link": {
+    "name": "Component: Icon Button Link",
+    "prefix": [
+      "we-icon-button:a",
+      "icon-button:a"
+    ],
+    "body": [
+      "<a class=\"icon-button ${1|filled,tonal,outline,standard|}\" href=\"$2\" aria-label=\"$3\">",
+      "  <span class=\"icon\" aria-hidden=\"true\">$4</span>",
+      "</a>$0"
+    ],
+    "description": "Compact button for supplementary actions. Always include an aria-label.\nVariants: filled (default) | tonal | outline | standard\nSizes: extra-small | small (default) | medium | large | extra-large\nShapes: round (default) | square\nWidths: narrow | normal (default) | wide"
+  },
+  "Component: Toggle Icon Button": {
+    "name": "Component: Toggle Icon Button",
+    "prefix": [
+      "we-toggle-icon-button",
+      "toggle-icon-button"
+    ],
+    "body": [
+      "<div class=\"toggle-icon-button ${1|filled,tonal,outline,standard|}\">",
+      "  <input class=\"input\" type=\"${2|checkbox,radio|}\" name=\"$3\" id=\"$4\" aria-label=\"$5\">",
+      "  <label class=\"label\" for=\"$4\">",
+      "    <span class=\"icon\" aria-hidden=\"true\">$6</span>",
+      "  </label>",
+      "</div>$0"
+    ],
+    "description": "Toggle an icon state using a native checkbox or radio. Always include an aria-label.\nVariants: filled (default) | tonal | outline | standard\nSizes: extra-small | small (default) | medium | large | extra-large\nShapes: round (default) | square\nWidths: narrow | normal (default) | wide"
+  },
+  "Component: Standard Button Group": {
+    "name": "Component: Standard Button Group",
+    "prefix": [
+      "we-standard-button-group",
+      "standard-button-group"
+    ],
+    "body": [
+      "<div class=\"standard-button-group $1\" role=\"group\" aria-label=\"$2\">",
+      "  $0",
+      "</div>"
+    ],
+    "description": "Groups related buttons with interactive layout response.\nSizes: extra-small | small (default) | medium | large | extra-large\nShapes: round (default) | square\nWidths: narrow | normal (default) | wide"
+  },
+  "Component: Connected Button Group": {
+    "name": "Component: Connected Button Group",
+    "prefix": [
+      "we-connected-button-group",
+      "connected-button-group"
+    ],
+    "body": [
+      "<div class=\"connected-button-group $1\" role=\"group\" aria-label=\"$2\">",
+      "  $0",
+      "</div>"
+    ],
+    "description": "Groups related toggle options into a unified segmented strip.\nSizes: extra-small | small (default) | medium | large | extra-large\nShapes: round (default) | square"
+  },
+  "Component: Extended FAB": {
+    "name": "Component: Extended FAB",
+    "prefix": [
+      "we-extended-fab",
+      "extended-fab"
+    ],
+    "body": [
+      "<button class=\"extended-fab ${1|primary-container,secondary-container,tertiary-container,primary,secondary,tertiary|}\">",
+      "  <span class=\"icon\" aria-hidden=\"true\">$2</span>",
+      "  <span class=\"label-text\">$3</span>",
+      "</button>$0"
+    ],
+    "description": "Floating action button with icon and label for the primary constructive action on a screen.\nVariants: primary-container (default) | secondary-container | tertiary-container | primary | secondary | tertiary\nSizes: small (default) | medium | large"
+  },
+  "Component: Extended FAB Link": {
+    "name": "Component: Extended FAB Link",
+    "prefix": [
+      "we-extended-fab:a",
+      "extended-fab:a"
+    ],
+    "body": [
+      "<a class=\"extended-fab ${1|primary-container,secondary-container,tertiary-container,primary,secondary,tertiary|}\" href=\"$2\">",
+      "  <span class=\"icon\" aria-hidden=\"true\">$3</span>",
+      "  <span class=\"label-text\">$4</span>",
+      "</a>$0"
+    ],
+    "description": "Floating action button with icon and label for the primary constructive action on a screen.\nVariants: primary-container (default) | secondary-container | tertiary-container | primary | secondary | tertiary\nSizes: small (default) | medium | large"
+  },
+  "Component: FAB": {
+    "name": "Component: FAB",
+    "prefix": [
+      "we-fab",
+      "fab"
+    ],
+    "body": [
+      "<button class=\"fab ${1|primary-container,secondary-container,tertiary-container,primary,secondary,tertiary|}\" aria-label=\"$2\">",
+      "  <span class=\"icon\" aria-hidden=\"true\">$3</span>",
+      "</button>$0"
+    ],
+    "description": "Floating action button for the primary constructive action on a screen. Always include an aria-label.\nVariants: primary-container (default) | secondary-container | tertiary-container | primary | secondary | tertiary\nSizes: small (default) | medium | large"
+  },
+  "Component: FAB Link": {
+    "name": "Component: FAB Link",
+    "prefix": [
+      "we-fab:a",
+      "fab:a"
+    ],
+    "body": [
+      "<a class=\"fab ${1|primary-container,secondary-container,tertiary-container,primary,secondary,tertiary|}\" href=\"$2\" aria-label=\"$3\">",
+      "  <span class=\"icon\" aria-hidden=\"true\">$4</span>",
+      "</a>$0"
+    ],
+    "description": "Floating action button for the primary constructive action on a screen. Always include an aria-label.\nVariants: primary-container (default) | secondary-container | tertiary-container | primary | secondary | tertiary\nSizes: small (default) | medium | large"
+  },
+  "Component: Switch": {
+    "name": "Component: Switch",
+    "prefix": [
+      "we-switch",
+      "switch"
+    ],
+    "body": [
+      "<input class=\"switch $1\" type=\"checkbox\" role=\"switch\" aria-label=\"$2\">$0"
+    ],
+    "description": "Toggles a single standalone setting on or off with immediate effect.\nModifiers: icon"
+  },
+  "CDN Core": {
+    "prefix": "cdn-core",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/core.css\" />"
+    ],
+    "description": "Load the core foundation (reset + essential tokens)"
+  },
+  "CDN Component Button": {
+    "prefix": "cdn-component-button",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/button.css\" />"
+    ],
+    "description": "Load the Button component styles"
+  },
+  "CDN Component Switch": {
+    "prefix": "cdn-component-switch",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/switch.css\" />"
+    ],
+    "description": "Load the Switch component styles"
+  },
+  "CDN Scheme Aqua Expressive": {
+    "prefix": "cdn-scheme-aqua-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/aqua-expressive.css\" />"
+    ],
+    "description": "Load the aqua-expressive scheme"
+  },
+  "CDN Scheme Aqua Neutral": {
+    "prefix": "cdn-scheme-aqua-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/aqua-neutral.css\" />"
+    ],
+    "description": "Load the aqua-neutral scheme"
+  },
+  "CDN Scheme Aqua Tonal": {
+    "prefix": "cdn-scheme-aqua-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/aqua-tonal.css\" />"
+    ],
+    "description": "Load the aqua-tonal scheme"
+  },
+  "CDN Scheme Aqua Vibrant": {
+    "prefix": "cdn-scheme-aqua-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/aqua-vibrant.css\" />"
+    ],
+    "description": "Load the aqua-vibrant scheme"
+  },
+  "CDN Scheme Baseline": {
+    "prefix": "cdn-scheme-baseline",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/baseline.css\" />"
+    ],
+    "description": "Load the baseline scheme"
+  },
+  "CDN Scheme Berry Expressive": {
+    "prefix": "cdn-scheme-berry-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/berry-expressive.css\" />"
+    ],
+    "description": "Load the berry-expressive scheme"
+  },
+  "CDN Scheme Berry Neutral": {
+    "prefix": "cdn-scheme-berry-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/berry-neutral.css\" />"
+    ],
+    "description": "Load the berry-neutral scheme"
+  },
+  "CDN Scheme Berry Tonal": {
+    "prefix": "cdn-scheme-berry-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/berry-tonal.css\" />"
+    ],
+    "description": "Load the berry-tonal scheme"
+  },
+  "CDN Scheme Berry Vibrant": {
+    "prefix": "cdn-scheme-berry-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/berry-vibrant.css\" />"
+    ],
+    "description": "Load the berry-vibrant scheme"
+  },
+  "CDN Scheme Blue": {
+    "prefix": "cdn-scheme-blue",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/blue.css\" />"
+    ],
+    "description": "Load the blue scheme"
+  },
+  "CDN Scheme Blue Green": {
+    "prefix": "cdn-scheme-blue-green",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/blue-green.css\" />"
+    ],
+    "description": "Load the blue-green scheme"
+  },
+  "CDN Scheme Carbon Expressive": {
+    "prefix": "cdn-scheme-carbon-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/carbon-expressive.css\" />"
+    ],
+    "description": "Load the carbon-expressive scheme"
+  },
+  "CDN Scheme Carbon Neutral": {
+    "prefix": "cdn-scheme-carbon-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/carbon-neutral.css\" />"
+    ],
+    "description": "Load the carbon-neutral scheme"
+  },
+  "CDN Scheme Carbon Tonal": {
+    "prefix": "cdn-scheme-carbon-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/carbon-tonal.css\" />"
+    ],
+    "description": "Load the carbon-tonal scheme"
+  },
+  "CDN Scheme Carbon Vibrant": {
+    "prefix": "cdn-scheme-carbon-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/carbon-vibrant.css\" />"
+    ],
+    "description": "Load the carbon-vibrant scheme"
+  },
+  "CDN Scheme Classic Expressive": {
+    "prefix": "cdn-scheme-classic-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/classic-expressive.css\" />"
+    ],
+    "description": "Load the classic-expressive scheme"
+  },
+  "CDN Scheme Classic Neutral": {
+    "prefix": "cdn-scheme-classic-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/classic-neutral.css\" />"
+    ],
+    "description": "Load the classic-neutral scheme"
+  },
+  "CDN Scheme Classic Tonal": {
+    "prefix": "cdn-scheme-classic-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/classic-tonal.css\" />"
+    ],
+    "description": "Load the classic-tonal scheme"
+  },
+  "CDN Scheme Classic Vibrant": {
+    "prefix": "cdn-scheme-classic-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/classic-vibrant.css\" />"
+    ],
+    "description": "Load the classic-vibrant scheme"
+  },
+  "CDN Scheme Forest Expressive": {
+    "prefix": "cdn-scheme-forest-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/forest-expressive.css\" />"
+    ],
+    "description": "Load the forest-expressive scheme"
+  },
+  "CDN Scheme Forest Neutral": {
+    "prefix": "cdn-scheme-forest-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/forest-neutral.css\" />"
+    ],
+    "description": "Load the forest-neutral scheme"
+  },
+  "CDN Scheme Forest Tonal": {
+    "prefix": "cdn-scheme-forest-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/forest-tonal.css\" />"
+    ],
+    "description": "Load the forest-tonal scheme"
+  },
+  "CDN Scheme Forest Vibrant": {
+    "prefix": "cdn-scheme-forest-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/forest-vibrant.css\" />"
+    ],
+    "description": "Load the forest-vibrant scheme"
+  },
+  "CDN Scheme Fuchsia Expressive": {
+    "prefix": "cdn-scheme-fuchsia-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/fuchsia-expressive.css\" />"
+    ],
+    "description": "Load the fuchsia-expressive scheme"
+  },
+  "CDN Scheme Fuchsia Neutral": {
+    "prefix": "cdn-scheme-fuchsia-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/fuchsia-neutral.css\" />"
+    ],
+    "description": "Load the fuchsia-neutral scheme"
+  },
+  "CDN Scheme Fuchsia Tonal": {
+    "prefix": "cdn-scheme-fuchsia-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/fuchsia-tonal.css\" />"
+    ],
+    "description": "Load the fuchsia-tonal scheme"
+  },
+  "CDN Scheme Fuchsia Vibrant": {
+    "prefix": "cdn-scheme-fuchsia-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/fuchsia-vibrant.css\" />"
+    ],
+    "description": "Load the fuchsia-vibrant scheme"
+  },
+  "CDN Scheme Green": {
+    "prefix": "cdn-scheme-green",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/green.css\" />"
+    ],
+    "description": "Load the green scheme"
+  },
+  "CDN Scheme Green Orange": {
+    "prefix": "cdn-scheme-green-orange",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/green-orange.css\" />"
+    ],
+    "description": "Load the green-orange scheme"
+  },
+  "CDN Scheme Indigo": {
+    "prefix": "cdn-scheme-indigo",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/indigo.css\" />"
+    ],
+    "description": "Load the indigo scheme"
+  },
+  "CDN Scheme Light Purple Blue": {
+    "prefix": "cdn-scheme-light-purple-blue",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/light-purple-blue.css\" />"
+    ],
+    "description": "Load the light-purple-blue scheme"
+  },
+  "CDN Scheme Monochrome": {
+    "prefix": "cdn-scheme-monochrome",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/monochrome.css\" />"
+    ],
+    "description": "Load the monochrome scheme"
+  },
+  "CDN Scheme Orange": {
+    "prefix": "cdn-scheme-orange",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/orange.css\" />"
+    ],
+    "description": "Load the orange scheme"
+  },
+  "CDN Scheme Paper Expressive": {
+    "prefix": "cdn-scheme-paper-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/paper-expressive.css\" />"
+    ],
+    "description": "Load the paper-expressive scheme"
+  },
+  "CDN Scheme Paper Neutral": {
+    "prefix": "cdn-scheme-paper-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/paper-neutral.css\" />"
+    ],
+    "description": "Load the paper-neutral scheme"
+  },
+  "CDN Scheme Paper Tonal": {
+    "prefix": "cdn-scheme-paper-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/paper-tonal.css\" />"
+    ],
+    "description": "Load the paper-tonal scheme"
+  },
+  "CDN Scheme Paper Vibrant": {
+    "prefix": "cdn-scheme-paper-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/paper-vibrant.css\" />"
+    ],
+    "description": "Load the paper-vibrant scheme"
+  },
+  "CDN Scheme Pink Indigo": {
+    "prefix": "cdn-scheme-pink-indigo",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/pink-indigo.css\" />"
+    ],
+    "description": "Load the pink-indigo scheme"
+  },
+  "CDN Scheme Porcelain Expressive": {
+    "prefix": "cdn-scheme-porcelain-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/porcelain-expressive.css\" />"
+    ],
+    "description": "Load the porcelain-expressive scheme"
+  },
+  "CDN Scheme Porcelain Neutral": {
+    "prefix": "cdn-scheme-porcelain-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/porcelain-neutral.css\" />"
+    ],
+    "description": "Load the porcelain-neutral scheme"
+  },
+  "CDN Scheme Porcelain Tonal": {
+    "prefix": "cdn-scheme-porcelain-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/porcelain-tonal.css\" />"
+    ],
+    "description": "Load the porcelain-tonal scheme"
+  },
+  "CDN Scheme Porcelain Vibrant": {
+    "prefix": "cdn-scheme-porcelain-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/porcelain-vibrant.css\" />"
+    ],
+    "description": "Load the porcelain-vibrant scheme"
+  },
+  "CDN Scheme Red": {
+    "prefix": "cdn-scheme-red",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/red.css\" />"
+    ],
+    "description": "Load the red scheme"
+  },
+  "CDN Scheme Sun Expressive": {
+    "prefix": "cdn-scheme-sun-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/sun-expressive.css\" />"
+    ],
+    "description": "Load the sun-expressive scheme"
+  },
+  "CDN Scheme Sun Neutral": {
+    "prefix": "cdn-scheme-sun-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/sun-neutral.css\" />"
+    ],
+    "description": "Load the sun-neutral scheme"
+  },
+  "CDN Scheme Sun Tonal": {
+    "prefix": "cdn-scheme-sun-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/sun-tonal.css\" />"
+    ],
+    "description": "Load the sun-tonal scheme"
+  },
+  "CDN Scheme Sun Vibrant": {
+    "prefix": "cdn-scheme-sun-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/sun-vibrant.css\" />"
+    ],
+    "description": "Load the sun-vibrant scheme"
+  },
+  "CDN Scheme Violet": {
+    "prefix": "cdn-scheme-violet",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/violet.css\" />"
+    ],
+    "description": "Load the violet scheme"
+  },
+  "CDN Scheme Yellow": {
+    "prefix": "cdn-scheme-yellow",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/yellow.css\" />"
+    ],
+    "description": "Load the yellow scheme"
+  },
+  "CDN Scheme Yellow Red": {
+    "prefix": "cdn-scheme-yellow-red",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/yellow-red.css\" />"
+    ],
+    "description": "Load the yellow-red scheme"
+  },
+  "CDN Scheme Alpha Aqua Expressive": {
+    "prefix": "cdn-scheme-alpha-aqua-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/aqua-expressive.css\" />"
+    ],
+    "description": "Load the alpha aqua-expressive scheme"
+  },
+  "CDN Scheme Alpha Aqua Neutral": {
+    "prefix": "cdn-scheme-alpha-aqua-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/aqua-neutral.css\" />"
+    ],
+    "description": "Load the alpha aqua-neutral scheme"
+  },
+  "CDN Scheme Alpha Aqua Tonal": {
+    "prefix": "cdn-scheme-alpha-aqua-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/aqua-tonal.css\" />"
+    ],
+    "description": "Load the alpha aqua-tonal scheme"
+  },
+  "CDN Scheme Alpha Aqua Vibrant": {
+    "prefix": "cdn-scheme-alpha-aqua-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/aqua-vibrant.css\" />"
+    ],
+    "description": "Load the alpha aqua-vibrant scheme"
+  },
+  "CDN Scheme Alpha Baseline": {
+    "prefix": "cdn-scheme-alpha-baseline",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/baseline.css\" />"
+    ],
+    "description": "Load the alpha baseline scheme"
+  },
+  "CDN Scheme Alpha Berry Expressive": {
+    "prefix": "cdn-scheme-alpha-berry-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/berry-expressive.css\" />"
+    ],
+    "description": "Load the alpha berry-expressive scheme"
+  },
+  "CDN Scheme Alpha Berry Neutral": {
+    "prefix": "cdn-scheme-alpha-berry-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/berry-neutral.css\" />"
+    ],
+    "description": "Load the alpha berry-neutral scheme"
+  },
+  "CDN Scheme Alpha Berry Tonal": {
+    "prefix": "cdn-scheme-alpha-berry-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/berry-tonal.css\" />"
+    ],
+    "description": "Load the alpha berry-tonal scheme"
+  },
+  "CDN Scheme Alpha Berry Vibrant": {
+    "prefix": "cdn-scheme-alpha-berry-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/berry-vibrant.css\" />"
+    ],
+    "description": "Load the alpha berry-vibrant scheme"
+  },
+  "CDN Scheme Alpha Blue": {
+    "prefix": "cdn-scheme-alpha-blue",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/blue.css\" />"
+    ],
+    "description": "Load the alpha blue scheme"
+  },
+  "CDN Scheme Alpha Blue Green": {
+    "prefix": "cdn-scheme-alpha-blue-green",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/blue-green.css\" />"
+    ],
+    "description": "Load the alpha blue-green scheme"
+  },
+  "CDN Scheme Alpha Carbon Expressive": {
+    "prefix": "cdn-scheme-alpha-carbon-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/carbon-expressive.css\" />"
+    ],
+    "description": "Load the alpha carbon-expressive scheme"
+  },
+  "CDN Scheme Alpha Carbon Neutral": {
+    "prefix": "cdn-scheme-alpha-carbon-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/carbon-neutral.css\" />"
+    ],
+    "description": "Load the alpha carbon-neutral scheme"
+  },
+  "CDN Scheme Alpha Carbon Tonal": {
+    "prefix": "cdn-scheme-alpha-carbon-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/carbon-tonal.css\" />"
+    ],
+    "description": "Load the alpha carbon-tonal scheme"
+  },
+  "CDN Scheme Alpha Carbon Vibrant": {
+    "prefix": "cdn-scheme-alpha-carbon-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/carbon-vibrant.css\" />"
+    ],
+    "description": "Load the alpha carbon-vibrant scheme"
+  },
+  "CDN Scheme Alpha Classic Expressive": {
+    "prefix": "cdn-scheme-alpha-classic-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/classic-expressive.css\" />"
+    ],
+    "description": "Load the alpha classic-expressive scheme"
+  },
+  "CDN Scheme Alpha Classic Neutral": {
+    "prefix": "cdn-scheme-alpha-classic-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/classic-neutral.css\" />"
+    ],
+    "description": "Load the alpha classic-neutral scheme"
+  },
+  "CDN Scheme Alpha Classic Tonal": {
+    "prefix": "cdn-scheme-alpha-classic-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/classic-tonal.css\" />"
+    ],
+    "description": "Load the alpha classic-tonal scheme"
+  },
+  "CDN Scheme Alpha Classic Vibrant": {
+    "prefix": "cdn-scheme-alpha-classic-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/classic-vibrant.css\" />"
+    ],
+    "description": "Load the alpha classic-vibrant scheme"
+  },
+  "CDN Scheme Alpha Forest Expressive": {
+    "prefix": "cdn-scheme-alpha-forest-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/forest-expressive.css\" />"
+    ],
+    "description": "Load the alpha forest-expressive scheme"
+  },
+  "CDN Scheme Alpha Forest Neutral": {
+    "prefix": "cdn-scheme-alpha-forest-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/forest-neutral.css\" />"
+    ],
+    "description": "Load the alpha forest-neutral scheme"
+  },
+  "CDN Scheme Alpha Forest Tonal": {
+    "prefix": "cdn-scheme-alpha-forest-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/forest-tonal.css\" />"
+    ],
+    "description": "Load the alpha forest-tonal scheme"
+  },
+  "CDN Scheme Alpha Forest Vibrant": {
+    "prefix": "cdn-scheme-alpha-forest-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/forest-vibrant.css\" />"
+    ],
+    "description": "Load the alpha forest-vibrant scheme"
+  },
+  "CDN Scheme Alpha Fuchsia Expressive": {
+    "prefix": "cdn-scheme-alpha-fuchsia-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/fuchsia-expressive.css\" />"
+    ],
+    "description": "Load the alpha fuchsia-expressive scheme"
+  },
+  "CDN Scheme Alpha Fuchsia Neutral": {
+    "prefix": "cdn-scheme-alpha-fuchsia-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/fuchsia-neutral.css\" />"
+    ],
+    "description": "Load the alpha fuchsia-neutral scheme"
+  },
+  "CDN Scheme Alpha Fuchsia Tonal": {
+    "prefix": "cdn-scheme-alpha-fuchsia-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/fuchsia-tonal.css\" />"
+    ],
+    "description": "Load the alpha fuchsia-tonal scheme"
+  },
+  "CDN Scheme Alpha Fuchsia Vibrant": {
+    "prefix": "cdn-scheme-alpha-fuchsia-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/fuchsia-vibrant.css\" />"
+    ],
+    "description": "Load the alpha fuchsia-vibrant scheme"
+  },
+  "CDN Scheme Alpha Green": {
+    "prefix": "cdn-scheme-alpha-green",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/green.css\" />"
+    ],
+    "description": "Load the alpha green scheme"
+  },
+  "CDN Scheme Alpha Green Orange": {
+    "prefix": "cdn-scheme-alpha-green-orange",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/green-orange.css\" />"
+    ],
+    "description": "Load the alpha green-orange scheme"
+  },
+  "CDN Scheme Alpha Indigo": {
+    "prefix": "cdn-scheme-alpha-indigo",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/indigo.css\" />"
+    ],
+    "description": "Load the alpha indigo scheme"
+  },
+  "CDN Scheme Alpha Light Purple Blue": {
+    "prefix": "cdn-scheme-alpha-light-purple-blue",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/light-purple-blue.css\" />"
+    ],
+    "description": "Load the alpha light-purple-blue scheme"
+  },
+  "CDN Scheme Alpha Monochrome": {
+    "prefix": "cdn-scheme-alpha-monochrome",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/monochrome.css\" />"
+    ],
+    "description": "Load the alpha monochrome scheme"
+  },
+  "CDN Scheme Alpha Orange": {
+    "prefix": "cdn-scheme-alpha-orange",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/orange.css\" />"
+    ],
+    "description": "Load the alpha orange scheme"
+  },
+  "CDN Scheme Alpha Paper Expressive": {
+    "prefix": "cdn-scheme-alpha-paper-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/paper-expressive.css\" />"
+    ],
+    "description": "Load the alpha paper-expressive scheme"
+  },
+  "CDN Scheme Alpha Paper Neutral": {
+    "prefix": "cdn-scheme-alpha-paper-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/paper-neutral.css\" />"
+    ],
+    "description": "Load the alpha paper-neutral scheme"
+  },
+  "CDN Scheme Alpha Paper Tonal": {
+    "prefix": "cdn-scheme-alpha-paper-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/paper-tonal.css\" />"
+    ],
+    "description": "Load the alpha paper-tonal scheme"
+  },
+  "CDN Scheme Alpha Paper Vibrant": {
+    "prefix": "cdn-scheme-alpha-paper-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/paper-vibrant.css\" />"
+    ],
+    "description": "Load the alpha paper-vibrant scheme"
+  },
+  "CDN Scheme Alpha Pink Indigo": {
+    "prefix": "cdn-scheme-alpha-pink-indigo",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/pink-indigo.css\" />"
+    ],
+    "description": "Load the alpha pink-indigo scheme"
+  },
+  "CDN Scheme Alpha Porcelain Expressive": {
+    "prefix": "cdn-scheme-alpha-porcelain-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/porcelain-expressive.css\" />"
+    ],
+    "description": "Load the alpha porcelain-expressive scheme"
+  },
+  "CDN Scheme Alpha Porcelain Neutral": {
+    "prefix": "cdn-scheme-alpha-porcelain-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/porcelain-neutral.css\" />"
+    ],
+    "description": "Load the alpha porcelain-neutral scheme"
+  },
+  "CDN Scheme Alpha Porcelain Tonal": {
+    "prefix": "cdn-scheme-alpha-porcelain-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/porcelain-tonal.css\" />"
+    ],
+    "description": "Load the alpha porcelain-tonal scheme"
+  },
+  "CDN Scheme Alpha Porcelain Vibrant": {
+    "prefix": "cdn-scheme-alpha-porcelain-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/porcelain-vibrant.css\" />"
+    ],
+    "description": "Load the alpha porcelain-vibrant scheme"
+  },
+  "CDN Scheme Alpha Red": {
+    "prefix": "cdn-scheme-alpha-red",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/red.css\" />"
+    ],
+    "description": "Load the alpha red scheme"
+  },
+  "CDN Scheme Alpha Sun Expressive": {
+    "prefix": "cdn-scheme-alpha-sun-expressive",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/sun-expressive.css\" />"
+    ],
+    "description": "Load the alpha sun-expressive scheme"
+  },
+  "CDN Scheme Alpha Sun Neutral": {
+    "prefix": "cdn-scheme-alpha-sun-neutral",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/sun-neutral.css\" />"
+    ],
+    "description": "Load the alpha sun-neutral scheme"
+  },
+  "CDN Scheme Alpha Sun Tonal": {
+    "prefix": "cdn-scheme-alpha-sun-tonal",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/sun-tonal.css\" />"
+    ],
+    "description": "Load the alpha sun-tonal scheme"
+  },
+  "CDN Scheme Alpha Sun Vibrant": {
+    "prefix": "cdn-scheme-alpha-sun-vibrant",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/sun-vibrant.css\" />"
+    ],
+    "description": "Load the alpha sun-vibrant scheme"
+  },
+  "CDN Scheme Alpha Violet": {
+    "prefix": "cdn-scheme-alpha-violet",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/violet.css\" />"
+    ],
+    "description": "Load the alpha violet scheme"
+  },
+  "CDN Scheme Alpha Yellow": {
+    "prefix": "cdn-scheme-alpha-yellow",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/yellow.css\" />"
+    ],
+    "description": "Load the alpha yellow scheme"
+  },
+  "CDN Scheme Alpha Yellow Red": {
+    "prefix": "cdn-scheme-alpha-yellow-red",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/yellow-red.css\" />"
+    ],
+    "description": "Load the alpha yellow-red scheme"
+  },
+  "Web Expressive Starter": {
+    "prefix": ["!we", "web-expressive-starter"],
+    "body": [
+      "<!doctype html>",
+      "<html lang=\"en\">",
+      "  <head>",
+      "    <meta charset=\"UTF-8\" />",
+      "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+      "    <title>${1:Web Expressive Starter}</title>",
+      "",
+      "    <!-- 1. Typography -->",
+      "    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />",
+      "    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />",
+      "    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..700&display=swap\" />",
+      "",
+      "    <!-- 2. Core (reset + tokens) -->",
+      "    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/core.css\" />",
+      "",
+      "    <!-- 3. A color scheme -->",
+      "    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/${2|baseline,monochrome,aqua-tonal,berry-tonal,classic-tonal,forest-tonal,fuchsia-tonal,paper-tonal,porcelain-tonal,sun-tonal|}.css\" />",
+      "",
+      "    <!-- 4. Components (as needed) -->",
+      "    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/button.css\" />",
+      "",
+      "    <style>",
+      "      html {",
+      "        --ref-typeface-base: \"Roboto Flex\";",
+      "      }",
+      "      .headline {",
+      "        font: var(--sys-typescale-headline-large);",
+      "      }",
+      "    </style>",
+      "  </head>",
+      "  <body>",
+      "    <h1 class=\"headline\">Hello, World!$0</h1>",
+      "    <button class=\"button tonal large\">Get Started</button>",
+      "  </body>",
+      "</html>"
+    ],
+    "description": "Complete HTML starter template loading Web Expressive (typography, core reset, scheme, button) via CDN."
+  },
+  "CDN Component Connected Button Group": {
+    "prefix": "cdn-component-connected-button-group",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/connected-button-group.css\" />"
+    ],
+    "description": "Load the Connected Button Group component styles"
+  },
+  "CDN Component Icon Button": {
+    "prefix": "cdn-component-icon-button",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/icon-button.css\" />"
+    ],
+    "description": "Load the Icon Button component styles"
+  },
+  "CDN Component Standard Button Group": {
+    "prefix": "cdn-component-standard-button-group",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/standard-button-group.css\" />"
+    ],
+    "description": "Load the Standard Button Group component styles"
+  },
+  "CDN Component Toggle Button": {
+    "prefix": "cdn-component-toggle-button",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/toggle-button.css\" />"
+    ],
+    "description": "Load the Toggle Button component styles"
+  },
+  "CDN Component Toggle Icon Button": {
+    "prefix": "cdn-component-toggle-icon-button",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/toggle-icon-button.css\" />"
+    ],
+    "description": "Load the Toggle Icon Button component styles"
+  },
+  "CDN Component FAB": {
+    "prefix": "cdn-component-fab",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/fab.css\" />"
+    ],
+    "description": "Load the FAB component styles"
+  },
+  "CDN Component Extended FAB": {
+    "prefix": "cdn-component-extended-fab",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/extended-fab.css\" />"
+    ],
+    "description": "Load the Extended FAB component styles"
+  },
+  "CDN Shape Clip Tokens": {
+    "prefix": "cdn-shape-clip",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/shapes/clip-tokens.css\" />"
+    ],
+    "description": "Load the Clip tokens for expressive shapes"
+  },
+  "CDN Shape Mask Tokens": {
+    "prefix": "cdn-shape-mask",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/shapes/mask-tokens.css\" />"
+    ],
+    "description": "Load the Mask tokens for expressive shapes"
+  }
+}

@@ -1,0 +1,7 @@
+**/*
+!package.json
+!README.md
+!LICENSE
+!icon-128.png
+!snippets/**
+!data/**
