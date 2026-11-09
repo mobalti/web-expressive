@@ -1467,19 +1467,15 @@
         </blockquote>
 
         <pre><code class="language-css">/* Standard content uses baseline styles */
-.article-body {
-  font: var(--sys-typescale-body-large);
-  color: var(--sys-color-on-surface);
+.headline {
+  font: var(--sys-typescale-display-small);
 }
 
-/* Expressive hero titles and primary actions use emphasized styles */
-.hero-headline {
-  font: var(--sys-typescale-emphasized-display-small);
-  color: var(--sys-color-primary);
-}
-
-.button-primary {
-  font: var(--sys-typescale-emphasized-label-large);
+/* Expressive hero headlines use emphasized styles */
+@scope (.hero) {
+  .headline {
+    font: var(--sys-typescale-emphasized-display-large);
+  }
 }
 </code></pre>
 
@@ -1834,15 +1830,14 @@
         <pre><code class="language-css">.custom-control {
   outline: 0 solid var(--sys-color-secondary);
   outline-offset: 2px;
-}
 
-.custom-control:focus-visible {
-  outline-width: 3px;
-}
+  &amp;:focus-visible {
+    outline-width: 3px;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .custom-control {
-    transition: outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring);
+  @media (prefers-reduced-motion: no-preference) {
+    transition: outline-width var(--focus-ring-motion-duration)
+      var(--focus-ring-motion-spring);
   }
 }
 </code></pre>
