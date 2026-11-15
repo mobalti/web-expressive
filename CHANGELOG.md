@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1
+
+- Renamed `--focus-ring-motion-duration` to `--focus-ring-motion-spring-duration` to align with the `--[token]` and `--[token]-duration` motion naming pattern.
+- Updated component focus transitions, documentation, layout examples, and VS Code snippets to use the new token name.
+
+Upgrade note: Replace `--focus-ring-motion-duration` with `--focus-ring-motion-spring-duration` in any custom focus-ring transitions or overrides.
+
 ## 1.1.0
 
 - Added `--sys-elevation-level-0` and applied it to components with no resting shadow.

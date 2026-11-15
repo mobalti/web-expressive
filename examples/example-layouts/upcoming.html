@@ -306,7 +306,7 @@
                 content: "";
 
                 @media (prefers-reduced-motion: no-preference) {
-                  transition: outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring);
+                  transition: outline-width var(--focus-ring-motion-spring-duration) var(--focus-ring-motion-spring);
                 }
               }
             }
@@ -337,7 +337,7 @@
 
                 /* Respect the user's reduced-motion preference. */
                 @media (prefers-reduced-motion: no-preference) {
-                  transition: outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring);
+                  transition: outline-width var(--focus-ring-motion-spring-duration) var(--focus-ring-motion-spring);
                 }
               }
 
@@ -514,7 +514,7 @@
                 position-anchor: --carousel;
                 place-items: center;
                 transition:
-                  outline-width var(--focus-ring-motion-duration) var(--focus-ring-motion-spring),
+                  outline-width var(--focus-ring-motion-spring-duration) var(--focus-ring-motion-spring),
                   border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
                 cursor: pointer;
                 inset-block-start: calc(anchor(start) - 3.75rem);

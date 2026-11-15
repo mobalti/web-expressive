@@ -112,7 +112,7 @@ html {
 /* Focus ring motion: expands beyond its resting width, then settles back. */
 html {
   --focus-ring-motion-spring: linear(0 0%, 2.5 25%, 2.5 50%, 1 100%);
-  --focus-ring-motion-duration: 350ms;
+  --focus-ring-motion-spring-duration: 350ms;
 }
 
 html {

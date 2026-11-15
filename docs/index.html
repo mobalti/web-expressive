@@ -134,8 +134,8 @@
             Relative Colors) and native HTML, saving maximum performance for your app&#39;s logic.
           </li>
           <li>
-            <strong>Production-Ready Theming:</strong> 50&#43; built-in light/dark schemes, a full set of documented system tokens, 35 abstract shapes,
-            configurable components with dedicated APIs, and instant theme-swapping with friction-free overrides.
+            <strong>Production-Ready Theming:</strong> 50&#43; built-in light/dark schemes, a full set of documented system tokens, 35 abstract
+            shapes, configurable components with dedicated APIs, and instant theme-swapping with friction-free overrides.
           </li>
           <li>
             <strong>Drop-in Modularity:</strong> Pick only what you need, from tokens to individual components, without adding bundle bloat or
@@ -348,21 +348,23 @@
           <a href="https://m3.material.io/foundations/design-tokens/overview#7f084930-cf5f-4b7e-b83c-614888f18a77" target="_blank" rel="noopener"
             >system tokens</a
           >
-          documented in this reference as CSS custom properties prefixed with <code style="white-space: nowrap">--sys-*</code>. These are the
-          public tokens you use to build and style your interfaces.
+          documented in this reference as CSS custom properties prefixed with <code style="white-space: nowrap">--sys-*</code>. These are the public
+          tokens you use to build and style your interfaces.
         </p>
         <p>
-          In addition to system tokens, Web Expressive provides configuration custom properties that function as public component APIs.
-          These include container style query properties (<code style="white-space: nowrap">--size-items</code>,
-          <code style="white-space: nowrap">--width-items</code>, and <code style="white-space: nowrap">--shape-items</code>) to declaratively
-          adjust component sizing, width, and corner rounding per container, as well as typeface configuration properties
-          (<code style="white-space: nowrap">--ref-typeface-*</code>) to customize font families across the typescale.
+          In addition to system tokens, Web Expressive provides configuration custom properties that function as public component APIs. These include
+          container style query properties (<code style="white-space: nowrap">--size-items</code>,
+          <code style="white-space: nowrap">--width-items</code>, and <code style="white-space: nowrap">--shape-items</code>) to declaratively adjust
+          component sizing, width, and corner rounding per container, as well as typeface configuration properties (<code style="white-space: nowrap"
+            >--ref-typeface-*</code
+          >) to customize font families across the typescale.
         </p>
         <p>
-          Web Expressive also exposes its <a href="#focus-ring-motion">focus-ring motion tokens</a>
-          (<code style="white-space: nowrap">--focus-ring-motion-spring</code> and
-          <code style="white-space: nowrap">--focus-ring-motion-duration</code>). Focus rings are a common interaction behavior across Web Expressive
-          components, and these tokens are made available so you can apply the same spring outline behavior to your own custom components.
+          Web Expressive also exposes its <a href="#focus-ring-motion">focus-ring motion tokens</a> (<code style="white-space: nowrap"
+            >--focus-ring-motion-spring</code
+          >
+          and <code style="white-space: nowrap">--focus-ring-motion-spring-duration</code>). Focus rings are a common interaction behavior across Web
+          Expressive components, and these tokens are made available so you can apply the same spring outline behavior to your own custom components.
         </p>
         <p>
           When inspecting components in browser DevTools, you will also see custom properties prefixed with
@@ -709,12 +711,12 @@
         </h3>
         <p>Web Expressive decouples font loading from typography tokens, making font configuration clean, modular, and centralized.</p>
         <p>
-          In CSS, the <code>font-family</code> property combines specific font family names with a generic family fallback. Web Expressive
-          separates these into two distinct custom properties: specific font names are set on <code>--ref-typeface-*</code> (which accepts
-          only a comma-separated list of quoted strings, such as <code>"Inter"</code> or <code>"Inter", "Arial", "Helvetica"</code>), while
-          the generic fallback is set on <code>--ref-typeface-generic</code> (such as <code>sans-serif</code> or <code>serif</code>). Because
-          the initial value for <code>--ref-typeface-generic</code> is <code>sans-serif</code>, you only need to declare it if your typography
-          requires a different generic family fallback.
+          In CSS, the <code>font-family</code> property combines specific font family names with a generic family fallback. Web Expressive separates
+          these into two distinct custom properties: specific font names are set on <code>--ref-typeface-*</code> (which accepts only a
+          comma-separated list of quoted strings, such as <code>"Inter"</code> or <code>"Inter", "Arial", "Helvetica"</code>), while the generic
+          fallback is set on <code>--ref-typeface-generic</code> (such as <code>sans-serif</code> or <code>serif</code>). Because the initial value
+          for <code>--ref-typeface-generic</code> is <code>sans-serif</code>, you only need to declare it if your typography requires a different
+          generic family fallback.
         </p>
         <p>
           Load your chosen web font using any provider (such as Google Fonts) or via <code>@font-face</code> definitions. For the typescale tokens to
@@ -1445,8 +1447,8 @@
             elements.
           </li>
           <li>
-            <strong>Emphasized styles</strong> were introduced in the M3 Expressive update. They have a higher weight than baseline styles
-            and can be used for selection, actions, headlines, and other editorial treatments.
+            <strong>Emphasized styles</strong> were introduced in the M3 Expressive update. They have a higher weight than baseline styles and can be
+            used for selection, actions, headlines, and other editorial treatments.
           </li>
           <li>
             <strong>Components</strong>: Use emphasized styles to communicate importance or active status, such as primary action buttons, Extended
@@ -1462,8 +1464,8 @@
           <p>
             <strong>Implementation Note:</strong> Web Expressive packages each typescale into a single CSS <code>font</code> shorthand token (bundling
             <code>font-weight</code>, <code>font-size/line-height</code>, and <code>font-family</code>). Always consume typescale variables via the
-            shorthand <code>font</code> property. Tracking is not included in these shorthand tokens; use <code>letter-spacing</code> separately
-            when needed.
+            shorthand <code>font</code> property. Tracking is not included in these shorthand tokens; use <code>letter-spacing</code> separately when
+            needed.
           </p>
         </blockquote>
 
@@ -1659,12 +1661,12 @@
           <a class="heading-anchor" href="#elevation">Elevation</a>
         </h3>
         <p>
-          Elevation is the distance between two surfaces on the z-axis. Material uses six levels of elevation, from 0 to 5. An element's resting
-          state can be on levels 0 to 3, while levels 4 and 5 are reserved for interaction states such as hover and dragged.
+          Elevation is the distance between two surfaces on the z-axis. Material uses six levels of elevation, from 0 to 5. An element's resting state
+          can be on levels 0 to 3, while levels 4 and 5 are reserved for interaction states such as hover and dragged.
         </p>
         <p>
-          Web Expressive represents these levels through CSS <code>box-shadow</code> values. Apply a token with the <code>box-shadow</code>
-          property; <code>--sys-elevation-level-0</code> has the value <code>none</code>.
+          Web Expressive represents these levels through CSS <code>box-shadow</code> values. Apply a token with the <code>box-shadow</code> property;
+          <code>--sys-elevation-level-0</code> has the value <code>none</code>.
         </p>
 
         <blockquote>
@@ -1721,12 +1723,12 @@
           <a class="heading-anchor" href="#motion">Motion</a>
         </h3>
         <p>
-          Spatial springs are used for movement, rotation, size, and rounded corners. Effects springs are used for color and opacity,
-          where there should be no overshoot. Each has three speeds: fast, default, and slow.
+          Spatial springs are used for movement, rotation, size, and rounded corners. Effects springs are used for color and opacity, where there
+          should be no overshoot. Each has three speeds: fast, default, and slow.
         </p>
         <p>
-          Web Expressive uses Material's recommended web curves and durations to approximate expressive springs for animations without
-          interruptions or gestures. Apply the curve and its companion duration in a CSS transition or animation.
+          Web Expressive uses Material's recommended web curves and durations to approximate expressive springs for animations without interruptions
+          or gestures. Apply the curve and its companion duration in a CSS transition or animation.
         </p>
 
         <pre><code class="language-css">.interactive-element {
@@ -1796,9 +1798,9 @@
           <a class="heading-anchor" href="#focus-ring-motion">Focus Ring Motion</a>
         </h4>
         <p>
-          Web Expressive provides two additional tokens for focus-ring motion. The ring expands beyond its resting width, then settles back.
-          These tokens are included in <code>core.css</code> and use the <code>--focus-ring-*</code> prefix. They are Web Expressive tokens,
-          separate from Material's system motion tokens.
+          Web Expressive provides two additional tokens for focus-ring motion. The ring expands beyond its resting width, then settles back. These
+          tokens are included in <code>core.css</code> and use the <code>--focus-ring-*</code> prefix. They are Web Expressive tokens, separate from
+          Material's system motion tokens.
         </p>
         <div class="table-wrapper">
           <table>
@@ -1816,7 +1818,7 @@
                 <td>The curve used to animate the focus ring's width. Use as a transition or animation timing function.</td>
               </tr>
               <tr>
-                <td><code>--focus-ring-motion-duration</code></td>
+                <td><code>--focus-ring-motion-spring-duration</code></td>
                 <td><code>350ms</code></td>
                 <td>The duration of the focus-ring animation. Use as a transition or animation duration.</td>
               </tr>
@@ -1837,7 +1839,7 @@
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    transition: outline-width var(--focus-ring-motion-duration)
+    transition: outline-width var(--focus-ring-motion-spring-duration)
       var(--focus-ring-motion-spring);
   }
 }
@@ -1848,8 +1850,8 @@
         </h3>
         <p>
           An 18-step spacing scale based on an 8px unit, where <code>--sys-measurement-space-100</code> equals <code>0.5rem</code> (8px at a 16px root
-          size). Apply spacing tokens to the margins, padding, and gaps of a component, UI element, or layout. The system can be extended to add
-          more spacing units and patterns as needed.
+          size). Apply spacing tokens to the margins, padding, and gaps of a component, UI element, or layout. The system can be extended to add more
+          spacing units and patterns as needed.
         </p>
 
         <pre><code class="language-css">.container {
@@ -2300,8 +2302,8 @@
           <a class="heading-anchor" href="#components-guide">Components Guide</a>
         </h2>
         <p>
-          Web Expressive components implement Material 3 Expressive interaction patterns using native HTML and modern CSS with zero
-          runtime JavaScript.
+          Web Expressive components implement Material 3 Expressive interaction patterns using native HTML and modern CSS with zero runtime
+          JavaScript.
         </p>
 
         <h3 id="components-overview">

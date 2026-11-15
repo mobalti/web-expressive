@@ -537,11 +537,11 @@
   "Focus ring motion spring": {
     "prefix": "--focus-ring-motion-spring",
     "body": ["var(--focus-ring-motion-spring)"],
-    "description": "Animates the focus ring beyond its resting width, then settles back. Use as the transition or animation timing function with --focus-ring-motion-duration."
+    "description": "Animates the focus ring beyond its resting width, then settles back. Use as the transition or animation timing function with --focus-ring-motion-spring-duration."
   },
   "Focus ring motion duration": {
-    "prefix": "--focus-ring-motion-duration",
-    "body": ["var(--focus-ring-motion-duration)"],
+    "prefix": "--focus-ring-motion-spring-duration",
+    "body": ["var(--focus-ring-motion-spring-duration)"],
     "description": "350ms. Use as the transition or animation duration with --focus-ring-motion-spring."
   },
   "Shape corner none": {
