@@ -4,7 +4,6 @@ A toolkit built on web standards that simplifies and accelerates UI development 
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mobalti/web-expressive/blob/main/LICENSE) [![npm package](https://img.shields.io/npm/v/web-expressive.svg?color=green)](https://www.npmjs.com/package/web-expressive) [![Web Standards](https://img.shields.io/badge/built%20with-web%20standards-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-
 ## Resources
 
 - [Homepage](https://mobalti.github.io/web-expressive/)
@@ -27,13 +26,13 @@ This code snippet is a buildless example that loads `web-expressive` from a CDN.
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400..700&display=swap" />
 
     <!-- 2. Core (reset + tokens) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/core.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.1/dist/core.css" />
 
     <!-- 3. A color scheme -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/schemes/alpha/fuchsia-tonal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.1/dist/schemes/alpha/fuchsia-tonal.css" />
 
     <!-- 4. Components (as needed) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.0/dist/components/button.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-expressive@1.1.1/dist/components/button.css" />
     <style>
       html {
         /* Update the font family for the typography system after loading the font from the CDN */
