@@ -19,6 +19,7 @@ This code snippet is a buildless example that loads `web-expressive` from a CDN.
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="text-scale" content="scale" />
     <title>Web Expressive Starter</title>
     <!-- 1. Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
