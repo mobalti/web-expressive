@@ -1,6 +1,7 @@
 @layer design-system.components {
   .button {
-    --_button-corner: calc((var(--_block-size) - var(--_inner-padding) * 2) / 2);
+    --_button-corner: calc((max(var(--_min-block-size), calc(1lh + (var(--_padding-block) * 2))) - var(--_inner-padding) * 2) / 2);
+
     --_button-transitions:
       border-radius var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial),
       outline-width var(--focus-ring-motion-spring-duration) var(--focus-ring-motion-spring);
@@ -18,8 +19,9 @@
     background: transparent;
     isolation: isolate;
     padding-inline: var(--_padding-inline);
+    padding-block: var(--_padding-block);
     inline-size: fit-content;
-    block-size: var(--_block-size);
+    min-block-size: var(--_min-block-size);
     color: var(--_color);
     font: var(--_font);
     -webkit-user-select: none;
@@ -144,11 +146,11 @@
   }
 
   .button {
-    --_block-size: 3rem;
+    --_min-block-size: 48px;
     --_pressed-button-corner: var(--sys-shape-corner-small);
     --_font: var(--sys-typescale-label-large);
     --_gap: var(--sys-measurement-space-100);
-    --_icon-font-size: 1.25rem;
+    --_icon-font-size: 20px;
     --_inner-padding: var(--sys-measurement-space-50);
     --_padding-block: var(--sys-measurement-space-125);
     --_padding-inline: var(--sys-measurement-space-200);
@@ -165,11 +167,11 @@
 
     &:not(.small) {
       @container style(--size-items: extra-small) {
-        --_block-size: 3rem;
+        --_min-block-size: 48px;
         --_pressed-button-corner: var(--sys-shape-corner-small);
         --_font: var(--sys-typescale-label-large);
         --_gap: var(--sys-measurement-space-50);
-        --_icon-font-size: 1.25rem;
+        --_icon-font-size: 20px;
         --_inner-padding: var(--sys-measurement-space-100);
         --_padding-block: var(--sys-measurement-space-75);
         --_padding-inline: var(--sys-measurement-space-150);
@@ -186,11 +188,11 @@
       }
 
       @container style(--size-items: medium) {
-        --_block-size: 3.5rem;
+        --_min-block-size: 56px;
         --_pressed-button-corner: var(--sys-shape-corner-medium);
         --_font: var(--sys-typescale-title-medium);
         --_gap: var(--sys-measurement-space-100);
-        --_icon-font-size: 1.5rem;
+        --_icon-font-size: 24px;
         --_inner-padding: var(--sys-measurement-space-0);
         --_padding-block: var(--sys-measurement-space-200);
         --_padding-inline: var(--sys-measurement-space-300);
@@ -207,11 +209,11 @@
       }
 
       @container style(--size-items: large) {
-        --_block-size: 6rem;
+        --_min-block-size: 96px;
         --_pressed-button-corner: var(--sys-shape-corner-large);
         --_font: var(--sys-typescale-headline-small);
         --_gap: var(--sys-measurement-space-150);
-        --_icon-font-size: 2rem;
+        --_icon-font-size: 32px;
         --_inner-padding: var(--sys-measurement-space-0);
         --_padding-block: var(--sys-measurement-space-400);
         --_padding-inline: var(--sys-measurement-space-600);
@@ -228,11 +230,11 @@
       }
 
       @container style(--size-items: extra-large) {
-        --_block-size: 8.5rem;
+        --_min-block-size: 136px;
         --_pressed-button-corner: var(--sys-shape-corner-large);
         --_font: var(--sys-typescale-headline-large);
         --_gap: var(--sys-measurement-space-200);
-        --_icon-font-size: 2.5rem;
+        --_icon-font-size: 40px;
         --_inner-padding: var(--sys-measurement-space-0);
         --_padding-block: var(--sys-measurement-space-600);
         --_padding-inline: var(--sys-measurement-space-800);
@@ -250,11 +252,11 @@
     }
 
     &.extra-small {
-      --_block-size: 3rem;
+      --_min-block-size: 48px;
       --_pressed-button-corner: var(--sys-shape-corner-small);
       --_font: var(--sys-typescale-label-large);
       --_gap: var(--sys-measurement-space-50);
-      --_icon-font-size: 1.25rem;
+      --_icon-font-size: 20px;
       --_inner-padding: var(--sys-measurement-space-100);
       --_padding-block: var(--sys-measurement-space-75);
       --_padding-inline: var(--sys-measurement-space-150);
@@ -271,11 +273,11 @@
     }
 
     &.medium {
-      --_block-size: 3.5rem;
+      --_min-block-size: 56px;
       --_pressed-button-corner: var(--sys-shape-corner-medium);
       --_font: var(--sys-typescale-title-medium);
       --_gap: var(--sys-measurement-space-100);
-      --_icon-font-size: 1.5rem;
+      --_icon-font-size: 24px;
       --_inner-padding: var(--sys-measurement-space-0);
       --_padding-block: var(--sys-measurement-space-200);
       --_padding-inline: var(--sys-measurement-space-300);
@@ -292,11 +294,11 @@
     }
 
     &.large {
-      --_block-size: 6rem;
+      --_min-block-size: 96px;
       --_pressed-button-corner: var(--sys-shape-corner-large);
       --_font: var(--sys-typescale-headline-small);
       --_gap: var(--sys-measurement-space-150);
-      --_icon-font-size: 2rem;
+      --_icon-font-size: 32px;
       --_inner-padding: var(--sys-measurement-space-0);
       --_padding-block: var(--sys-measurement-space-400);
       --_padding-inline: var(--sys-measurement-space-600);
@@ -313,11 +315,11 @@
     }
 
     &.extra-large {
-      --_block-size: 8.5rem;
+      --_min-block-size: 136px;
       --_pressed-button-corner: var(--sys-shape-corner-large);
       --_font: var(--sys-typescale-headline-large);
       --_gap: var(--sys-measurement-space-200);
-      --_icon-font-size: 2.5rem;
+      --_icon-font-size: 40px;
       --_inner-padding: var(--sys-measurement-space-0);
       --_padding-block: var(--sys-measurement-space-600);
       --_padding-inline: var(--sys-measurement-space-800);

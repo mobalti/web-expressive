@@ -51,7 +51,7 @@
       inline-size: 100%;
 
       /* Extra small and small connected button groups have 48px target areas and a minimum width of 48px. */
-      min-inline-size: 3rem;
+      min-inline-size: 48px;
 
       --_edge-corner: var(--_radius-full);
       --_inner-corner: var(--sys-shape-corner-small);
@@ -92,14 +92,14 @@
 
       &:has(.icon:only-of-type.selected) {
         .label {
-          gap: 0rem;
+          gap: 0px;
           transition: gap var(--sys-motion-spring-fast-spatial-duration) var(--sys-motion-spring-fast-spatial);
         }
 
         .selected {
           display: block;
           transition: inline-size var(--sys-motion-spring-fast-effects-duration) var(--sys-motion-spring-fast-effects);
-          inline-size: 0rem;
+          inline-size: 0px;
           overflow: clip;
         }
 

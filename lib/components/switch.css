@@ -18,13 +18,13 @@
     --_state: transparent;
     --_border: 2px solid var(--sys-color-outline);
     --_padding: var(--sys-measurement-space-150);
-    --_translate-x: -0.625rem;
+    --_translate-x: -10px;
     --_outline-width: 0px;
-    --_corner: 6.25rem;
+    --_corner: 100px;
 
     --_icon-color: var(--sys-color-surface-container-highest);
     --_icon-content: "";
-    --_handle-shape-size: 2.5rem;
+    --_handle-shape-size: 40px;
 
     --isLTR: 1;
     display: inline-grid;
@@ -36,8 +36,8 @@
     border: none;
     border-radius: var(--_corner);
     background: none;
-    inline-size: 3.25rem;
-    block-size: 3rem;
+    inline-size: 52px;
+    block-size: 48px;
 
     user-select: none;
     -webkit-user-select: none;
@@ -101,7 +101,7 @@
       --_state: transparent;
       --_border: none;
       --_padding: var(--sys-measurement-space-100);
-      --_translate-x: 0.625rem;
+      --_translate-x: 10px;
       --_icon-color: var(--sys-color-on-primary-container);
 
       &:hover {
@@ -141,8 +141,8 @@
       border: var(--_border);
       border-radius: var(--_corner);
       background: var(--_background);
-      inline-size: 3.25rem;
-      block-size: 2rem;
+      inline-size: 52px;
+      block-size: 32px;
       content: "";
 
       /* Respect the user's reduced-motion preference. */
@@ -170,7 +170,7 @@
       block-size: var(--_handle-shape-size);
       content: var(--_icon-content);
       color: var(--_icon-color);
-      font-size: 1rem;
+      font-size: 16px;
       line-height: 1;
       font-family: var(--we-icon-font-family);
       font-variation-settings:

@@ -60,14 +60,14 @@
 
 html {
   --sys-shape-corner-none: 0px;
-  --sys-shape-corner-extra-small: 0.25rem;
-  --sys-shape-corner-small: 0.5rem;
-  --sys-shape-corner-medium: 0.75rem;
-  --sys-shape-corner-large: 1rem;
-  --sys-shape-corner-large-increased: 1.25rem;
-  --sys-shape-corner-extra-large: 1.75rem;
-  --sys-shape-corner-extra-large-increased: 2rem;
-  --sys-shape-corner-extra-extra-large: 3rem;
+  --sys-shape-corner-extra-small: 4px;
+  --sys-shape-corner-small: 8px;
+  --sys-shape-corner-medium: 12px;
+  --sys-shape-corner-large: 16px;
+  --sys-shape-corner-large-increased: 20px;
+  --sys-shape-corner-extra-large: 28px;
+  --sys-shape-corner-extra-large-increased: 32px;
+  --sys-shape-corner-extra-extra-large: 48px;
   --sys-shape-corner-full: 9999px;
 
   /* ----------------------------------------------------- */
@@ -116,24 +116,24 @@ html {
 }
 
 html {
-  --sys-measurement-space-0: 0rem; /* 0px */
-  --sys-measurement-space-25: 0.125rem; /* 2px */
-  --sys-measurement-space-50: 0.25rem; /* 4px */
-  --sys-measurement-space-75: 0.375rem; /* 6px */
-  --sys-measurement-space-100: 0.5rem; /* 8px */
-  --sys-measurement-space-125: 0.625rem; /* 10px */
-  --sys-measurement-space-150: 0.75rem; /* 12px */
-  --sys-measurement-space-175: 0.875rem; /* 14px */
-  --sys-measurement-space-200: 1rem; /* 16px */
-  --sys-measurement-space-250: 1.25rem; /* 20px */
-  --sys-measurement-space-300: 1.5rem; /* 24px */
-  --sys-measurement-space-400: 2rem; /* 32px */
-  --sys-measurement-space-450: 2.25rem; /* 36px */
-  --sys-measurement-space-500: 2.5rem; /* 40px */
-  --sys-measurement-space-600: 3rem; /* 48px */
-  --sys-measurement-space-700: 3.5rem; /* 56px */
-  --sys-measurement-space-800: 4rem; /* 64px */
-  --sys-measurement-space-900: 4.5rem; /* 72px */
+  --sys-measurement-space-0: 0px;
+  --sys-measurement-space-25: 2px;
+  --sys-measurement-space-50: 4px;
+  --sys-measurement-space-75: 6px;
+  --sys-measurement-space-100: 8px;
+  --sys-measurement-space-125: 10px;
+  --sys-measurement-space-150: 12px;
+  --sys-measurement-space-175: 14px;
+  --sys-measurement-space-200: 16px;
+  --sys-measurement-space-250: 20px;
+  --sys-measurement-space-300: 24px;
+  --sys-measurement-space-400: 32px;
+  --sys-measurement-space-450: 36px;
+  --sys-measurement-space-500: 40px;
+  --sys-measurement-space-600: 48px;
+  --sys-measurement-space-700: 56px;
+  --sys-measurement-space-800: 64px;
+  --sys-measurement-space-900: 72px;
 }
 
 html {

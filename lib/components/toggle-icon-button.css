@@ -203,16 +203,16 @@
 
     --_border-radius: var(--_initial-button-corner);
 
-    --_icon-font-size: 1.25rem;
-    --_block-size: 3rem;
+    --_icon-font-size: 20px;
+    --_block-size: 48px;
 
     --_padding-block: var(--sys-measurement-space-50);
 
-    --_normal-inline-size: 3rem;
+    --_normal-inline-size: 48px;
     --_normal-padding-inline: var(--sys-measurement-space-50);
-    --_narrow-inline-size: 3rem;
+    --_narrow-inline-size: 48px;
     --_narrow-padding-inline: var(--sys-measurement-space-100);
-    --_wide-inline-size: 3.25rem;
+    --_wide-inline-size: 52px;
     --_wide-padding-inline: var(--sys-measurement-space-0);
 
     --_inline-size: var(--_normal-inline-size);
@@ -266,131 +266,131 @@
 
     &:not(.small) {
       @container style(--size-items: extra-small) {
-        --_block-size: 3rem;
-        --_icon-font-size: 1.25rem;
+        --_block-size: 48px;
+        --_icon-font-size: 20px;
         --_padding-block: var(--sys-measurement-space-100);
         --_selected-button-corner: var(--sys-shape-corner-medium);
         --_initial-square-button-corner: var(--sys-shape-corner-medium);
         --_active-button-corner: var(--sys-shape-corner-small);
 
-        --_normal-inline-size: 3rem;
+        --_normal-inline-size: 48px;
         --_normal-padding-inline: var(--sys-measurement-space-100);
-        --_narrow-inline-size: 3rem;
+        --_narrow-inline-size: 48px;
         --_narrow-padding-inline: var(--sys-measurement-space-125);
-        --_wide-inline-size: 3rem;
+        --_wide-inline-size: 48px;
         --_wide-padding-inline: var(--sys-measurement-space-50);
       }
 
       @container style(--size-items: medium) {
-        --_block-size: 3.5rem;
-        --_icon-font-size: 1.5rem;
+        --_block-size: 56px;
+        --_icon-font-size: 24px;
         --_padding-block: var(--sys-measurement-space-0);
         --_selected-button-corner: var(--sys-shape-corner-large);
         --_initial-square-button-corner: var(--sys-shape-corner-large);
         --_active-button-corner: var(--sys-shape-corner-medium);
 
-        --_normal-inline-size: 3.5rem;
+        --_normal-inline-size: 56px;
         --_normal-padding-inline: var(--sys-measurement-space-0);
-        --_narrow-inline-size: 3.5rem;
+        --_narrow-inline-size: 56px;
         --_narrow-padding-inline: var(--sys-measurement-space-50);
-        --_wide-inline-size: 4.5rem;
+        --_wide-inline-size: 72px;
         --_wide-padding-inline: var(--sys-measurement-space-0);
       }
 
       @container style(--size-items: large) {
-        --_block-size: 6rem;
-        --_icon-font-size: 2rem;
+        --_block-size: 96px;
+        --_icon-font-size: 32px;
         --_padding-block: var(--sys-measurement-space-0);
         --_selected-button-corner: var(--sys-shape-corner-extra-large);
         --_initial-square-button-corner: var(--sys-shape-corner-extra-large);
         --_active-button-corner: var(--sys-shape-corner-large);
 
-        --_normal-inline-size: 6rem;
+        --_normal-inline-size: 96px;
         --_normal-padding-inline: var(--sys-measurement-space-0);
-        --_narrow-inline-size: 4rem;
+        --_narrow-inline-size: 64px;
         --_narrow-padding-inline: var(--sys-measurement-space-0);
-        --_wide-inline-size: 8rem;
+        --_wide-inline-size: 128px;
         --_wide-padding-inline: var(--sys-measurement-space-0);
       }
 
       @container style(--size-items: extra-large) {
-        --_block-size: 8.5rem;
-        --_icon-font-size: 2.5rem;
+        --_block-size: 136px;
+        --_icon-font-size: 40px;
         --_padding-block: var(--sys-measurement-space-0);
         --_selected-button-corner: var(--sys-shape-corner-extra-large);
         --_initial-square-button-corner: var(--sys-shape-corner-extra-large);
         --_active-button-corner: var(--sys-shape-corner-large);
 
-        --_normal-inline-size: 8.5rem;
+        --_normal-inline-size: 136px;
         --_normal-padding-inline: var(--sys-measurement-space-0);
-        --_narrow-inline-size: 6.5rem;
+        --_narrow-inline-size: 104px;
         --_narrow-padding-inline: var(--sys-measurement-space-0);
-        --_wide-inline-size: 11.5rem;
+        --_wide-inline-size: 184px;
         --_wide-padding-inline: var(--sys-measurement-space-0);
       }
     }
 
     &.extra-small {
-      --_block-size: 3rem;
-      --_icon-font-size: 1.25rem;
+      --_block-size: 48px;
+      --_icon-font-size: 20px;
       --_padding-block: var(--sys-measurement-space-100);
       --_selected-button-corner: var(--sys-shape-corner-medium);
       --_initial-square-button-corner: var(--sys-shape-corner-medium);
       --_active-button-corner: var(--sys-shape-corner-small);
 
-      --_normal-inline-size: 3rem;
+      --_normal-inline-size: 48px;
       --_normal-padding-inline: var(--sys-measurement-space-100);
-      --_narrow-inline-size: 3rem;
+      --_narrow-inline-size: 48px;
       --_narrow-padding-inline: var(--sys-measurement-space-125);
-      --_wide-inline-size: 3rem;
+      --_wide-inline-size: 48px;
       --_wide-padding-inline: var(--sys-measurement-space-50);
     }
 
     &.medium {
-      --_block-size: 3.5rem;
-      --_icon-font-size: 1.5rem;
+      --_block-size: 56px;
+      --_icon-font-size: 24px;
       --_padding-block: var(--sys-measurement-space-0);
       --_selected-button-corner: var(--sys-shape-corner-large);
       --_initial-square-button-corner: var(--sys-shape-corner-large);
       --_active-button-corner: var(--sys-shape-corner-medium);
 
-      --_normal-inline-size: 3.5rem;
+      --_normal-inline-size: 56px;
       --_normal-padding-inline: var(--sys-measurement-space-0);
-      --_narrow-inline-size: 3.5rem;
+      --_narrow-inline-size: 56px;
       --_narrow-padding-inline: var(--sys-measurement-space-50);
-      --_wide-inline-size: 4.5rem;
+      --_wide-inline-size: 72px;
       --_wide-padding-inline: var(--sys-measurement-space-0);
     }
 
     &.large {
-      --_block-size: 6rem;
-      --_icon-font-size: 2rem;
+      --_block-size: 96px;
+      --_icon-font-size: 32px;
       --_padding-block: var(--sys-measurement-space-0);
       --_selected-button-corner: var(--sys-shape-corner-extra-large);
       --_initial-square-button-corner: var(--sys-shape-corner-extra-large);
       --_active-button-corner: var(--sys-shape-corner-large);
 
-      --_normal-inline-size: 6rem;
+      --_normal-inline-size: 96px;
       --_normal-padding-inline: var(--sys-measurement-space-0);
-      --_narrow-inline-size: 4rem;
+      --_narrow-inline-size: 64px;
       --_narrow-padding-inline: var(--sys-measurement-space-0);
-      --_wide-inline-size: 8rem;
+      --_wide-inline-size: 128px;
       --_wide-padding-inline: var(--sys-measurement-space-0);
     }
 
     &.extra-large {
-      --_block-size: 8.5rem;
-      --_icon-font-size: 2.5rem;
+      --_block-size: 136px;
+      --_icon-font-size: 40px;
       --_padding-block: var(--sys-measurement-space-0);
       --_selected-button-corner: var(--sys-shape-corner-extra-large);
       --_initial-square-button-corner: var(--sys-shape-corner-extra-large);
       --_active-button-corner: var(--sys-shape-corner-large);
 
-      --_normal-inline-size: 8.5rem;
+      --_normal-inline-size: 136px;
       --_normal-padding-inline: var(--sys-measurement-space-0);
-      --_narrow-inline-size: 6.5rem;
+      --_narrow-inline-size: 104px;
       --_narrow-padding-inline: var(--sys-measurement-space-0);
-      --_wide-inline-size: 11.5rem;
+      --_wide-inline-size: 184px;
       --_wide-padding-inline: var(--sys-measurement-space-0);
     }
   }

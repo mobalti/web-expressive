@@ -1,6 +1,6 @@
 @layer design-system.groups {
   .standard-button-group {
-    --_extended-measurement-space-225: 1.125rem; /* 18px */
+    --_extended-measurement-space-225: 18px;
 
     --size-items: small;
     --_gap: var(--sys-measurement-space-150);

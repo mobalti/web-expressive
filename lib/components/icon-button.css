@@ -142,24 +142,24 @@
 
   /* Size and width variants. */
   .icon-button {
-    --_block-size: 3rem;
-    --_icon-font-size: 1.25rem;
-    --_inline-size: 3rem;
+    --_block-size: 48px;
+    --_icon-font-size: 20px;
+    --_inline-size: 48px;
     --_padding-block: var(--sys-measurement-space-50);
     --_padding-inline: var(--sys-measurement-space-50);
     --_pressed-button-corner: var(--sys-shape-corner-small);
 
     &:not(.normal) {
       @container style(--width-items: narrow) {
-        --_block-size: 3rem;
-        --_inline-size: 3rem;
+        --_block-size: 48px;
+        --_inline-size: 48px;
         --_padding-block: var(--sys-measurement-space-50);
         --_padding-inline: var(--sys-measurement-space-100);
       }
 
       @container style(--width-items: wide) {
-        --_block-size: 3rem;
-        --_inline-size: 3.25rem;
+        --_block-size: 48px;
+        --_inline-size: 52px;
         --_padding-block: var(--sys-measurement-space-50);
         --_padding-inline: var(--sys-measurement-space-0);
       }
@@ -172,15 +172,15 @@
     }
 
     &.narrow {
-      --_block-size: 3rem;
-      --_inline-size: 3rem;
+      --_block-size: 48px;
+      --_inline-size: 48px;
       --_padding-block: var(--sys-measurement-space-50);
       --_padding-inline: var(--sys-measurement-space-100);
     }
 
     &.wide {
-      --_block-size: 3rem;
-      --_inline-size: 3.25rem;
+      --_block-size: 48px;
+      --_inline-size: 52px;
       --_padding-block: var(--sys-measurement-space-50);
       --_padding-inline: var(--sys-measurement-space-0);
     }
@@ -191,23 +191,23 @@
 
     &:not(.small) {
       @container style(--size-items: extra-small) {
-        --_block-size: 3rem;
-        --_inline-size: 3rem;
+        --_block-size: 48px;
+        --_inline-size: 48px;
         --_padding-block: var(--sys-measurement-space-100);
         --_padding-inline: var(--sys-measurement-space-100);
-        --_icon-font-size: 1.25rem;
+        --_icon-font-size: 20px;
 
         &:not(.normal) {
           @container style(--width-items: narrow) {
-            --_block-size: 3rem;
-            --_inline-size: 3rem;
+            --_block-size: 48px;
+            --_inline-size: 48px;
             --_padding-block: var(--sys-measurement-space-100);
             --_padding-inline: var(--sys-measurement-space-125);
           }
 
           @container style(--width-items: wide) {
-            --_block-size: 3rem;
-            --_inline-size: 3rem;
+            --_block-size: 48px;
+            --_inline-size: 48px;
             --_padding-block: var(--sys-measurement-space-100);
             --_padding-inline: var(--sys-measurement-space-50);
           }
@@ -220,15 +220,15 @@
         }
 
         &.narrow {
-          --_block-size: 3rem;
-          --_inline-size: 3rem;
+          --_block-size: 48px;
+          --_inline-size: 48px;
           --_padding-block: var(--sys-measurement-space-100);
           --_padding-inline: var(--sys-measurement-space-125);
         }
 
         &.wide {
-          --_block-size: 3rem;
-          --_inline-size: 3rem;
+          --_block-size: 48px;
+          --_inline-size: 48px;
           --_padding-block: var(--sys-measurement-space-100);
           --_padding-inline: var(--sys-measurement-space-50);
         }
@@ -239,24 +239,24 @@
       }
 
       @container style(--size-items: medium) {
-        --_block-size: 3.5rem;
-        --_icon-font-size: 1.5rem;
-        --_inline-size: 3.5rem;
+        --_block-size: 56px;
+        --_icon-font-size: 24px;
+        --_inline-size: 56px;
         --_padding-block: var(--sys-measurement-space-0);
         --_padding-inline: var(--sys-measurement-space-0);
         --_pressed-button-corner: var(--sys-shape-corner-medium);
 
         &:not(.normal) {
           @container style(--width-items: narrow) {
-            --_block-size: 3.5rem;
-            --_inline-size: 3.5rem;
+            --_block-size: 56px;
+            --_inline-size: 56px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-50);
           }
 
           @container style(--width-items: wide) {
-            --_block-size: 3.5rem;
-            --_inline-size: 4.5rem;
+            --_block-size: 56px;
+            --_inline-size: 72px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
@@ -269,15 +269,15 @@
         }
 
         &.narrow {
-          --_block-size: 3.5rem;
-          --_inline-size: 3.5rem;
+          --_block-size: 56px;
+          --_inline-size: 56px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-50);
         }
 
         &.wide {
-          --_block-size: 3.5rem;
-          --_inline-size: 4.5rem;
+          --_block-size: 56px;
+          --_inline-size: 72px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }
@@ -288,24 +288,24 @@
       }
 
       @container style(--size-items: large) {
-        --_block-size: 6rem;
-        --_icon-font-size: 2rem;
-        --_inline-size: 6rem;
+        --_block-size: 96px;
+        --_icon-font-size: 32px;
+        --_inline-size: 96px;
         --_padding-block: var(--sys-measurement-space-0);
         --_padding-inline: var(--sys-measurement-space-0);
         --_pressed-button-corner: var(--sys-shape-corner-large);
 
         &:not(.normal) {
           @container style(--width-items: narrow) {
-            --_block-size: 6rem;
-            --_inline-size: 4rem;
+            --_block-size: 96px;
+            --_inline-size: 64px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
 
           @container style(--width-items: wide) {
-            --_block-size: 6rem;
-            --_inline-size: 8rem;
+            --_block-size: 96px;
+            --_inline-size: 128px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
@@ -318,15 +318,15 @@
         }
 
         &.narrow {
-          --_block-size: 6rem;
-          --_inline-size: 4rem;
+          --_block-size: 96px;
+          --_inline-size: 64px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }
 
         &.wide {
-          --_block-size: 6rem;
-          --_inline-size: 8rem;
+          --_block-size: 96px;
+          --_inline-size: 128px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }
@@ -337,24 +337,24 @@
       }
 
       @container style(--size-items: extra-large) {
-        --_block-size: 8.5rem;
-        --_icon-font-size: 2.5rem;
-        --_inline-size: 8.5rem;
+        --_block-size: 136px;
+        --_icon-font-size: 40px;
+        --_inline-size: 136px;
         --_padding-block: var(--sys-measurement-space-0);
         --_padding-inline: var(--sys-measurement-space-0);
         --_pressed-button-corner: var(--sys-shape-corner-large);
 
         &:not(.normal) {
           @container style(--width-items: narrow) {
-            --_block-size: 8.5rem;
-            --_inline-size: 6.5rem;
+            --_block-size: 136px;
+            --_inline-size: 104px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
 
           @container style(--width-items: wide) {
-            --_block-size: 8.5rem;
-            --_inline-size: 11.5rem;
+            --_block-size: 136px;
+            --_inline-size: 184px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
@@ -367,15 +367,15 @@
         }
 
         &.narrow {
-          --_block-size: 8.5rem;
-          --_inline-size: 6.5rem;
+          --_block-size: 136px;
+          --_inline-size: 104px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }
 
         &.wide {
-          --_block-size: 8.5rem;
-          --_inline-size: 11.5rem;
+          --_block-size: 136px;
+          --_inline-size: 184px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }
@@ -386,23 +386,23 @@
       }
 
       &.extra-small {
-        --_block-size: 3rem;
-        --_inline-size: 3rem;
+        --_block-size: 48px;
+        --_inline-size: 48px;
         --_padding-block: var(--sys-measurement-space-100);
         --_padding-inline: var(--sys-measurement-space-100);
-        --_icon-font-size: 1.25rem;
+        --_icon-font-size: 20px;
 
         &:not(.normal) {
           @container style(--width-items: narrow) {
-            --_block-size: 3rem;
-            --_inline-size: 3rem;
+            --_block-size: 48px;
+            --_inline-size: 48px;
             --_padding-block: var(--sys-measurement-space-100);
             --_padding-inline: var(--sys-measurement-space-125);
           }
 
           @container style(--width-items: wide) {
-            --_block-size: 3rem;
-            --_inline-size: 3rem;
+            --_block-size: 48px;
+            --_inline-size: 48px;
             --_padding-block: var(--sys-measurement-space-100);
             --_padding-inline: var(--sys-measurement-space-50);
           }
@@ -415,15 +415,15 @@
         }
 
         &.narrow {
-          --_block-size: 3rem;
-          --_inline-size: 3rem;
+          --_block-size: 48px;
+          --_inline-size: 48px;
           --_padding-block: var(--sys-measurement-space-100);
           --_padding-inline: var(--sys-measurement-space-125);
         }
 
         &.wide {
-          --_block-size: 3rem;
-          --_inline-size: 3rem;
+          --_block-size: 48px;
+          --_inline-size: 48px;
           --_padding-block: var(--sys-measurement-space-100);
           --_padding-inline: var(--sys-measurement-space-50);
         }
@@ -434,24 +434,24 @@
       }
 
       &.medium {
-        --_block-size: 3.5rem;
-        --_icon-font-size: 1.5rem;
-        --_inline-size: 3.5rem;
+        --_block-size: 56px;
+        --_icon-font-size: 24px;
+        --_inline-size: 56px;
         --_padding-block: var(--sys-measurement-space-0);
         --_padding-inline: var(--sys-measurement-space-0);
         --_pressed-button-corner: var(--sys-shape-corner-medium);
 
         &:not(.normal) {
           @container style(--width-items: narrow) {
-            --_block-size: 3.5rem;
-            --_inline-size: 3.5rem;
+            --_block-size: 56px;
+            --_inline-size: 56px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-50);
           }
 
           @container style(--width-items: wide) {
-            --_block-size: 3.5rem;
-            --_inline-size: 4.5rem;
+            --_block-size: 56px;
+            --_inline-size: 72px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
@@ -464,15 +464,15 @@
         }
 
         &.narrow {
-          --_block-size: 3.5rem;
-          --_inline-size: 3.5rem;
+          --_block-size: 56px;
+          --_inline-size: 56px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-50);
         }
 
         &.wide {
-          --_block-size: 3.5rem;
-          --_inline-size: 4.5rem;
+          --_block-size: 56px;
+          --_inline-size: 72px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }
@@ -483,24 +483,24 @@
       }
 
       &.large {
-        --_block-size: 6rem;
-        --_icon-font-size: 2rem;
-        --_inline-size: 6rem;
+        --_block-size: 96px;
+        --_icon-font-size: 32px;
+        --_inline-size: 96px;
         --_padding-block: var(--sys-measurement-space-0);
         --_padding-inline: var(--sys-measurement-space-0);
         --_pressed-button-corner: var(--sys-shape-corner-large);
 
         &:not(.normal) {
           @container style(--width-items: narrow) {
-            --_block-size: 6rem;
-            --_inline-size: 4rem;
+            --_block-size: 96px;
+            --_inline-size: 64px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
 
           @container style(--width-items: wide) {
-            --_block-size: 6rem;
-            --_inline-size: 8rem;
+            --_block-size: 96px;
+            --_inline-size: 128px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
@@ -513,15 +513,15 @@
         }
 
         &.narrow {
-          --_block-size: 6rem;
-          --_inline-size: 4rem;
+          --_block-size: 96px;
+          --_inline-size: 64px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }
 
         &.wide {
-          --_block-size: 6rem;
-          --_inline-size: 8rem;
+          --_block-size: 96px;
+          --_inline-size: 128px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }
@@ -532,24 +532,24 @@
       }
 
       &.extra-large {
-        --_block-size: 8.5rem;
-        --_icon-font-size: 2.5rem;
-        --_inline-size: 8.5rem;
+        --_block-size: 136px;
+        --_icon-font-size: 40px;
+        --_inline-size: 136px;
         --_padding-block: var(--sys-measurement-space-0);
         --_padding-inline: var(--sys-measurement-space-0);
         --_pressed-button-corner: var(--sys-shape-corner-large);
 
         &:not(.normal) {
           @container style(--width-items: narrow) {
-            --_block-size: 8.5rem;
-            --_inline-size: 6.5rem;
+            --_block-size: 136px;
+            --_inline-size: 104px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
 
           @container style(--width-items: wide) {
-            --_block-size: 8.5rem;
-            --_inline-size: 11.5rem;
+            --_block-size: 136px;
+            --_inline-size: 184px;
             --_padding-block: var(--sys-measurement-space-0);
             --_padding-inline: var(--sys-measurement-space-0);
           }
@@ -562,15 +562,15 @@
         }
 
         &.narrow {
-          --_block-size: 8.5rem;
-          --_inline-size: 6.5rem;
+          --_block-size: 136px;
+          --_inline-size: 104px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }
 
         &.wide {
-          --_block-size: 8.5rem;
-          --_inline-size: 11.5rem;
+          --_block-size: 136px;
+          --_inline-size: 184px;
           --_padding-block: var(--sys-measurement-space-0);
           --_padding-inline: var(--sys-measurement-space-0);
         }

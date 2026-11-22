@@ -120,52 +120,52 @@
 
   .extended-fab {
     /* Component-specific additions to the spacing scale. */
-    --_extended-measurement-space-325: 1.625rem; /* 26px */
-    --_extended-measurement-space-350: 1.75rem; /* 28px */
+    --_extended-measurement-space-325: 26px;
+    --_extended-measurement-space-350: 28px;
 
     /* Default small size. */
-    --_block-size: 3.5rem;
+    --_block-size: 56px;
     --_font: var(--sys-typescale-title-medium);
     --_gap: var(--sys-measurement-space-100);
-    --_icon-font-size: 1.5rem;
+    --_icon-font-size: 24px;
     --_padding-inline: var(--sys-measurement-space-200);
     --_corner: var(--sys-shape-corner-large);
 
     &:not(.small) {
       @container style(--size-items: medium) {
-        --_block-size: 5rem;
+        --_block-size: 80px;
         --_corner: var(--sys-shape-corner-large-increased);
         --_font: var(--sys-typescale-title-large);
         --_gap: var(--sys-measurement-space-150);
-        --_icon-font-size: 1.75rem;
+        --_icon-font-size: 28px;
         --_padding-inline: var(--_extended-measurement-space-325);
       }
 
       @container style(--size-items: large) {
-        --_block-size: 6rem;
+        --_block-size: 96px;
         --_corner: var(--sys-shape-corner-extra-large);
         --_font: var(--sys-typescale-headline-small);
         --_gap: var(--sys-measurement-space-200);
-        --_icon-font-size: 2.25rem;
+        --_icon-font-size: 36px;
         --_padding-inline: var(--_extended-measurement-space-350);
       }
     }
 
     &.medium {
-      --_block-size: 5rem;
+      --_block-size: 80px;
       --_corner: var(--sys-shape-corner-large-increased);
       --_font: var(--sys-typescale-title-large);
       --_gap: var(--sys-measurement-space-150);
-      --_icon-font-size: 1.75rem;
+      --_icon-font-size: 28px;
       --_padding-inline: var(--_extended-measurement-space-325);
     }
 
     &.large {
-      --_block-size: 6rem;
+      --_block-size: 96px;
       --_corner: var(--sys-shape-corner-extra-large);
       --_font: var(--sys-typescale-headline-small);
       --_gap: var(--sys-measurement-space-200);
-      --_icon-font-size: 2.25rem;
+      --_icon-font-size: 36px;
       --_padding-inline: var(--_extended-measurement-space-350);
     }
   }
