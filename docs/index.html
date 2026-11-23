@@ -156,6 +156,7 @@
   &lt;head&gt;
     &lt;meta charset="UTF-8" /&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;meta name="text-scale" content="scale" /&gt;
     &lt;title&gt;Web Expressive Starter&lt;/title&gt;
 
     &lt;!-- 1. Typography --&gt;
@@ -1849,9 +1850,9 @@
           <a class="heading-anchor" href="#spacing">Spacing</a>
         </h3>
         <p>
-          An 18-step spacing scale based on an 8px unit, where <code>--sys-measurement-space-100</code> equals <code>0.5rem</code> (8px at a 16px root
-          size). Apply spacing tokens to the margins, padding, and gaps of a component, UI element, or layout. The system can be extended to add more
-          spacing units and patterns as needed.
+          An 18-step spacing scale based on an 8px unit, where <code>--sys-measurement-space-100</code> equals <code>8px</code>. Apply spacing tokens to
+          the margins, padding, and gaps of a component, UI element, or layout. The system can be extended to add more spacing units and patterns as
+          needed.
         </p>
 
         <pre><code class="language-css">.container {
@@ -1866,81 +1867,81 @@
             <thead>
               <tr>
                 <th>Tokens</th>
-                <th>Value (rem / px)</th>
+                <th>Value</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><code>--sys-measurement-space-0</code></td>
-                <td><code>0rem</code> (0px)</td>
+                <td><code>0px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-25</code></td>
-                <td><code>0.125rem</code> (2px)</td>
+                <td><code>2px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-50</code></td>
-                <td><code>0.25rem</code> (4px)</td>
+                <td><code>4px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-75</code></td>
-                <td><code>0.375rem</code> (6px)</td>
+                <td><code>6px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-100</code></td>
-                <td><code>0.5rem</code> (8px)</td>
+                <td><code>8px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-125</code></td>
-                <td><code>0.625rem</code> (10px)</td>
+                <td><code>10px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-150</code></td>
-                <td><code>0.75rem</code> (12px)</td>
+                <td><code>12px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-175</code></td>
-                <td><code>0.875rem</code> (14px)</td>
+                <td><code>14px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-200</code></td>
-                <td><code>1rem</code> (16px)</td>
+                <td><code>16px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-250</code></td>
-                <td><code>1.25rem</code> (20px)</td>
+                <td><code>20px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-300</code></td>
-                <td><code>1.5rem</code> (24px)</td>
+                <td><code>24px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-400</code></td>
-                <td><code>2rem</code> (32px)</td>
+                <td><code>32px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-450</code></td>
-                <td><code>2.25rem</code> (36px)</td>
+                <td><code>36px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-500</code></td>
-                <td><code>2.5rem</code> (40px)</td>
+                <td><code>40px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-600</code></td>
-                <td><code>3rem</code> (48px)</td>
+                <td><code>48px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-700</code></td>
-                <td><code>3.5rem</code> (56px)</td>
+                <td><code>56px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-800</code></td>
-                <td><code>4rem</code> (64px)</td>
+                <td><code>64px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-measurement-space-900</code></td>
-                <td><code>4.5rem</code> (72px)</td>
+                <td><code>72px</code></td>
               </tr>
             </tbody>
           </table>
@@ -1969,7 +1970,7 @@
             <thead>
               <tr>
                 <th>Tokens</th>
-                <th>Value (rem / px)</th>
+                <th>Value</th>
               </tr>
             </thead>
             <tbody>
@@ -1979,35 +1980,35 @@
               </tr>
               <tr>
                 <td><code>--sys-shape-corner-extra-small</code></td>
-                <td><code>0.25rem</code> (4px)</td>
+                <td><code>4px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-shape-corner-small</code></td>
-                <td><code>0.5rem</code> (8px)</td>
+                <td><code>8px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-shape-corner-medium</code></td>
-                <td><code>0.75rem</code> (12px)</td>
+                <td><code>12px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-shape-corner-large</code></td>
-                <td><code>1rem</code> (16px)</td>
+                <td><code>16px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-shape-corner-large-increased</code></td>
-                <td><code>1.25rem</code> (20px)</td>
+                <td><code>20px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-shape-corner-extra-large</code></td>
-                <td><code>1.75rem</code> (28px)</td>
+                <td><code>28px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-shape-corner-extra-large-increased</code></td>
-                <td><code>2rem</code> (32px)</td>
+                <td><code>32px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-shape-corner-extra-extra-large</code></td>
-                <td><code>3rem</code> (48px)</td>
+                <td><code>48px</code></td>
               </tr>
               <tr>
                 <td><code>--sys-shape-corner-full</code></td>
