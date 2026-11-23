@@ -2,7 +2,7 @@
   "name": "web-expressive-snippets",
   "displayName": "Web Expressive Snippets",
   "description": "HTML and CSS snippets with custom property IntelliSense for Web Expressive",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "icon": "icon-128.png",
   "publisher": "web-expressive",
   "engines": {
