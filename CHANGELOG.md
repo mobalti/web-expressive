@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.2
+
+- Migrated system measurement spacing (`--sys-measurement-space-*`) and shape corner tokens (`--sys-shape-corner-*`) from `rem` to `px` to align with Material Design 3 accessibility specifications.
+- Preserved `rem` units strictly for typography tokens (`--sys-typescale-*`), allowing text size to scale fluidly with OS and browser accessibility text scale preferences.
+- Updated `.button` and `.toggle-button` components to use `min-block-size` with a dynamic pill border-radius formula, enabling containers to expand gracefully under large text scaling while maintaining proportional pill geometry.
+- Set fixed pixel dimensions on non-text elements and controls (FAB, icon buttons, toggle icon buttons, switches, and icon glyphs) to prevent structural ballooning during font scaling.
+- Added cross-platform font smoothing (`-webkit-font-smoothing: antialiased` and `-moz-osx-font-smoothing: grayscale`) to match macOS text rendering fidelity with Windows and Android.
+- Added `<meta name="text-scale" content="scale" />` support in the quick start snippet.
+
 ## 1.1.1
 
 - Renamed `--focus-ring-motion-duration` to `--focus-ring-motion-spring-duration` to align with the `--[token]` and `--[token]-duration` motion naming pattern.
